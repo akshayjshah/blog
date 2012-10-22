@@ -1,18 +1,15 @@
 # An Audible Literacy Filter
 
+> If it takes someone more than 20 years to notice how to properly use "it's,"
+> then that's not a learning curve I'm comfortable with. So, even in this
+> hyper-competitive market, I will pass on a great programmer who cannot
+> write.<br>
+> *Kyle Wiens on the [Harvard Business
+> Review](http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html)
+
 Especially among technical folks, writing is an underrated skill. Kyle Wiens
-hit the front page of Hacker News by
-[blogging](http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html)
-about his use of a writing test to screen engineering applicants: 
-
-<blockquote
-cite="http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html">If
-it takes someone more than 20 years to notice how to properly use "it's," then
-that's not a learning curve I'm comfortable with. So, even in this
-hyper-competitive market, I will pass on a great programmer who cannot
-write.</blockquote>
-
-While I'm not completely convinced that "at
+hit the front page of Hacker News by blogging about his use of a writing test
+to screen engineering applicants. While I'm not completely convinced that "at
 its core, code is prose," I do believe that facility with prose is both
 valuable in itself and a good proxy for attention to detail. Many authors have
 made the former point, often [specifically addressing startups][rww], and Kyle
