@@ -9,7 +9,8 @@ MAKEFLAGS += --no-builtin-rules
 _FLAGS ?= ""
 _POSTS = building-a-blog.md \
 		 zero-to-code-monkey.md \
-		 audible-literacy-filter.md
+		 audible-literacy-filter.md \
+		 language-use-on-github.md
 
 define render-post
 	@echo "Rendering $<..."
