@@ -10,7 +10,8 @@ _FLAGS ?= ""
 _POSTS = building-a-blog.md \
 		 zero-to-code-monkey.md \
 		 audible-literacy-filter.md \
-		 language-use-on-github.md
+		 language-use-on-github.md \
+		 soft-deletion-in-django.md
 
 define render-post
 	@echo "Rendering $<..."
