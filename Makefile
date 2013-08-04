@@ -12,6 +12,7 @@ _POSTS = building-a-blog.md \
 		 audible-literacy-filter.md \
 		 language-use-on-github.md \
 		 soft-deletion-in-django.md \
+		 license-your-code.md \
 		 testing-django-fields.md
 
 define render-post
