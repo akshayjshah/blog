@@ -11,7 +11,8 @@ _POSTS = building-a-blog.md \
 		 zero-to-code-monkey.md \
 		 audible-literacy-filter.md \
 		 language-use-on-github.md \
-		 soft-deletion-in-django.md
+		 soft-deletion-in-django.md \
+		 testing-django-fields.md
 
 define render-post
 	@echo "Rendering $<..."

@@ -138,3 +138,13 @@ Hearsay, we just finished migrating all our models to use `LiveField`, and
 it's been a huge help already---having the option to simultaneously support
 soft-deletion and uniqueness constraints keeps our application code *and* our
 data clean.
+
+## Update
+
+I've open-sourced this soft-deletion plug-in as `django-livefield`. You can
+install it from [PyPI](https://pypi.python.org/pypi/django-livefield/) or check
+out the code on [GitHub](https://github.com/hearsaycorp/django-livefield).
+
+Curious how to test your shiny new soft-deletion field? Check out my post on
+[testing custom Django fields](/testing-django-fields/) for some tips, or
+check out the [actual test setup](https://github.com/hearsaycorp/django-livefield).
