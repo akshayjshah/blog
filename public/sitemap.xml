@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://akshayshah.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2013-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/testing-django-fields/</loc>
+    <loc>http://localhost:1313/post/testing-django-fields/</loc>
     <lastmod>2013-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/license-your-code/</loc>
+    <loc>http://localhost:1313/post/license-your-code/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/django-soft-deletion/</loc>
+    <loc>http://localhost:1313/post/django-soft-deletion/</loc>
     <lastmod>2013-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/language-use-on-github/</loc>
+    <loc>http://localhost:1313/post/language-use-on-github/</loc>
     <lastmod>2013-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/audible-literacy-test/</loc>
+    <loc>http://localhost:1313/post/audible-literacy-test/</loc>
     <lastmod>2012-10-22T21:54:58-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/zero-to-code-monkey/</loc>
+    <loc>http://localhost:1313/post/zero-to-code-monkey/</loc>
     <lastmod>2012-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/post/hakyll-and-bootstrap/</loc>
+    <loc>http://localhost:1313/post/hakyll-and-bootstrap/</loc>
     <lastmod>2012-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://akshayshah.org/colophon/</loc>
+    <loc>http://localhost:1313/colophon/</loc>
     <lastmod>2012-08-01T00:00:00+00:00</lastmod>
   </url>
   
