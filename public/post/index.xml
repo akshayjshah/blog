@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Data Hacker, MD</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://www.akshayshah.org/post/</link>
     <description>Recent content in Posts on Data Hacker, MD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Aug 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.akshayshah.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Testing Django Fields</title>
-      <link>http://localhost:1313/post/testing-django-fields/</link>
+      <link>http://www.akshayshah.org/post/testing-django-fields/</link>
       <pubDate>Thu, 15 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/testing-django-fields/</guid>
+      <guid>http://www.akshayshah.org/post/testing-django-fields/</guid>
       <description>&lt;p&gt;I love the flexibility that custom Django fields, abstract models, managers,
 and querysets offer, but unit testing them is a pain. Ideally, the tests for
 custom Django fields should be completely isolated from the models that use the
 fields in production; deciding that, for example, my &lt;code&gt;User&lt;/code&gt; model no longer
-needs to support soft deletion shouldn&amp;rsquo;t affect the tests for the &lt;a href=&#34;http://localhost:1313/post/django-soft-deletion/&#34;&gt;soft-deletion
+needs to support soft deletion shouldn&amp;rsquo;t affect the tests for the &lt;a href=&#34;http://www.akshayshah.org/post/django-soft-deletion/&#34;&gt;soft-deletion
 field&lt;/a&gt; itself.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://stackoverflow.com/questions/502916/django-how-to-create-a-model-dynamically-just-for-testing&#34;&gt;most common approach&lt;/a&gt; to this problem is simple, if annoying: declare
@@ -101,7 +101,7 @@ class ModelTestCase(TestCase):
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Looking for an example? Here&amp;rsquo;s a section of the test suite for my
-&lt;a href=&#34;http://localhost:1313/post/django-soft-deletion/&#34;&gt;soft-deletion field&lt;/a&gt;:&lt;/p&gt;
+&lt;a href=&#34;http://www.akshayshah.org/post/django-soft-deletion/&#34;&gt;soft-deletion field&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from django.db import IntegrityError, models
 
@@ -144,10 +144,10 @@ class SoftDeletionTests(ModelTestCase):
     
     <item>
       <title>License Your Code!</title>
-      <link>http://localhost:1313/post/license-your-code/</link>
+      <link>http://www.akshayshah.org/post/license-your-code/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/license-your-code/</guid>
+      <guid>http://www.akshayshah.org/post/license-your-code/</guid>
       <description>
 
 &lt;p&gt;If you&amp;rsquo;re a &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; (or &lt;a href=&#34;http://bitbucket.org&#34;&gt;Bitbucket&lt;/a&gt;, or &lt;a href=&#34;http://www.gitorious.com&#34;&gt;Gitorious&lt;/a&gt;) user, you probably
@@ -239,10 +239,10 @@ of a good summary article, leave a comment!&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Soft Deletion in Django</title>
-      <link>http://localhost:1313/post/django-soft-deletion/</link>
+      <link>http://www.akshayshah.org/post/django-soft-deletion/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/django-soft-deletion/</guid>
+      <guid>http://www.akshayshah.org/post/django-soft-deletion/</guid>
       <description>
 
 &lt;p class=&#34;update&#34;&gt;&lt;em&gt;Update:&lt;/em&gt; I&#39;ve open-sourced this soft-deletion
@@ -390,7 +390,7 @@ soft-deletion and uniqueness constraints keeps our application code &lt;em&gt;an
 data clean.&lt;/p&gt;
 
 &lt;p&gt;(Curious how to test your shiny new soft-deletion field? Check out my post on
-&lt;a href=&#34;http://localhost:1313/post/testing-django-fields&#34;&gt;testing custom Django fields&lt;/a&gt; for some tips, or
+&lt;a href=&#34;http://www.akshayshah.org/post/testing-django-fields&#34;&gt;testing custom Django fields&lt;/a&gt; for some tips, or
 check out the actual test setup on
 &lt;a href=&#34;https://github.com/hearsaycorp/django-livefield&#34;&gt;GitHub&lt;/a&gt;.)&lt;/p&gt;
 </description>
@@ -398,10 +398,10 @@ check out the actual test setup on
     
     <item>
       <title>Language Use on GitHub</title>
-      <link>http://localhost:1313/post/language-use-on-github/</link>
+      <link>http://www.akshayshah.org/post/language-use-on-github/</link>
       <pubDate>Sun, 10 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/language-use-on-github/</guid>
+      <guid>http://www.akshayshah.org/post/language-use-on-github/</guid>
       <description>
 
 &lt;p&gt;Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
@@ -409,7 +409,7 @@ using Go also do front-end work in ActionScript? Most programmers have some
 intuitions about these questions &amp;ndash; &lt;em&gt;but what does the data say&lt;/em&gt;? Spurred on by
 a six-month-old Twitter &lt;a href=&#34;https://twitter.com/misc/status/235167513833525249&#34;&gt;conversation&lt;/a&gt;, I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: &lt;img src=&#34;http://localhost:1313/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
+languages on GitHub: &lt;img src=&#34;http://www.akshayshah.org/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
 alt=&#34;Language Correlation on GitHub&#34; class=&#34;fill-column&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Each square in the chart measures the &lt;a href=&#34;http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient&#34;&gt;rank correlation&lt;/a&gt;
@@ -530,8 +530,8 @@ pushes = pd.read_csv(&#39;stacked_language_by_user.csv&#39;).pivot(
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Exporting these results from BigQuery was an enormous pain (and required a paid
-account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
-&lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
+account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
+&lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
 
 &lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
 
@@ -593,10 +593,10 @@ less distorted by these outliers.&lt;/li&gt;
 &lt;p&gt;If that doesn&amp;rsquo;t convince you, it&amp;rsquo;s easy to calculate the Pearson correlation &amp;ndash;
 it&amp;rsquo;s the default in pandas, so removing the &lt;code&gt;method=&#39;spearman&#39;&lt;/code&gt; above should
 do the trick. If you&amp;rsquo;re impatient, you can just peek at the
-&lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/pearson_language_correlation.svg&#34;&gt;results&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/pearson_language_correlation.svg&#34;&gt;results&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-&lt;img src=&#34;http://localhost:1313/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
+&lt;img src=&#34;http://www.akshayshah.org/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
 alt=&#34;Language Correlation on GitHub&#34; class=&#34;fill-column&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The most striking thing about this chart is its &lt;em&gt;blueness&lt;/em&gt;. Despite our
@@ -630,10 +630,10 @@ comment!&lt;/p&gt;
     
     <item>
       <title>An Audible Literacy Filter</title>
-      <link>http://localhost:1313/post/audible-literacy-test/</link>
+      <link>http://www.akshayshah.org/post/audible-literacy-test/</link>
       <pubDate>Mon, 22 Oct 2012 21:54:58 -0700</pubDate>
       
-      <guid>http://localhost:1313/post/audible-literacy-test/</guid>
+      <guid>http://www.akshayshah.org/post/audible-literacy-test/</guid>
       <description>
 
 &lt;blockquote cite=&#34;http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html&#34;&gt;
@@ -694,10 +694,10 @@ self-important candidate (or co-worker).&lt;/p&gt;
     
     <item>
       <title>Zero to Code Monkey</title>
-      <link>http://localhost:1313/post/zero-to-code-monkey/</link>
+      <link>http://www.akshayshah.org/post/zero-to-code-monkey/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/zero-to-code-monkey/</guid>
+      <guid>http://www.akshayshah.org/post/zero-to-code-monkey/</guid>
       <description>
 
 &lt;p&gt;Last year, I&amp;rsquo;d never have called myself a programmer. Sure, I&amp;rsquo;d dabbled a bit
@@ -836,10 +836,10 @@ know how you&amp;rsquo;d proceed.&lt;/p&gt;
     
     <item>
       <title>Hakyll and Bootstrap</title>
-      <link>http://localhost:1313/post/hakyll-and-bootstrap/</link>
+      <link>http://www.akshayshah.org/post/hakyll-and-bootstrap/</link>
       <pubDate>Sat, 04 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hakyll-and-bootstrap/</guid>
+      <guid>http://www.akshayshah.org/post/hakyll-and-bootstrap/</guid>
       <description>
 
 &lt;p class=&#34;update&#34;&gt;&lt;em&gt;Update:&lt;/em&gt; It&#39;s probably no surprise, but diving
