@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <title>Language Use on GitHub • Data Hacker, MD</title>
+    
+    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="author" content="Akshay Shah">
+    <meta name="google-site-verification" content="foo">
+    <meta name="generator" content="Hugo 0.13" />
+
+    
+    <base href="http://akshayshah.org/">
+    <link rel="canonical" href="http://akshayshah.org/post/language-use-on-github/">
+    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+
+    
+    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
+    <a class="site-name" href="/">Data Hacker, MD</a><br>
+      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
+    </nav>
+
+
+<header>
+  <h1>Language Use on GitHub</h1>
+  February 10, 2013
+</header>
+
+<article>
+  
+
+<p>Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
+using Go also do front-end work in ActionScript? Most programmers have some
+intuitions about these questions &ndash; <em>but what does the data say</em>? Spurred on by
+a six-month-old Twitter <a href="https://twitter.com/misc/status/235167513833525249">conversation</a>, I decided to find out.
+Using data from 2012, I charted the relationships between the 25 most popular
+languages on GitHub: <img src="/img/post/language-use-on-github/spearman_language_correlation.svg"
+alt="Language Correlation on GitHub" class="fill-column"></p>
+
+<p>Each square in the chart measures the <a href="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">rank correlation</a>
+between two languages; positive correlations are in blue, and negative
+correlations are in red. A little more than halfway down the first column is a
+medium-red square showing the correlation between Go and ActionScript. Because
+the square is red, we know that as users write more Go, they write less
+ActionScript. From the intensity of the red, we know that this rule of thumb is
+fairly reliable. Rank correlations are symmetric, so ActionScript fans also
+write less Go (and there&rsquo;s an identically-colored square in the bottom row to
+show it). Take a moment to find your favorite languages, then read on for the
+details!</p>
+
+<h2 id="data-collection">Data Collection</h2>
+
+<p>GitHub&rsquo;s own <a href="https://github.com/briandoll">Brian Doll</a> published a <a href="https://gist.github.com/briandoll/e0637fff9c8eec988528">data set</a>
+titled &ldquo;Programming Language Correlations,&rdquo; but as an astute commenter pointed
+out, it&rsquo;s really a set of conditional probabilities. For our question,
+that&rsquo;s an important distinction &ndash; while conditional probabilities let us say,
+&ldquo;87.9% of CoffeeScript programmers also code in Ruby,&rdquo; they <em>don&rsquo;t</em> allow us to
+say, &ldquo;People who write more CoffeeScript also tend to write more Ruby.&rdquo; To
+tackle our question, we&rsquo;ll need access to some more granular data.</p>
+
+<p>Rather than banging on the API, we can use the <a href="http://www.githubarchive.org/">GitHub
+Archive</a>. This fantastic resource archives every public GitHub
+event and makes the whole data set accessible via <a href="https://developers.google.com/bigquery/">Google BigQuery</a>.
+BigQuery has a web-based console and a comfortably SQL-like query language, so
+it&rsquo;s easy to get the data we need (all the code in this post is also in a
+single <a href="https://gist.github.com/akshayjshah/4772174">Gist</a>):</p>
+
+<pre><code class="language-sql">select actor, repository_language, count(repository_language) as pushes
+from [githubarchive:github.timeline]
+where type='PushEvent'
+    and repository_language != ''
+    and PARSE_UTC_USEC(created_at) &gt;= PARSE_UTC_USEC('2012-01-01 00:00:00')
+    and PARSE_UTC_USEC(created_at) &lt; PARSE_UTC_USEC('2013-01-01 00:00:00')
+group by actor, repository_language;
+</code></pre>
+
+<p>The results of this query are in a stacked format, where each combination of
+user and language is on a separate row:</p>
+
+<table class="fill-column center">
+  <thead>
+    <tr>
+      <th>actor</th>
+      <th>repository_language</th>
+      <th>pushes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Joe</td>
+      <td>CoffeeScript</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>Joe</td>
+      <td>Ruby</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>Sue</td>
+      <td>CoffeeScript</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Joe</td>
+      <td>Go</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Sue</td>
+      <td>Ruby</td>
+      <td>48</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Stacked formats are often convenient in database schemas, but they&rsquo;re not very
+useful for analysis. We&rsquo;d rather unstack the data so that there&rsquo;s one row per
+user and one column per language:</p>
+
+<table class="fill-column center">
+  <thead>
+    <tr>
+      <th>actor</th>
+      <th>CoffeeScript</th>
+      <th>Go</th>
+      <th>Ruby</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Joe</td>
+      <td>24</td>
+      <td>1</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>Sue</td>
+      <td>0</td>
+      <td>0</td>
+      <td>48</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>With the help of the brilliant <a href="http://pandas.pydata.org/">pandas</a> library, we can perform this
+transformation with one Python command:</p>
+
+<pre><code class="language-python">import pandas as pd
+
+pushes = pd.read_csv('stacked_language_by_user.csv').pivot(
+    index='actor',
+    columns='repository_language',
+    values='pushes')
+</code></pre>
+
+<p>Exporting these results from BigQuery was an enormous pain (and required a paid
+account), so I&rsquo;ll keep a zipped copy of the <a href="/img/post/language-use-on-github/stacked_language_by_user.zip">stacked</a> and
+<a href="/img/post/language-use-on-github/unstacked_language_by_user.zip">unstacked</a> results available.</p>
+
+<h2 id="analysis">Analysis</h2>
+
+<p>GitHub recognizes <em>lots</em> of different languages, including some that are fairly
+obscure, so our unstacked data set has too many columns to visualize. Let&rsquo;s
+just keep the most popular languages:</p>
+
+<pre><code class="language-python">import numpy as np
+
+popular = pushes.select(lambda x: np.sum(pushes[x]) &gt; 50000, axis=1)
+</code></pre>
+
+<p>Now that our data&rsquo;s formatted and filtered, it&rsquo;s time to actually calculate our
+correlation matrix and draw a plot. Again, pandas makes the number-crunching
+ridiculously simple:</p>
+
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+def plot_correlation(dataframe, filename, title='', corr_type=''):
+    lang_names = dataframe.columns.tolist()
+    tick_indices = np.arange(0.5, len(lang_names) + 0.5)
+    plt.figure()
+    plt.pcolor(dataframe.values, cmap='RdBu', vmin=-1, vmax=1)
+    colorbar = plt.colorbar()
+    colorbar.set_label(corr_type)
+    plt.title(title)
+    plt.xticks(tick_indices, lang_names, rotation='vertical')
+    plt.yticks(tick_indices, lang_names)
+    plt.savefig(filename)
+
+spearman_corr = popular.corr(method='spearman')
+plot_correlation(
+    spearman_corr,
+    'spearman_language_correlation.svg',
+    title='2012 GitHub Language Correlations',
+    corr_type='Spearman\'s Rank Correlation')
+</code></pre>
+
+<p class="update"><em>Update:</em> As <a href="http://conjugateprior.org/">conjugateprior</a>
+noted in the now-defunct comments, this calculation ignores any rows with missing
+data (for example, the Python-Ruby correlation ignores any users who haven't
+used both Python and Ruby). We could fill the missing values with zeroes (which
+Corey has already done - check out his <a
+href="https://gist.github.com/coyotebush/5379476">updated code</a> and <a
+href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</a>),
+or we could also calculate significance for each correlation.</p>
+
+<p>It&rsquo;s better to use <a href="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman&rsquo;s rank correlation</a> here
+instead of the usual <a href="http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient">Pearson correlation</a> for two
+reasons:</p>
+
+<ul>
+<li>We don&rsquo;t really care whether the relationship between languages is strictly
+linear.</li>
+<li>There are quite a few outliers in our data set, and rank correlations are
+less distorted by these outliers.</li>
+</ul>
+
+<p>If that doesn&rsquo;t convince you, it&rsquo;s easy to calculate the Pearson correlation &ndash;
+it&rsquo;s the default in pandas, so removing the <code>method='spearman'</code> above should
+do the trick. If you&rsquo;re impatient, you can just peek at the
+<a href="/img/post/language-use-on-github/pearson_language_correlation.svg">results</a>.</p>
+
+<p><h2 id="conclusions">Conclusions</h2>
+<img src="/img/post/language-use-on-github/spearman_language_correlation.svg"
+alt="Language Correlation on GitHub" class="fill-column"></p>
+
+<p>The most striking thing about this chart is its <em>blueness</em>. Despite our
+tribalism, writing scads of C# doesn&rsquo;t make programmers any less likely to hack
+on some R. Even PHP, perhaps the <a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">most hated</a> programming language on
+earth, has a slight positive correlation with Haskell. After seeing so many
+flamewars in forums, on mailing lists, and even in person, I expected language
+communities to be more insular. I&rsquo;m particularly surprised by the positive
+correlations between the languages associated with proprietary platforms (C#,
+Objective-C, and ActionScript) and the traditionally open-source languages.</p>
+
+<p>Not surprisingly, special-purpose languages are the exception to this rule. R,
+Matlab, and Puppet have more strong correlations (both positive and negative)
+than the norm, likely because of their niche roles in data analysis and devops.</p>
+
+<p>Like any analysis project, this one comes with a few caveats:</p>
+
+<ul>
+<li>GitHub pushes aren&rsquo;t a perfect measure of activity. Then again, neither are
+commits, lines of code changed, or anything else I&rsquo;ve heard of.</li>
+<li>This data only considers public projects on GitHub, many of which are open
+source. Open-source programmers, and projects, may behave quite differently
+from their closed-source counterparts.</li>
+<li>Correlation isn&rsquo;t causation.</li>
+</ul>
+
+<p>I&rsquo;ve only scratched the surface here &ndash; if you&rsquo;ve got some ideas, leave a
+comment!</p>
+
+</article>
+
+    <footer>
+    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
+    This blog has an <a href="/feed.xml">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
+    </footer>
+  </body>
+</html>
+
