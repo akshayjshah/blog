@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <title>Soft Deletion in Django • Data Hacker, MD</title>
+    
+    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="author" content="Akshay Shah">
+    <meta name="google-site-verification" content="foo">
+    <meta name="generator" content="Hugo 0.13" />
+
+    
+    <base href="http://akshayshah.org/">
+    <link rel="canonical" href="http://akshayshah.org/post/django-soft-deletion/">
+    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+
+    
+    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
+    <a class="site-name" href="/">Data Hacker, MD</a><br>
+      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
+    </nav>
+
+
+<header>
+  <h1>Soft Deletion in Django</h1>
+  May  9, 2013
+</header>
+
+<article>
+  
+
+<p class="update"><em>Update:</em> I've open-sourced this soft-deletion
+strategy as <code>django-livefield</code>. You can install it from <a
+href="https://pypi.python.org/pypi/django-livefield/" title="django-livefield
+on PyPI">PyPI</a> or check out the code on <a
+href="https://github.com/hearsaycorp/django-livefield" title="django-livefield
+on GitHub">GitHub</a>. Try it out and let me know what you think!</p>
+
+<p>Like any self-respecting data nerd, I find deleting database records abhorrent.
+What happens if I need to resurrect those records later? What if I want to run
+a survival analysis? Django&rsquo;s ORM doesn&rsquo;t offer any out-of-the-box support for
+soft-deletion, but it&rsquo;s not difficult to preserve your data by overriding a few
+methods and flipping a Boolean field instead of actually deleting anything.
+After living with that system for a while, though, I&rsquo;m convinced that it&rsquo;s
+inadequate; in this post, I&rsquo;ll explain its principal shortcoming and propose a
+slightly more complex, but vastly better, alternative.</p>
+
+<h2 id="naive-soft-deletion">Naive Soft-Deletion</h2>
+
+<p>At first blush, soft-deletion seems embarrassingly simple. If you&rsquo;re like me,
+a system like this probably springs to mind:</p>
+
+<pre><code class="language-python">from django.db import models
+from django.db.models.query import QuerySet
+
+
+class SoftDeletionQuerySet(QuerySet):
+    def delete(self):
+        # Bulk delete bypasses individual objects' delete methods.
+        return super(SoftDeletionQuerySet, self).update(alive=False)
+
+    def hard_delete(self):
+        return super(SoftDeletionQuerySet, self).delete()
+
+    def alive(self):
+        return self.filter(alive=True)
+
+    def dead(self):
+        return self.exclude(alive=True)
+
+
+class SoftDeletionManager(models.Manager):
+    def __init__(self, *args, **kwargs):
+        self.alive_only = kwargs.pop('alive_only', True)
+        super(SoftDeletionManager, self).__init__(*args, **kwargs)
+
+    def get_queryset(self):
+        if self.alive_only:
+            return SoftDeletionQuerySet(self.model).filter(alive=True)
+        return SoftDeletionQuerySet(self.model)
+
+    def hard_delete(self):
+        return self.get_queryset().hard_delete()
+
+
+class SoftDeletionModel(models.Model):
+    alive = models.BooleanField(default=True)
+
+    objects = SoftDeletionManager()
+    all_objects = SoftDeletionManager(alive_only=False)
+
+    class Meta:
+        abstract = True
+
+    def delete(self):
+        self.alive = False
+        self.save()
+
+    def hard_delete(self):
+        super(SoftDeletionModel, self).delete()
+</code></pre>
+
+<p>This approach is straightforward and readable, and for nearly two years it
+worked well for us at <a href="http://hearsaysocial.com/careers/">Hearsay Social</a>.
+<em>However, it inevitably leads to data corruption.</em></p>
+
+<p>The problem is simple: using a Boolean to store deletion status makes it
+impossible to enforce uniqueness constraints in your database. Let&rsquo;s say you&rsquo;re
+storing user records which should have unique email addresses; with this
+soft-deletion scheme, you can only have one active record for
+&ldquo;betty@smith.com&rdquo;. Including deletion status in your constraint lets you keep
+both a soft-deleted and an active record with the same email address, but then
+you&rsquo;re out of luck &ndash; any attempt to delete another record for Betty will throw
+an <code>IntegrityError</code>. Luckily, there&rsquo;s a better way.</p>
+
+<h2 id="the-null-solution">The Null Solution</h2>
+
+<p>At the database level, there&rsquo;s a straightforward solution to this problem
+(though I didn&rsquo;t learn about it until a few months ago): store soft-deleted
+records with nulls in the <code>alive</code> column. As mandated by the ANSI SQL
+standard, MySQL, Postgres, and SQLite treat each null as a unique snowflake.</p>
+
+<p>However, creating a Django field with this behavior is a little tricky because
+we want to forbid <code>False</code> values in the database (allowing only <code>True</code> and
+<code>NULL</code>).  Here&rsquo;s what I came up with:</p>
+
+<pre><code class="language-python">from django.db import models
+
+class LiveField(models.Field):
+    '''Similar to a BooleanField, but stores False as NULL.
+
+    '''
+    description = 'Soft-deletion status'
+    __metaclass__ = models.SubfieldBase
+
+    def __init__(self):
+        super(LiveField, self).__init__(default=True, null=True)
+
+    def get_internal_type(self):
+        # Create DB column as though for a NullBooleanField.
+        return 'NullBooleanField'
+
+    def get_prep_value(self, value):
+        # Convert in-Python value to value we'll store in DB
+        if value:
+            return 1
+        return None
+
+    def to_python(self, value):
+        # Misleading name, since type coercion also occurs when
+        # assigning a value to the field in Python.
+        return bool(value)
+
+    def get_prep_lookup(self, lookup_type, value):
+        # Filters with .alive=False won't work, so
+        # raise a helpful exception instead.
+        if lookup_type == 'exact' and not value:
+            msg = (&quot;%(model)s doesn't support filters with &quot;
+                &quot;%(field)s=False. Use a filter with &quot;
+                &quot;%(field)s=None or an exclude with &quot;
+                &quot;%(field)s=True instead.&quot;)
+            raise TypeError(msg % {
+                'model': self.model.__name__,
+                'field': self.name})
+
+        return super(LiveField, self).get_prep_lookup(lookup_type, value)
+</code></pre>
+
+<p>This is a drop-in replacement for Django&rsquo;s stock <code>BooleanField</code> in the
+abstract model above, but under the covers it stores falsy values as nulls. At
+Hearsay, we just finished migrating all our models to use <code>LiveField</code>, and
+it&rsquo;s been a huge help already &ndash; having the option to simultaneously support
+soft-deletion and uniqueness constraints keeps our application code <em>and</em> our
+data clean.</p>
+
+<p>(Curious how to test your shiny new soft-deletion field? Check out my post on
+<a href="/post/testing-django-fields">testing custom Django fields</a> for some tips, or
+check out the actual test setup on
+<a href="https://github.com/hearsaycorp/django-livefield">GitHub</a>.)</p>
+
+</article>
+
+    <footer>
+    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
+    This blog has an <a href="/feed.xml">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
+    </footer>
+  </body>
+</html>
+
