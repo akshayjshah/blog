@@ -138,7 +138,7 @@ class SoftDeletionTests(ModelTestCase):
         self.assertRaises(IntegrityError, first.save)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Questions? Have a better idea? Leave a comment!&lt;/p&gt;
+&lt;p&gt;Questions? Have a better idea? [Let me know][mailto:akshay@akshayshah.org]!&lt;/p&gt;
 </description>
     </item>
     
@@ -232,7 +232,7 @@ read &lt;a href=&#34;http://www.gnu.org/philosophy/open-source-misses-the-point.
 complicated. Patents aren&amp;rsquo;t the same thing as copyright, though some
 open-source licenses attempt to address them. Think of patent protection as
 another axis that&amp;rsquo;s orthogonal to the permissive-copyleft axis. If you know
-of a good summary article, leave a comment!&lt;/p&gt;&lt;/li&gt;
+of a good summary article, [let me know][mailto:akshay@akshayshah.org]!&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -623,8 +623,8 @@ from their closed-source counterparts.&lt;/li&gt;
 &lt;li&gt;Correlation isn&amp;rsquo;t causation.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, leave a
-comment!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, [let me
+know][mailto:akshay@akshayshah.org]!&lt;/p&gt;
 </description>
     </item>
     
@@ -711,9 +711,7 @@ dilettante.&lt;/p&gt;
 &lt;p&gt;Nine months later, I&amp;rsquo;m on a different plane: I&amp;rsquo;m still no expert, but I&amp;rsquo;m
 definitely a programmer (or at least a code monkey). Writing code every day is
 an important part of my job, and I &lt;em&gt;love&lt;/em&gt; it. If you&amp;rsquo;re interested in learning
-to code, especially in Python, I hope my story helps you get started faster.
-If you&amp;rsquo;re an experienced engineer, leave a comment and tell me where I went
-wrong (and where I should go next)!&lt;/p&gt;
+to code, especially in Python, I hope my story helps you get started faster.&lt;/p&gt;
 
 &lt;h2 id=&#34;syntax-is-easy&#34;&gt;Syntax Is Easy&lt;/h2&gt;
 
@@ -769,7 +767,8 @@ MIT&amp;rsquo;s &lt;a href=&#34;http://ocw.mit.edu/courses/electrical-engineerin
 taught in Python, doesn&amp;rsquo;t assume any prior knowledge, and moves slowly enough
 for me to watch while riding the train and keeping an eye out for my stop. I&amp;rsquo;m
 not sure what I&amp;rsquo;ll tackle next, but I&amp;rsquo;m leaning towards continuing the MIT
-undergraduate sequence. (Have a suggestion? Leave a comment and let me know!)&lt;/p&gt;
+undergraduate sequence. (Have a suggestion? [Let me
+know][mailto:akshay@akshayshah.org]!)&lt;/p&gt;
 
 &lt;h2 id=&#34;craftsmanship-is-crucial&#34;&gt;Craftsmanship Is Crucial&lt;/h2&gt;
 
@@ -829,8 +828,8 @@ of &lt;a href=&#34;http://pragprog.com/book/tpp/the-pragmatic-programmer&#34;&gt
 inclined to focus more on hard skills for the next few months.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you&amp;rsquo;ve read this far, I&amp;rsquo;d appreciate your input! Leave a comment and let me
-know how you&amp;rsquo;d proceed.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve read this far, I&amp;rsquo;d appreciate your input! Send me an
+[email][mailto:akshay@akshayshah.org] and let me know where I went wrong.&lt;/p&gt;
 </description>
     </item>
     
