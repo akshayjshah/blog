@@ -1,3 +1,5 @@
+default: build
+
 quickstart:
 	brew install hugo
 	npm install -g less less-plugin-clean-css
@@ -8,5 +10,8 @@ css:
 serve:
 	hugo server --watch
 
-build:
+build: css
 	hugo
+
+deploy:
+	git subtree push --prefix=public git@github.com:akshayjshah/akshayjshah.github.io.git master
