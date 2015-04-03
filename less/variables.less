@@ -1,0 +1,46 @@
+//
+// Typography & Base Rhythm
+// ------------------------
+@maxFontSize: 22px;
+@minFontSize: 16px;
+@measure: 31rem;
+
+@goldenRatio: 1.618;
+@ratio: @goldenRatio;
+@lineHeight: @ratio;
+@v: (@lineHeight * 1rem);
+
+@serifFontFamily: calluna, serif;
+@sansFontFamily: calluna-sans, sans-serif;
+@monoFontFamily: Monaco, Menlo, Consolas, monospace;
+
+//
+// Colors
+// ------
+
+// Grays
+@black: #000;
+@grayDarker: #222;
+@grayDark: #333;
+@gray: #555;
+@grayLight: #999;
+@grayLighter: #eee;
+@white: #fff;
+
+// Accent colors
+@blue: #1144AA;
+@purple: #6C0AAB;
+@yellow: #FFD100;
+
+@primaryColor: @blue;
+@secondaryColor: @purple;
+@complementaryColor: @yellow;
+
+@baseFontFamily: @serifFontFamily;
+@altFontFamily: @sansFontFamily;
+@headerFontFamily: @sansFontFamily;
+
+@textColor: @grayDarker;
+@backgroundColor: @white;
+@wellColor: @grayLighter;
+@updateColor: lighten(@complementaryColor, 35%);

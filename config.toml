@@ -1,0 +1,13 @@
+baseurl = "http://akshayshah.org"
+languageCode = "en-us"
+title = "Data Hacker, MD"
+
+[params]
+  DateFmt = "January _2, 2006"
+  Author = "Akshay Shah"
+  AuthorEmail = "akshay@akshayshah.org"
+  Description = "Thoughts from a physician-turned-engineer."
+  GoogleSiteVerification = "foo"
+
+[blackfriday]
+  plainIdAnchors = true
