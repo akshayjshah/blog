@@ -15,8 +15,6 @@ Nine months later, I'm on a different plane: I'm still no expert, but I'm
 definitely a programmer (or at least a code monkey). Writing code every day is
 an important part of my job, and I *love* it. If you're interested in learning
 to code, especially in Python, I hope my story helps you get started faster.
-If you're an experienced engineer, leave a comment and tell me where I went
-wrong (and where I should go next)!
 
 ## Syntax Is Easy
 Oddly enough, learning the syntax of a programming language --- the rules
@@ -70,7 +68,8 @@ MIT's [Introduction to Computer Science and Programming][mit6.00] because it's
 taught in Python, doesn't assume any prior knowledge, and moves slowly enough
 for me to watch while riding the train and keeping an eye out for my stop. I'm
 not sure what I'll tackle next, but I'm leaning towards continuing the MIT
-undergraduate sequence. (Have a suggestion? Leave a comment and let me know!)
+undergraduate sequence. (Have a suggestion? [Let me
+know][mailto:akshay@akshayshah.org]!)
 
 ## Craftsmanship Is Crucial
 
@@ -127,8 +126,8 @@ time next. I could:
   of [The Pragmatic Programmer][] and [The Mythical Man-Month][], but I'm
   inclined to focus more on hard skills for the next few months.
 
-If you've read this far, I'd appreciate your input! Leave a comment and let me
-know how you'd proceed.
+If you've read this far, I'd appreciate your input! Send me an
+[email][mailto:akshay@akshayshah.org] and let me know where I went wrong.
 
 [LaTeX]: http://nitens.org/taraborelli/latex "The Beauty of LaTeX"
 [Python]: http://www.python.org/about/

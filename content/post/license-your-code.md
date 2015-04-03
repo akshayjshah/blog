@@ -84,7 +84,7 @@ sharing your code online.
   complicated. Patents aren't the same thing as copyright, though some
   open-source licenses attempt to address them. Think of patent protection as
   another axis that's orthogonal to the permissive-copyleft axis. If you know
-  of a good summary article, leave a comment!
+  of a good summary article, [let me know][mailto:akshay@akshayshah.org]!
 
 [GitHub]: http://github.com
 [Bitbucket]: http://bitbucket.org

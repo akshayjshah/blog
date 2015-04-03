@@ -222,8 +222,8 @@ Like any analysis project, this one comes with a few caveats:
   from their closed-source counterparts.
 * Correlation isn't causation.
 
-I've only scratched the surface here -- if you've got some ideas, leave a
-comment!
+I've only scratched the surface here -- if you've got some ideas, [let me
+know][mailto:akshay@akshayshah.org]!
 
 [big-query]: https://developers.google.com/bigquery/
 [brian-doll-data]: https://gist.github.com/briandoll/e0637fff9c8eec988528
