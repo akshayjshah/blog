@@ -8,7 +8,7 @@
   or <a href="/colophon/">read a bit more about me</a>.</p>
 
   <ol class="post-list">
-  {{ range .Data.Pages }}
+  {{ range where .Data.Pages "Type" "post" }}
     {{ .Render "summary" }}
   {{ end }}
   </ol>
