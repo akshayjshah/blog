@@ -7,7 +7,7 @@ quickstart:
 css:
 	lessc --clean-css="--s1 --advanced --compatibility=ie8" less/style.less static/style.min.css
 
-serve:
+serve: css
 	hugo server --watch
 
 build: css
