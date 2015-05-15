@@ -13,5 +13,5 @@ serve: css
 build: css
 	hugo
 
-deploy:
+deploy: build
 	git subtree push --prefix=public git@github.com:akshayjshah/akshayjshah.github.io.git master
