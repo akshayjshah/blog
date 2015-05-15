@@ -13,7 +13,8 @@ _POSTS = building-a-blog.md \
 		 language-use-on-github.md \
 		 soft-deletion-in-django.md \
 		 license-your-code.md \
-		 testing-django-fields.md
+		 testing-django-fields.md \
+		 podcasts-for-developers.md
 
 define render-post
 	@echo "Rendering $<..."
