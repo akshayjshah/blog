@@ -6,8 +6,77 @@
     <description>Recent content on Data Hacker, MD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2015 21:57:17 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.akshayshah.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Podcasts for Developers</title>
+      <link>http://www.akshayshah.org/post/podcasts-for-developers/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.akshayshah.org/post/podcasts-for-developers/</guid>
+      <description>
+
+&lt;p&gt;Even though computer science doesn&amp;rsquo;t change too quickly, software engineering
+changes all the time. New libraries, languages, and architectural patterns
+emerge, jump the shark, and die, only to re-emerge a few years later. How&amp;rsquo;s a
+working engineer supposed to keep up without spending every free moment
+on Hacker News?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Podcasts&lt;/em&gt;, that&amp;rsquo;s how. Unfortunately, most podcasts are meandering
+stream-of-consciousness monologues recorded on a laptop microphone. After a few
+years of avid listening, though, I&amp;rsquo;ve found a pretty good selection of shows
+&amp;mdash; if you share my interests in web development, data science, and startups,
+you may find something you like. All these podcasts regularly produce great
+episodes, but I listen to the three-star shows religiously and the one-star shows
+only if the topic sounds appealing.&lt;/p&gt;
+
+&lt;p&gt;If you know of a great show that isn&amp;rsquo;t on my list, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
+know&lt;/a&gt; &amp;mdash; I&amp;rsquo;m always looking for something new.&lt;/p&gt;
+
+&lt;h2 id=&#34;general-engineering&#34;&gt;General Engineering&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.se-radio.net/&#34;&gt;Software Engineering Radio&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://changelog.com/podcast/&#34;&gt;The Changelog&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hanselminutes.com/&#34;&gt;Hanselminutes&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.talkpythontome.com/&#34;&gt;Talk Python to Me&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jupiterbroadcasting.com/show/coderradio/&#34;&gt;Coder Radio&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://theshipshow.com/&#34;&gt;The Ship Show&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;the-web&#34;&gt;The Web&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://5by5.tv/bigwebshow&#34;&gt;The Big Web Show&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pathtoperf.com/&#34;&gt;The Path to Performance&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://thewebahead.net/&#34;&gt;The Web Ahead&lt;/a&gt; ★ (the &lt;a href=&#34;http://thewebahead.net/34&#34;&gt;Web
+Behind&lt;/a&gt; sub-series was ★★★)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://devchat.tv/js-jabber/&#34;&gt;JavaScript Jabber&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;data-science-and-big-data&#34;&gt;Data Science and Big Data&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.thetalkingmachines.com/&#34;&gt;Talking Machines&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://radar.oreilly.com/tag/oreilly-data-show-podcast&#34;&gt;O&amp;rsquo;Reilly Data Show&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;startups-and-silicon-valley&#34;&gt;Startups and Silicon Valley&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://gimletmedia.com/show/startup/&#34;&gt;StartUp Podcast&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a16z.com/tag/podcasts/&#34;&gt;a16z&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;podcatchers&#34;&gt;Podcatchers&lt;/h2&gt;
+
+&lt;p&gt;A quick word on podcasting clients: the official podcast clients from Apple and
+Google are okay, but it&amp;rsquo;s worth spending a few dollars to get a top-notch
+third-party app. If you&amp;rsquo;re on iOS, Marco Arment&amp;rsquo;s
+&lt;a href=&#34;https://overcast.fm/&#34;&gt;Overcast&lt;/a&gt; is simply &lt;em&gt;amazing&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The MIT License</title>
@@ -260,7 +329,7 @@ read &lt;a href=&#34;http://www.gnu.org/philosophy/open-source-misses-the-point.
 complicated. Patents aren&amp;rsquo;t the same thing as copyright, though some
 open-source licenses attempt to address them. Think of patent protection as
 another axis that&amp;rsquo;s orthogonal to the permissive-copyleft axis. If you know
-of a good summary article, [let me know][mailto:akshay@akshayshah.org]!&lt;/p&gt;&lt;/li&gt;
+of a good summary article, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me know&lt;/a&gt;!&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
