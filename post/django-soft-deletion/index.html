@@ -5,56 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-      <title>Soft Deletion in Django • Data Hacker, MD</title>
+      <title>Soft Deletion in Django • Akshay Shah</title>
     
-    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="description" content="Thoughts on code and human factors from a physician-turned-engineer.">
     <meta name="author" content="Akshay Shah">
     <meta name="google-site-verification" content="4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw">
-    <meta name="generator" content="Hugo 0.13" />
+    <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://www.akshayshah.org/">
-    <link rel="canonical" href="http://www.akshayshah.org/post/django-soft-deletion/">
-    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+    <base href="http://localhost:1313/">
+    <link rel="canonical" href="http://localhost:1313/post/django-soft-deletion/">
+    <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
+    <link rel="license" href="/license/">
 
     
-    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" type="text/css" href="/style.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
-    <script type="text/javascript" src="/js/highlight.pack.js"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
-    
-    
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
-    <a class="site-name" href="/">Data Hacker, MD</a><br>
-      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
-    </nav>
 
 
 <header>
   <h1>Soft Deletion in Django</h1>
-  May  9, 2013
+  <p class="subtitle">May  9, 2013</p>
 </header>
 
 <article>
-  
-
-<p class="update"><em>Update:</em> I've open-sourced this soft-deletion
-strategy as <code>django-livefield</code>. You can install it from <a
-href="https://pypi.python.org/pypi/django-livefield/" title="django-livefield
-on PyPI">PyPI</a> or check out the code on <a
-href="https://github.com/hearsaycorp/django-livefield" title="django-livefield
-on GitHub">GitHub</a>. Try it out and let me know what you think!</p>
+    
 
 <p>Like any self-respecting data nerd, I find deleting database records abhorrent.
 What happens if I need to resurrect those records later? What if I want to run
@@ -63,7 +42,20 @@ soft-deletion, but it&rsquo;s not difficult to preserve your data by overriding 
 methods and flipping a Boolean field instead of actually deleting anything.
 After living with that system for a while, though, I&rsquo;m convinced that it&rsquo;s
 inadequate; in this post, I&rsquo;ll explain its principal shortcoming and propose a
-slightly more complex, but vastly better, alternative.</p>
+slightly more complex, but vastly better, alternative.
+<label for="mn-update-django-livefield" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="mn-update-django-livefield" class="margin-toggle">
+<span class="marginnote">
+    <em>Update:</em> 
+I&rsquo;ve open-sourced this soft-deletion
+plug-in as <code>django-livefield</code>. You can install it from <a
+href="https://pypi.python.org/pypi/django-livefield/" title="django-livefield
+on PyPI">PyPI</a> or check out the code on <a
+href="https://github.com/hearsaycorp/django-livefield" title="django-livefield
+on GitHub">GitHub</a>. Try it out and let me know what you think!
+
+</span>
+</p>
 
 <h2 id="naive-soft-deletion">Naive Soft-Deletion</h2>
 
@@ -193,18 +185,20 @@ it&rsquo;s been a huge help already &ndash; having the option to simultaneously 
 soft-deletion and uniqueness constraints keeps our application code <em>and</em> our
 data clean.</p>
 
-<p>(Curious how to test your shiny new soft-deletion field? Check out my post on
+<p>Curious how to test your shiny new soft-deletion field? Check out my post on
 <a href="/post/testing-django-fields">testing custom Django fields</a> for some tips, or
 check out the actual test setup on
-<a href="https://github.com/hearsaycorp/django-livefield">GitHub</a>.)</p>
+<a href="https://github.com/hearsaycorp/django-livefield">GitHub</a>.</p>
 
 </article>
 
-    <footer>
-    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
-    This blog has an <a href="">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
-    Unless otherwise noted, all code and prose is licensed under the <a href="/license/" rel="license">MIT license</a>.<br>
-    </footer>
-  </body>
+        <footer>
+            &larr; <a href="/" rel="index">Home</a><br>
+            &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
+        </footer>
+    <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 

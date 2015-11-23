@@ -5,56 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-      <title>Language Use on GitHub • Data Hacker, MD</title>
+      <title>Language Use on GitHub • Akshay Shah</title>
     
-    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="description" content="Thoughts on code and human factors from a physician-turned-engineer.">
     <meta name="author" content="Akshay Shah">
     <meta name="google-site-verification" content="4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw">
-    <meta name="generator" content="Hugo 0.13" />
+    <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://www.akshayshah.org/">
-    <link rel="canonical" href="http://www.akshayshah.org/post/language-use-on-github/">
-    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+    <base href="http://localhost:1313/">
+    <link rel="canonical" href="http://localhost:1313/post/language-use-on-github/">
+    <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
+    <link rel="license" href="/license/">
 
     
-    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" type="text/css" href="/style.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
-    <script type="text/javascript" src="/js/highlight.pack.js"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
-    
-    
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
-    <a class="site-name" href="/">Data Hacker, MD</a><br>
-      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
-    </nav>
 
 
 <header>
   <h1>Language Use on GitHub</h1>
-  February 10, 2013
+  <p class="subtitle">February 10, 2013</p>
 </header>
 
 <article>
-  
+    
 
 <p>Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
 using Go also do front-end work in ActionScript? Most programmers have some
-intuitions about these questions &ndash; <em>but what does the data say</em>? Spurred on by
+intuitions about these questions&mdash;<em>but what does the data say</em>? Spurred on by
 a six-month-old Twitter <a href="https://twitter.com/misc/status/235167513833525249">conversation</a>, I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: <img src="/img/post/language-use-on-github/spearman_language_correlation.svg"
+languages on GitHub: <img
+src="/img/post/language-use-on-github/spearman_language_correlation.svg"
 alt="Language Correlation on GitHub" class="fill-column"></p>
 
 <p>Each square in the chart measures the <a href="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">rank correlation</a>
@@ -191,7 +178,22 @@ popular = pushes.select(lambda x: np.sum(pushes[x]) &gt; 50000, axis=1)
 
 <p>Now that our data&rsquo;s formatted and filtered, it&rsquo;s time to actually calculate our
 correlation matrix and draw a plot. Again, pandas makes the number-crunching
-ridiculously simple:</p>
+ridiculously simple:
+<label for="mn-update-fillna" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="mn-update-fillna" class="margin-toggle">
+<span class="marginnote">
+    <em>Update:</em> 
+As <a href="http://conjugateprior.org/">conjugateprior</a>
+noted in the now-defunct comments, this calculation ignores any rows with missing
+data (for example, the Python-Ruby correlation ignores any users who haven&rsquo;t
+used both Python and Ruby). We could fill the missing values with zeroes (which
+Corey has already done&mdash;check out his <a
+href="https://gist.github.com/coyotebush/5379476">updated code</a> and <a
+href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</a>),
+or we could also calculate significance for each correlation.
+
+</span>
+</p>
 
 <pre><code class="language-python">import matplotlib.pyplot as plt
 
@@ -214,15 +216,6 @@ plot_correlation(
     title='2012 GitHub Language Correlations',
     corr_type='Spearman\'s Rank Correlation')
 </code></pre>
-
-<p class="update"><em>Update:</em> As <a href="http://conjugateprior.org/">conjugateprior</a>
-noted in the now-defunct comments, this calculation ignores any rows with missing
-data (for example, the Python-Ruby correlation ignores any users who haven't
-used both Python and Ruby). We could fill the missing values with zeroes (which
-Corey has already done - check out his <a
-href="https://gist.github.com/coyotebush/5379476">updated code</a> and <a
-href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</a>),
-or we could also calculate significance for each correlation.</p>
 
 <p>It&rsquo;s better to use <a href="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman&rsquo;s rank correlation</a> here
 instead of the usual <a href="http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient">Pearson correlation</a> for two
@@ -268,16 +261,18 @@ from their closed-source counterparts.</li>
 <li>Correlation isn&rsquo;t causation.</li>
 </ul>
 
-<p>I&rsquo;ve only scratched the surface here &ndash; if you&rsquo;ve got some ideas, [let me
-know][mailto:akshay@akshayshah.org]!</p>
+<p>I&rsquo;ve only scratched the surface here &ndash; if you&rsquo;ve got some ideas, <a href="mailto:akshay@akshayshah.org">let me
+know</a>!</p>
 
 </article>
 
-    <footer>
-    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
-    This blog has an <a href="">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
-    Unless otherwise noted, all code and prose is licensed under the <a href="/license/" rel="license">MIT license</a>.<br>
-    </footer>
-  </body>
+        <footer>
+            &larr; <a href="/" rel="index">Home</a><br>
+            &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
+        </footer>
+    <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 
