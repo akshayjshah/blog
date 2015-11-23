@@ -207,7 +207,7 @@ class SoftDeletionTests(ModelTestCase):
         self.assertRaises(IntegrityError, first.save)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Questions? Have a better idea? [Let me know][mailto:akshay@akshayshah.org]!&lt;/p&gt;
+&lt;p&gt;Questions? Have a better idea? &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;Let me know&lt;/a&gt;!&lt;/p&gt;
 </description>
     </item>
     
@@ -692,8 +692,8 @@ from their closed-source counterparts.&lt;/li&gt;
 &lt;li&gt;Correlation isn&amp;rsquo;t causation.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, [let me
-know][mailto:akshay@akshayshah.org]!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
+know&lt;/a&gt;!&lt;/p&gt;
 </description>
     </item>
     
@@ -898,7 +898,7 @@ inclined to focus more on hard skills for the next few months.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;If you&amp;rsquo;ve read this far, I&amp;rsquo;d appreciate your input! Send me an
-[email][mailto:akshay@akshayshah.org] and let me know where I went wrong.&lt;/p&gt;
+&lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;email&lt;/a&gt; and let me know where I went wrong.&lt;/p&gt;
 </description>
     </item>
     
