@@ -15,29 +15,15 @@
     {{ .Hugo.Generator }}
 
     <!-- Links -->
-    <base href="{{ .Site.BaseUrl }}">
+    <base href="{{ .Site.BaseURL }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .RSSLink }}">
-
-    <!-- Fonts -->
-    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="license" href="/license/">
 
     <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" type="text/css" href="/style.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
-    <script type="text/javascript" src="/js/highlight.pack.js"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!-- pipe through safeHtml to stop Go templates from stripping comments -->
-    {{ "<!--[if lt IE 9]>" | safeHtml }}
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    {{ "<![endif]-->" | safeHtml }}
   </head>
 
   <body>
-    <nav class="branding">By day, just <a href="/colophon/">{{ .Site.Params.Author }}</a>. By night,<br>
-    <a class="site-name" href="/">{{ .Site.Title }}</a><br>
-      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
-    </nav><!-- .branding -->

@@ -68,8 +68,7 @@ MIT's [Introduction to Computer Science and Programming][mit6.00] because it's
 taught in Python, doesn't assume any prior knowledge, and moves slowly enough
 for me to watch while riding the train and keeping an eye out for my stop. I'm
 not sure what I'll tackle next, but I'm leaning towards continuing the MIT
-undergraduate sequence. (Have a suggestion? [Let me
-know][mailto:akshay@akshayshah.org]!)
+undergraduate sequence.
 
 ## Craftsmanship Is Crucial
 
@@ -127,7 +126,7 @@ time next. I could:
   inclined to focus more on hard skills for the next few months.
 
 If you've read this far, I'd appreciate your input! Send me an
-[email][mailto:akshay@akshayshah.org] and let me know where I went wrong.
+[email](mailto:akshay@akshayshah.org) and let me know where I went wrong.
 
 [LaTeX]: http://nitens.org/taraborelli/latex "The Beauty of LaTeX"
 [Python]: http://www.python.org/about/
@@ -137,7 +136,7 @@ If you've read this far, I'd appreciate your input! Send me an
 [Perl]: http://learn.perl.org/first_steps/ "Perl First Steps"
 [t]: http://stevelosh.com/projects/t/
 [t-src]: https://bitbucket.org/sjl/t/src/
-[mit6.00]: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/ 
+[mit6.00]: http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/
 [Code Complete]: http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670
 [codinghorror]: http://www.codinghorror.com/blog/2004/02/recommended-reading-for-developers.html
 [The Pragmatic Programmer]: http://pragprog.com/book/tpp/the-pragmatic-programmer

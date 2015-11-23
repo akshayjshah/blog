@@ -1,12 +1,12 @@
 baseurl = "http://www.akshayshah.org"
 languageCode = "en-us"
-title = "Data Hacker, MD"
+title = "Akshay Shah"
 
 [params]
   DateFmt = "January _2, 2006"
   Author = "Akshay Shah"
   AuthorEmail = "akshay@akshayshah.org"
-  Description = "Thoughts from a physician-turned-engineer."
+  Description = "Thoughts on code and human factors from a physician-turned-engineer."
   GoogleSiteVerification = "4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw"
 
 [blackfriday]

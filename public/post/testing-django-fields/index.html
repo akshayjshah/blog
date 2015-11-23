@@ -5,49 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-      <title>Testing Django Fields • Data Hacker, MD</title>
+      <title>Testing Django Fields • Akshay Shah</title>
     
-    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="description" content="Thoughts on code and human factors from a physician-turned-engineer.">
     <meta name="author" content="Akshay Shah">
     <meta name="google-site-verification" content="4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw">
-    <meta name="generator" content="Hugo 0.13" />
+    <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://www.akshayshah.org/">
-    <link rel="canonical" href="http://www.akshayshah.org/post/testing-django-fields/">
-    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+    <base href="http://localhost:1313/">
+    <link rel="canonical" href="http://localhost:1313/post/testing-django-fields/">
+    <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
+    <link rel="license" href="/license/">
 
     
-    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" type="text/css" href="/style.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
-    <script type="text/javascript" src="/js/highlight.pack.js"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
-    
-    
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
-    <a class="site-name" href="/">Data Hacker, MD</a><br>
-      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
-    </nav>
 
 
 <header>
   <h1>Testing Django Fields</h1>
-  August 15, 2013
+  <p class="subtitle">August 15, 2013</p>
 </header>
 
 <article>
-  <p>I love the flexibility that custom Django fields, abstract models, managers,
+    <p>I love the flexibility that custom Django fields, abstract models, managers,
 and querysets offer, but unit testing them is a pain. Ideally, the tests for
 custom Django fields should be completely isolated from the models that use the
 fields in production; deciding that, for example, my <code>User</code> model no longer
@@ -170,15 +156,17 @@ class SoftDeletionTests(ModelTestCase):
         self.assertRaises(IntegrityError, first.save)
 </code></pre>
 
-<p>Questions? Have a better idea? [Let me know][mailto:akshay@akshayshah.org]!</p>
+<p>Questions? Have a better idea? <a href="mailto:akshay@akshayshah.org">Let me know</a>!</p>
 
 </article>
 
-    <footer>
-    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
-    This blog has an <a href="">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
-    Unless otherwise noted, all code and prose is licensed under the <a href="/license/" rel="license">MIT license</a>.<br>
-    </footer>
-  </body>
+        <footer>
+            &larr; <a href="/" rel="index">Home</a><br>
+            &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
+        </footer>
+    <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 

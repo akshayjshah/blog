@@ -1,0 +1,22 @@
+table {
+    empty-cells: show;
+    overflow-x: auto;
+    clear: left;
+    text-align: center;
+    margin: 1rem 0;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    -moz-font-feature-settings: "tnum";
+    -ms-font-feature-settings: "tnum";
+}
+
+tbody td {
+    vertical-align: top;
+}
+
+thead th {
+    border-bottom: 1px dotted;
+    font-weight: 400;
+}

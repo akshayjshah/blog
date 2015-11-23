@@ -5,10 +5,11 @@ date = "2013-02-10"
 
 Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
 using Go also do front-end work in ActionScript? Most programmers have some
-intuitions about these questions -- *but what does the data say*? Spurred on by
+intuitions about these questions---*but what does the data say*? Spurred on by
 a six-month-old Twitter [conversation][twitter-convo], I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: <img src="/img/post/language-use-on-github/spearman_language_correlation.svg"
+languages on GitHub: <img
+src="/img/post/language-use-on-github/spearman_language_correlation.svg"
 alt="Language Correlation on GitHub" class="fill-column">
 
 Each square in the chart measures the [rank correlation][wiki-rank-correlation]
@@ -149,6 +150,16 @@ popular = pushes.select(lambda x: np.sum(pushes[x]) > 50000, axis=1)
 Now that our data's formatted and filtered, it's time to actually calculate our
 correlation matrix and draw a plot. Again, pandas makes the number-crunching
 ridiculously simple:
+{{< update "fillna" >}}
+As <a href="http://conjugateprior.org/">conjugateprior</a>
+noted in the now-defunct comments, this calculation ignores any rows with missing
+data (for example, the Python-Ruby correlation ignores any users who haven&rsquo;t
+used both Python and Ruby). We could fill the missing values with zeroes (which
+Corey has already done&mdash;check out his <a
+href="https://gist.github.com/coyotebush/5379476">updated code</a> and <a
+href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</a>),
+or we could also calculate significance for each correlation.
+{{< /update >}}
 
 ```python
 import matplotlib.pyplot as plt
@@ -172,15 +183,6 @@ plot_correlation(
     title='2012 GitHub Language Correlations',
     corr_type='Spearman\'s Rank Correlation')
 ```
-
-<p class="update"><em>Update:</em> As <a href="http://conjugateprior.org/">conjugateprior</a>
-noted in the now-defunct comments, this calculation ignores any rows with missing
-data (for example, the Python-Ruby correlation ignores any users who haven't
-used both Python and Ruby). We could fill the missing values with zeroes (which
-Corey has already done - check out his <a
-href="https://gist.github.com/coyotebush/5379476">updated code</a> and <a
-href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</a>),
-or we could also calculate significance for each correlation.</p>
 
 It's better to use [Spearman's rank correlation][wiki-rank-correlation] here
 instead of the usual [Pearson correlation][wiki-pearson-correlation] for two
@@ -223,13 +225,13 @@ Like any analysis project, this one comes with a few caveats:
 * Correlation isn't causation.
 
 I've only scratched the surface here -- if you've got some ideas, [let me
-know][mailto:akshay@akshayshah.org]!
+know](mailto:akshay@akshayshah.org)!
 
 [big-query]: https://developers.google.com/bigquery/
 [brian-doll-data]: https://gist.github.com/briandoll/e0637fff9c8eec988528
 [brian-doll]: https://github.com/briandoll
 [gist]: https://gist.github.com/akshayjshah/4772174
-[github-archive]: http://www.githubarchive.org/ 
+[github-archive]: http://www.githubarchive.org/
 [pandas]: http://pandas.pydata.org/
 [pearson-plot]: /img/post/language-use-on-github/pearson_language_correlation.svg
 [php]: http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/

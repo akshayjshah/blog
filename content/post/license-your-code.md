@@ -3,14 +3,14 @@ title = "License Your Code!"
 date = "2013-08-04"
 +++
 
-If you're a [GitHub][] (or [Bitbucket][], or [Gitorious][]) user, you probably
+If you're a [GitHub][] user, you probably
 want to let other people use your code in their own projects. Just throwing
 your code online isn't enough, though -- you *have* to release it under an
 open-source license.  If you're not sure why, read on: in this post, I'll
 explain the absolute minimum that every developer should know about copyright
 and software licensing.
 
-Even though <abbr title="I Am Not a Lawyer">IANAL</abbr>, I'll start with a few
+Even though I'm not a lawyer, I'll start with a few
 disclaimers: this post isn't legal advice, I'm not going to address patents at
 all, and some of what I'm about to explain is specific to the United States.
 
@@ -20,7 +20,7 @@ In the US, every shred of code you've ever written is automatically protected
 by copyright. That means, broadly speaking, that it's your property.  If you
 leave your bike unlocked outside a coffee shop, I'm not allowed to walk by and
 steal it; similarly, if you post your code online, I'm not automatically
-allowed to copy and use it. Don't worry, though -- seventy years after you die,
+allowed to copy and use it. Don't worry, though---seventy years after you die,
 the copyright expires and your code enters the *public domain*, at which point
 I can finally use it however I like.
 
@@ -69,22 +69,18 @@ sharing your code online.
 
 * Need a refresher? Looking for some actual legalese to include in your
   project? Check out GitHub's [license picker][].
-
 * Want to know more about intellectual property and open source? Read Richard
   Stallman's [Why Software Should Not Have Owners][no-owners]. It's a seminal
   piece, and it's well worth your time.
-
 * Wondering why most folks these days call it "open-source" and not "free"
   software? Read Eric Raymond's [1998 call to action][esr-opensource]. While
   you're there, you may want to check out [The Cathedral and the Bazaar][catb].
   (Ignore anything related to guns, sex, or politics.) For Stallman's response,
   read [Why Open Source Misses the Point of Free Software][rms-opensource].
-
 * Curious how all this copyright stuff relates to software patents? It's
   complicated. Patents aren't the same thing as copyright, though some
   open-source licenses attempt to address them. Think of patent protection as
-  another axis that's orthogonal to the permissive-copyleft axis. If you know
-  of a good summary article, [let me know](mailto:akshay@akshayshah.org)!
+  another axis that's orthogonal to the permissive-copyleft axis.
 
 [GitHub]: http://github.com
 [Bitbucket]: http://bitbucket.org

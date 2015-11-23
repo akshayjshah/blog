@@ -3,13 +3,6 @@ title = "Soft Deletion in Django"
 date = "2013-05-09"
 +++
 
-<p class="update"><em>Update:</em> I've open-sourced this soft-deletion
-strategy as <code>django-livefield</code>. You can install it from <a
-href="https://pypi.python.org/pypi/django-livefield/" title="django-livefield
-on PyPI">PyPI</a> or check out the code on <a
-href="https://github.com/hearsaycorp/django-livefield" title="django-livefield
-on GitHub">GitHub</a>. Try it out and let me know what you think!</p>
-
 Like any self-respecting data nerd, I find deleting database records abhorrent.
 What happens if I need to resurrect those records later? What if I want to run
 a survival analysis? Django's ORM doesn't offer any out-of-the-box support for
@@ -18,6 +11,15 @@ methods and flipping a Boolean field instead of actually deleting anything.
 After living with that system for a while, though, I'm convinced that it's
 inadequate; in this post, I'll explain its principal shortcoming and propose a
 slightly more complex, but vastly better, alternative.
+{{< update "django-livefield" >}}
+I&rsquo;ve open-sourced this soft-deletion
+plug-in as <code>django-livefield</code>. You can install it from <a
+href="https://pypi.python.org/pypi/django-livefield/" title="django-livefield
+on PyPI">PyPI</a> or check out the code on <a
+href="https://github.com/hearsaycorp/django-livefield" title="django-livefield
+on GitHub">GitHub</a>. Try it out and let me know what you think!
+{{< /update >}}
+
 
 ## Naive Soft-Deletion
 
@@ -93,7 +95,7 @@ an ``IntegrityError``. Luckily, there's a better way.
 At the database level, there's a straightforward solution to this problem
 (though I didn't learn about it until a few months ago): store soft-deleted
 records with nulls in the ``alive`` column. As mandated by the ANSI SQL
-standard, MySQL, Postgres, and SQLite treat each null as a unique snowflake. 
+standard, MySQL, Postgres, and SQLite treat each null as a unique snowflake.
 
 However, creating a Django field with this behavior is a little tricky because
 we want to forbid ``False`` values in the database (allowing only ``True`` and
@@ -149,7 +151,7 @@ it's been a huge help already -- having the option to simultaneously support
 soft-deletion and uniqueness constraints keeps our application code *and* our
 data clean.
 
-(Curious how to test your shiny new soft-deletion field? Check out my post on
+Curious how to test your shiny new soft-deletion field? Check out my post on
 [testing custom Django fields](/post/testing-django-fields) for some tips, or
 check out the actual test setup on
-[GitHub](https://github.com/hearsaycorp/django-livefield).)
+[GitHub](https://github.com/hearsaycorp/django-livefield).

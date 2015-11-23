@@ -2,11 +2,11 @@
 
 <header>
   <h1>{{ .Title }}</h1>
-  {{ .Date.Format .Site.Params.DateFmt }}
+  {{ if ne .Date.Year 1 }}<p class="subtitle">{{ .Date.Format .Site.Params.DateFmt }}</p>{{ end }}
 </header>
 
 <article>
-  {{ .Content }}
+    {{ .Content }}
 </article>
 
 {{ partial "footer.html" . }}

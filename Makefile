@@ -1,17 +1,27 @@
-default: build
+.DEFAULT_GOAL := build
 
-quickstart:
-	brew install hugo
-	npm install -g less less-plugin-clean-css
+.PHONY: bootstrap
+bootstrap:
+	brew install hugo sassc yuicompressor
+	# Add GitHub Pages repo for deployment.
+	git remote add -f deploy https://github.com/akshayjshah/akshayjshah.github.io.git
+	git subtree add --prefix public deploy master --squash
 
-css:
-	lessc --clean-css="--s1 --advanced --compatibility=ie8" less/style.less static/style.min.css
 
-serve: css
-	hugo server --watch
+css: styles
+	sassc styles/style.scss | yuicompressor --type css > static/style.min.css
 
-build: css
+.PHONY: clean
+clean:
+	rm -rf public
+
+build: css archetypes content data layouts static config.toml
 	hugo
 
+.PHONY: serve
+serve: build
+	hugo server --watch
+
+.PHONY: deploy
 deploy: build
-	git subtree push --prefix=public git@github.com:akshayjshah/akshayjshah.github.io.git master
+	git subtree push --prefix=public deploy master

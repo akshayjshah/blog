@@ -1,14 +1,19 @@
-{{ partial "header.html" }}
+{{ partial "header.html" . }}
 
-<article>
 <header>
   <h1>Oh Noes!</h1>
-  <h2>404</h2>
+  <p class="subtitle">This is a 404.</p>
 </header>
 
-<p class="lead">Whether by accident or design, the page you're looking for
-doesn&rsquo;t exist &mdash; sorry! Perhaps you&rsquo;d like to check the <a
-  href="/">homepage</a>?</p>
+<article>
+  <figure>
+    <img src="img/oh-no-300x300.png">
+  </figure>
+
+  <p>Whether by accident or design, the page you're looking for doesn&rsquo;t
+  exist&mdash;perhaps you'll have better luck starting from the <a href="/"
+  rel="index">homepage</a>.</p>
+    
 </article>
 
-{{ partial "footer.html" }}
+{{ partial "footer.html" . }}

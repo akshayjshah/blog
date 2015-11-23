@@ -3,16 +3,17 @@ title = "Hakyll and Bootstrap"
 date = "2012-08-04"
 +++
 
-<p class="update"><em>Update:</em> It's probably no surprise, but diving
+Though
+{{< update "failure" >}}
+It's probably no surprise, but diving
 straight into Haskell wasn't the smoothest transition; without a better
 understanding of the language as a whole, I spent more time fiddling with the
 code than writing. I experimented with a few different site generation tools,
 including a custom Python script, before settling on Steve Francia's <a
 href="http://gohugo.io/" title="Hugo: A Fast & Modern Static Website
 Generator">Hugo</a>.
-</p>
-
-Though I've run a few [Wordpress][] sites in the past, I've always found the
+{{< /update >}}
+I've run a few [Wordpress][] sites in the past, I've always found the
 software irritating to use. In particular, I *loathe* the composer--the
 rich text editor never works quite as I expect it to, and the <abbr
 class="initialism">HTML</abbr> editor mangles my markup without warning. The
@@ -89,7 +90,7 @@ distracting from the words themselves.
 My efforts to choose a different color scheme, though, have been a complete
 failure. The defaults are nice enough, but they lack soul, and my efforts to
 change them usually end in a neon-tinted nightmare. There's hope on the
-horizon, though--I just read Ian Taylor's ["Never Use Black,"][black]
+horizon, though--I just read Ian Taylor's "[Never Use Black][black],"
 and I may try mixing some blue or red into the default grays.
 
 I'm not much of a programmer or a designer, so I'm always in the market for

@@ -10,9 +10,9 @@ working engineer supposed to keep up without spending every free moment
 on Hacker News?
 
 *Podcasts*, that's how. Unfortunately, most podcasts are meandering
-stream-of-consciousness monologues recorded on a laptop microphone. After a few
-years of avid listening, though, I've found a pretty good selection of shows
---- if you share my interests in web development, data science, and startups,
+monologues recorded on a laptop microphone. After a few
+years of avid listening, though, I've found a pretty good selection of
+shows---if you share my interests in web development, data science, and startups,
 you may find something you like. All these podcasts regularly produce great
 episodes, but I listen to the three-star shows religiously and the one-star shows
 only if the topic sounds appealing.
@@ -26,8 +26,8 @@ know](mailto:akshay@akshayshah.org) --- I'm always looking for something new.
 1. [The Changelog](https://changelog.com/podcast/) ★★★
 1. [Hanselminutes](http://hanselminutes.com/) ★★
 1. [Talk Python to Me](http://www.talkpythontome.com/) ★★
-1. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) ★★ 
-1. [The Ship Show](http://theshipshow.com/) ★ 
+1. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) ★★
+1. [The Ship Show](http://theshipshow.com/) ★
 
 ## The Web
 1. [The Big Web Show](http://5by5.tv/bigwebshow) ★★
@@ -49,4 +49,3 @@ A quick word on podcasting clients: the official podcast clients from Apple and
 Google are okay, but it's worth spending a few dollars to get a top-notch
 third-party app. If you're on iOS, Marco Arment's
 [Overcast](https://overcast.fm/) is simply *amazing*.
-

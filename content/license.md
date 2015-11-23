@@ -1,10 +1,7 @@
 +++
-date = "2015-04-02T21:57:17-07:00"
 title = "The MIT License"
 
 +++
-
-Copyright &copy; 2015 Akshay Shah
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

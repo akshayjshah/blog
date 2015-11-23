@@ -129,7 +129,7 @@ class SoftDeletionTests(ModelTestCase):
         self.assertRaises(IntegrityError, first.save)
 ```
 
-Questions? Have a better idea? [Let me know][mailto:akshay@akshayshah.org]!
+Questions? Have a better idea? [Let me know](mailto:akshay@akshayshah.org)!
 
 [so]: http://stackoverflow.com/questions/502916/django-how-to-create-a-model-dynamically-just-for-testing
 [soft-deletion field]: /post/django-soft-deletion/

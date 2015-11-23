@@ -1,25 +1,94 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Data Hacker, MD</title>
-    <link>http://www.akshayshah.org/post/</link>
-    <description>Recent content in Posts on Data Hacker, MD</description>
+    <title>Posts on Akshay Shah</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Akshay Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Aug 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.akshayshah.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 May 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Podcasts for Developers</title>
+      <link>http://localhost:1313/post/podcasts-for-developers/</link>
+      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/podcasts-for-developers/</guid>
+      <description>
+
+&lt;p&gt;Even though computer science doesn&amp;rsquo;t change too quickly, software engineering
+changes all the time. New libraries, languages, and architectural patterns
+emerge, jump the shark, and die, only to re-emerge a few years later. How&amp;rsquo;s a
+working engineer supposed to keep up without spending every free moment
+on Hacker News?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Podcasts&lt;/em&gt;, that&amp;rsquo;s how. Unfortunately, most podcasts are meandering
+monologues recorded on a laptop microphone. After a few
+years of avid listening, though, I&amp;rsquo;ve found a pretty good selection of
+shows&amp;mdash;if you share my interests in web development, data science, and startups,
+you may find something you like. All these podcasts regularly produce great
+episodes, but I listen to the three-star shows religiously and the one-star shows
+only if the topic sounds appealing.&lt;/p&gt;
+
+&lt;p&gt;If you know of a great show that isn&amp;rsquo;t on my list, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
+know&lt;/a&gt; &amp;mdash; I&amp;rsquo;m always looking for something new.&lt;/p&gt;
+
+&lt;h2 id=&#34;general-engineering&#34;&gt;General Engineering&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.se-radio.net/&#34;&gt;Software Engineering Radio&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://changelog.com/podcast/&#34;&gt;The Changelog&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hanselminutes.com/&#34;&gt;Hanselminutes&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.talkpythontome.com/&#34;&gt;Talk Python to Me&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jupiterbroadcasting.com/show/coderradio/&#34;&gt;Coder Radio&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://theshipshow.com/&#34;&gt;The Ship Show&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;the-web&#34;&gt;The Web&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://5by5.tv/bigwebshow&#34;&gt;The Big Web Show&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pathtoperf.com/&#34;&gt;The Path to Performance&lt;/a&gt; ★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://thewebahead.net/&#34;&gt;The Web Ahead&lt;/a&gt; ★ (the &lt;a href=&#34;http://thewebahead.net/34&#34;&gt;Web
+Behind&lt;/a&gt; sub-series was ★★★)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://devchat.tv/js-jabber/&#34;&gt;JavaScript Jabber&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;data-science-and-big-data&#34;&gt;Data Science and Big Data&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.thetalkingmachines.com/&#34;&gt;Talking Machines&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://radar.oreilly.com/tag/oreilly-data-show-podcast&#34;&gt;O&amp;rsquo;Reilly Data Show&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;startups-and-silicon-valley&#34;&gt;Startups and Silicon Valley&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://gimletmedia.com/show/startup/&#34;&gt;StartUp Podcast&lt;/a&gt; ★★★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a16z.com/tag/podcasts/&#34;&gt;a16z&lt;/a&gt; ★&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;podcatchers&#34;&gt;Podcatchers&lt;/h2&gt;
+
+&lt;p&gt;A quick word on podcasting clients: the official podcast clients from Apple and
+Google are okay, but it&amp;rsquo;s worth spending a few dollars to get a top-notch
+third-party app. If you&amp;rsquo;re on iOS, Marco Arment&amp;rsquo;s
+&lt;a href=&#34;https://overcast.fm/&#34;&gt;Overcast&lt;/a&gt; is simply &lt;em&gt;amazing&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Testing Django Fields</title>
-      <link>http://www.akshayshah.org/post/testing-django-fields/</link>
+      <link>http://localhost:1313/post/testing-django-fields/</link>
       <pubDate>Thu, 15 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.akshayshah.org/post/testing-django-fields/</guid>
+      <guid>http://localhost:1313/post/testing-django-fields/</guid>
       <description>&lt;p&gt;I love the flexibility that custom Django fields, abstract models, managers,
 and querysets offer, but unit testing them is a pain. Ideally, the tests for
 custom Django fields should be completely isolated from the models that use the
 fields in production; deciding that, for example, my &lt;code&gt;User&lt;/code&gt; model no longer
-needs to support soft deletion shouldn&amp;rsquo;t affect the tests for the &lt;a href=&#34;http://www.akshayshah.org/post/django-soft-deletion/&#34;&gt;soft-deletion
+needs to support soft deletion shouldn&amp;rsquo;t affect the tests for the &lt;a href=&#34;http://localhost:1313/post/django-soft-deletion/&#34;&gt;soft-deletion
 field&lt;/a&gt; itself.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://stackoverflow.com/questions/502916/django-how-to-create-a-model-dynamically-just-for-testing&#34;&gt;most common approach&lt;/a&gt; to this problem is simple, if annoying: declare
@@ -101,7 +170,7 @@ class ModelTestCase(TestCase):
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Looking for an example? Here&amp;rsquo;s a section of the test suite for my
-&lt;a href=&#34;http://www.akshayshah.org/post/django-soft-deletion/&#34;&gt;soft-deletion field&lt;/a&gt;:&lt;/p&gt;
+&lt;a href=&#34;http://localhost:1313/post/django-soft-deletion/&#34;&gt;soft-deletion field&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from django.db import IntegrityError, models
 
@@ -138,26 +207,26 @@ class SoftDeletionTests(ModelTestCase):
         self.assertRaises(IntegrityError, first.save)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Questions? Have a better idea? [Let me know][mailto:akshay@akshayshah.org]!&lt;/p&gt;
+&lt;p&gt;Questions? Have a better idea? &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;Let me know&lt;/a&gt;!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>License Your Code!</title>
-      <link>http://www.akshayshah.org/post/license-your-code/</link>
+      <link>http://localhost:1313/post/license-your-code/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.akshayshah.org/post/license-your-code/</guid>
+      <guid>http://localhost:1313/post/license-your-code/</guid>
       <description>
 
-&lt;p&gt;If you&amp;rsquo;re a &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; (or &lt;a href=&#34;http://bitbucket.org&#34;&gt;Bitbucket&lt;/a&gt;, or &lt;a href=&#34;http://www.gitorious.com&#34;&gt;Gitorious&lt;/a&gt;) user, you probably
+&lt;p&gt;If you&amp;rsquo;re a &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; user, you probably
 want to let other people use your code in their own projects. Just throwing
 your code online isn&amp;rsquo;t enough, though &amp;ndash; you &lt;em&gt;have&lt;/em&gt; to release it under an
 open-source license.  If you&amp;rsquo;re not sure why, read on: in this post, I&amp;rsquo;ll
 explain the absolute minimum that every developer should know about copyright
 and software licensing.&lt;/p&gt;
 
-&lt;p&gt;Even though &lt;abbr title=&#34;I Am Not a Lawyer&#34;&gt;IANAL&lt;/abbr&gt;, I&amp;rsquo;ll start with a few
+&lt;p&gt;Even though I&amp;rsquo;m not a lawyer, I&amp;rsquo;ll start with a few
 disclaimers: this post isn&amp;rsquo;t legal advice, I&amp;rsquo;m not going to address patents at
 all, and some of what I&amp;rsquo;m about to explain is specific to the United States.&lt;/p&gt;
 
@@ -167,7 +236,7 @@ all, and some of what I&amp;rsquo;m about to explain is specific to the United S
 by copyright. That means, broadly speaking, that it&amp;rsquo;s your property.  If you
 leave your bike unlocked outside a coffee shop, I&amp;rsquo;m not allowed to walk by and
 steal it; similarly, if you post your code online, I&amp;rsquo;m not automatically
-allowed to copy and use it. Don&amp;rsquo;t worry, though &amp;ndash; seventy years after you die,
+allowed to copy and use it. Don&amp;rsquo;t worry, though&amp;mdash;seventy years after you die,
 the copyright expires and your code enters the &lt;em&gt;public domain&lt;/em&gt;, at which point
 I can finally use it however I like.&lt;/p&gt;
 
@@ -215,42 +284,31 @@ sharing your code online.&lt;/p&gt;
 &lt;h2 id=&#34;more-questions&#34;&gt;More Questions?&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Need a refresher? Looking for some actual legalese to include in your
-project? Check out GitHub&amp;rsquo;s &lt;a href=&#34;http://choosealicense.com/&#34;&gt;license picker&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Want to know more about intellectual property and open source? Read Richard
+&lt;li&gt;Need a refresher? Looking for some actual legalese to include in your
+project? Check out GitHub&amp;rsquo;s &lt;a href=&#34;http://choosealicense.com/&#34;&gt;license picker&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Want to know more about intellectual property and open source? Read Richard
 Stallman&amp;rsquo;s &lt;a href=&#34;http://www.gnu.org/philosophy/why-free.html&#34;&gt;Why Software Should Not Have Owners&lt;/a&gt;. It&amp;rsquo;s a seminal
-piece, and it&amp;rsquo;s well worth your time.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Wondering why most folks these days call it &amp;ldquo;open-source&amp;rdquo; and not &amp;ldquo;free&amp;rdquo;
+piece, and it&amp;rsquo;s well worth your time.&lt;/li&gt;
+&lt;li&gt;Wondering why most folks these days call it &amp;ldquo;open-source&amp;rdquo; and not &amp;ldquo;free&amp;rdquo;
 software? Read Eric Raymond&amp;rsquo;s &lt;a href=&#34;http://catb.org/~esr/open-source.html&#34;&gt;1998 call to action&lt;/a&gt;. While
 you&amp;rsquo;re there, you may want to check out &lt;a href=&#34;http://catb.org/esr/writings/cathedral-bazaar/cathedral-bazaar/&#34;&gt;The Cathedral and the Bazaar&lt;/a&gt;.
 (Ignore anything related to guns, sex, or politics.) For Stallman&amp;rsquo;s response,
-read &lt;a href=&#34;http://www.gnu.org/philosophy/open-source-misses-the-point.html&#34;&gt;Why Open Source Misses the Point of Free Software&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Curious how all this copyright stuff relates to software patents? It&amp;rsquo;s
+read &lt;a href=&#34;http://www.gnu.org/philosophy/open-source-misses-the-point.html&#34;&gt;Why Open Source Misses the Point of Free Software&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Curious how all this copyright stuff relates to software patents? It&amp;rsquo;s
 complicated. Patents aren&amp;rsquo;t the same thing as copyright, though some
 open-source licenses attempt to address them. Think of patent protection as
-another axis that&amp;rsquo;s orthogonal to the permissive-copyleft axis. If you know
-of a good summary article, [let me know][mailto:akshay@akshayshah.org]!&lt;/p&gt;&lt;/li&gt;
+another axis that&amp;rsquo;s orthogonal to the permissive-copyleft axis.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Soft Deletion in Django</title>
-      <link>http://www.akshayshah.org/post/django-soft-deletion/</link>
+      <link>http://localhost:1313/post/django-soft-deletion/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.akshayshah.org/post/django-soft-deletion/</guid>
+      <guid>http://localhost:1313/post/django-soft-deletion/</guid>
       <description>
-
-&lt;p class=&#34;update&#34;&gt;&lt;em&gt;Update:&lt;/em&gt; I&#39;ve open-sourced this soft-deletion
-strategy as &lt;code&gt;django-livefield&lt;/code&gt;. You can install it from &lt;a
-href=&#34;https://pypi.python.org/pypi/django-livefield/&#34; title=&#34;django-livefield
-on PyPI&#34;&gt;PyPI&lt;/a&gt; or check out the code on &lt;a
-href=&#34;https://github.com/hearsaycorp/django-livefield&#34; title=&#34;django-livefield
-on GitHub&#34;&gt;GitHub&lt;/a&gt;. Try it out and let me know what you think!&lt;/p&gt;
 
 &lt;p&gt;Like any self-respecting data nerd, I find deleting database records abhorrent.
 What happens if I need to resurrect those records later? What if I want to run
@@ -259,7 +317,20 @@ soft-deletion, but it&amp;rsquo;s not difficult to preserve your data by overrid
 methods and flipping a Boolean field instead of actually deleting anything.
 After living with that system for a while, though, I&amp;rsquo;m convinced that it&amp;rsquo;s
 inadequate; in this post, I&amp;rsquo;ll explain its principal shortcoming and propose a
-slightly more complex, but vastly better, alternative.&lt;/p&gt;
+slightly more complex, but vastly better, alternative.
+&lt;label for=&#34;mn-update-django-livefield&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-update-django-livefield&#34; class=&#34;margin-toggle&#34;&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+    &lt;em&gt;Update:&lt;/em&gt; 
+I&amp;rsquo;ve open-sourced this soft-deletion
+plug-in as &lt;code&gt;django-livefield&lt;/code&gt;. You can install it from &lt;a
+href=&#34;https://pypi.python.org/pypi/django-livefield/&#34; title=&#34;django-livefield
+on PyPI&#34;&gt;PyPI&lt;/a&gt; or check out the code on &lt;a
+href=&#34;https://github.com/hearsaycorp/django-livefield&#34; title=&#34;django-livefield
+on GitHub&#34;&gt;GitHub&lt;/a&gt;. Try it out and let me know what you think!
+
+&lt;/span&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;naive-soft-deletion&#34;&gt;Naive Soft-Deletion&lt;/h2&gt;
 
@@ -389,27 +460,28 @@ it&amp;rsquo;s been a huge help already &amp;ndash; having the option to simulta
 soft-deletion and uniqueness constraints keeps our application code &lt;em&gt;and&lt;/em&gt; our
 data clean.&lt;/p&gt;
 
-&lt;p&gt;(Curious how to test your shiny new soft-deletion field? Check out my post on
-&lt;a href=&#34;http://www.akshayshah.org/post/testing-django-fields&#34;&gt;testing custom Django fields&lt;/a&gt; for some tips, or
+&lt;p&gt;Curious how to test your shiny new soft-deletion field? Check out my post on
+&lt;a href=&#34;http://localhost:1313/post/testing-django-fields&#34;&gt;testing custom Django fields&lt;/a&gt; for some tips, or
 check out the actual test setup on
-&lt;a href=&#34;https://github.com/hearsaycorp/django-livefield&#34;&gt;GitHub&lt;/a&gt;.)&lt;/p&gt;
+&lt;a href=&#34;https://github.com/hearsaycorp/django-livefield&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Language Use on GitHub</title>
-      <link>http://www.akshayshah.org/post/language-use-on-github/</link>
+      <link>http://localhost:1313/post/language-use-on-github/</link>
       <pubDate>Sun, 10 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.akshayshah.org/post/language-use-on-github/</guid>
+      <guid>http://localhost:1313/post/language-use-on-github/</guid>
       <description>
 
 &lt;p&gt;Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
 using Go also do front-end work in ActionScript? Most programmers have some
-intuitions about these questions &amp;ndash; &lt;em&gt;but what does the data say&lt;/em&gt;? Spurred on by
+intuitions about these questions&amp;mdash;&lt;em&gt;but what does the data say&lt;/em&gt;? Spurred on by
 a six-month-old Twitter &lt;a href=&#34;https://twitter.com/misc/status/235167513833525249&#34;&gt;conversation&lt;/a&gt;, I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: &lt;img src=&#34;http://www.akshayshah.org/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
+languages on GitHub: &lt;img
+src=&#34;/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
 alt=&#34;Language Correlation on GitHub&#34; class=&#34;fill-column&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Each square in the chart measures the &lt;a href=&#34;http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient&#34;&gt;rank correlation&lt;/a&gt;
@@ -530,8 +602,8 @@ pushes = pd.read_csv(&#39;stacked_language_by_user.csv&#39;).pivot(
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Exporting these results from BigQuery was an enormous pain (and required a paid
-account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
-&lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
+account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
+&lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
 
 &lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
 
@@ -546,7 +618,22 @@ popular = pushes.select(lambda x: np.sum(pushes[x]) &amp;gt; 50000, axis=1)
 
 &lt;p&gt;Now that our data&amp;rsquo;s formatted and filtered, it&amp;rsquo;s time to actually calculate our
 correlation matrix and draw a plot. Again, pandas makes the number-crunching
-ridiculously simple:&lt;/p&gt;
+ridiculously simple:
+&lt;label for=&#34;mn-update-fillna&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-update-fillna&#34; class=&#34;margin-toggle&#34;&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+    &lt;em&gt;Update:&lt;/em&gt; 
+As &lt;a href=&#34;http://conjugateprior.org/&#34;&gt;conjugateprior&lt;/a&gt;
+noted in the now-defunct comments, this calculation ignores any rows with missing
+data (for example, the Python-Ruby correlation ignores any users who haven&amp;rsquo;t
+used both Python and Ruby). We could fill the missing values with zeroes (which
+Corey has already done&amp;mdash;check out his &lt;a
+href=&#34;https://gist.github.com/coyotebush/5379476&#34;&gt;updated code&lt;/a&gt; and &lt;a
+href=&#34;http://coreyford.name/2013/04/13/github-language-correlations.html&#34;&gt;plot&lt;/a&gt;),
+or we could also calculate significance for each correlation.
+
+&lt;/span&gt;
+&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
 
@@ -570,15 +657,6 @@ plot_correlation(
     corr_type=&#39;Spearman\&#39;s Rank Correlation&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p class=&#34;update&#34;&gt;&lt;em&gt;Update:&lt;/em&gt; As &lt;a href=&#34;http://conjugateprior.org/&#34;&gt;conjugateprior&lt;/a&gt;
-noted in the now-defunct comments, this calculation ignores any rows with missing
-data (for example, the Python-Ruby correlation ignores any users who haven&#39;t
-used both Python and Ruby). We could fill the missing values with zeroes (which
-Corey has already done - check out his &lt;a
-href=&#34;https://gist.github.com/coyotebush/5379476&#34;&gt;updated code&lt;/a&gt; and &lt;a
-href=&#34;http://coreyford.name/2013/04/13/github-language-correlations.html&#34;&gt;plot&lt;/a&gt;),
-or we could also calculate significance for each correlation.&lt;/p&gt;
-
 &lt;p&gt;It&amp;rsquo;s better to use &lt;a href=&#34;http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient&#34;&gt;Spearman&amp;rsquo;s rank correlation&lt;/a&gt; here
 instead of the usual &lt;a href=&#34;http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient&#34;&gt;Pearson correlation&lt;/a&gt; for two
 reasons:&lt;/p&gt;
@@ -593,10 +671,10 @@ less distorted by these outliers.&lt;/li&gt;
 &lt;p&gt;If that doesn&amp;rsquo;t convince you, it&amp;rsquo;s easy to calculate the Pearson correlation &amp;ndash;
 it&amp;rsquo;s the default in pandas, so removing the &lt;code&gt;method=&#39;spearman&#39;&lt;/code&gt; above should
 do the trick. If you&amp;rsquo;re impatient, you can just peek at the
-&lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/pearson_language_correlation.svg&#34;&gt;results&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/pearson_language_correlation.svg&#34;&gt;results&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-&lt;img src=&#34;http://www.akshayshah.org/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
+&lt;img src=&#34;http://localhost:1313/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
 alt=&#34;Language Correlation on GitHub&#34; class=&#34;fill-column&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The most striking thing about this chart is its &lt;em&gt;blueness&lt;/em&gt;. Despite our
@@ -623,27 +701,30 @@ from their closed-source counterparts.&lt;/li&gt;
 &lt;li&gt;Correlation isn&amp;rsquo;t causation.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, [let me
-know][mailto:akshay@akshayshah.org]!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
+know&lt;/a&gt;!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>An Audible Literacy Filter</title>
-      <link>http://www.akshayshah.org/post/audible-literacy-test/</link>
+      <link>http://localhost:1313/post/audible-literacy-test/</link>
       <pubDate>Mon, 22 Oct 2012 21:54:58 -0700</pubDate>
       
-      <guid>http://www.akshayshah.org/post/audible-literacy-test/</guid>
+      <guid>http://localhost:1313/post/audible-literacy-test/</guid>
       <description>
 
-&lt;blockquote cite=&#34;http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html&#34;&gt;
-&lt;p&gt;If it takes someone more than 20 years to notice how to properly use &#34;it&#39;s,&#34;
-then that&#39;s not a learning curve I&#39;m comfortable with. So, even in this
+&lt;p&gt;&lt;div class=&#34;epigraphs&#34;&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;If it takes someone more than 20 years to notice how to properly use &amp;ldquo;it&amp;rsquo;s,&amp;rdquo;
+then that&amp;rsquo;s not a learning curve I&amp;rsquo;m comfortable with. So, even in this
 hyper-competitive market, I will pass on a great programmer who cannot
 write.&lt;/p&gt;
-&lt;small&gt;Kyle Wiens on &lt;cite&gt;&lt;a href=&#34;http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html&#34;&gt;
-The Harvard Business Review Blog&lt;/a&gt;&lt;/cite&gt;&lt;/small&gt;
-&lt;/blockquote&gt;
+
+        &lt;footer&gt;Kyle Wiens on &lt;cite&gt;&lt;a href=&#34;http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html&#34;&gt;The Harvard Business Review Blog&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;
+    &lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Especially among technical folks, writing is an underrated skill. Kyle Wiens
 hit the front page of Hacker News by blogging about his use of a writing test
@@ -694,10 +775,10 @@ self-important candidate (or co-worker).&lt;/p&gt;
     
     <item>
       <title>Zero to Code Monkey</title>
-      <link>http://www.akshayshah.org/post/zero-to-code-monkey/</link>
+      <link>http://localhost:1313/post/zero-to-code-monkey/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.akshayshah.org/post/zero-to-code-monkey/</guid>
+      <guid>http://localhost:1313/post/zero-to-code-monkey/</guid>
       <description>
 
 &lt;p&gt;Last year, I&amp;rsquo;d never have called myself a programmer. Sure, I&amp;rsquo;d dabbled a bit
@@ -767,8 +848,7 @@ MIT&amp;rsquo;s &lt;a href=&#34;http://ocw.mit.edu/courses/electrical-engineerin
 taught in Python, doesn&amp;rsquo;t assume any prior knowledge, and moves slowly enough
 for me to watch while riding the train and keeping an eye out for my stop. I&amp;rsquo;m
 not sure what I&amp;rsquo;ll tackle next, but I&amp;rsquo;m leaning towards continuing the MIT
-undergraduate sequence. (Have a suggestion? [Let me
-know][mailto:akshay@akshayshah.org]!)&lt;/p&gt;
+undergraduate sequence.&lt;/p&gt;
 
 &lt;h2 id=&#34;craftsmanship-is-crucial&#34;&gt;Craftsmanship Is Crucial&lt;/h2&gt;
 
@@ -829,28 +909,34 @@ inclined to focus more on hard skills for the next few months.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;If you&amp;rsquo;ve read this far, I&amp;rsquo;d appreciate your input! Send me an
-[email][mailto:akshay@akshayshah.org] and let me know where I went wrong.&lt;/p&gt;
+&lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;email&lt;/a&gt; and let me know where I went wrong.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hakyll and Bootstrap</title>
-      <link>http://www.akshayshah.org/post/hakyll-and-bootstrap/</link>
+      <link>http://localhost:1313/post/hakyll-and-bootstrap/</link>
       <pubDate>Sat, 04 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.akshayshah.org/post/hakyll-and-bootstrap/</guid>
+      <guid>http://localhost:1313/post/hakyll-and-bootstrap/</guid>
       <description>
 
-&lt;p class=&#34;update&#34;&gt;&lt;em&gt;Update:&lt;/em&gt; It&#39;s probably no surprise, but diving
+&lt;p&gt;Though
+&lt;label for=&#34;mn-update-failure&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-update-failure&#34; class=&#34;margin-toggle&#34;&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+    &lt;em&gt;Update:&lt;/em&gt; 
+It&#39;s probably no surprise, but diving
 straight into Haskell wasn&#39;t the smoothest transition; without a better
 understanding of the language as a whole, I spent more time fiddling with the
 code than writing. I experimented with a few different site generation tools,
 including a custom Python script, before settling on Steve Francia&#39;s &lt;a
 href=&#34;http://gohugo.io/&#34; title=&#34;Hugo: A Fast &amp; Modern Static Website
 Generator&#34;&gt;Hugo&lt;/a&gt;.
-&lt;/p&gt;
 
-&lt;p&gt;Though I&amp;rsquo;ve run a few &lt;a href=&#34;http://www.wordpress.com&#34; title=&#34;WordPress&#34;&gt;Wordpress&lt;/a&gt; sites in the past, I&amp;rsquo;ve always found the
+&lt;/span&gt;
+
+I&amp;rsquo;ve run a few &lt;a href=&#34;http://www.wordpress.com&#34; title=&#34;WordPress&#34;&gt;Wordpress&lt;/a&gt; sites in the past, I&amp;rsquo;ve always found the
 software irritating to use. In particular, I &lt;em&gt;loathe&lt;/em&gt; the composer&amp;ndash;the
 rich text editor never works quite as I expect it to, and the &lt;abbr
 class=&#34;initialism&#34;&gt;HTML&lt;/abbr&gt; editor mangles my markup without warning. The
@@ -929,7 +1015,7 @@ distracting from the words themselves.&lt;/p&gt;
 &lt;p&gt;My efforts to choose a different color scheme, though, have been a complete
 failure. The defaults are nice enough, but they lack soul, and my efforts to
 change them usually end in a neon-tinted nightmare. There&amp;rsquo;s hope on the
-horizon, though&amp;ndash;I just read Ian Taylor&amp;rsquo;s &lt;a href=&#34;http://ianstormtaylor.com/design-tip-never-use-black/&#34; title=&#34;Design Tip: Never User Black&#34;&gt;&amp;ldquo;Never Use Black,&amp;rdquo;&lt;/a&gt;
+horizon, though&amp;ndash;I just read Ian Taylor&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://ianstormtaylor.com/design-tip-never-use-black/&#34; title=&#34;Design Tip: Never User Black&#34;&gt;Never Use Black&lt;/a&gt;,&amp;rdquo;
 and I may try mixing some blue or red into the default grays.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m not much of a programmer or a designer, so I&amp;rsquo;m always in the market for
