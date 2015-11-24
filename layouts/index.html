@@ -13,12 +13,17 @@
     <a href="mailto:{{ .Site.Params.AuthorEmail }}">email</a> and say hello,
     or <a href="/colophon/">read a bit more about me</a>.</p>
 
-    <h2>Posts</h2>
+    {{ range .Data.Pages.GroupByDate "2006" }}
+    {{ if ne .Key "0001" }}
+    <h2>{{ .Key }}</h2>
     <ol class="post-list">
-        {{ range where .Data.Pages "Type" "post" }}
-        {{ .Render "summary" }}
-        {{ end }}
+      {{ range where .Pages "Type" "post" }}
+      {{ .Render "summary" }}
+      {{ end }}
     </ol>
+    {{ end }}
+    {{ end }}
+
 </article>
 
 {{ partial "footer.html" . }}
