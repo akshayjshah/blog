@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <title>Zero to Code Monkey • Data Hacker, MD</title>
+    
+    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="author" content="Akshay Shah">
+    <meta name="google-site-verification" content="4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw">
+    <meta name="generator" content="Hugo 0.14" />
+
+    
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/zero-to-code-monkey/">
+    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+
+    
+    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
+    <a class="site-name" href="/">Data Hacker, MD</a><br>
+      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
+    </nav>
+
+
+<header>
+  <h1>Zero to Code Monkey</h1>
+  September 24, 2012
+</header>
+
+<article>
+  
+
+<p>Last year, I&rsquo;d never have called myself a programmer. Sure, I&rsquo;d dabbled a bit
+here and there: I took a few computer science courses in high school and
+college, cobbled together some Excel macros and one-off data processing scripts
+in medical school, and hand-wrote two websites in the late 90s. I&rsquo;d never
+written code daily, even while taking computer science classes, and most
+importantly, I&rsquo;d never collaborated on a software project. At best, I was a
+dilettante.</p>
+
+<p>Nine months later, I&rsquo;m on a different plane: I&rsquo;m still no expert, but I&rsquo;m
+definitely a programmer (or at least a code monkey). Writing code every day is
+an important part of my job, and I <em>love</em> it. If you&rsquo;re interested in learning
+to code, especially in Python, I hope my story helps you get started faster.</p>
+
+<h2 id="syntax-is-easy">Syntax Is Easy</h2>
+
+<p>Oddly enough, learning the syntax of a programming language &mdash; the rules
+for assembling words, curly braces, backslashes, and all the other
+typographical flotsam in the corners of your keyboard into working code &mdash;
+was relatively easy. <a href="http://www.python.org/about/">Python</a> is particularly straightforward, and Zed Shaw&rsquo;s
+<a href="http://learnpythonthehardway.org/">Learn Python the Hard Way</a> taught me the basics in a single weekend.
+Experimenting in an <a href="http://repl.it/" title="repl.it">interactive environment</a> was very helpful at this
+stage, since the interpreter caught all my mistakes, printed a helpful error
+message, and let me try again right away. Whenever I didn&rsquo;t understand where
+I&rsquo;d gone wrong, pasting the error message verbatim into Google always turned up
+a relevant answer.</p>
+
+<p>Only a few days in, I was able to exercise my new skills by writing a to-do
+manager like <a href="http://stevelosh.com/projects/t/">Steve Losh&rsquo;s t</a> &mdash; and it <em>actually worked</em>.  Writing
+even a simple utility that functioned exactly as I wanted it to was hugely
+empowering, and using my little program every day kept me excited about
+learning. Emulating t had an unanticipated, but immensely helpful, side effect:
+it let me compare my efforts to <a href="https://bitbucket.org/sjl/t/src/">the actual t source code</a>, which is
+also written in Python. Taking the time to really understand how Steve&rsquo;s code
+worked (and why it was much, much better than mine) accelerated my learning
+dramatically.</p>
+
+<h2 id="computer-science-is-practical">Computer Science Is Practical</h2>
+
+<p>Of course, what&rsquo;s a to-do manager without projects, sub-projects, and maybe
+even sub-sub-projects? Naively, I assumed that adding this feature to my little
+utility would be a quick one-hour project. When I sat down to start
+writing, though, I realized that I had no clue how to handle potentially
+infinite project nesting. A little research (leavened with some hazy memories
+from school) revealed that managing data with this sort of parent-child
+relationship is, unsurprisingly, a well-studied problem in computer science,
+and after a few nights of experimenting and reading I managed to add projects
+to my to-do list manager.</p>
+
+<p>Along the way, I realized that I&rsquo;d always be a few steps behind until I learned
+some basic computer science: most common problems have established solutions,
+and my complete ignorance of those solutions was forcing me to reinvent the
+wheel (poorly) at every turn. It&rsquo;s a little like trying to organize thousands
+of loose papers without using a file cabinet; I&rsquo;d probably come up with some
+sort of workable system eventually, but why go through all that pain when
+there&rsquo;s a good solution that&rsquo;s widely available? To push the analogy
+further, file cabinets also have a large ecosystem of standard add-ons
+designed to solve particular problems &mdash; it&rsquo;s easy to get cabinets with
+built-in indexing systems, horizontal drawers, or wheels, for example.
+Similarly, it&rsquo;s easy to find variations of the basic computer science building
+blocks that are optimized for particular applications.</p>
+
+<p>Nine months isn&rsquo;t enough to make anyone an expert in computer science, but
+there are a <em>lot</em> of excellent courses available free online. I started with
+MIT&rsquo;s <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/">Introduction to Computer Science and Programming</a> because it&rsquo;s
+taught in Python, doesn&rsquo;t assume any prior knowledge, and moves slowly enough
+for me to watch while riding the train and keeping an eye out for my stop. I&rsquo;m
+not sure what I&rsquo;ll tackle next, but I&rsquo;m leaning towards continuing the MIT
+undergraduate sequence. (Have a suggestion? [Let me
+know][mailto:akshay@akshayshah.org]!)</p>
+
+<h2 id="craftsmanship-is-crucial">Craftsmanship Is Crucial</h2>
+
+<p>A few days after I started watching the MIT lectures, I switched jobs and began
+writing code at work. This was, to say the least, a big transition: I went from
+being the sole author of a hundred-line program to working with a team of real
+engineers building a real web application. The standard for the correctness of
+my code went up, but more importantly, so did the standards for its
+<em>readability</em> and <em>maintainability</em>.</p>
+
+<p>Even with reams of well-written code (and the inevitable bits of crufty legacy
+code) to learn from, it took me months to really understand why anyone would
+prioritize anything other than accurate output. &ldquo;It works right now,&rdquo; I&rsquo;d think to
+myself, &ldquo;so why would anyone spend another week just making it look pretty?&rdquo;
+That attitude changed the first time I had to add some functionality to a small
+piece of code I&rsquo;d written a few months earlier. Even as the original author, I
+was completely baffled &mdash; I&rsquo;d named every variable <code>x</code>, <code>sbgs</code>,
+<code>data</code> (yes, really), or something equally useless, and now I couldn&rsquo;t make
+heads or tails of any of it. I ended up scrapping the whole file, starting from
+scratch, and feeling lucky that none of the many bugs in my old code had seen
+the light of day.</p>
+
+<p>Needless to say, I&rsquo;m now a convert. I&rsquo;m getting better at giving functions and
+variables meaningful names. I plan my code more carefully. I&rsquo;m a little more
+comfortable with object-oriented programming, and I&rsquo;m keeping global variables
+to a minimum. More abstractly, I&rsquo;m slowly learning how to hide complexity so
+that other people can treat my code as a pluggable component. I want to take
+pride not just in my code&rsquo;s functionality, but in its readability, its
+cleanliness, and its aesthetics &mdash; in short, in its craftsmanship.</p>
+
+<p>Taking a few months to focus on something other than basic computer science is
+a luxury I can afford only because Python provides an off-the-shelf version of
+most common building blocks. Since I don&rsquo;t absolutely need to know, for
+example, how each of the many common sorting algorithms works (though it would
+probably be helpful), I can afford to put reading on hold for a little while to
+become a better craftsman. I&rsquo;ve spent most of this time reading <a href="http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670">Code
+Complete</a>, mostly because Jeff Atwood describes it as &ldquo;<a href="http://www.codinghorror.com/blog/2004/02/recommended-reading-for-developers.html">the Joy of Cooking
+for software developers</a>.&rdquo; I&rsquo;ll probably still make the same
+rookie mistakes, but I hope that this early investment will help me learn from
+my mistakes faster.</p>
+
+<h2 id="what-next">What Next?</h2>
+
+<p>I&rsquo;ll finish Code Complete this week, but I&rsquo;m not sure where I should invest my
+time next. I could:</p>
+
+<ul>
+<li>Review linear algebra. I&rsquo;m hoping to pick up a few machine learning projects
+soon, so dusting off my math skills would be helpful.</li>
+<li>Start another computer science course or read an introductory book on data
+structures and algorithms. Along with learning more math, this is probably
+the best long-term use of my time.</li>
+<li>Learn the Python numerical toolkit in more depth. This is definitely the most
+practical option, but I think it has the least enduring value.</li>
+<li>Read more about software craftsmanship and project management. I have copies
+of <a href="http://pragprog.com/book/tpp/the-pragmatic-programmer">The Pragmatic Programmer</a> and <a href="http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959">The Mythical Man-Month</a>, but I&rsquo;m
+inclined to focus more on hard skills for the next few months.</li>
+</ul>
+
+<p>If you&rsquo;ve read this far, I&rsquo;d appreciate your input! Send me an
+<a href="mailto:akshay@akshayshah.org">email</a> and let me know where I went wrong.</p>
+
+</article>
+
+    <footer>
+    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
+    This blog has an <a href="">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
+    Unless otherwise noted, all code and prose is licensed under the <a href="/license/" rel="license">MIT license</a>.<br>
+    </footer>
+  </body>
+</html>
+

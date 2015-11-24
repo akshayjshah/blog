@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <title>License Your Code! • Data Hacker, MD</title>
+    
+    <meta name="description" content="Thoughts from a physician-turned-engineer.">
+    <meta name="author" content="Akshay Shah">
+    <meta name="google-site-verification" content="4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw">
+    <meta name="generator" content="Hugo 0.14" />
+
+    
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/license-your-code/">
+    <link rel="alternate" type="application/rss+xml" title="Data Hacker, MD" href="">
+
+    
+    <script type="text/javascript" src="http://use.typekit.net/xsy8lin.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="branding">By day, just <a href="/colophon/">Akshay Shah</a>. By night,<br>
+    <a class="site-name" href="/">Data Hacker, MD</a><br>
+      <img class="flourish" src="/img/flourish.svg" height="72" alt="">
+    </nav>
+
+
+<header>
+  <h1>License Your Code!</h1>
+  August  4, 2013
+</header>
+
+<article>
+  
+
+<p>If you&rsquo;re a <a href="http://github.com">GitHub</a> (or <a href="http://bitbucket.org">Bitbucket</a>, or <a href="http://www.gitorious.com">Gitorious</a>) user, you probably
+want to let other people use your code in their own projects. Just throwing
+your code online isn&rsquo;t enough, though &ndash; you <em>have</em> to release it under an
+open-source license.  If you&rsquo;re not sure why, read on: in this post, I&rsquo;ll
+explain the absolute minimum that every developer should know about copyright
+and software licensing.</p>
+
+<p>Even though <abbr title="I Am Not a Lawyer">IANAL</abbr>, I&rsquo;ll start with a few
+disclaimers: this post isn&rsquo;t legal advice, I&rsquo;m not going to address patents at
+all, and some of what I&rsquo;m about to explain is specific to the United States.</p>
+
+<h2 id="closed-by-default">Closed by Default</h2>
+
+<p>In the US, every shred of code you&rsquo;ve ever written is automatically protected
+by copyright. That means, broadly speaking, that it&rsquo;s your property.  If you
+leave your bike unlocked outside a coffee shop, I&rsquo;m not allowed to walk by and
+steal it; similarly, if you post your code online, I&rsquo;m not automatically
+allowed to copy and use it. Don&rsquo;t worry, though &ndash; seventy years after you die,
+the copyright expires and your code enters the <em>public domain</em>, at which point
+I can finally use it however I like.</p>
+
+<p>Under American law, it&rsquo;s very difficult to reliably circumvent the century-long
+wait before your copyright expires. To let other developers legally copy,
+modify, and reuse your code while it&rsquo;s still relevant, you have to offer it to
+them under a <em>license</em>.</p>
+
+<h2 id="permissive-licensing">Permissive Licensing</h2>
+
+<p>Licenses are just agreements between you, the author and owner of the code, and
+all the other developers who&rsquo;d like to use your code. Even if you&rsquo;ve never
+exchanged emails or chatted on the phone, you can sue developers who use your
+code but don&rsquo;t follow the rules in your license.</p>
+
+<p>Some open-source software licenses are quite straightforward: they let other
+developers do whatever they&rsquo;d like with your code as long as they don&rsquo;t hold
+you liable for the consequences. They can package your library into a
+closed-source application and sell subscriptions, they can modify the code and
+distribute it under a different license, and they can even sell copies of your
+code without changing a single line. If your code has a bug that causes a
+nuclear meltdown, though, they&rsquo;re on their own. Because they let other
+developers do whatever they&rsquo;d like, these licenses are often called
+<em>permissive</em>; the <a href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a> is a popular example.</p>
+
+<h2 id="copyleft">Copyleft</h2>
+
+<p>But what if you don&rsquo;t want your code integrated into closed-source systems?
+Richard Stallman and the <a href="http://fsf.org">Free Software Foundation</a> are right there with
+you. In a clever legal hack, they wrote the <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a>, a license which lets other
+developers run, read, change, and share your source code, but requires that any
+copies (modified or not) be licensed in a way that preserves the same freedoms.
+Licensing your work under the GPL allows other people to integrate your code
+into a paid product, but it forces them to license their product under the GPL,
+too (or something that&rsquo;s essentially identical). In short, your code and all
+its descendants will be free forever, but many companies won&rsquo;t be willing to
+use it. Because it uses a copyright hack to attack the very notion of
+software ownership, the GPL and its variants are often called <em>copyleft</em>
+licenses.</p>
+
+<p>And with that, you know more than 99% of programmers about software licensing.
+Stand proud, grasshopper, and remember to include an explicit license when
+sharing your code online.</p>
+
+<h2 id="more-questions">More Questions?</h2>
+
+<ul>
+<li><p>Need a refresher? Looking for some actual legalese to include in your
+project? Check out GitHub&rsquo;s <a href="http://choosealicense.com/">license picker</a>.</p></li>
+
+<li><p>Want to know more about intellectual property and open source? Read Richard
+Stallman&rsquo;s <a href="http://www.gnu.org/philosophy/why-free.html">Why Software Should Not Have Owners</a>. It&rsquo;s a seminal
+piece, and it&rsquo;s well worth your time.</p></li>
+
+<li><p>Wondering why most folks these days call it &ldquo;open-source&rdquo; and not &ldquo;free&rdquo;
+software? Read Eric Raymond&rsquo;s <a href="http://catb.org/~esr/open-source.html">1998 call to action</a>. While
+you&rsquo;re there, you may want to check out <a href="http://catb.org/esr/writings/cathedral-bazaar/cathedral-bazaar/">The Cathedral and the Bazaar</a>.
+(Ignore anything related to guns, sex, or politics.) For Stallman&rsquo;s response,
+read <a href="http://www.gnu.org/philosophy/open-source-misses-the-point.html">Why Open Source Misses the Point of Free Software</a>.</p></li>
+
+<li><p>Curious how all this copyright stuff relates to software patents? It&rsquo;s
+complicated. Patents aren&rsquo;t the same thing as copyright, though some
+open-source licenses attempt to address them. Think of patent protection as
+another axis that&rsquo;s orthogonal to the permissive-copyleft axis. If you know
+of a good summary article, <a href="mailto:akshay@akshayshah.org">let me know</a>!</p></li>
+</ul>
+
+</article>
+
+    <footer>
+    <img class="flourish" src="/img/flourish.svg" height="72" alt=""><br>
+    This blog has an <a href="">RSS feed</a>; I'm also on <a href="http://twitter.com/akshayshah">Twitter</a>, <a href="http://github.com/akshayjshah">GitHub</a>, and <a href="http://linkedin.com/in/akshayjshah">LinkedIn</a>.<br>
+    Unless otherwise noted, all code and prose is licensed under the <a href="/license/" rel="license">MIT license</a>.<br>
+    </footer>
+  </body>
+</html>
+
