@@ -13,8 +13,8 @@
     <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://localhost:1313/">
-    <link rel="canonical" href="http://localhost:1313/post/django-soft-deletion/">
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/django-soft-deletion/">
     <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
     <link rel="license" href="/license/">
 
@@ -122,7 +122,7 @@ storing user records which should have unique email addresses; with this
 soft-deletion scheme, you can only have one active record for
 &ldquo;betty@smith.com&rdquo;. Including deletion status in your constraint lets you keep
 both a soft-deleted and an active record with the same email address, but then
-you&rsquo;re out of luck &ndash; any attempt to delete another record for Betty will throw
+you&rsquo;re out of luck&mdash;any attempt to delete another record for Betty will throw
 an <code>IntegrityError</code>. Luckily, there&rsquo;s a better way.</p>
 
 <h2 id="the-null-solution">The Null Solution</h2>
@@ -181,7 +181,7 @@ class LiveField(models.Field):
 <p>This is a drop-in replacement for Django&rsquo;s stock <code>BooleanField</code> in the
 abstract model above, but under the covers it stores falsy values as nulls. At
 Hearsay, we just finished migrating all our models to use <code>LiveField</code>, and
-it&rsquo;s been a huge help already &ndash; having the option to simultaneously support
+it&rsquo;s been a huge help already&mdash;having the option to simultaneously support
 soft-deletion and uniqueness constraints keeps our application code <em>and</em> our
 data clean.</p>
 
@@ -196,9 +196,6 @@ check out the actual test setup on
             &larr; <a href="/" rel="index">Home</a><br>
             &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
         </footer>
-    <script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+    </body>
 </html>
 

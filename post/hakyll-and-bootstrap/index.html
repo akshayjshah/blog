@@ -13,8 +13,8 @@
     <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://localhost:1313/">
-    <link rel="canonical" href="http://localhost:1313/post/hakyll-and-bootstrap/">
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/hakyll-and-bootstrap/">
     <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
     <link rel="license" href="/license/">
 
@@ -35,7 +35,8 @@
 <article>
     
 
-<p>Though
+<p>Though I&rsquo;ve run a few <a href="http://www.wordpress.com" title="WordPress">Wordpress</a> sites in the past, I&rsquo;ve always found the
+software irritating to use.
 <label for="mn-update-failure" class="margin-toggle">&#8853;</label>
 <input type="checkbox" id="mn-update-failure" class="margin-toggle">
 <span class="marginnote">
@@ -50,10 +51,8 @@ Generator">Hugo</a>.
 
 </span>
 
-I&rsquo;ve run a few <a href="http://www.wordpress.com" title="WordPress">Wordpress</a> sites in the past, I&rsquo;ve always found the
-software irritating to use. In particular, I <em>loathe</em> the composer&ndash;the
-rich text editor never works quite as I expect it to, and the <abbr
-class="initialism">HTML</abbr> editor mangles my markup without warning. The
+In particular, I <em>loathe</em> the composer&mdash;the rich text editor never works quite
+as I expect it to, and the HTML editor mangles my markup without warning. The
 installation is dead simple, the theme support is fantastic, and I love <a href="http://ma.tt/tag/gpl/" title="Matt Mullenweg on the GPL">Matt
 Mullenweg&rsquo;s support of free software</a>, but Wordpress just isn&rsquo;t for me.
 At the same time, I don&rsquo;t miss hand-coding entire sites; I&rsquo;ve done that exactly
@@ -67,7 +66,7 @@ to <a href="https://www.tumblr.com/" title="Tumblr">Tumblr</a>, I decided to kee
 
 <p>Hakyll is a static site generator, which means that it&rsquo;s only a few short steps
 away from writing markup by hand. Those few steps make all the difference,
-though&ndash;I can still control exactly what the final <abbr>HTML</abbr> will look
+though&mdash;I can still control exactly what the final HTML will look
 like, but Hakyll lets me write articles in <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a> and use templates for
 site-wide elements like navigation and footers.  Static sites are all the rage
 among geeks these days, so <a href="http://nanoc.stoneship.org/docs/1-introduction/" title="Nanoc Documentation">a lot&rsquo;s</a> already <a href="http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/" title="Steve Losh: Moving from Django to Hyde">been written</a>
@@ -96,7 +95,7 @@ easy Javascript-based workarounds, but I&rsquo;ll need to do a little more due
 diligence before I&rsquo;m comfortable trusting them with critical data.</p>
 
 <p>Hakyll also has its own set of challenges, mostly because it&rsquo;s written and
-configured in <a href="http://www.haskell.org/haskellwiki/Haskell" title="HaskellWiki">Haskell</a>. To put it mildly, I&rsquo;m a Haskell neophyte&ndash;I&rsquo;ve been
+configured in <a href="http://www.haskell.org/haskellwiki/Haskell" title="HaskellWiki">Haskell</a>. To put it mildly, I&rsquo;m a Haskell neophyte&mdash;I&rsquo;ve been
 interested in the language for months, but haven&rsquo;t done anything more than a
 few <a href="http://projecteuler.net/" title="Project Euler">Project Euler</a> questions. Since I don&rsquo;t have a strong background in
 category theory, monads and arrows are <em>blowing my mind</em>.  There&rsquo;s something
@@ -110,16 +109,16 @@ functional programming has been more enlightening than infuriating.</p>
 
 <p>I have trouble matching my clothing, let alone the dozens of small elements
 that make up a website, so creating an attractive design for my new site was a
-daunting task. Luckily, nobody needs to see my first efforts&ndash;I decided to use
+daunting task. Luckily, nobody needs to see my first efforts&mdash;I decided to use
 Twitter&rsquo;s <a href="http://twitter.github.com/bootstrap/" title="Twitter Bootstrap">Bootstrap</a> framework instead. It&rsquo;s clean, attractive, and
-mobile-friendly, and it&rsquo;s teaching me some of <abbr>HTML</abbr>5&rsquo;s new tricks.
-<a href="http://lesscss.org" title="{less}">{less}</a>, the <abbr>CSS</abbr> meta-language Boostrap uses, is also
-wonderful: it&rsquo;s close enough to vanilla <abbr>CSS</abbr> that it&rsquo;s easy to
+mobile-friendly, and it&rsquo;s teaching me some of HTML5&rsquo;s new tricks.
+<a href="http://lesscss.org" title="{less}">{less}</a>, the CSS meta-language Boostrap uses, is also
+wonderful: it&rsquo;s close enough to vanilla CSS that it&rsquo;s easy to
 learn, but it makes my stylesheets much more modular and consistent.</p>
 
 <p>While I haven&rsquo;t tweaked Bootstrap&rsquo;s default styling much, I <em>had</em> to do
 something about the fonts. I like Helvetica, especially on visually intense
-marketing sites&ndash;but Bootstrap&rsquo;s tiny default font size combined with
+marketing sites&mdash;but Bootstrap&rsquo;s tiny default font size combined with
 Helvetica&rsquo;s clinical modernism made blocks of text downright hostile. After a few
 hours poking through <a href="http://www.google.com/webfonts" title="Google Web Fonts">Google Web Fonts</a> and testing different styles,
 I settled on <a href="http://www.omnibus-type.com/" title="Omnibus Type">Omnibus Type&rsquo;s</a> <a href="http://www.google.com/webfonts/specimen/Rosario" title="Rosario">Rosario</a>. To my eye, it
@@ -129,7 +128,7 @@ distracting from the words themselves.</p>
 <p>My efforts to choose a different color scheme, though, have been a complete
 failure. The defaults are nice enough, but they lack soul, and my efforts to
 change them usually end in a neon-tinted nightmare. There&rsquo;s hope on the
-horizon, though&ndash;I just read Ian Taylor&rsquo;s &ldquo;<a href="http://ianstormtaylor.com/design-tip-never-use-black/" title="Design Tip: Never User Black">Never Use Black</a>,&rdquo;
+horizon, though&mdash;I just read Ian Taylor&rsquo;s &ldquo;<a href="http://ianstormtaylor.com/design-tip-never-use-black/" title="Design Tip: Never User Black">Never Use Black</a>,&rdquo;
 and I may try mixing some blue or red into the default grays.</p>
 
 <p>I&rsquo;m not much of a programmer or a designer, so I&rsquo;m always in the market for
@@ -143,9 +142,6 @@ me a <a href="http://twitter.com/akshayshah">tweet</a> and let me know what you 
             &larr; <a href="/" rel="index">Home</a><br>
             &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
         </footer>
-    <script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+    </body>
 </html>
 

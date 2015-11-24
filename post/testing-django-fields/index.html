@@ -13,8 +13,8 @@
     <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://localhost:1313/">
-    <link rel="canonical" href="http://localhost:1313/post/testing-django-fields/">
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/testing-django-fields/">
     <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
     <link rel="license" href="/license/">
 
@@ -45,7 +45,7 @@ all test-specific models in <code>test/models.py</code>, but don&rsquo;t include
 in <code>INSTALLED APPS</code>. In your test suite&rsquo;s setup method, monkey-patch your
 settings to include the test app and run Django&rsquo;s <code>syncdb</code> command, and
 un-patch your settings in the teardown method. Dynamically altering your
-settings in the test suite keeps your production database clean &ndash; a rogue
+settings in the test suite keeps your production database clean&mdash;a rogue
 <code>syncdb</code> won&rsquo;t suddenly create dozens of useless new tables. My biggest gripe
 with this approach, though, is that it forces you to separate your test code
 into two files. The tests become much harder to read, and the file of test
@@ -164,9 +164,6 @@ class SoftDeletionTests(ModelTestCase):
             &larr; <a href="/" rel="index">Home</a><br>
             &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
         </footer>
-    <script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+    </body>
 </html>
 
