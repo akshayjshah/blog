@@ -27,7 +27,7 @@ candidate's use of the word "myself."
 
 ## An Easy, Audible Grammar Test
 
-Many guides to grammar gaffes focus on homophones--pairs of words that
+Many guides to grammar gaffes focus on homophones---pairs of words that
 have different meanings but identical pronunciations.  But relying on
 homophones to sort the literate wheat from the unemployable chaff is difficult
 precisely because they sound alike; using homophones to detect your candidate's
@@ -51,7 +51,7 @@ but not "I." Most importantly, "myself" is *not* just a fancy substitute for "me
   or me.")
 * "Jane and myself will go to the meeting." (Replace with "Jane and I.")
 
-And there you have it--a simple, audible grammar test. Its
+And there you have it---a simple, audible grammar test. Its
 false-positive rate is low, and it's particularly good at detecting the overly
 self-important candidate (or co-worker).
 

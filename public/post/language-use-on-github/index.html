@@ -13,8 +13,8 @@
     <meta name="generator" content="Hugo 0.14" />
 
     
-    <base href="http://localhost:1313/">
-    <link rel="canonical" href="http://localhost:1313/post/language-use-on-github/">
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/language-use-on-github/">
     <link rel="alternate" type="application/rss+xml" title="Akshay Shah" href="">
     <link rel="license" href="/license/">
 
@@ -42,7 +42,7 @@ a six-month-old Twitter <a href="https://twitter.com/misc/status/235167513833525
 Using data from 2012, I charted the relationships between the 25 most popular
 languages on GitHub: <img
 src="/img/post/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub" class="fill-column"></p>
+alt="Language Correlation on GitHub"></p>
 
 <p>Each square in the chart measures the <a href="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">rank correlation</a>
 between two languages; positive correlations are in blue, and negative
@@ -60,7 +60,7 @@ details!</p>
 <p>GitHub&rsquo;s own <a href="https://github.com/briandoll">Brian Doll</a> published a <a href="https://gist.github.com/briandoll/e0637fff9c8eec988528">data set</a>
 titled &ldquo;Programming Language Correlations,&rdquo; but as an astute commenter pointed
 out, it&rsquo;s really a set of conditional probabilities. For our question,
-that&rsquo;s an important distinction &ndash; while conditional probabilities let us say,
+that&rsquo;s an important distinction&mdash;while conditional probabilities let us say,
 &ldquo;87.9% of CoffeeScript programmers also code in Ruby,&rdquo; they <em>don&rsquo;t</em> allow us to
 say, &ldquo;People who write more CoffeeScript also tend to write more Ruby.&rdquo; To
 tackle our question, we&rsquo;ll need access to some more granular data.</p>
@@ -84,7 +84,7 @@ group by actor, repository_language;
 <p>The results of this query are in a stacked format, where each combination of
 user and language is on a separate row:</p>
 
-<table class="fill-column center">
+<table>
   <thead>
     <tr>
       <th>actor</th>
@@ -125,7 +125,7 @@ user and language is on a separate row:</p>
 useful for analysis. We&rsquo;d rather unstack the data so that there&rsquo;s one row per
 user and one column per language:</p>
 
-<table class="fill-column center">
+<table>
   <thead>
     <tr>
       <th>actor</th>
@@ -228,14 +228,14 @@ linear.</li>
 less distorted by these outliers.</li>
 </ul>
 
-<p>If that doesn&rsquo;t convince you, it&rsquo;s easy to calculate the Pearson correlation &ndash;
-it&rsquo;s the default in pandas, so removing the <code>method='spearman'</code> above should
-do the trick. If you&rsquo;re impatient, you can just peek at the
+<p>If that doesn&rsquo;t convince you, it&rsquo;s easy to calculate the Pearson correlation&mdash;it&rsquo;s
+the default in pandas, so removing the <code>method='spearman'</code> above should do
+the trick. If you&rsquo;re impatient, you can just peek at the
 <a href="/img/post/language-use-on-github/pearson_language_correlation.svg">results</a>.</p>
 
 <p><h2 id="conclusions">Conclusions</h2>
 <img src="/img/post/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub" class="fill-column"></p>
+alt="Language Correlation on GitHub"></p>
 
 <p>The most striking thing about this chart is its <em>blueness</em>. Despite our
 tribalism, writing scads of C# doesn&rsquo;t make programmers any less likely to hack
@@ -261,7 +261,7 @@ from their closed-source counterparts.</li>
 <li>Correlation isn&rsquo;t causation.</li>
 </ul>
 
-<p>I&rsquo;ve only scratched the surface here &ndash; if you&rsquo;ve got some ideas, <a href="mailto:akshay@akshayshah.org">let me
+<p>I&rsquo;ve only scratched the surface here&mdash;if you&rsquo;ve got some ideas, <a href="mailto:akshay@akshayshah.org">let me
 know</a>!</p>
 
 </article>
@@ -270,9 +270,6 @@ know</a>!</p>
             &larr; <a href="/" rel="index">Home</a><br>
             &copy; 2012&ndash;2015 <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
         </footer>
-    <script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+    </body>
 </html>
 

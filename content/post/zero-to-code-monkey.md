@@ -17,10 +17,10 @@ an important part of my job, and I *love* it. If you're interested in learning
 to code, especially in Python, I hope my story helps you get started faster.
 
 ## Syntax Is Easy
-Oddly enough, learning the syntax of a programming language --- the rules
+Oddly enough, learning the syntax of a programming language---the rules
 for assembling words, curly braces, backslashes, and all the other
-typographical flotsam in the corners of your keyboard into working code ---
-was relatively easy. [Python][] is particularly straightforward, and Zed Shaw's
+typographical flotsam in the corners of your keyboard into working code---was
+relatively easy. [Python][] is particularly straightforward, and Zed Shaw's
 [Learn Python the Hard Way][lpthw] taught me the basics in a single weekend.
 Experimenting in an [interactive environment][repl.it] was very helpful at this
 stage, since the interpreter caught all my mistakes, printed a helpful error
@@ -29,7 +29,7 @@ I'd gone wrong, pasting the error message verbatim into Google always turned up
 a relevant answer.
 
 Only a few days in, I was able to exercise my new skills by writing a to-do
-manager like [Steve Losh's t][t] --- and it *actually worked*.  Writing
+manager like [Steve Losh's t][t]---and it *actually worked*.  Writing
 even a simple utility that functioned exactly as I wanted it to was hugely
 empowering, and using my little program every day kept me excited about
 learning. Emulating t had an unanticipated, but immensely helpful, side effect:
@@ -57,7 +57,7 @@ of loose papers without using a file cabinet; I'd probably come up with some
 sort of workable system eventually, but why go through all that pain when
 there's a good solution that's widely available? To push the analogy
 further, file cabinets also have a large ecosystem of standard add-ons
-designed to solve particular problems --- it's easy to get cabinets with
+designed to solve particular problems---it's easy to get cabinets with
 built-in indexing systems, horizontal drawers, or wheels, for example.
 Similarly, it's easy to find variations of the basic computer science building
 blocks that are optimized for particular applications.
@@ -85,7 +85,7 @@ prioritize anything other than accurate output. "It works right now," I'd think 
 myself, "so why would anyone spend another week just making it look pretty?"
 That attitude changed the first time I had to add some functionality to a small
 piece of code I'd written a few months earlier. Even as the original author, I
-was completely baffled --- I'd named every variable ``x``, ``sbgs``,
+was completely baffled---I'd named every variable ``x``, ``sbgs``,
 ``data`` (yes, really), or something equally useless, and now I couldn't make
 heads or tails of any of it. I ended up scrapping the whole file, starting from
 scratch, and feeling lucky that none of the many bugs in my old code had seen
@@ -97,7 +97,7 @@ comfortable with object-oriented programming, and I'm keeping global variables
 to a minimum. More abstractly, I'm slowly learning how to hide complexity so
 that other people can treat my code as a pluggable component. I want to take
 pride not just in my code's functionality, but in its readability, its
-cleanliness, and its aesthetics --- in short, in its craftsmanship.
+cleanliness, and its aesthetics---in short, in its craftsmanship.
 
 Taking a few months to focus on something other than basic computer science is
 a luxury I can afford only because Python provides an off-the-shelf version of

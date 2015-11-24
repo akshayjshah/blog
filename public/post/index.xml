@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Akshay Shah</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://www.akshayshah.org/post/</link>
     <description>Recent content in Posts on Akshay Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 May 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.akshayshah.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Podcasts for Developers</title>
-      <link>http://localhost:1313/post/podcasts-for-developers/</link>
+      <link>http://www.akshayshah.org/post/podcasts-for-developers/</link>
       <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/podcasts-for-developers/</guid>
+      <guid>http://www.akshayshah.org/post/podcasts-for-developers/</guid>
       <description>
 
 &lt;p&gt;Even though computer science doesn&amp;rsquo;t change too quickly, software engineering
@@ -80,15 +80,15 @@ third-party app. If you&amp;rsquo;re on iOS, Marco Arment&amp;rsquo;s
     
     <item>
       <title>Testing Django Fields</title>
-      <link>http://localhost:1313/post/testing-django-fields/</link>
+      <link>http://www.akshayshah.org/post/testing-django-fields/</link>
       <pubDate>Thu, 15 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/testing-django-fields/</guid>
+      <guid>http://www.akshayshah.org/post/testing-django-fields/</guid>
       <description>&lt;p&gt;I love the flexibility that custom Django fields, abstract models, managers,
 and querysets offer, but unit testing them is a pain. Ideally, the tests for
 custom Django fields should be completely isolated from the models that use the
 fields in production; deciding that, for example, my &lt;code&gt;User&lt;/code&gt; model no longer
-needs to support soft deletion shouldn&amp;rsquo;t affect the tests for the &lt;a href=&#34;http://localhost:1313/post/django-soft-deletion/&#34;&gt;soft-deletion
+needs to support soft deletion shouldn&amp;rsquo;t affect the tests for the &lt;a href=&#34;http://www.akshayshah.org/post/django-soft-deletion/&#34;&gt;soft-deletion
 field&lt;/a&gt; itself.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://stackoverflow.com/questions/502916/django-how-to-create-a-model-dynamically-just-for-testing&#34;&gt;most common approach&lt;/a&gt; to this problem is simple, if annoying: declare
@@ -96,7 +96,7 @@ all test-specific models in &lt;code&gt;test/models.py&lt;/code&gt;, but don&amp
 in &lt;code&gt;INSTALLED APPS&lt;/code&gt;. In your test suite&amp;rsquo;s setup method, monkey-patch your
 settings to include the test app and run Django&amp;rsquo;s &lt;code&gt;syncdb&lt;/code&gt; command, and
 un-patch your settings in the teardown method. Dynamically altering your
-settings in the test suite keeps your production database clean &amp;ndash; a rogue
+settings in the test suite keeps your production database clean&amp;mdash;a rogue
 &lt;code&gt;syncdb&lt;/code&gt; won&amp;rsquo;t suddenly create dozens of useless new tables. My biggest gripe
 with this approach, though, is that it forces you to separate your test code
 into two files. The tests become much harder to read, and the file of test
@@ -170,7 +170,7 @@ class ModelTestCase(TestCase):
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Looking for an example? Here&amp;rsquo;s a section of the test suite for my
-&lt;a href=&#34;http://localhost:1313/post/django-soft-deletion/&#34;&gt;soft-deletion field&lt;/a&gt;:&lt;/p&gt;
+&lt;a href=&#34;http://www.akshayshah.org/post/django-soft-deletion/&#34;&gt;soft-deletion field&lt;/a&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from django.db import IntegrityError, models
 
@@ -213,15 +213,15 @@ class SoftDeletionTests(ModelTestCase):
     
     <item>
       <title>License Your Code!</title>
-      <link>http://localhost:1313/post/license-your-code/</link>
+      <link>http://www.akshayshah.org/post/license-your-code/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/license-your-code/</guid>
+      <guid>http://www.akshayshah.org/post/license-your-code/</guid>
       <description>
 
 &lt;p&gt;If you&amp;rsquo;re a &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; user, you probably
 want to let other people use your code in their own projects. Just throwing
-your code online isn&amp;rsquo;t enough, though &amp;ndash; you &lt;em&gt;have&lt;/em&gt; to release it under an
+your code online isn&amp;rsquo;t enough, though&amp;mdash;you &lt;em&gt;have&lt;/em&gt; to release it under an
 open-source license.  If you&amp;rsquo;re not sure why, read on: in this post, I&amp;rsquo;ll
 explain the absolute minimum that every developer should know about copyright
 and software licensing.&lt;/p&gt;
@@ -304,10 +304,10 @@ another axis that&amp;rsquo;s orthogonal to the permissive-copyleft axis.&lt;/li
     
     <item>
       <title>Soft Deletion in Django</title>
-      <link>http://localhost:1313/post/django-soft-deletion/</link>
+      <link>http://www.akshayshah.org/post/django-soft-deletion/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/django-soft-deletion/</guid>
+      <guid>http://www.akshayshah.org/post/django-soft-deletion/</guid>
       <description>
 
 &lt;p&gt;Like any self-respecting data nerd, I find deleting database records abhorrent.
@@ -397,7 +397,7 @@ storing user records which should have unique email addresses; with this
 soft-deletion scheme, you can only have one active record for
 &amp;ldquo;betty@smith.com&amp;rdquo;. Including deletion status in your constraint lets you keep
 both a soft-deleted and an active record with the same email address, but then
-you&amp;rsquo;re out of luck &amp;ndash; any attempt to delete another record for Betty will throw
+you&amp;rsquo;re out of luck&amp;mdash;any attempt to delete another record for Betty will throw
 an &lt;code&gt;IntegrityError&lt;/code&gt;. Luckily, there&amp;rsquo;s a better way.&lt;/p&gt;
 
 &lt;h2 id=&#34;the-null-solution&#34;&gt;The Null Solution&lt;/h2&gt;
@@ -456,12 +456,12 @@ class LiveField(models.Field):
 &lt;p&gt;This is a drop-in replacement for Django&amp;rsquo;s stock &lt;code&gt;BooleanField&lt;/code&gt; in the
 abstract model above, but under the covers it stores falsy values as nulls. At
 Hearsay, we just finished migrating all our models to use &lt;code&gt;LiveField&lt;/code&gt;, and
-it&amp;rsquo;s been a huge help already &amp;ndash; having the option to simultaneously support
+it&amp;rsquo;s been a huge help already&amp;mdash;having the option to simultaneously support
 soft-deletion and uniqueness constraints keeps our application code &lt;em&gt;and&lt;/em&gt; our
 data clean.&lt;/p&gt;
 
 &lt;p&gt;Curious how to test your shiny new soft-deletion field? Check out my post on
-&lt;a href=&#34;http://localhost:1313/post/testing-django-fields&#34;&gt;testing custom Django fields&lt;/a&gt; for some tips, or
+&lt;a href=&#34;http://www.akshayshah.org/post/testing-django-fields&#34;&gt;testing custom Django fields&lt;/a&gt; for some tips, or
 check out the actual test setup on
 &lt;a href=&#34;https://github.com/hearsaycorp/django-livefield&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -469,10 +469,10 @@ check out the actual test setup on
     
     <item>
       <title>Language Use on GitHub</title>
-      <link>http://localhost:1313/post/language-use-on-github/</link>
+      <link>http://www.akshayshah.org/post/language-use-on-github/</link>
       <pubDate>Sun, 10 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/language-use-on-github/</guid>
+      <guid>http://www.akshayshah.org/post/language-use-on-github/</guid>
       <description>
 
 &lt;p&gt;Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
@@ -482,7 +482,7 @@ a six-month-old Twitter &lt;a href=&#34;https://twitter.com/misc/status/23516751
 Using data from 2012, I charted the relationships between the 25 most popular
 languages on GitHub: &lt;img
 src=&#34;/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
-alt=&#34;Language Correlation on GitHub&#34; class=&#34;fill-column&#34;&gt;&lt;/p&gt;
+alt=&#34;Language Correlation on GitHub&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Each square in the chart measures the &lt;a href=&#34;http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient&#34;&gt;rank correlation&lt;/a&gt;
 between two languages; positive correlations are in blue, and negative
@@ -500,7 +500,7 @@ details!&lt;/p&gt;
 &lt;p&gt;GitHub&amp;rsquo;s own &lt;a href=&#34;https://github.com/briandoll&#34;&gt;Brian Doll&lt;/a&gt; published a &lt;a href=&#34;https://gist.github.com/briandoll/e0637fff9c8eec988528&#34;&gt;data set&lt;/a&gt;
 titled &amp;ldquo;Programming Language Correlations,&amp;rdquo; but as an astute commenter pointed
 out, it&amp;rsquo;s really a set of conditional probabilities. For our question,
-that&amp;rsquo;s an important distinction &amp;ndash; while conditional probabilities let us say,
+that&amp;rsquo;s an important distinction&amp;mdash;while conditional probabilities let us say,
 &amp;ldquo;87.9% of CoffeeScript programmers also code in Ruby,&amp;rdquo; they &lt;em&gt;don&amp;rsquo;t&lt;/em&gt; allow us to
 say, &amp;ldquo;People who write more CoffeeScript also tend to write more Ruby.&amp;rdquo; To
 tackle our question, we&amp;rsquo;ll need access to some more granular data.&lt;/p&gt;
@@ -524,7 +524,7 @@ group by actor, repository_language;
 &lt;p&gt;The results of this query are in a stacked format, where each combination of
 user and language is on a separate row:&lt;/p&gt;
 
-&lt;table class=&#34;fill-column center&#34;&gt;
+&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;actor&lt;/th&gt;
@@ -565,7 +565,7 @@ user and language is on a separate row:&lt;/p&gt;
 useful for analysis. We&amp;rsquo;d rather unstack the data so that there&amp;rsquo;s one row per
 user and one column per language:&lt;/p&gt;
 
-&lt;table class=&#34;fill-column center&#34;&gt;
+&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;actor&lt;/th&gt;
@@ -602,8 +602,8 @@ pushes = pd.read_csv(&#39;stacked_language_by_user.csv&#39;).pivot(
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Exporting these results from BigQuery was an enormous pain (and required a paid
-account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
-&lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
+account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
+&lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
 
 &lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
 
@@ -668,14 +668,14 @@ linear.&lt;/li&gt;
 less distorted by these outliers.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If that doesn&amp;rsquo;t convince you, it&amp;rsquo;s easy to calculate the Pearson correlation &amp;ndash;
-it&amp;rsquo;s the default in pandas, so removing the &lt;code&gt;method=&#39;spearman&#39;&lt;/code&gt; above should
-do the trick. If you&amp;rsquo;re impatient, you can just peek at the
-&lt;a href=&#34;http://localhost:1313/img/post/language-use-on-github/pearson_language_correlation.svg&#34;&gt;results&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If that doesn&amp;rsquo;t convince you, it&amp;rsquo;s easy to calculate the Pearson correlation&amp;mdash;it&amp;rsquo;s
+the default in pandas, so removing the &lt;code&gt;method=&#39;spearman&#39;&lt;/code&gt; above should do
+the trick. If you&amp;rsquo;re impatient, you can just peek at the
+&lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/pearson_language_correlation.svg&#34;&gt;results&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-&lt;img src=&#34;http://localhost:1313/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
-alt=&#34;Language Correlation on GitHub&#34; class=&#34;fill-column&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.akshayshah.org/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
+alt=&#34;Language Correlation on GitHub&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The most striking thing about this chart is its &lt;em&gt;blueness&lt;/em&gt;. Despite our
 tribalism, writing scads of C# doesn&amp;rsquo;t make programmers any less likely to hack
@@ -701,17 +701,17 @@ from their closed-source counterparts.&lt;/li&gt;
 &lt;li&gt;Correlation isn&amp;rsquo;t causation.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I&amp;rsquo;ve only scratched the surface here &amp;ndash; if you&amp;rsquo;ve got some ideas, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
+&lt;p&gt;I&amp;rsquo;ve only scratched the surface here&amp;mdash;if you&amp;rsquo;ve got some ideas, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
 know&lt;/a&gt;!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>An Audible Literacy Filter</title>
-      <link>http://localhost:1313/post/audible-literacy-test/</link>
+      <link>http://www.akshayshah.org/post/audible-literacy-test/</link>
       <pubDate>Mon, 22 Oct 2012 21:54:58 -0700</pubDate>
       
-      <guid>http://localhost:1313/post/audible-literacy-test/</guid>
+      <guid>http://www.akshayshah.org/post/audible-literacy-test/</guid>
       <description>
 
 &lt;p&gt;&lt;div class=&#34;epigraphs&#34;&gt;
@@ -739,7 +739,7 @@ candidate&amp;rsquo;s use of the word &amp;ldquo;myself.&amp;rdquo;&lt;/p&gt;
 
 &lt;h2 id=&#34;an-easy-audible-grammar-test&#34;&gt;An Easy, Audible Grammar Test&lt;/h2&gt;
 
-&lt;p&gt;Many guides to grammar gaffes focus on homophones&amp;ndash;pairs of words that
+&lt;p&gt;Many guides to grammar gaffes focus on homophones&amp;mdash;pairs of words that
 have different meanings but identical pronunciations.  But relying on
 homophones to sort the literate wheat from the unemployable chaff is difficult
 precisely because they sound alike; using homophones to detect your candidate&amp;rsquo;s
@@ -767,7 +767,7 @@ or me.&amp;ldquo;)&lt;/li&gt;
 &lt;li&gt;&amp;ldquo;Jane and myself will go to the meeting.&amp;rdquo; (Replace with &amp;ldquo;Jane and I.&amp;rdquo;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;And there you have it&amp;ndash;a simple, audible grammar test. Its
+&lt;p&gt;And there you have it&amp;mdash;a simple, audible grammar test. Its
 false-positive rate is low, and it&amp;rsquo;s particularly good at detecting the overly
 self-important candidate (or co-worker).&lt;/p&gt;
 </description>
@@ -775,10 +775,10 @@ self-important candidate (or co-worker).&lt;/p&gt;
     
     <item>
       <title>Zero to Code Monkey</title>
-      <link>http://localhost:1313/post/zero-to-code-monkey/</link>
+      <link>http://www.akshayshah.org/post/zero-to-code-monkey/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/zero-to-code-monkey/</guid>
+      <guid>http://www.akshayshah.org/post/zero-to-code-monkey/</guid>
       <description>
 
 &lt;p&gt;Last year, I&amp;rsquo;d never have called myself a programmer. Sure, I&amp;rsquo;d dabbled a bit
@@ -796,10 +796,10 @@ to code, especially in Python, I hope my story helps you get started faster.&lt;
 
 &lt;h2 id=&#34;syntax-is-easy&#34;&gt;Syntax Is Easy&lt;/h2&gt;
 
-&lt;p&gt;Oddly enough, learning the syntax of a programming language &amp;mdash; the rules
+&lt;p&gt;Oddly enough, learning the syntax of a programming language&amp;mdash;the rules
 for assembling words, curly braces, backslashes, and all the other
-typographical flotsam in the corners of your keyboard into working code &amp;mdash;
-was relatively easy. &lt;a href=&#34;http://www.python.org/about/&#34;&gt;Python&lt;/a&gt; is particularly straightforward, and Zed Shaw&amp;rsquo;s
+typographical flotsam in the corners of your keyboard into working code&amp;mdash;was
+relatively easy. &lt;a href=&#34;http://www.python.org/about/&#34;&gt;Python&lt;/a&gt; is particularly straightforward, and Zed Shaw&amp;rsquo;s
 &lt;a href=&#34;http://learnpythonthehardway.org/&#34;&gt;Learn Python the Hard Way&lt;/a&gt; taught me the basics in a single weekend.
 Experimenting in an &lt;a href=&#34;http://repl.it/&#34; title=&#34;repl.it&#34;&gt;interactive environment&lt;/a&gt; was very helpful at this
 stage, since the interpreter caught all my mistakes, printed a helpful error
@@ -808,7 +808,7 @@ I&amp;rsquo;d gone wrong, pasting the error message verbatim into Google always 
 a relevant answer.&lt;/p&gt;
 
 &lt;p&gt;Only a few days in, I was able to exercise my new skills by writing a to-do
-manager like &lt;a href=&#34;http://stevelosh.com/projects/t/&#34;&gt;Steve Losh&amp;rsquo;s t&lt;/a&gt; &amp;mdash; and it &lt;em&gt;actually worked&lt;/em&gt;.  Writing
+manager like &lt;a href=&#34;http://stevelosh.com/projects/t/&#34;&gt;Steve Losh&amp;rsquo;s t&lt;/a&gt;&amp;mdash;and it &lt;em&gt;actually worked&lt;/em&gt;.  Writing
 even a simple utility that functioned exactly as I wanted it to was hugely
 empowering, and using my little program every day kept me excited about
 learning. Emulating t had an unanticipated, but immensely helpful, side effect:
@@ -837,7 +837,7 @@ of loose papers without using a file cabinet; I&amp;rsquo;d probably come up wit
 sort of workable system eventually, but why go through all that pain when
 there&amp;rsquo;s a good solution that&amp;rsquo;s widely available? To push the analogy
 further, file cabinets also have a large ecosystem of standard add-ons
-designed to solve particular problems &amp;mdash; it&amp;rsquo;s easy to get cabinets with
+designed to solve particular problems&amp;mdash;it&amp;rsquo;s easy to get cabinets with
 built-in indexing systems, horizontal drawers, or wheels, for example.
 Similarly, it&amp;rsquo;s easy to find variations of the basic computer science building
 blocks that are optimized for particular applications.&lt;/p&gt;
@@ -865,7 +865,7 @@ prioritize anything other than accurate output. &amp;ldquo;It works right now,&a
 myself, &amp;ldquo;so why would anyone spend another week just making it look pretty?&amp;rdquo;
 That attitude changed the first time I had to add some functionality to a small
 piece of code I&amp;rsquo;d written a few months earlier. Even as the original author, I
-was completely baffled &amp;mdash; I&amp;rsquo;d named every variable &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;sbgs&lt;/code&gt;,
+was completely baffled&amp;mdash;I&amp;rsquo;d named every variable &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;sbgs&lt;/code&gt;,
 &lt;code&gt;data&lt;/code&gt; (yes, really), or something equally useless, and now I couldn&amp;rsquo;t make
 heads or tails of any of it. I ended up scrapping the whole file, starting from
 scratch, and feeling lucky that none of the many bugs in my old code had seen
@@ -877,7 +877,7 @@ comfortable with object-oriented programming, and I&amp;rsquo;m keeping global v
 to a minimum. More abstractly, I&amp;rsquo;m slowly learning how to hide complexity so
 that other people can treat my code as a pluggable component. I want to take
 pride not just in my code&amp;rsquo;s functionality, but in its readability, its
-cleanliness, and its aesthetics &amp;mdash; in short, in its craftsmanship.&lt;/p&gt;
+cleanliness, and its aesthetics&amp;mdash;in short, in its craftsmanship.&lt;/p&gt;
 
 &lt;p&gt;Taking a few months to focus on something other than basic computer science is
 a luxury I can afford only because Python provides an off-the-shelf version of
@@ -915,13 +915,14 @@ inclined to focus more on hard skills for the next few months.&lt;/li&gt;
     
     <item>
       <title>Hakyll and Bootstrap</title>
-      <link>http://localhost:1313/post/hakyll-and-bootstrap/</link>
+      <link>http://www.akshayshah.org/post/hakyll-and-bootstrap/</link>
       <pubDate>Sat, 04 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hakyll-and-bootstrap/</guid>
+      <guid>http://www.akshayshah.org/post/hakyll-and-bootstrap/</guid>
       <description>
 
-&lt;p&gt;Though
+&lt;p&gt;Though I&amp;rsquo;ve run a few &lt;a href=&#34;http://www.wordpress.com&#34; title=&#34;WordPress&#34;&gt;Wordpress&lt;/a&gt; sites in the past, I&amp;rsquo;ve always found the
+software irritating to use.
 &lt;label for=&#34;mn-update-failure&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
 &lt;input type=&#34;checkbox&#34; id=&#34;mn-update-failure&#34; class=&#34;margin-toggle&#34;&gt;
 &lt;span class=&#34;marginnote&#34;&gt;
@@ -936,10 +937,8 @@ Generator&#34;&gt;Hugo&lt;/a&gt;.
 
 &lt;/span&gt;
 
-I&amp;rsquo;ve run a few &lt;a href=&#34;http://www.wordpress.com&#34; title=&#34;WordPress&#34;&gt;Wordpress&lt;/a&gt; sites in the past, I&amp;rsquo;ve always found the
-software irritating to use. In particular, I &lt;em&gt;loathe&lt;/em&gt; the composer&amp;ndash;the
-rich text editor never works quite as I expect it to, and the &lt;abbr
-class=&#34;initialism&#34;&gt;HTML&lt;/abbr&gt; editor mangles my markup without warning. The
+In particular, I &lt;em&gt;loathe&lt;/em&gt; the composer&amp;mdash;the rich text editor never works quite
+as I expect it to, and the HTML editor mangles my markup without warning. The
 installation is dead simple, the theme support is fantastic, and I love &lt;a href=&#34;http://ma.tt/tag/gpl/&#34; title=&#34;Matt Mullenweg on the GPL&#34;&gt;Matt
 Mullenweg&amp;rsquo;s support of free software&lt;/a&gt;, but Wordpress just isn&amp;rsquo;t for me.
 At the same time, I don&amp;rsquo;t miss hand-coding entire sites; I&amp;rsquo;ve done that exactly
@@ -953,7 +952,7 @@ to &lt;a href=&#34;https://www.tumblr.com/&#34; title=&#34;Tumblr&#34;&gt;Tumblr
 
 &lt;p&gt;Hakyll is a static site generator, which means that it&amp;rsquo;s only a few short steps
 away from writing markup by hand. Those few steps make all the difference,
-though&amp;ndash;I can still control exactly what the final &lt;abbr&gt;HTML&lt;/abbr&gt; will look
+though&amp;mdash;I can still control exactly what the final HTML will look
 like, but Hakyll lets me write articles in &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34; title=&#34;Markdown&#34;&gt;Markdown&lt;/a&gt; and use templates for
 site-wide elements like navigation and footers.  Static sites are all the rage
 among geeks these days, so &lt;a href=&#34;http://nanoc.stoneship.org/docs/1-introduction/&#34; title=&#34;Nanoc Documentation&#34;&gt;a lot&amp;rsquo;s&lt;/a&gt; already &lt;a href=&#34;http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/&#34; title=&#34;Steve Losh: Moving from Django to Hyde&#34;&gt;been written&lt;/a&gt;
@@ -982,7 +981,7 @@ easy Javascript-based workarounds, but I&amp;rsquo;ll need to do a little more d
 diligence before I&amp;rsquo;m comfortable trusting them with critical data.&lt;/p&gt;
 
 &lt;p&gt;Hakyll also has its own set of challenges, mostly because it&amp;rsquo;s written and
-configured in &lt;a href=&#34;http://www.haskell.org/haskellwiki/Haskell&#34; title=&#34;HaskellWiki&#34;&gt;Haskell&lt;/a&gt;. To put it mildly, I&amp;rsquo;m a Haskell neophyte&amp;ndash;I&amp;rsquo;ve been
+configured in &lt;a href=&#34;http://www.haskell.org/haskellwiki/Haskell&#34; title=&#34;HaskellWiki&#34;&gt;Haskell&lt;/a&gt;. To put it mildly, I&amp;rsquo;m a Haskell neophyte&amp;mdash;I&amp;rsquo;ve been
 interested in the language for months, but haven&amp;rsquo;t done anything more than a
 few &lt;a href=&#34;http://projecteuler.net/&#34; title=&#34;Project Euler&#34;&gt;Project Euler&lt;/a&gt; questions. Since I don&amp;rsquo;t have a strong background in
 category theory, monads and arrows are &lt;em&gt;blowing my mind&lt;/em&gt;.  There&amp;rsquo;s something
@@ -996,16 +995,16 @@ functional programming has been more enlightening than infuriating.&lt;/p&gt;
 
 &lt;p&gt;I have trouble matching my clothing, let alone the dozens of small elements
 that make up a website, so creating an attractive design for my new site was a
-daunting task. Luckily, nobody needs to see my first efforts&amp;ndash;I decided to use
+daunting task. Luckily, nobody needs to see my first efforts&amp;mdash;I decided to use
 Twitter&amp;rsquo;s &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34; title=&#34;Twitter Bootstrap&#34;&gt;Bootstrap&lt;/a&gt; framework instead. It&amp;rsquo;s clean, attractive, and
-mobile-friendly, and it&amp;rsquo;s teaching me some of &lt;abbr&gt;HTML&lt;/abbr&gt;5&amp;rsquo;s new tricks.
-&lt;a href=&#34;http://lesscss.org&#34; title=&#34;{less}&#34;&gt;{less}&lt;/a&gt;, the &lt;abbr&gt;CSS&lt;/abbr&gt; meta-language Boostrap uses, is also
-wonderful: it&amp;rsquo;s close enough to vanilla &lt;abbr&gt;CSS&lt;/abbr&gt; that it&amp;rsquo;s easy to
+mobile-friendly, and it&amp;rsquo;s teaching me some of HTML5&amp;rsquo;s new tricks.
+&lt;a href=&#34;http://lesscss.org&#34; title=&#34;{less}&#34;&gt;{less}&lt;/a&gt;, the CSS meta-language Boostrap uses, is also
+wonderful: it&amp;rsquo;s close enough to vanilla CSS that it&amp;rsquo;s easy to
 learn, but it makes my stylesheets much more modular and consistent.&lt;/p&gt;
 
 &lt;p&gt;While I haven&amp;rsquo;t tweaked Bootstrap&amp;rsquo;s default styling much, I &lt;em&gt;had&lt;/em&gt; to do
 something about the fonts. I like Helvetica, especially on visually intense
-marketing sites&amp;ndash;but Bootstrap&amp;rsquo;s tiny default font size combined with
+marketing sites&amp;mdash;but Bootstrap&amp;rsquo;s tiny default font size combined with
 Helvetica&amp;rsquo;s clinical modernism made blocks of text downright hostile. After a few
 hours poking through &lt;a href=&#34;http://www.google.com/webfonts&#34; title=&#34;Google Web Fonts&#34;&gt;Google Web Fonts&lt;/a&gt; and testing different styles,
 I settled on &lt;a href=&#34;http://www.omnibus-type.com/&#34; title=&#34;Omnibus Type&#34;&gt;Omnibus Type&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;http://www.google.com/webfonts/specimen/Rosario&#34; title=&#34;Rosario&#34;&gt;Rosario&lt;/a&gt;. To my eye, it
@@ -1015,7 +1014,7 @@ distracting from the words themselves.&lt;/p&gt;
 &lt;p&gt;My efforts to choose a different color scheme, though, have been a complete
 failure. The defaults are nice enough, but they lack soul, and my efforts to
 change them usually end in a neon-tinted nightmare. There&amp;rsquo;s hope on the
-horizon, though&amp;ndash;I just read Ian Taylor&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://ianstormtaylor.com/design-tip-never-use-black/&#34; title=&#34;Design Tip: Never User Black&#34;&gt;Never Use Black&lt;/a&gt;,&amp;rdquo;
+horizon, though&amp;mdash;I just read Ian Taylor&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://ianstormtaylor.com/design-tip-never-use-black/&#34; title=&#34;Design Tip: Never User Black&#34;&gt;Never Use Black&lt;/a&gt;,&amp;rdquo;
 and I may try mixing some blue or red into the default grays.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m not much of a programmer or a designer, so I&amp;rsquo;m always in the market for

@@ -87,7 +87,7 @@ storing user records which should have unique email addresses; with this
 soft-deletion scheme, you can only have one active record for
 "betty@smith.com". Including deletion status in your constraint lets you keep
 both a soft-deleted and an active record with the same email address, but then
-you're out of luck -- any attempt to delete another record for Betty will throw
+you're out of luck---any attempt to delete another record for Betty will throw
 an ``IntegrityError``. Luckily, there's a better way.
 
 ## The Null Solution
@@ -147,7 +147,7 @@ class LiveField(models.Field):
 This is a drop-in replacement for Django's stock ``BooleanField`` in the
 abstract model above, but under the covers it stores falsy values as nulls. At
 Hearsay, we just finished migrating all our models to use ``LiveField``, and
-it's been a huge help already -- having the option to simultaneously support
+it's been a huge help already---having the option to simultaneously support
 soft-deletion and uniqueness constraints keeps our application code *and* our
 data clean.
 

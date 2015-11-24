@@ -3,7 +3,8 @@ title = "Hakyll and Bootstrap"
 date = "2012-08-04"
 +++
 
-Though
+Though I've run a few [Wordpress][] sites in the past, I've always found the
+software irritating to use.
 {{< update "failure" >}}
 It's probably no surprise, but diving
 straight into Haskell wasn't the smoothest transition; without a better
@@ -13,10 +14,8 @@ including a custom Python script, before settling on Steve Francia's <a
 href="http://gohugo.io/" title="Hugo: A Fast & Modern Static Website
 Generator">Hugo</a>.
 {{< /update >}}
-I've run a few [Wordpress][] sites in the past, I've always found the
-software irritating to use. In particular, I *loathe* the composer--the
-rich text editor never works quite as I expect it to, and the <abbr
-class="initialism">HTML</abbr> editor mangles my markup without warning. The
+In particular, I *loathe* the composer---the rich text editor never works quite
+as I expect it to, and the HTML editor mangles my markup without warning. The
 installation is dead simple, the theme support is fantastic, and I love [Matt
 Mullenweg's support of free software][gpl], but Wordpress just isn't for me.
 At the same time, I don't miss hand-coding entire sites; I've done that exactly
@@ -30,7 +29,7 @@ to [Tumblr][], I decided to keep things simple and build with [Hakyll][] and
 
 Hakyll is a static site generator, which means that it's only a few short steps
 away from writing markup by hand. Those few steps make all the difference,
-though--I can still control exactly what the final <abbr>HTML</abbr> will look
+though---I can still control exactly what the final HTML will look
 like, but Hakyll lets me write articles in [Markdown][] and use templates for
 site-wide elements like navigation and footers.  Static sites are all the rage
 among geeks these days, so [a lot's][nanoc] already [been written][stevelosh]
@@ -57,7 +56,7 @@ easy Javascript-based workarounds, but I'll need to do a little more due
 diligence before I'm comfortable trusting them with critical data.
 
 Hakyll also has its own set of challenges, mostly because it's written and
-configured in [Haskell][]. To put it mildly, I'm a Haskell neophyte--I've been
+configured in [Haskell][]. To put it mildly, I'm a Haskell neophyte---I've been
 interested in the language for months, but haven't done anything more than a
 few [Project Euler][] questions. Since I don't have a strong background in
 category theory, monads and arrows are *blowing my mind*.  There's something
@@ -71,16 +70,16 @@ functional programming has been more enlightening than infuriating.
 
 I have trouble matching my clothing, let alone the dozens of small elements
 that make up a website, so creating an attractive design for my new site was a
-daunting task. Luckily, nobody needs to see my first efforts--I decided to use
+daunting task. Luckily, nobody needs to see my first efforts---I decided to use
 Twitter's [Bootstrap][] framework instead. It's clean, attractive, and
-mobile-friendly, and it's teaching me some of <abbr>HTML</abbr>5's new tricks.
-[{less}][less], the <abbr>CSS</abbr> meta-language Boostrap uses, is also
-wonderful: it's close enough to vanilla <abbr>CSS</abbr> that it's easy to
+mobile-friendly, and it's teaching me some of HTML5's new tricks.
+[{less}][less], the CSS meta-language Boostrap uses, is also
+wonderful: it's close enough to vanilla CSS that it's easy to
 learn, but it makes my stylesheets much more modular and consistent.
 
 While I haven't tweaked Bootstrap's default styling much, I *had* to do
 something about the fonts. I like Helvetica, especially on visually intense
-marketing sites--but Bootstrap's tiny default font size combined with
+marketing sites---but Bootstrap's tiny default font size combined with
 Helvetica's clinical modernism made blocks of text downright hostile. After a few
 hours poking through [Google Web Fonts][webfonts] and testing different styles,
 I settled on [Omnibus Type's][omnibus] [Rosario][rosario]. To my eye, it
@@ -90,7 +89,7 @@ distracting from the words themselves.
 My efforts to choose a different color scheme, though, have been a complete
 failure. The defaults are nice enough, but they lack soul, and my efforts to
 change them usually end in a neon-tinted nightmare. There's hope on the
-horizon, though--I just read Ian Taylor's "[Never Use Black][black],"
+horizon, though---I just read Ian Taylor's "[Never Use Black][black],"
 and I may try mixing some blue or red into the default grays.
 
 I'm not much of a programmer or a designer, so I'm always in the market for

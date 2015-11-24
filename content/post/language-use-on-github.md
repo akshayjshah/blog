@@ -10,7 +10,7 @@ a six-month-old Twitter [conversation][twitter-convo], I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
 languages on GitHub: <img
 src="/img/post/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub" class="fill-column">
+alt="Language Correlation on GitHub">
 
 Each square in the chart measures the [rank correlation][wiki-rank-correlation]
 between two languages; positive correlations are in blue, and negative
@@ -28,7 +28,7 @@ details!
 GitHub's own [Brian Doll][brian-doll] published a [data set][brian-doll-data]
 titled "Programming Language Correlations," but as an astute commenter pointed
 out, it's really a set of conditional probabilities. For our question,
-that's an important distinction -- while conditional probabilities let us say,
+that's an important distinction---while conditional probabilities let us say,
 "87.9% of CoffeeScript programmers also code in Ruby," they *don't* allow us to
 say, "People who write more CoffeeScript also tend to write more Ruby." To
 tackle our question, we'll need access to some more granular data.
@@ -53,7 +53,7 @@ group by actor, repository_language;
 The results of this query are in a stacked format, where each combination of
 user and language is on a separate row:
 
-<table class="fill-column center">
+<table>
   <thead>
     <tr>
       <th>actor</th>
@@ -94,7 +94,7 @@ Stacked formats are often convenient in database schemas, but they're not very
 useful for analysis. We'd rather unstack the data so that there's one row per
 user and one column per language:
 
-<table class="fill-column center">
+<table>
   <thead>
     <tr>
       <th>actor</th>
@@ -193,14 +193,14 @@ reasons:
 * There are quite a few outliers in our data set, and rank correlations are
   less distorted by these outliers.
 
-If that doesn't convince you, it's easy to calculate the Pearson correlation --
-it's the default in pandas, so removing the ``method='spearman'`` above should
-do the trick. If you're impatient, you can just peek at the
+If that doesn't convince you, it's easy to calculate the Pearson correlation---it's
+the default in pandas, so removing the ``method='spearman'`` above should do
+the trick. If you're impatient, you can just peek at the
 [results][pearson-plot].
 
 <h2 id="conclusions">Conclusions</h2>
 <img src="/img/post/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub" class="fill-column">
+alt="Language Correlation on GitHub">
 
 The most striking thing about this chart is its *blueness*. Despite our
 tribalism, writing scads of C# doesn't make programmers any less likely to hack
@@ -224,7 +224,7 @@ Like any analysis project, this one comes with a few caveats:
   from their closed-source counterparts.
 * Correlation isn't causation.
 
-I've only scratched the surface here -- if you've got some ideas, [let me
+I've only scratched the surface here---if you've got some ideas, [let me
 know](mailto:akshay@akshayshah.org)!
 
 [big-query]: https://developers.google.com/bigquery/

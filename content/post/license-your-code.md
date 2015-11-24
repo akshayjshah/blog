@@ -5,7 +5,7 @@ date = "2013-08-04"
 
 If you're a [GitHub][] user, you probably
 want to let other people use your code in their own projects. Just throwing
-your code online isn't enough, though -- you *have* to release it under an
+your code online isn't enough, though---you *have* to release it under an
 open-source license.  If you're not sure why, read on: in this post, I'll
 explain the absolute minimum that every developer should know about copyright
 and software licensing.

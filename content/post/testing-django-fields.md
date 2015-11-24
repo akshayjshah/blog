@@ -15,7 +15,7 @@ all test-specific models in ``test/models.py``, but don't include the test app
 in ``INSTALLED APPS``. In your test suite's setup method, monkey-patch your
 settings to include the test app and run Django's ``syncdb`` command, and
 un-patch your settings in the teardown method. Dynamically altering your
-settings in the test suite keeps your production database clean -- a rogue
+settings in the test suite keeps your production database clean---a rogue
 ``syncdb`` won't suddenly create dozens of useless new tables. My biggest gripe
 with this approach, though, is that it forces you to separate your test code
 into two files. The tests become much harder to read, and the file of test
