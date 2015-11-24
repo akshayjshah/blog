@@ -10,7 +10,7 @@ $ratio: 1.618;
 $lineHeight: $ratio;
 $v: ($lineHeight * 1rem);
 
-$serifStack: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$serifStack: "Cardo", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $monoStack: "Inconsolata", Consolas, "Liberation Mono", Menlo, Monaco, Courier, monospace;
 $bodyStack: $serifStack;
 $codeStack: $monoStack;
