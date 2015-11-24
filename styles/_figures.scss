@@ -7,9 +7,13 @@ figure {
     max-width: 55%;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
-    margin: 0 0 3em 0;
+    margin: 1rem 0;
 }
 
 img {
     max-width: 100%;
+}
+
+@media screen and (max-width: 770px) {
+    figure { max-width: 90%; }
 }

@@ -1,4 +1,4 @@
-.sidenote, .marginnote {
+.marginnote {
     float: right;
     clear: right;
     margin-right: -60%;
@@ -22,37 +22,25 @@
     line-height: 1.6;
 }
 
-.sidenote-number {
-    counter-increment: sidenote-counter;
-}
-
-.sidenote-number:after, .sidenote:before {
-    content: counter(sidenote-counter) " ";
-    font-family: et-book-roman-old-style;
-    position: relative;
-    vertical-align: baseline;
-}
-
-.sidenote-number:after {
-    content: counter(sidenote-counter);
-    font-size: 0.8rem;
-    top: -0.5rem;
-    left: 0.1rem;
-}
-
-.sidenote:before {
-    content: counter(sidenote-counter) " ";
-    top: -0.5rem;
-}
-
 input.margin-toggle {
     display: none;
 }
 
-label.sidenote-number {
-    display: inline;
+label.margin-toggle {
+    display: none;
 }
 
-label.margin-toggle:not(.sidenote-number) {
-    display: none;
+@media (max-width: 770px) {
+    label.margin-toggle { display: inline; }
+    .marginnote { display: none; }
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        clear: both;
+        width: 90%;
+        margin: 0.8rem 5%;
+        vertical-align: baseline;
+        position: relative;
+    }
+    label { cursor: pointer; }
 }

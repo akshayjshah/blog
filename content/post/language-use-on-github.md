@@ -8,9 +8,9 @@ using Go also do front-end work in ActionScript? Most programmers have some
 intuitions about these questions---*but what does the data say*? Spurred on by
 a six-month-old Twitter [conversation][twitter-convo], I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: <img
+languages on GitHub: <figure><img
 src="/img/post/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub">
+alt="Language Correlation on GitHub"></figure>
 
 Each square in the chart measures the [rank correlation][wiki-rank-correlation]
 between two languages; positive correlations are in blue, and negative
@@ -124,7 +124,6 @@ transformation with one Python command:
 
 ```python
 import pandas as pd
-
 pushes = pd.read_csv('stacked_language_by_user.csv').pivot(
     index='actor',
     columns='repository_language',
@@ -138,18 +137,7 @@ account), so I'll keep a zipped copy of the [stacked][stacked-csv] and
 ## Analysis
 
 GitHub recognizes *lots* of different languages, including some that are fairly
-obscure, so our unstacked data set has too many columns to visualize. Let's
-just keep the most popular languages:
-
-```python
-import numpy as np
-
-popular = pushes.select(lambda x: np.sum(pushes[x]) > 50000, axis=1)
-```
-
-Now that our data's formatted and filtered, it's time to actually calculate our
-correlation matrix and draw a plot. Again, pandas makes the number-crunching
-ridiculously simple:
+obscure, so our unstacked data set has too many columns to visualize.
 {{< update "fillna" >}}
 As <a href="http://conjugateprior.org/">conjugateprior</a>
 noted in the now-defunct comments, this calculation ignores any rows with missing
@@ -160,6 +148,16 @@ href="https://gist.github.com/coyotebush/5379476">updated code</a> and <a
 href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</a>),
 or we could also calculate significance for each correlation.
 {{< /update >}}
+Let's just keep the most popular languages:
+
+```python
+import numpy as np
+popular = pushes.select(lambda x: np.sum(pushes[x]) > 50000, axis=1)
+```
+
+Now that our data's formatted and filtered, it's time to actually calculate our
+correlation matrix and draw a plot. Again, pandas makes the number-crunching
+ridiculously simple:
 
 ```python
 import matplotlib.pyplot as plt

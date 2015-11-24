@@ -395,7 +395,7 @@ worked well for us at &lt;a href=&#34;http://hearsaysocial.com/careers/&#34;&gt;
 impossible to enforce uniqueness constraints in your database. Let&amp;rsquo;s say you&amp;rsquo;re
 storing user records which should have unique email addresses; with this
 soft-deletion scheme, you can only have one active record for
-&amp;ldquo;betty@smith.com&amp;rdquo;. Including deletion status in your constraint lets you keep
+betty@smith.com. Including deletion status in your constraint lets you keep
 both a soft-deleted and an active record with the same email address, but then
 you&amp;rsquo;re out of luck&amp;mdash;any attempt to delete another record for Betty will throw
 an &lt;code&gt;IntegrityError&lt;/code&gt;. Luckily, there&amp;rsquo;s a better way.&lt;/p&gt;
@@ -480,9 +480,9 @@ using Go also do front-end work in ActionScript? Most programmers have some
 intuitions about these questions&amp;mdash;&lt;em&gt;but what does the data say&lt;/em&gt;? Spurred on by
 a six-month-old Twitter &lt;a href=&#34;https://twitter.com/misc/status/235167513833525249&#34;&gt;conversation&lt;/a&gt;, I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: &lt;img
+languages on GitHub: &lt;figure&gt;&lt;img
 src=&#34;/img/post/language-use-on-github/spearman_language_correlation.svg&#34;
-alt=&#34;Language Correlation on GitHub&#34;&gt;&lt;/p&gt;
+alt=&#34;Language Correlation on GitHub&#34;&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;Each square in the chart measures the &lt;a href=&#34;http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient&#34;&gt;rank correlation&lt;/a&gt;
 between two languages; positive correlations are in blue, and negative
@@ -594,7 +594,6 @@ user and one column per language:&lt;/p&gt;
 transformation with one Python command:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-
 pushes = pd.read_csv(&#39;stacked_language_by_user.csv&#39;).pivot(
     index=&#39;actor&#39;,
     columns=&#39;repository_language&#39;,
@@ -608,17 +607,7 @@ account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://www
 &lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
 
 &lt;p&gt;GitHub recognizes &lt;em&gt;lots&lt;/em&gt; of different languages, including some that are fairly
-obscure, so our unstacked data set has too many columns to visualize. Let&amp;rsquo;s
-just keep the most popular languages:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
-
-popular = pushes.select(lambda x: np.sum(pushes[x]) &amp;gt; 50000, axis=1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now that our data&amp;rsquo;s formatted and filtered, it&amp;rsquo;s time to actually calculate our
-correlation matrix and draw a plot. Again, pandas makes the number-crunching
-ridiculously simple:
+obscure, so our unstacked data set has too many columns to visualize.
 &lt;label for=&#34;mn-update-fillna&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
 &lt;input type=&#34;checkbox&#34; id=&#34;mn-update-fillna&#34; class=&#34;margin-toggle&#34;&gt;
 &lt;span class=&#34;marginnote&#34;&gt;
@@ -633,7 +622,16 @@ href=&#34;http://coreyford.name/2013/04/13/github-language-correlations.html&#34
 or we could also calculate significance for each correlation.
 
 &lt;/span&gt;
-&lt;/p&gt;
+
+Let&amp;rsquo;s just keep the most popular languages:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+popular = pushes.select(lambda x: np.sum(pushes[x]) &amp;gt; 50000, axis=1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that our data&amp;rsquo;s formatted and filtered, it&amp;rsquo;s time to actually calculate our
+correlation matrix and draw a plot. Again, pandas makes the number-crunching
+ridiculously simple:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
 

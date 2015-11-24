@@ -4,12 +4,12 @@ title = "Colophon"
 
 +++
 
+I'm Akshay Shah, and you've landed on my little patch of the web---mazel
+tov!
 {{< sidenote "akshay-pic" >}}
-<img height="300" width="300" alt="" src="/img/akshay-300x300.png">
+<img max-height="300" width="300" alt="" src="/img/akshay-300x300.png">
 {{< /sidenote >}}
-I'm Akshay Shah,
-and you've landed on my little patch of the web---mazel
-tov! As a brief introduction, I live in San Francisco, CA, where I'm an
+As a brief introduction, I live in San Francisco, CA, where I'm an
 engineer at [Uber][]. If you'd like to get in touch with me, you can
 send me an [email][]; I'm also on [Twitter][], [LinkedIn][], and [GitHub][].
 

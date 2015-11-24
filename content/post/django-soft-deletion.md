@@ -85,7 +85,7 @@ The problem is simple: using a Boolean to store deletion status makes it
 impossible to enforce uniqueness constraints in your database. Let's say you're
 storing user records which should have unique email addresses; with this
 soft-deletion scheme, you can only have one active record for
-"betty@smith.com". Including deletion status in your constraint lets you keep
+betty@smith.com. Including deletion status in your constraint lets you keep
 both a soft-deleted and an active record with the same email address, but then
 you're out of luck---any attempt to delete another record for Betty will throw
 an ``IntegrityError``. Luckily, there's a better way.
