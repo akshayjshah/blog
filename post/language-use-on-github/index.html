@@ -40,9 +40,9 @@ using Go also do front-end work in ActionScript? Most programmers have some
 intuitions about these questions&mdash;<em>but what does the data say</em>? Spurred on by
 a six-month-old Twitter <a href="https://twitter.com/misc/status/235167513833525249">conversation</a>, I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: <img
+languages on GitHub: <figure><img
 src="/img/post/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub"></p>
+alt="Language Correlation on GitHub"></figure></p>
 
 <p>Each square in the chart measures the <a href="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">rank correlation</a>
 between two languages; positive correlations are in blue, and negative
@@ -154,7 +154,6 @@ user and one column per language:</p>
 transformation with one Python command:</p>
 
 <pre><code class="language-python">import pandas as pd
-
 pushes = pd.read_csv('stacked_language_by_user.csv').pivot(
     index='actor',
     columns='repository_language',
@@ -168,17 +167,7 @@ account), so I&rsquo;ll keep a zipped copy of the <a href="/img/post/language-us
 <h2 id="analysis">Analysis</h2>
 
 <p>GitHub recognizes <em>lots</em> of different languages, including some that are fairly
-obscure, so our unstacked data set has too many columns to visualize. Let&rsquo;s
-just keep the most popular languages:</p>
-
-<pre><code class="language-python">import numpy as np
-
-popular = pushes.select(lambda x: np.sum(pushes[x]) &gt; 50000, axis=1)
-</code></pre>
-
-<p>Now that our data&rsquo;s formatted and filtered, it&rsquo;s time to actually calculate our
-correlation matrix and draw a plot. Again, pandas makes the number-crunching
-ridiculously simple:
+obscure, so our unstacked data set has too many columns to visualize.
 <label for="mn-update-fillna" class="margin-toggle">&#8853;</label>
 <input type="checkbox" id="mn-update-fillna" class="margin-toggle">
 <span class="marginnote">
@@ -193,7 +182,16 @@ href="http://coreyford.name/2013/04/13/github-language-correlations.html">plot</
 or we could also calculate significance for each correlation.
 
 </span>
-</p>
+
+Let&rsquo;s just keep the most popular languages:</p>
+
+<pre><code class="language-python">import numpy as np
+popular = pushes.select(lambda x: np.sum(pushes[x]) &gt; 50000, axis=1)
+</code></pre>
+
+<p>Now that our data&rsquo;s formatted and filtered, it&rsquo;s time to actually calculate our
+correlation matrix and draw a plot. Again, pandas makes the number-crunching
+ridiculously simple:</p>
 
 <pre><code class="language-python">import matplotlib.pyplot as plt
 

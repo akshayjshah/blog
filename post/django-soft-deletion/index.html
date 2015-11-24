@@ -120,7 +120,7 @@ worked well for us at <a href="http://hearsaysocial.com/careers/">Hearsay Social
 impossible to enforce uniqueness constraints in your database. Let&rsquo;s say you&rsquo;re
 storing user records which should have unique email addresses; with this
 soft-deletion scheme, you can only have one active record for
-&ldquo;betty@smith.com&rdquo;. Including deletion status in your constraint lets you keep
+betty@smith.com. Including deletion status in your constraint lets you keep
 both a soft-deleted and an active record with the same email address, but then
 you&rsquo;re out of luck&mdash;any attempt to delete another record for Betty will throw
 an <code>IntegrityError</code>. Luckily, there&rsquo;s a better way.</p>
