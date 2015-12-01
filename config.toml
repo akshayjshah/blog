@@ -10,4 +10,4 @@ title = "Akshay Shah"
   GoogleSiteVerification = "4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw"
 
 [blackfriday]
-  plainIdAnchors = true
+  plainIDAnchors = true

@@ -57,7 +57,7 @@ on GitHub">GitHub</a>. Try it out and let me know what you think!
 </span>
 </p>
 
-<h2 id="naive-soft-deletion:4a5f809b2c368dcab604840dcdaacdb8">Naive Soft-Deletion</h2>
+<h2 id="naive-soft-deletion">Naive Soft-Deletion</h2>
 
 <p>At first blush, soft-deletion seems embarrassingly simple. If you&rsquo;re like me,
 a system like this probably springs to mind:</p>
@@ -125,7 +125,7 @@ both a soft-deleted and an active record with the same email address, but then
 you&rsquo;re out of luck&mdash;any attempt to delete another record for Betty will throw
 an <code>IntegrityError</code>. Luckily, there&rsquo;s a better way.</p>
 
-<h2 id="the-null-solution:4a5f809b2c368dcab604840dcdaacdb8">The Null Solution</h2>
+<h2 id="the-null-solution">The Null Solution</h2>
 
 <p>At the database level, there&rsquo;s a straightforward solution to this problem
 (though I didn&rsquo;t learn about it until a few months ago): store soft-deleted

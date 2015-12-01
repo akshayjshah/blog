@@ -34,7 +34,7 @@ only if the topic sounds appealing.&lt;/p&gt;
 &lt;p&gt;If you know of a great show that isn&amp;rsquo;t on my list, &lt;a href=&#34;mailto:akshay@akshayshah.org&#34;&gt;let me
 know&lt;/a&gt; &amp;mdash; I&amp;rsquo;m always looking for something new.&lt;/p&gt;
 
-&lt;h2 id=&#34;general-engineering:ed5c70ce0c491224d2f261270adf4b76&#34;&gt;General Engineering&lt;/h2&gt;
+&lt;h2 id=&#34;general-engineering&#34;&gt;General Engineering&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.se-radio.net/&#34;&gt;Software Engineering Radio&lt;/a&gt; ★★★&lt;/li&gt;
@@ -45,7 +45,7 @@ know&lt;/a&gt; &amp;mdash; I&amp;rsquo;m always looking for something new.&lt;/p
 &lt;li&gt;&lt;a href=&#34;http://theshipshow.com/&#34;&gt;The Ship Show&lt;/a&gt; ★&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;the-web:ed5c70ce0c491224d2f261270adf4b76&#34;&gt;The Web&lt;/h2&gt;
+&lt;h2 id=&#34;the-web&#34;&gt;The Web&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://5by5.tv/bigwebshow&#34;&gt;The Big Web Show&lt;/a&gt; ★★&lt;/li&gt;
@@ -55,21 +55,21 @@ Behind&lt;/a&gt; sub-series was ★★★)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://devchat.tv/js-jabber/&#34;&gt;JavaScript Jabber&lt;/a&gt; ★&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;data-science-and-big-data:ed5c70ce0c491224d2f261270adf4b76&#34;&gt;Data Science and Big Data&lt;/h2&gt;
+&lt;h2 id=&#34;data-science-and-big-data&#34;&gt;Data Science and Big Data&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.thetalkingmachines.com/&#34;&gt;Talking Machines&lt;/a&gt; ★★★&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://radar.oreilly.com/tag/oreilly-data-show-podcast&#34;&gt;O&amp;rsquo;Reilly Data Show&lt;/a&gt; ★&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;startups-and-silicon-valley:ed5c70ce0c491224d2f261270adf4b76&#34;&gt;Startups and Silicon Valley&lt;/h2&gt;
+&lt;h2 id=&#34;startups-and-silicon-valley&#34;&gt;Startups and Silicon Valley&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://gimletmedia.com/show/startup/&#34;&gt;StartUp Podcast&lt;/a&gt; ★★★&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://a16z.com/tag/podcasts/&#34;&gt;a16z&lt;/a&gt; ★&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;podcatchers:ed5c70ce0c491224d2f261270adf4b76&#34;&gt;Podcatchers&lt;/h2&gt;
+&lt;h2 id=&#34;podcatchers&#34;&gt;Podcatchers&lt;/h2&gt;
 
 &lt;p&gt;A quick word on podcasting clients: the official podcast clients from Apple and
 Google are okay, but it&amp;rsquo;s worth spending a few dollars to get a top-notch
@@ -230,7 +230,7 @@ and software licensing.&lt;/p&gt;
 disclaimers: this post isn&amp;rsquo;t legal advice, I&amp;rsquo;m not going to address patents at
 all, and some of what I&amp;rsquo;m about to explain is specific to the United States.&lt;/p&gt;
 
-&lt;h2 id=&#34;closed-by-default:8b068c15bc14cdfc7d3bc12f6a694666&#34;&gt;Closed by Default&lt;/h2&gt;
+&lt;h2 id=&#34;closed-by-default&#34;&gt;Closed by Default&lt;/h2&gt;
 
 &lt;p&gt;In the US, every shred of code you&amp;rsquo;ve ever written is automatically protected
 by copyright. That means, broadly speaking, that it&amp;rsquo;s your property.  If you
@@ -245,7 +245,7 @@ wait before your copyright expires. To let other developers legally copy,
 modify, and reuse your code while it&amp;rsquo;s still relevant, you have to offer it to
 them under a &lt;em&gt;license&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;permissive-licensing:8b068c15bc14cdfc7d3bc12f6a694666&#34;&gt;Permissive Licensing&lt;/h2&gt;
+&lt;h2 id=&#34;permissive-licensing&#34;&gt;Permissive Licensing&lt;/h2&gt;
 
 &lt;p&gt;Licenses are just agreements between you, the author and owner of the code, and
 all the other developers who&amp;rsquo;d like to use your code. Even if you&amp;rsquo;ve never
@@ -262,7 +262,7 @@ nuclear meltdown, though, they&amp;rsquo;re on their own. Because they let other
 developers do whatever they&amp;rsquo;d like, these licenses are often called
 &lt;em&gt;permissive&lt;/em&gt;; the &lt;a href=&#34;https://en.wikipedia.org/wiki/MIT_License&#34;&gt;MIT license&lt;/a&gt; is a popular example.&lt;/p&gt;
 
-&lt;h2 id=&#34;copyleft:8b068c15bc14cdfc7d3bc12f6a694666&#34;&gt;Copyleft&lt;/h2&gt;
+&lt;h2 id=&#34;copyleft&#34;&gt;Copyleft&lt;/h2&gt;
 
 &lt;p&gt;But what if you don&amp;rsquo;t want your code integrated into closed-source systems?
 Richard Stallman and the &lt;a href=&#34;http://fsf.org&#34;&gt;Free Software Foundation&lt;/a&gt; are right there with
@@ -281,7 +281,7 @@ licenses.&lt;/p&gt;
 Stand proud, grasshopper, and remember to include an explicit license when
 sharing your code online.&lt;/p&gt;
 
-&lt;h2 id=&#34;more-questions:8b068c15bc14cdfc7d3bc12f6a694666&#34;&gt;More Questions?&lt;/h2&gt;
+&lt;h2 id=&#34;more-questions&#34;&gt;More Questions?&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Need a refresher? Looking for some actual legalese to include in your
@@ -332,7 +332,7 @@ on GitHub&#34;&gt;GitHub&lt;/a&gt;. Try it out and let me know what you think!
 &lt;/span&gt;
 &lt;/p&gt;
 
-&lt;h2 id=&#34;naive-soft-deletion:4a5f809b2c368dcab604840dcdaacdb8&#34;&gt;Naive Soft-Deletion&lt;/h2&gt;
+&lt;h2 id=&#34;naive-soft-deletion&#34;&gt;Naive Soft-Deletion&lt;/h2&gt;
 
 &lt;p&gt;At first blush, soft-deletion seems embarrassingly simple. If you&amp;rsquo;re like me,
 a system like this probably springs to mind:&lt;/p&gt;
@@ -400,7 +400,7 @@ both a soft-deleted and an active record with the same email address, but then
 you&amp;rsquo;re out of luck&amp;mdash;any attempt to delete another record for Betty will throw
 an &lt;code&gt;IntegrityError&lt;/code&gt;. Luckily, there&amp;rsquo;s a better way.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-null-solution:4a5f809b2c368dcab604840dcdaacdb8&#34;&gt;The Null Solution&lt;/h2&gt;
+&lt;h2 id=&#34;the-null-solution&#34;&gt;The Null Solution&lt;/h2&gt;
 
 &lt;p&gt;At the database level, there&amp;rsquo;s a straightforward solution to this problem
 (though I didn&amp;rsquo;t learn about it until a few months ago): store soft-deleted
@@ -495,7 +495,7 @@ write less Go (and there&amp;rsquo;s an identically-colored square in the bottom
 show it). Take a moment to find your favorite languages, then read on for the
 details!&lt;/p&gt;
 
-&lt;h2 id=&#34;data-collection:c21f0a42d9eb35c43df05ae3956e62fe&#34;&gt;Data Collection&lt;/h2&gt;
+&lt;h2 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h2&gt;
 
 &lt;p&gt;GitHub&amp;rsquo;s own &lt;a href=&#34;https://github.com/briandoll&#34;&gt;Brian Doll&lt;/a&gt; published a &lt;a href=&#34;https://gist.github.com/briandoll/e0637fff9c8eec988528&#34;&gt;data set&lt;/a&gt;
 titled &amp;ldquo;Programming Language Correlations,&amp;rdquo; but as an astute commenter pointed
@@ -604,7 +604,7 @@ pushes = pd.read_csv(&#39;stacked_language_by_user.csv&#39;).pivot(
 account), so I&amp;rsquo;ll keep a zipped copy of the &lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/stacked_language_by_user.zip&#34;&gt;stacked&lt;/a&gt; and
 &lt;a href=&#34;http://www.akshayshah.org/img/post/language-use-on-github/unstacked_language_by_user.zip&#34;&gt;unstacked&lt;/a&gt; results available.&lt;/p&gt;
 
-&lt;h2 id=&#34;analysis:c21f0a42d9eb35c43df05ae3956e62fe&#34;&gt;Analysis&lt;/h2&gt;
+&lt;h2 id=&#34;analysis&#34;&gt;Analysis&lt;/h2&gt;
 
 &lt;p&gt;GitHub recognizes &lt;em&gt;lots&lt;/em&gt; of different languages, including some that are fairly
 obscure, so our unstacked data set has too many columns to visualize.
@@ -735,7 +735,7 @@ us are willing (or allowed) to administer a writing test as part of the
 interview process. For the rushed curmudgeon, I offer a shortcut: focus on the
 candidate&amp;rsquo;s use of the word &amp;ldquo;myself.&amp;rdquo;&lt;/p&gt;
 
-&lt;h2 id=&#34;an-easy-audible-grammar-test:da80e0833d6ea3ee06d8379e7d6e6c50&#34;&gt;An Easy, Audible Grammar Test&lt;/h2&gt;
+&lt;h2 id=&#34;an-easy-audible-grammar-test&#34;&gt;An Easy, Audible Grammar Test&lt;/h2&gt;
 
 &lt;p&gt;Many guides to grammar gaffes focus on homophones&amp;mdash;pairs of words that
 have different meanings but identical pronunciations.  But relying on
@@ -792,7 +792,7 @@ definitely a programmer (or at least a code monkey). Writing code every day is
 an important part of my job, and I &lt;em&gt;love&lt;/em&gt; it. If you&amp;rsquo;re interested in learning
 to code, especially in Python, I hope my story helps you get started faster.&lt;/p&gt;
 
-&lt;h2 id=&#34;syntax-is-easy:ecea238c9d94fb3bc0b59bc5de6a2232&#34;&gt;Syntax Is Easy&lt;/h2&gt;
+&lt;h2 id=&#34;syntax-is-easy&#34;&gt;Syntax Is Easy&lt;/h2&gt;
 
 &lt;p&gt;Oddly enough, learning the syntax of a programming language&amp;mdash;the rules
 for assembling words, curly braces, backslashes, and all the other
@@ -815,7 +815,7 @@ also written in Python. Taking the time to really understand how Steve&amp;rsquo
 worked (and why it was much, much better than mine) accelerated my learning
 dramatically.&lt;/p&gt;
 
-&lt;h2 id=&#34;computer-science-is-practical:ecea238c9d94fb3bc0b59bc5de6a2232&#34;&gt;Computer Science Is Practical&lt;/h2&gt;
+&lt;h2 id=&#34;computer-science-is-practical&#34;&gt;Computer Science Is Practical&lt;/h2&gt;
 
 &lt;p&gt;Of course, what&amp;rsquo;s a to-do manager without projects, sub-projects, and maybe
 even sub-sub-projects? Naively, I assumed that adding this feature to my little
@@ -848,7 +848,7 @@ for me to watch while riding the train and keeping an eye out for my stop. I&amp
 not sure what I&amp;rsquo;ll tackle next, but I&amp;rsquo;m leaning towards continuing the MIT
 undergraduate sequence.&lt;/p&gt;
 
-&lt;h2 id=&#34;craftsmanship-is-crucial:ecea238c9d94fb3bc0b59bc5de6a2232&#34;&gt;Craftsmanship Is Crucial&lt;/h2&gt;
+&lt;h2 id=&#34;craftsmanship-is-crucial&#34;&gt;Craftsmanship Is Crucial&lt;/h2&gt;
 
 &lt;p&gt;A few days after I started watching the MIT lectures, I switched jobs and began
 writing code at work. This was, to say the least, a big transition: I went from
@@ -888,7 +888,7 @@ for software developers&lt;/a&gt;.&amp;rdquo; I&amp;rsquo;ll probably still make
 rookie mistakes, but I hope that this early investment will help me learn from
 my mistakes faster.&lt;/p&gt;
 
-&lt;h2 id=&#34;what-next:ecea238c9d94fb3bc0b59bc5de6a2232&#34;&gt;What Next?&lt;/h2&gt;
+&lt;h2 id=&#34;what-next&#34;&gt;What Next?&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;ll finish Code Complete this week, but I&amp;rsquo;m not sure where I should invest my
 time next. I could:&lt;/p&gt;
@@ -946,7 +946,7 @@ of choosing whatever tools I like; after looking at everything from &lt;a href=&
 to &lt;a href=&#34;https://www.tumblr.com/&#34; title=&#34;Tumblr&#34;&gt;Tumblr&lt;/a&gt;, I decided to keep things simple and build with &lt;a href=&#34;http://jaspervdj.be/hakyll/&#34; title=&#34;Hakyll&#34;&gt;Hakyll&lt;/a&gt; and
 &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34; title=&#34;Twitter Bootstrap&#34;&gt;Bootstrap&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;hakyll-static-site-generation:8398cd266333a1ac92285470e7a8bf71&#34;&gt;Hakyll: Static Site Generation&lt;/h2&gt;
+&lt;h2 id=&#34;hakyll-static-site-generation&#34;&gt;Hakyll: Static Site Generation&lt;/h2&gt;
 
 &lt;p&gt;Hakyll is a static site generator, which means that it&amp;rsquo;s only a few short steps
 away from writing markup by hand. Those few steps make all the difference,
@@ -989,7 +989,7 @@ is excellent, the &lt;a href=&#34;http://groups.google.com/group/hakyll&#34; tit
 &lt;a href=&#34;http://jaspervdj.be&#34; title=&#34;Jasper Van der Jeugt&#34;&gt;author&lt;/a&gt; is exceptionally helpful, so my first foray into practical
 functional programming has been more enlightening than infuriating.&lt;/p&gt;
 
-&lt;h2 id=&#34;bootstrap-clean-design-no-fuss:8398cd266333a1ac92285470e7a8bf71&#34;&gt;Bootstrap: Clean Design, No Fuss&lt;/h2&gt;
+&lt;h2 id=&#34;bootstrap-clean-design-no-fuss&#34;&gt;Bootstrap: Clean Design, No Fuss&lt;/h2&gt;
 
 &lt;p&gt;I have trouble matching my clothing, let alone the dozens of small elements
 that make up a website, so creating an attractive design for my new site was a
