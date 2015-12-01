@@ -946,7 +946,7 @@ of choosing whatever tools I like; after looking at everything from &lt;a href=&
 to &lt;a href=&#34;https://www.tumblr.com/&#34; title=&#34;Tumblr&#34;&gt;Tumblr&lt;/a&gt;, I decided to keep things simple and build with &lt;a href=&#34;http://jaspervdj.be/hakyll/&#34; title=&#34;Hakyll&#34;&gt;Hakyll&lt;/a&gt; and
 &lt;a href=&#34;http://twitter.github.com/bootstrap/&#34; title=&#34;Twitter Bootstrap&#34;&gt;Bootstrap&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;hakyll-static-site-generation:8398cd266333a1ac92285470e7a8bf71&#34;&gt;Hakyll: Static Site Generation&lt;/h2&gt;
+&lt;h2 id=&#34;hakyll-static-site-generation&#34;&gt;Hakyll: Static Site Generation&lt;/h2&gt;
 
 &lt;p&gt;Hakyll is a static site generator, which means that it&amp;rsquo;s only a few short steps
 away from writing markup by hand. Those few steps make all the difference,
@@ -989,7 +989,7 @@ is excellent, the &lt;a href=&#34;http://groups.google.com/group/hakyll&#34; tit
 &lt;a href=&#34;http://jaspervdj.be&#34; title=&#34;Jasper Van der Jeugt&#34;&gt;author&lt;/a&gt; is exceptionally helpful, so my first foray into practical
 functional programming has been more enlightening than infuriating.&lt;/p&gt;
 
-&lt;h2 id=&#34;bootstrap-clean-design-no-fuss:8398cd266333a1ac92285470e7a8bf71&#34;&gt;Bootstrap: Clean Design, No Fuss&lt;/h2&gt;
+&lt;h2 id=&#34;bootstrap-clean-design-no-fuss&#34;&gt;Bootstrap: Clean Design, No Fuss&lt;/h2&gt;
 
 &lt;p&gt;I have trouble matching my clothing, let alone the dozens of small elements
 that make up a website, so creating an attractive design for my new site was a

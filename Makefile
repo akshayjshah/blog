@@ -15,13 +15,14 @@ css: styles
 clean:
 	rm -rf public
 
-build: css archetypes content data layouts static config.toml
+.PHONY: build
+build: css
 	hugo
 
 .PHONY: serve
-serve: build
+serve: css
 	hugo server --watch
 
 .PHONY: deploy
-deploy: build
+deploy:
 	git subtree push --prefix=public deploy master
