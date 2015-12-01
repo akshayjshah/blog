@@ -25,4 +25,6 @@ serve: css
 
 .PHONY: deploy
 deploy:
-	git subtree push --prefix=public deploy master
+	# Always force-push, since the canonical revision history is in this
+	# repository.
+	git push deploy `git subtree split --prefix=public master`:master --force
