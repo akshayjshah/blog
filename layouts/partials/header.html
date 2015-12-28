@@ -17,7 +17,10 @@
     <!-- Links -->
     <base href="{{ .Site.BaseURL }}">
     <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .RSSlink }}
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .RSSlink }}">
+    <link rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .RSSlink }}">
+    {{ end }}
     <link rel="license" href="/license/">
 
     <!-- Styles -->
