@@ -92,7 +92,7 @@ code {
     font-family: $codeStack;
 }
 
-pre.code {
+pre {
     width: 52.5%;
     padding-left: 2.5%;
     overflow-x: auto;
@@ -116,6 +116,13 @@ blockquote footer {
 
 .post-list {
     list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.post-list .post-date {
+    font-style: italic;
+    color: lighten($textColor, 30%);
 }
 
 .epigraphs blockquote {
@@ -134,7 +141,7 @@ blockquote footer {
 
 @media screen and (max-width: 770px) {
     p, footer, table { width: 90%; }
-    pre.code { width: 87.5%; }
+    pre { width: 87.5%; }
     ol, ul, dl { width: 85%; }
     blockquote p, blockquote footer { width: 90%; }
     h1, h2, h3 { margin-right: 1rem; }
