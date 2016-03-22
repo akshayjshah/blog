@@ -14,7 +14,8 @@ _POSTS = building-a-blog.md \
 		 soft-deletion-in-django.md \
 		 license-your-code.md \
 		 testing-django-fields.md \
-		 podcasts-for-developers.md
+		 podcasts-for-developers.md \
+		 decade-of-cap.md
 
 define render-post
 	@echo "Rendering $<..."
