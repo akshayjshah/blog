@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      <title>A Decade of CAP • Akshay Shah</title>
+    
+    <meta name="description" content="Thoughts on code and human factors from a physician-turned-engineer.">
+    <meta name="author" content="Akshay Shah">
+    <meta name="google-site-verification" content="4HtidoNpDGdC2C6EzFe1T7wQadGKABZb1Kv8VYoFdSw">
+    <meta name="generator" content="Hugo 0.15" />
+
+    
+    <base href="http://www.akshayshah.org">
+    <link rel="canonical" href="http://www.akshayshah.org/post/decade-of-cap/">
+    
+    <link rel="license" href="/license/">
+
+    
+    <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic,700%7CInconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/style.min.css">
+
+  </head>
+
+  <body>
+
+
+<header>
+  <h1>A Decade of CAP</h1>
+  <p class="subtitle">March 22, 2016</p>
+</header>
+
+<article>
+    
+
+<div class="epigraphs">
+    <blockquote>
+        <p>Consistency, availability, and tolerance to network partitions: you can have at
+most two of these properties for any shared-data system.</p>
+
+        <footer>Eric Brewer, <cite><a href="http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf">Towards Robust Distributed Systems</a></cite></footer>
+    </blockquote>
+</div>
+
+
+<p>Distributed systems folks think that everyone should read <a href="https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf">FLP</a>, but engineers
+in the trenches know the truth: the CAP theorem is king.
+<label for="mn-ubiquity" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="mn-ubiquity" class="margin-toggle">
+<span class="marginnote">
+    
+Whether or not the many alternate formulations of the safety-liveness tradeoff
+are somehow <em>better</em> than CAP is beside the point. They lost this round
+of marketing, so their jargon isn't a useful lingua franca.
+
+</span>
+
+Despite <a href="http://cs-www.cs.yale.edu/homes/dna/papers/abadi-pacelc.pdf">all</a> <a href="http://www.bailis.org/papers/hat-hotos2013.pdf">the</a> <a href="http://arxiv.org/pdf/1509.05393v2.pdf">competition</a>, Brewer&rsquo;s
+conjecture is&mdash;by far&mdash;the most common framework for working programmers to
+think through the tradeoffs inherent in distributed systems.</p>
+
+<p>But even though we name-check CAP all the time, most of us haven&rsquo;t fully grokked
+<a href="https://www.comp.nus.edu.sg/~gilbert/pubs/BrewersConjecture-SigAct.pdf">Gilbert and Lynch&rsquo;s proof</a> of Brewer&rsquo;s conjecture. If you&rsquo;re not sure
+exactly what <em>consistency</em> and <em>availability</em> mean, you&rsquo;re not alone; I recently
+gave a talk called &ldquo;<a href="https://speakerdeck.com/akshayjshah/a-decade-of-cap">A Decade of CAP</a>&rdquo; to a group of engineers at
+work.
+<label for="mn-kleppman" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="mn-kleppman" class="margin-toggle">
+<span class="marginnote">
+    
+The slides for my talk include a great illustration of linearizability that I
+stole from <a
+href="https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html">Martin
+Kleppman&rsquo;s blog</a>. Thanks, Martin!
+
+</span>
+
+(If you&rsquo;d prefer, you can also download a <a href="/docs/decade-of-cap.pdf">PDF version of the slides</a>.)</p>
+
+<p>It&rsquo;s trendy to <a href="http://arxiv.org/pdf/1509.05393v2.pdf">criticize CAP</a> these days, but I find most of
+the criticism unconvincing (though interesting). CAP&rsquo;s weakness is simple: its
+notions of consistency and availability are so stringent, and the system it
+proposes is so adversarial, that the final result doesn&rsquo;t shed much light on our
+everyday work.  Put differently, most useful distributed systems are neither CA
+nor CP. That doesn&rsquo;t make CAP any less true, it just means that reality is
+complicated. Until an alternative emerges that&rsquo;s both simpler <em>and</em> more useful,
+I&rsquo;ll continue to anchor my architecture discussions in CAP, and so should you.</p>
+
+<h2 id="readable-references">Readable References</h2>
+
+<p>If you&rsquo;re interested in distributed systems but don&rsquo;t know where to start, you
+may find some of these resources useful. Most of them take great pains to avoid
+the dense jargon that makes formal distributed systems writing so hard to
+approach.</p>
+
+<ul>
+<li>The <a href="http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf">slides</a> from Eric Brewer&rsquo;s original keynote. Without a video
+recording, they&rsquo;re a little hard to interpret.</li>
+<li>Gilbert and Lynch&rsquo;s <a href="https://www.comp.nus.edu.sg/~gilbert/pubs/BrewersConjecture-SigAct.pdf">proof</a>. It&rsquo;s more approachable than you&rsquo;d think.</li>
+<li>Gilbert and Lynch&rsquo;s <a href="https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer2.pdf">retrospective</a> on CAP. This is a great bridge from CAP
+to the wider world of formal distributed systems.</li>
+<li><a href="http://bravenewgeek.com/">Tyler Treat</a> and <a href="https://martin.kleppmann.com/">Martin Kleppman&rsquo;s</a> blogs.</li>
+</ul>
+
+</article>
+
+        <footer>
+            &larr; <a href="/" rel="index">Home</a><br>
+            &copy; 2012&ndash;2016 <a href="//colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.
+        </footer>
+    </body>
+</html>
+

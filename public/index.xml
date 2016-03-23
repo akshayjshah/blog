@@ -6,8 +6,87 @@
     <description>Recent content on Akshay Shah</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2016 16:53:55 -0700</lastBuildDate>
     <atom:link href="http://www.akshayshah.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Decade of CAP</title>
+      <link>http://www.akshayshah.org/post/decade-of-cap/</link>
+      <pubDate>Tue, 22 Mar 2016 16:53:55 -0700</pubDate>
+      
+      <guid>http://www.akshayshah.org/post/decade-of-cap/</guid>
+      <description>
+
+&lt;div class=&#34;epigraphs&#34;&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;Consistency, availability, and tolerance to network partitions: you can have at
+most two of these properties for any shared-data system.&lt;/p&gt;
+
+        &lt;footer&gt;Eric Brewer, &lt;cite&gt;&lt;a href=&#34;http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf&#34;&gt;Towards Robust Distributed Systems&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;
+    &lt;/blockquote&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Distributed systems folks think that everyone should read &lt;a href=&#34;https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf&#34;&gt;FLP&lt;/a&gt;, but engineers
+in the trenches know the truth: the CAP theorem is king.
+&lt;label for=&#34;mn-ubiquity&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-ubiquity&#34; class=&#34;margin-toggle&#34;&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+    
+Whether or not the many alternate formulations of the safety-liveness tradeoff
+are somehow &lt;em&gt;better&lt;/em&gt; than CAP is beside the point. They lost this round
+of marketing, so their jargon isn&#39;t a useful lingua franca.
+
+&lt;/span&gt;
+
+Despite &lt;a href=&#34;http://cs-www.cs.yale.edu/homes/dna/papers/abadi-pacelc.pdf&#34;&gt;all&lt;/a&gt; &lt;a href=&#34;http://www.bailis.org/papers/hat-hotos2013.pdf&#34;&gt;the&lt;/a&gt; &lt;a href=&#34;http://arxiv.org/pdf/1509.05393v2.pdf&#34;&gt;competition&lt;/a&gt;, Brewer&amp;rsquo;s
+conjecture is&amp;mdash;by far&amp;mdash;the most common framework for working programmers to
+think through the tradeoffs inherent in distributed systems.&lt;/p&gt;
+
+&lt;p&gt;But even though we name-check CAP all the time, most of us haven&amp;rsquo;t fully grokked
+&lt;a href=&#34;https://www.comp.nus.edu.sg/~gilbert/pubs/BrewersConjecture-SigAct.pdf&#34;&gt;Gilbert and Lynch&amp;rsquo;s proof&lt;/a&gt; of Brewer&amp;rsquo;s conjecture. If you&amp;rsquo;re not sure
+exactly what &lt;em&gt;consistency&lt;/em&gt; and &lt;em&gt;availability&lt;/em&gt; mean, you&amp;rsquo;re not alone; I recently
+gave a talk called &amp;ldquo;&lt;a href=&#34;https://speakerdeck.com/akshayjshah/a-decade-of-cap&#34;&gt;A Decade of CAP&lt;/a&gt;&amp;rdquo; to a group of engineers at
+work.
+&lt;label for=&#34;mn-kleppman&#34; class=&#34;margin-toggle&#34;&gt;&amp;#8853;&lt;/label&gt;
+&lt;input type=&#34;checkbox&#34; id=&#34;mn-kleppman&#34; class=&#34;margin-toggle&#34;&gt;
+&lt;span class=&#34;marginnote&#34;&gt;
+    
+The slides for my talk include a great illustration of linearizability that I
+stole from &lt;a
+href=&#34;https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html&#34;&gt;Martin
+Kleppman&amp;rsquo;s blog&lt;/a&gt;. Thanks, Martin!
+
+&lt;/span&gt;
+
+(If you&amp;rsquo;d prefer, you can also download a &lt;a href=&#34;http://www.akshayshah.org/docs/decade-of-cap.pdf&#34;&gt;PDF version of the slides&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s trendy to &lt;a href=&#34;http://arxiv.org/pdf/1509.05393v2.pdf&#34;&gt;criticize CAP&lt;/a&gt; these days, but I find most of
+the criticism unconvincing (though interesting). CAP&amp;rsquo;s weakness is simple: its
+notions of consistency and availability are so stringent, and the system it
+proposes is so adversarial, that the final result doesn&amp;rsquo;t shed much light on our
+everyday work.  Put differently, most useful distributed systems are neither CA
+nor CP. That doesn&amp;rsquo;t make CAP any less true, it just means that reality is
+complicated. Until an alternative emerges that&amp;rsquo;s both simpler &lt;em&gt;and&lt;/em&gt; more useful,
+I&amp;rsquo;ll continue to anchor my architecture discussions in CAP, and so should you.&lt;/p&gt;
+
+&lt;h2 id=&#34;readable-references&#34;&gt;Readable References&lt;/h2&gt;
+
+&lt;p&gt;If you&amp;rsquo;re interested in distributed systems but don&amp;rsquo;t know where to start, you
+may find some of these resources useful. Most of them take great pains to avoid
+the dense jargon that makes formal distributed systems writing so hard to
+approach.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf&#34;&gt;slides&lt;/a&gt; from Eric Brewer&amp;rsquo;s original keynote. Without a video
+recording, they&amp;rsquo;re a little hard to interpret.&lt;/li&gt;
+&lt;li&gt;Gilbert and Lynch&amp;rsquo;s &lt;a href=&#34;https://www.comp.nus.edu.sg/~gilbert/pubs/BrewersConjecture-SigAct.pdf&#34;&gt;proof&lt;/a&gt;. It&amp;rsquo;s more approachable than you&amp;rsquo;d think.&lt;/li&gt;
+&lt;li&gt;Gilbert and Lynch&amp;rsquo;s &lt;a href=&#34;https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer2.pdf&#34;&gt;retrospective&lt;/a&gt; on CAP. This is a great bridge from CAP
+to the wider world of formal distributed systems.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bravenewgeek.com/&#34;&gt;Tyler Treat&lt;/a&gt; and &lt;a href=&#34;https://martin.kleppmann.com/&#34;&gt;Martin Kleppman&amp;rsquo;s&lt;/a&gt; blogs.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Podcasts for Developers</title>
@@ -1038,34 +1117,33 @@ tov!
 
 &lt;/span&gt;
 
-As a brief introduction, I live in San Francisco, CA, where I&amp;rsquo;m an
-engineer at &lt;a href=&#34;http://uber.com&#34;&gt;Uber&lt;/a&gt;. If you&amp;rsquo;d like to get in touch with me, you can
-send me an &lt;a href=&#34;mailto:akshay@datahackermd.com&#34;&gt;email&lt;/a&gt;; I&amp;rsquo;m also on &lt;a href=&#34;http://twitter.com/akshayshah&#34;&gt;Twitter&lt;/a&gt;, &lt;a href=&#34;http://linkedin.com/in/akshayjshah&#34;&gt;LinkedIn&lt;/a&gt;, and &lt;a href=&#34;http://github.com/akshayjshah&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+As a brief introduction, I live in San Francisco, where I&amp;rsquo;m an engineer at
+&lt;a href=&#34;https://eng.uber.com&#34;&gt;Uber&lt;/a&gt;. If you&amp;rsquo;d like to get in touch with me, you can send me an &lt;a href=&#34;mailto:akshay@datahackermd.com&#34;&gt;email&lt;/a&gt;;
+I&amp;rsquo;m also on &lt;a href=&#34;https://twitter.com/akshayshah&#34;&gt;Twitter&lt;/a&gt;, &lt;a href=&#34;https://linkedin.com/in/akshayjshah&#34;&gt;LinkedIn&lt;/a&gt;, and &lt;a href=&#34;https://github.com/akshayjshah&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The first thing you&amp;rsquo;ll notice is that I&amp;rsquo;m the kind of person who calls this
-page the colophon. What can I say? &amp;ldquo;About Me,&amp;rdquo; &amp;ldquo;Meet Akshay,&amp;rdquo; and &amp;ldquo;The Happy
-Homepage for Rainbow Ponies&amp;rdquo; are just &lt;em&gt;so&lt;/em&gt; pedestrian. I like semicolons,
-parenthetical asides, fountain pens, and suede elbow patches, too.  Look on the
-bright side: despite my snotty East-Coast education, I still don&amp;rsquo;t own a single
-pair of Madras shorts.&lt;/p&gt;
+&lt;p&gt;The first thing you&amp;rsquo;ll notice is that I&amp;rsquo;m the kind of person who calls this page
+the colophon. What can I say? &amp;ldquo;About Me,&amp;rdquo; &amp;ldquo;Meet Akshay,&amp;rdquo; and &amp;ldquo;The Happy Homepage
+for Rainbow Ponies&amp;rdquo; are just &lt;em&gt;so&lt;/em&gt; pedestrian. I like semicolons, parenthetical
+asides, fountain pens, and suede elbow patches, too.  Look on the bright side:
+despite my snotty East-Coast education, I still don&amp;rsquo;t own a single pair of
+Madras shorts.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m easily excited&amp;mdash;show me something intriguing, and I&amp;rsquo;ll happily spend weeks
-reading and experimenting. In the past, I&amp;rsquo;ve made fountain pen nibs and
-medieval iron-gall ink, roasted my own coffee beans and opened a small espresso
-shop, led a cross-country bicycle trip, and mistakenly concocted an underwater
-blasting compound. Thus far, all lost fingertips have been successfully
-reattached.&lt;/p&gt;
+reading and experimenting. In the past, I&amp;rsquo;ve made fountain pen nibs and medieval
+iron-gall ink, roasted my own coffee beans and opened a small espresso shop, led
+a cross-country bicycle trip, and mistakenly concocted an underwater blasting
+compound. Thus far, all lost fingertips have been successfully reattached.&lt;/p&gt;
 
-&lt;p&gt;Professionally, I&amp;rsquo;ve been a public school teacher, an EMT, and a
-medical student. After finishing medical school in 2011, I moved to California
-and decided to pursue a career in software. If you&amp;rsquo;re interested, stay tuned
-for a post about leaving medicine for Silicon Valley.&lt;/p&gt;
+&lt;p&gt;Professionally, I&amp;rsquo;ve been a public school teacher, an EMT, and a medical
+student. After finishing medical school in 2011, I moved to California and
+decided to pursue a career in software. If you&amp;rsquo;re interested, stay tuned for a
+post about leaving medicine for Silicon Valley.&lt;/p&gt;
 
 &lt;p&gt;Like the best software, this blog scratches a personal itch: I tend to scribble
 notes while I&amp;rsquo;m thinking, but I miss longer-form writing. If my notes can be
 polished into posts that other people find useful or entertaining, then I&amp;rsquo;ll be
-thrilled; if not, I&amp;rsquo;ll enjoy the process anyways. Plus, setting up this site
-was a &lt;a href=&#34;http://www.akshayshah.org/post/hakyll-and-bootstrap/&#34;&gt;fun technical project&lt;/a&gt;.&lt;/p&gt;
+thrilled; if not, I&amp;rsquo;ll enjoy the process anyways. Plus, setting up this site was
+a &lt;a href=&#34;http://www.akshayshah.org/post/hakyll-and-bootstrap/&#34;&gt;fun technical project&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
