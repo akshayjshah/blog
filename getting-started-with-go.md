@@ -1,7 +1,5 @@
 # Getting Started with Go
 
-## May 11, 2018
-
 If you're starting a new project or a job that requires knowing Go, here's an
 opinionated learning plan that will get you ready in a hurry. If you're
 exploring Go out of idle curiosity, this probably isn't the plan for
