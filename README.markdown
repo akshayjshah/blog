@@ -1,10 +1,3 @@
-# Just Another Blog
+# Another defunct blog
 
-Another year, another rewrite...this is the source for my
-[blog][], which I'm currently building with the [Hugo][] static site generator.
-
-All prose and code is covered by the same [license][].
-
-[blog]: http://www.akshayshah.org
-[Hugo]: http://gohugo.io/
-[license]: https://github.com/akshayjshah/blog/blob/master/LICENSE
+I was building [my blog](http://www.akshayshah.org) with [Hugo](https://gohugo.io/), but it ended up being too much of a pain. I've since migrated the whole thing to [Notion](http://www.notion.so).
