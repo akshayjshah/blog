@@ -16,7 +16,8 @@ _POSTS = building-a-blog.md \
 		 testing-django-fields.md \
 		 podcasts-for-developers.md \
 		 decade-of-cap.md \
-		 getting-started-with-go.md
+		 getting-started-with-go.md \
+		 lazy-loading-data-with-swiftui-and-combine.md
 
 define render-post
 	@echo "Rendering $<..."
