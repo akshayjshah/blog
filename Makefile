@@ -7,7 +7,8 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 _FLAGS ?= ""
-_POSTS = building-a-blog.md \
+_POSTS = $(shell find recipes -name "*.md") \
+		 building-a-blog.md \
 		 zero-to-code-monkey.md \
 		 audible-literacy-filter.md \
 		 language-use-on-github.md \
@@ -53,7 +54,7 @@ site/404.html: 404.md bin/build style.css
 tmp/index.md: index.md style.css bin/build $(_POSTS)
 	@echo "Generating index..."
 	@mkdir -p $(@D)
-	@bin/build -style style.css -index $(_POSTS) > $@
+	@bin/build -recipes recipes -style style.css -index $(_POSTS) > $@
 
 build: site/index.html
 site/index.html: _FLAGS = -nodates -nohome

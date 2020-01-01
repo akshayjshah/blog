@@ -12,6 +12,7 @@ import (
 	"os"
 	"os/exec"
 	"path"
+	"path/filepath"
 	"sort"
 	"strings"
 	"time"
@@ -32,6 +33,7 @@ var (
 	_hideDates   = flag.Bool("nodates", false, "hide publish dates")
 	_hideHome    = flag.Bool("nohome", false, "hide homepage link")
 	_hideLicense = flag.Bool("nolicense", false, "hide license link")
+	_recipes     = flag.String("recipes", "", "recipes directory (with -index)")
 	_style       = flag.String("style", "", "CSS file")
 )
 
@@ -61,6 +63,20 @@ type Page struct {
 	HideHome    bool
 	HideLicense bool
 	Content     template.HTML
+}
+
+type Index struct {
+	Posts   []IndexEntry
+	Recipes []IndexEntry
+}
+
+func (i *Index) Sort() {
+	for _, s := range [][]IndexEntry{i.Posts, i.Recipes} {
+		sort.Slice(s, func(i, j int) bool {
+			// Reverse chronological sort.
+			return s[j].Created.Before(s[i].Created)
+		})
+	}
 }
 
 type IndexEntry struct {
@@ -167,23 +183,32 @@ func post(w io.Writer, site Site, post string) {
 	must(_post.Execute(w, p), "format HTML for %q", post)
 }
 
-func homepage(w io.Writer, posts []string) {
-	entries := make([]IndexEntry, len(posts))
-	for i, p := range posts {
-		title := strings.TrimSpace(strings.TrimPrefix(head(p), "#"))
-		c := created(p)
-		entries[i] = IndexEntry{
+func homepage(w io.Writer, files []string) {
+	var (
+		posts   []IndexEntry
+		recipes []IndexEntry
+	)
+	for _, f := range files {
+		title := strings.TrimSpace(strings.TrimPrefix(head(f), "#"))
+		c := created(f)
+		entry := IndexEntry{
 			Created:   c,
 			Published: c.Format(_date),
 			Title:     title,
-			Link:      fmt.Sprintf("/%s/", strings.TrimSuffix(p, ".md")),
+			Link:      fmt.Sprintf("/%s/", strings.TrimSuffix(f, ".md")),
 		}
+		if filepath.Dir(f) == *_recipes {
+			recipes = append(recipes, entry)
+			continue
+		}
+		posts = append(posts, entry)
 	}
-	sort.Slice(entries, func(i, j int) bool {
-		// Reverse chronological sort.
-		return entries[j].Created.Before(entries[i].Created)
-	})
-	must(_home.Execute(w, entries), "generate Markdown homepage")
+	idx := Index{
+		Posts:   posts,
+		Recipes: recipes,
+	}
+	idx.Sort()
+	must(_home.Execute(w, idx), "generate Markdown homepage")
 }
 
 func main() {
