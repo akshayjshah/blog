@@ -1,6 +1,0 @@
-{{ with .Get "epigraph" }}<div class="epigraphs">{{ end }}
-    <blockquote>
-        {{ .Inner }}
-        <footer>{{ .Get "footer" | markdownify }}</footer>
-    </blockquote>
-{{ with .Get "epigraph" }}</div><!-- .epigraphs -->{{ end }}
