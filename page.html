@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ .Site.Author }}">
+    <meta name="description" content="{{ .Site.Description }}">
+    <meta name="google-site-verification" content="{{ .Site.GoogleSiteVerification }}">
+    <title>{{ .TitlePlain }} • {{ .Site.Title }}</title>
+    <base href="{{ .Site.BaseURL }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="license" href="/license/">
+  </head>
+  <body>
+    <header>
+      {{ .Title }}
+      {{ if ne .Created "" }}
+        <p class="subtitle">{{ .Created }}{{ if and (ne .Updated "") (ne .Updated .Created) }}, updated {{ .Updated }}{{ end }}</p>
+      {{ end }}
+    </header>
+    <article>
+      {{ .Content }}
+    </article>
+    <footer>
+      {{ if not .HideHome }}&larr; <a href="/" rel="index">Home</a><br>{{ end }}
+      {{ if not .HideLicense }}&copy; 2012&ndash;{{ .Site.LastChanged }} <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.{{ end }}
+    </footer>
+  </body>
+</html>
