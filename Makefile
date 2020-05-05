@@ -7,7 +7,9 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 _FLAGS ?= ""
-_POSTS = building-a-blog.md
+# Keep in reverse chronological order.
+_POSTS = zero-to-code-monkey.md \
+		 building-a-blog.md
 
 define render-post
 	@echo "Rendering $<..."
