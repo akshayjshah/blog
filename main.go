@@ -12,6 +12,7 @@ import (
 	"os"
 	"os/exec"
 	"path"
+	"sort"
 	"strings"
 	"time"
 
@@ -53,6 +54,7 @@ type Page struct {
 }
 
 type IndexEntry struct {
+	Created   time.Time
 	Published string
 	Title     string
 	Link      string
@@ -79,7 +81,7 @@ func head(path string) string {
 	return first
 }
 
-func created(path string) string {
+func created(path string) time.Time {
 	git := exec.Command("git", "log", "--diff-filter=A", "--follow", "--format=%aI", path)
 	tail := exec.Command("tail", "-1")
 
@@ -98,13 +100,12 @@ func created(path string) string {
 	c, err := time.Parse(time.RFC3339, strings.TrimSpace(out.String()))
 	if err != nil {
 		// Assume the file is uncommitted, default to now.
-		return time.Now().Format(_date)
+		return time.Now()
 	}
-	return c.Format(_date)
-
+	return c
 }
 
-func updated(path string) string {
+func updated(path string) *time.Time {
 	git := exec.Command("git", "log", "--follow", "-1", "--format=%aI", path)
 	var out bytes.Buffer
 	git.Stdout = &out
@@ -112,9 +113,9 @@ func updated(path string) string {
 	u, err := time.Parse(time.RFC3339, strings.TrimSpace(out.String()))
 	if err != nil {
 		// Assume file hasn't been updated.
-		return ""
+		return nil
 	}
-	return u.Format(_date)
+	return &u
 }
 
 func post(w io.Writer, site Site, post string) {
@@ -129,8 +130,10 @@ func post(w io.Writer, site Site, post string) {
 		HideLicense: *_hideLicense,
 	}
 	if !p.HideDates {
-		p.Created = created(post)
-		p.Updated = updated(post)
+		p.Created = created(post).Format(_date)
+		if u := updated(post); u != nil {
+			p.Updated = u.Format(_date)
+		}
 	}
 	content, err := ioutil.ReadFile(post)
 	must(err, "read Markdown file")
@@ -143,12 +146,18 @@ func homepage(w io.Writer, posts []string) {
 	entries := make([]IndexEntry, len(posts))
 	for i, p := range posts {
 		title := strings.TrimSpace(strings.TrimPrefix(head(p), "#"))
+		c := created(p)
 		entries[i] = IndexEntry{
-			Published: created(p),
+			Created:   c,
+			Published: c.Format(_date),
 			Title:     title,
 			Link:      fmt.Sprintf("/%s/", strings.TrimSuffix(p, ".md")),
 		}
 	}
+	sort.Slice(entries, func(i, j int) bool {
+		// Reverse chronological sort.
+		return entries[j].Created.Before(entries[i].Created)
+	})
 	must(_home.Execute(w, entries), "generate Markdown homepage")
 }
 
