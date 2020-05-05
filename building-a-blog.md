@@ -84,6 +84,14 @@ suggestions! If coding's your thing, take a look at the [source code on
 GitHub](http://github.com/akshayjshah/akshayjshah.github.io); otherwise, send
 me a [tweet](http://twitter.com/akshayshah) and let me know what you think.
 
+## Update: Abject Failure
+
+It's probably no surprise, but diving straight into Haskell wasn't the
+smoothest transition; without a better understanding of the language as a
+whole, I spent more time fiddling with the code than writing. I experimented
+with a few different site generation tools, tried some newer web-based
+alternatives, and finally settled on a homegrown mix of GNU Make and Go.
+
 [Bootstrap]: http://twitter.github.com/bootstrap/ "Twitter Bootstrap"
 [Disqus]: http://disqus.com "Disqus"
 [Drupal]: http://drupal.org/ "Drupal"
