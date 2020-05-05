@@ -50,7 +50,7 @@ tmp/index.md: index.md bin/build $(_POSTS)
 	@bin/build -index $(_POSTS) > $@
 
 build: site/index.html
-site/index.html: _FLAGS = -nodates
+site/index.html: _FLAGS = -nodates -nohome
 site/index.html: tmp/index.md bin/build
 	$(render-post)
 
