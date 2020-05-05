@@ -7,6 +7,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 _FLAGS ?= ""
+_POSTS = building-a-blog.md
 
 define render-post
 	@echo "Rendering $<..."
@@ -16,6 +17,12 @@ define render-post
 		-created  "$(shell git log --diff-filter=A --follow --format=%aI -- $< | tail -1)" \
 		-updated  "$(shell git log --follow -1 --format=%aI -- $<)" \
 		$(_FLAGS) $< > $@
+endef
+
+define post-template
+build: site/$(basename $1)/index.html
+site/$(basename $1)/index.html: $1 bin/build page.html
+	$$(render-post)
 endef
 
 .PHONY: clean
@@ -49,3 +56,5 @@ build: site/license/index.html
 site/license/index.html: _FLAGS = -nolicense -nodates
 site/license/index.html: license.md bin/build page.html
 	$(render-post)
+
+$(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))
