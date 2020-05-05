@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"bytes"
 	"flag"
 	"fmt"
@@ -9,6 +10,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 	"path"
 	"strings"
 	"time"
@@ -21,9 +23,8 @@ const _date = "Jan 2006" // preferred date format for display
 var (
 	_md          = markdown.New(markdown.HTML(true)) // allow raw HTML in Markdown
 	_post        = template.Must(template.ParseFiles("page.html"))
-	_created     = flag.String("created", "", "date created")
-	_updated     = flag.String("updated", "", "date updated")
-	_title       = flag.String("title", "", "title (as Markdown H1)") // e.g., "# A Cool Title"
+	_home        = template.Must(template.ParseFiles("index.md"))
+	_index       = flag.Bool("index", false, "write Markdown index instead of single post")
 	_hideDates   = flag.Bool("nodates", false, "hide publish dates")
 	_hideHome    = flag.Bool("nohome", false, "hide homepage link")
 	_hideLicense = flag.Bool("nolicense", false, "hide license link")
@@ -51,37 +52,104 @@ type Page struct {
 	Content     template.HTML
 }
 
+type IndexEntry struct {
+	Published string
+	Title     string
+	Link      string
+}
+
+func must(err error, prefix string, args ...interface{}) {
+	if err != nil {
+		msg := fmt.Sprintf(prefix, args...)
+		log.Fatalf("%s: %v", msg, err)
+	}
+}
+
+func head(path string) string {
+	f, err := os.Open(path)
+	must(err, "open %q", path)
+	defer f.Close()
+	scanner := bufio.NewScanner(f)
+	var first string
+	for scanner.Scan() {
+		first = scanner.Text()
+		break
+	}
+	must(scanner.Err(), "scan %q", path)
+	return first
+}
+
+func created(path string) string {
+	git := exec.Command("git", "log", "--diff-filter=A", "--follow", "--format=%aI", path)
+	tail := exec.Command("tail", "-1")
+
+	r, w := io.Pipe()
+	git.Stdout = w
+	tail.Stdin = r
+
+	var out bytes.Buffer
+	tail.Stdout = &out
+
+	must(git.Start(), "start git")
+	must(tail.Start(), "start tail")
+	must(git.Wait(), "wait git")
+	must(w.Close(), "close pipe writer")
+	must(tail.Wait(), "wait tail")
+	c, err := time.Parse(time.RFC3339, strings.TrimSpace(out.String()))
+	if err != nil {
+		// Assume the file is uncommitted, default to now.
+		return time.Now().Format(_date)
+	}
+	return c.Format(_date)
+
+}
+
+func updated(path string) string {
+	git := exec.Command("git", "log", "--follow", "-1", "--format=%aI", path)
+	var out bytes.Buffer
+	git.Stdout = &out
+	must(git.Run(), "git")
+	u, err := time.Parse(time.RFC3339, strings.TrimSpace(out.String()))
+	if err != nil {
+		// Assume file hasn't been updated.
+		return ""
+	}
+	return u.Format(_date)
+}
+
 func post(w io.Writer, site Site, post string) {
+	first := head(post)
 	p := Page{
 		Site:        site,
-		TitlePlain:  strings.TrimSpace(strings.TrimPrefix(*_title, "#")),
-		Title:       template.HTML(_md.RenderToString([]byte(*_title))),
+		TitlePlain:  strings.TrimSpace(strings.TrimPrefix(first, "#")),
+		Title:       template.HTML(_md.RenderToString([]byte(first))),
 		Permalink:   site.BaseURL + "/" + path.Clean(strings.TrimSuffix(post, ".md")) + "/",
 		HideDates:   *_hideDates,
 		HideHome:    *_hideHome,
 		HideLicense: *_hideLicense,
 	}
 	if !p.HideDates {
-		// If we can't parse these flags, assume the file is uncommitted: it was
-		// created now and hasn't been updated after publishing.
-		created, err := time.Parse(time.RFC3339, *_created)
-		if err != nil {
-			created = time.Now()
-		}
-		p.Created = created.Format(_date)
-		if updated, err := time.Parse(time.RFC3339, *_updated); err == nil {
-			p.Updated = updated.Format(_date)
-		}
+		p.Created = created(post)
+		p.Updated = updated(post)
 	}
 	content, err := ioutil.ReadFile(post)
-	if err != nil {
-		log.Fatalf("read Markdown file: %v", err)
-	}
-	content = bytes.TrimPrefix(content, []byte(*_title))
+	must(err, "read Markdown file")
+	content = bytes.TrimPrefix(content, []byte(first))
 	p.Content = template.HTML(_md.RenderToString(content))
-	if err := _post.Execute(w, p); err != nil {
-		log.Fatalf("format HTML for %q: %v", post, err)
+	must(_post.Execute(w, p), "format HTML for %q", post)
+}
+
+func homepage(w io.Writer, posts []string) {
+	entries := make([]IndexEntry, len(posts))
+	for i, p := range posts {
+		title := strings.TrimSpace(strings.TrimPrefix(head(p), "#"))
+		entries[i] = IndexEntry{
+			Published: created(p),
+			Title:     title,
+			Link:      fmt.Sprintf("/%s/", strings.TrimSuffix(p, ".md")),
+		}
 	}
+	must(_home.Execute(w, entries), "generate Markdown homepage")
 }
 
 func main() {
@@ -99,6 +167,10 @@ func main() {
 		if p != "" {
 			paths = append(paths, p)
 		}
+	}
+	if *_index {
+		homepage(os.Stdout, paths)
+		return
 	}
 	if len(paths) > 1 {
 		log.Fatalf("one post at a time: got %v", paths)

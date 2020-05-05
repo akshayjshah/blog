@@ -14,11 +14,7 @@ _POSTS = zero-to-code-monkey.md \
 define render-post
 	@echo "Rendering $<..."
 	@mkdir -p $(@D)
-	@bin/build \
-		-title "$(shell head -1 $<)" \
-		-created  "$(shell git log --diff-filter=A --follow --format=%aI -- $< | tail -1)" \
-		-updated  "$(shell git log --follow -1 --format=%aI -- $<)" \
-		$(_FLAGS) $< > $@
+	@bin/build $(_FLAGS) $< > $@
 endef
 
 define post-template
@@ -45,9 +41,14 @@ site/404.html: _FLAGS = -nodates
 site/404.html: 404.md bin/build
 	$(render-post)
 
+tmp/index.md: index.md bin/build $(_POSTS)
+	@echo "Generating index..."
+	@mkdir -p $(@D)
+	@bin/build -index $(_POSTS) > $@
+
 build: site/index.html
 site/index.html: _FLAGS = -nodates
-site/index.html: index.md bin/build
+site/index.html: tmp/index.md bin/build
 	$(render-post)
 
 build: site/colophon/index.html
