@@ -1,4 +1,4 @@
-# Building a Blof
+# Building a Blog
 
 Though I've run a few [Wordpress][] sites in the past, I've always found the
 software irritating to use. In particular, I *loathe* the composer---the rich
