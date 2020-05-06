@@ -16,13 +16,16 @@ import (
 	"strings"
 	"time"
 
-	"gitlab.com/golang-commonmark/markdown"
+	"github.com/russross/blackfriday/v2"
+	"github.com/tdewolff/minify"
+	"github.com/tdewolff/minify/css"
+	"github.com/tdewolff/minify/html"
 )
 
 const _date = "Jan 2006" // preferred date format for display
 
 var (
-	_md          = markdown.New(markdown.HTML(true)) // allow raw HTML in Markdown
+	_minifier    = minify.New()
 	_post        = template.Must(template.ParseFiles("page.html"))
 	_home        = template.Must(template.ParseFiles("index.md"))
 	_index       = flag.Bool("index", false, "write Markdown index instead of single post")
@@ -31,6 +34,11 @@ var (
 	_hideLicense = flag.Bool("nolicense", false, "hide license link")
 	_style       = flag.String("style", "", "CSS file")
 )
+
+func init() {
+	_minifier.AddFunc("text/html", html.Minify)
+	_minifier.AddFunc("text/css", css.Minify)
+}
 
 type Site struct {
 	BaseURL                string
@@ -67,6 +75,21 @@ func must(err error, prefix string, args ...interface{}) {
 		msg := fmt.Sprintf(prefix, args...)
 		log.Fatalf("%s: %v", msg, err)
 	}
+}
+
+func render(md []byte) template.HTML {
+	raw := blackfriday.Run(md)
+	min, err := _minifier.Bytes("text/html", raw)
+	must(err, "minify HTML")
+	return template.HTML(min)
+}
+
+func style() template.CSS {
+	css, err := ioutil.ReadFile(*_style)
+	must(err, "read CSS from %q", *_style)
+	mincss, err := _minifier.Bytes("text/css", css)
+	must(err, "minify css")
+	return template.CSS(mincss)
 }
 
 func head(path string) string {
@@ -125,7 +148,7 @@ func post(w io.Writer, site Site, post string) {
 	p := Page{
 		Site:        site,
 		TitlePlain:  strings.TrimSpace(strings.TrimPrefix(first, "#")),
-		Title:       template.HTML(_md.RenderToString([]byte(first))),
+		Title:       render([]byte(first)),
 		Permalink:   site.BaseURL + "/" + path.Clean(strings.TrimSuffix(post, ".md")) + "/",
 		HideDates:   *_hideDates,
 		HideHome:    *_hideHome,
@@ -140,7 +163,7 @@ func post(w io.Writer, site Site, post string) {
 	content, err := ioutil.ReadFile(post)
 	must(err, "read Markdown file")
 	content = bytes.TrimPrefix(content, []byte(first))
-	p.Content = template.HTML(_md.RenderToString(content))
+	p.Content = render(content)
 	must(_post.Execute(w, p), "format HTML for %q", post)
 }
 
@@ -165,8 +188,6 @@ func homepage(w io.Writer, posts []string) {
 
 func main() {
 	flag.Parse()
-	css, err := ioutil.ReadFile(*_style)
-	must(err, "read CSS from %q", *_style)
 	site := Site{
 		BaseURL:                "http://www.akshayshah.org",
 		Title:                  "Akshay Shah",
@@ -174,7 +195,7 @@ func main() {
 		Description:            "Thoughts on code and human factors from a physician-turned-engineer.",
 		GoogleSiteVerification: "TODO",
 		LastChanged:            fmt.Sprint(time.Now().Year()),
-		CSS:                    template.CSS(css),
+		CSS:                    style(),
 	}
 	var paths []string
 	for _, p := range flag.Args() {
