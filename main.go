@@ -189,7 +189,7 @@ func homepage(w io.Writer, posts []string) {
 func main() {
 	flag.Parse()
 	site := Site{
-		BaseURL:     "http://www.akshayshah.org",
+		BaseURL:     "https://akshayshah.org",
 		Title:       "Akshay Shah",
 		Author:      "Akshay Shah",
 		Description: "Thoughts on code and human factors from a physician-turned-engineer.",
