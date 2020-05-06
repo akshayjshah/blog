@@ -55,7 +55,9 @@ tmp/index.md: index.md bin/build $(_POSTS)
 	@bin/build -style tmp/style.css -index $(_POSTS) > $@
 
 tmp/style.css: $(shell find . -name "*.scss")
-	sassc styles/style.scss > $@
+	@echo "Compiling SCSS..."
+	@mkdir -p $(@D)
+	@sassc styles/style.scss > $@
 
 build: site/index.html
 site/index.html: _FLAGS = -nodates -nohome
@@ -72,3 +74,7 @@ site/license/index.html: license.md bin/build page.html tmp/style.css
 	$(render-post)
 
 $(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))
+
+.PHONY: deploy
+deploy:
+	gsutil -m rsync -R site gs://www.akshayshah.org
