@@ -189,13 +189,12 @@ func homepage(w io.Writer, posts []string) {
 func main() {
 	flag.Parse()
 	site := Site{
-		BaseURL:                "http://www.akshayshah.org",
-		Title:                  "Akshay Shah",
-		Author:                 "Akshay Shah",
-		Description:            "Thoughts on code and human factors from a physician-turned-engineer.",
-		GoogleSiteVerification: "TODO",
-		LastChanged:            fmt.Sprint(time.Now().Year()),
-		CSS:                    style(),
+		BaseURL:     "http://www.akshayshah.org",
+		Title:       "Akshay Shah",
+		Author:      "Akshay Shah",
+		Description: "Thoughts on code and human factors from a physician-turned-engineer.",
+		LastChanged: fmt.Sprint(time.Now().Year()),
+		CSS:         style(),
 	}
 	var paths []string
 	for _, p := range flag.Args() {
