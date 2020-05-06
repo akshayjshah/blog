@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ .Site.Author }}">
     <meta name="description" content="{{ .Site.Description }}">
-    <title>{{ .TitlePlain }} • {{ .Site.Title }}</title>
-    <base href="{{ .Site.BaseURL }}">
+    <title>{{ if and (ne .TitlePlain .Site.Title) (ne .TitlePlain "") }}{{ .TitlePlain }} • {{end}}{{ .Site.Title }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="license" href="/license/">
     <style>{{ .Site.CSS }}</style>
