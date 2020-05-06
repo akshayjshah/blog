@@ -9,6 +9,12 @@ startup. Shoot me an [email](mailto:akshay@akshayshah.org) and say hello,
 or [read a bit more about me](/colophon/).
 
 # Writing
+
+<ol class="post-list">
 {{ range . }}
-{{ .Published }} • [{{ .Title }}]({{ .Link }})
+<li>
+  <span class="post-date">{{ .Published }} &raquo;</span>
+  <a href="{{ .Link }}">{{ .Title }}</a>
+</li>
 {{ end }}
+</ol>

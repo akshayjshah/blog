@@ -22,12 +22,12 @@ _POSTS = building-a-blog.md \
 define render-post
 	@echo "Rendering $<..."
 	@mkdir -p $(@D)
-	@bin/build $(_FLAGS) $< > $@
+	@bin/build -style tmp/style.css $(_FLAGS) $< > $@
 endef
 
 define post-template
 build: site/$(basename $1)/index.html
-site/$(basename $1)/index.html: $1 bin/build page.html
+site/$(basename $1)/index.html: $1 bin/build page.html tmp/style.css
 	$$(render-post)
 endef
 
@@ -46,26 +46,29 @@ build:
 
 build: site/404.html
 site/404.html: _FLAGS = -nodates
-site/404.html: 404.md bin/build
+site/404.html: 404.md bin/build tmp/style.css
 	$(render-post)
 
 tmp/index.md: index.md bin/build $(_POSTS)
 	@echo "Generating index..."
 	@mkdir -p $(@D)
-	@bin/build -index $(_POSTS) > $@
+	@bin/build -style tmp/style.css -index $(_POSTS) > $@
+
+tmp/style.css: $(shell find . -name "*.scss")
+	sassc styles/style.scss > $@
 
 build: site/index.html
 site/index.html: _FLAGS = -nodates -nohome
-site/index.html: tmp/index.md bin/build
+site/index.html: tmp/index.md tmp/style.css bin/build
 	$(render-post)
 
 build: site/colophon/index.html
-site/colophon/index.html: colophon.md bin/build page.html
+site/colophon/index.html: colophon.md bin/build page.html tmp/style.css
 	$(render-post)
 
 build: site/license/index.html
 site/license/index.html: _FLAGS = -nolicense -nodates
-site/license/index.html: license.md bin/build page.html
+site/license/index.html: license.md bin/build page.html tmp/style.css
 	$(render-post)
 
 $(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))

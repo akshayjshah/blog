@@ -29,6 +29,7 @@ var (
 	_hideDates   = flag.Bool("nodates", false, "hide publish dates")
 	_hideHome    = flag.Bool("nohome", false, "hide homepage link")
 	_hideLicense = flag.Bool("nolicense", false, "hide license link")
+	_style       = flag.String("style", "", "CSS file")
 )
 
 type Site struct {
@@ -38,6 +39,7 @@ type Site struct {
 	Description            string
 	GoogleSiteVerification string
 	LastChanged            string
+	CSS                    template.CSS
 }
 
 type Page struct {
@@ -162,6 +164,9 @@ func homepage(w io.Writer, posts []string) {
 }
 
 func main() {
+	flag.Parse()
+	css, err := ioutil.ReadFile(*_style)
+	must(err, "read CSS from %q", *_style)
 	site := Site{
 		BaseURL:                "http://www.akshayshah.org",
 		Title:                  "Akshay Shah",
@@ -169,8 +174,8 @@ func main() {
 		Description:            "Thoughts on code and human factors from a physician-turned-engineer.",
 		GoogleSiteVerification: "TODO",
 		LastChanged:            fmt.Sprint(time.Now().Year()),
+		CSS:                    template.CSS(css),
 	}
-	flag.Parse()
 	var paths []string
 	for _, p := range flag.Args() {
 		if p != "" {
