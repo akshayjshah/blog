@@ -40,8 +40,8 @@ public final class Lazy<A>: ObservableObject {
     private var subscribers = 0
     public var objectWillChange = ObservableObjectPublisher().handleEvents()
 
-		// Intentionally oversimplified loading - use an abstraction from
-		// your networking layer here.
+    // Intentionally oversimplified loading - use an abstraction from
+    // your networking layer here.
     private let load: ()->A
     public var value: A? {
         willSet {

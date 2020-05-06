@@ -5,7 +5,7 @@
 > hyper-competitive market, I will pass on a great programmer who cannot
 > write.<br>
 > *Kyle Wiens on the [Harvard Business
-> Review](http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html)
+> Review](http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html)*
 
 Especially among technical folks, writing is an underrated skill. Kyle Wiens
 hit the front page of Hacker News by blogging about his use of a writing test
