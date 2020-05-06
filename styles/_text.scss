@@ -108,8 +108,6 @@ blockquote p {
 .post-list .post-date {
     font-style: italic;
     color: lighten($textColor, 30%);
-    display: inline-block;
-    min-width: 6em;
 }
 
 @media screen and (max-width: 770px) {
