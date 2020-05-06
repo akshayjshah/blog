@@ -2,8 +2,8 @@
 
 ![Picture of Akshay](/img/headshot-640x640.png)
 
-I'm Akshay Shah, and you've landed on my little patch of the web--mazel tov! As
-a brief introduction, I live in San Francisco, where I'm the cofounder of a
+I'm Akshay Shah, and you've landed on my little patch of the web---mazel tov!
+As a brief introduction, I live in San Francisco, where I'm the cofounder of a
 small startup. If you'd like to get in touch with me, you can send me an
 [email](mailto:akshay@akshayshah.org); I'm also on
 [Twitter](https://twitter.com/akshayshah),
@@ -17,7 +17,7 @@ parenthetical asides, fountain pens, and suede elbow patches, too. Look on the
 bright side: despite my snotty East-Coast education, I still don't own a single
 pair of Madras shorts.
 
-I'm easily excited--show me something intriguing, and I'll happily spend weeks
+I'm easily excited---show me something intriguing, and I'll happily spend weeks
 reading and experimenting. In the past, I've made fountain pen nibs and
 medieval iron-gall ink, roasted my own coffee beans and opened a small espresso
 shop, led a cross-country bicycle trip, and mistakenly concocted an underwater
