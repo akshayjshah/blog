@@ -43,6 +43,7 @@ build:
 	@echo "Copying static assets..."
 	@rm -rf site/{img,docs}
 	@cp -R static/* site
+	@cp favicon.ico site/favicon.ico
 
 build: site/404.html
 site/404.html: _FLAGS = -nodates
