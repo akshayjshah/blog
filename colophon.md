@@ -1,6 +1,6 @@
 # Colophon
 
-<img alt="" src="/img/headshot-640x640.png" height="640" width="640">
+![Picture of Akshay](/img/headshot-640x640.png)
 
 I'm Akshay Shah, and you've landed on my little patch of the web---mazel tov!
 As a brief introduction, I live in San Francisco, where I'm the cofounder of a

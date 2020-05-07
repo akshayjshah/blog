@@ -1,6 +1,6 @@
 # Akshay Shah
 
-<img alt="" src="/img/akshay-300x300.png" height="300" width="300">
+![Picture of Akshay](/img/akshay-300x300.png)
 
 Hi there! I'm Akshay, and you've stumbled across my oft-neglected
 blog.  I've been a medical student, a public school teacher, an EMT,
