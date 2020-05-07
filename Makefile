@@ -22,12 +22,12 @@ _POSTS = building-a-blog.md \
 define render-post
 	@echo "Rendering $<..."
 	@mkdir -p $(@D)
-	@bin/build -style tmp/style.css $(_FLAGS) $< > $@
+	@bin/build -style style.css $(_FLAGS) $< > $@
 endef
 
 define post-template
 build: site/$(basename $1)/index.html
-site/$(basename $1)/index.html: $1 bin/build page.html tmp/style.css
+site/$(basename $1)/index.html: $1 bin/build page.html style.css
 	$$(render-post)
 endef
 
@@ -47,31 +47,26 @@ build:
 
 build: site/404.html
 site/404.html: _FLAGS = -nodates
-site/404.html: 404.md bin/build tmp/style.css
+site/404.html: 404.md bin/build style.css
 	$(render-post)
 
-tmp/index.md: index.md bin/build $(_POSTS)
+tmp/index.md: index.md style.css bin/build $(_POSTS)
 	@echo "Generating index..."
 	@mkdir -p $(@D)
-	@bin/build -style tmp/style.css -index $(_POSTS) > $@
-
-tmp/style.css: $(shell find . -name "*.scss")
-	@echo "Compiling SCSS..."
-	@mkdir -p $(@D)
-	@sassc styles/style.scss > $@
+	@bin/build -style style.css -index $(_POSTS) > $@
 
 build: site/index.html
 site/index.html: _FLAGS = -nodates -nohome
-site/index.html: tmp/index.md tmp/style.css bin/build
+site/index.html: tmp/index.md style.css bin/build
 	$(render-post)
 
 build: site/colophon/index.html
-site/colophon/index.html: colophon.md bin/build page.html tmp/style.css
+site/colophon/index.html: colophon.md bin/build page.html style.css
 	$(render-post)
 
 build: site/license/index.html
 site/license/index.html: _FLAGS = -nolicense -nodates
-site/license/index.html: license.md bin/build page.html tmp/style.css
+site/license/index.html: license.md bin/build page.html style.css
 	$(render-post)
 
 $(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))
