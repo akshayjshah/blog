@@ -71,7 +71,7 @@ code {
 
 pre {
     margin: 0 1rem;
-    white-space: pre-wrap;
+    overflow: auto;
 }
 
 li {
