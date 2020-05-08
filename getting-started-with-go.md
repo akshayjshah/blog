@@ -60,8 +60,9 @@ them...don't just skim the headings and move on.
    yourself with the [comment
    conventions](https://blog.golang.org/godoc-documenting-go-code) and
    [testable examples](https://blog.golang.org/examples). Bookmark
-   [godoc.org](http://godoc.org), which serves documentation for the standard
-   library and all open-source Go packages. 
+   ~~[godoc.org](http://godoc.org)~~ [pkg.go.dev](https://pkg.go.dev), which
+   serves documentation for the standard library and all open-source Go
+   packages. 
 
 ## Learn the Details
 
