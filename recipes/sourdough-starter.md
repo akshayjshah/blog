@@ -6,7 +6,7 @@ King Arthur Flour, the Tartine bread book, and every other sourdough-related
 book or website also has a guide available. The basic approach is to start with
 a whole-grain or rye flour (since they contain more yeasts and bacteria) and
 higher hydration, switching to white flour and 100% hydration
-([what?](/recipes/bakers-percentages)) once the culture takes hold.
+([what?](/recipes/bakers-percentages/)) once the culture takes hold.
 
 ## Ingredients
 

@@ -1,10 +1,10 @@
 # Baker's Percentages
 
-Serious bakers use weights in their recipes, mostly because scooping technique
-and humidity introduce a lot of variance in volume-based measurement. To make
-it easy to scale recipes up and down, bakers often express weights as
-percentages of the flour weight. This is completely different from normal
-math, where we'd use percentages of the *total* weight.
+Serious bakers use weights in their recipes, because scooping technique and
+humidity introduce a lot of variance in volume-based measurements. To make it
+easy to scale recipes up and down, bakers often express weights as percentages
+of the flour weight. This is completely different from normal math, where we'd
+use percentages of the *total* weight.
 
 There are two approaches to percentage-based sourdough baking: one breaks the
 starter into flour and water weights, and the other treats it as a separate
