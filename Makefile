@@ -23,7 +23,8 @@ _POSTS = building-a-blog.md \
 		 recipes/sourdough-starter.md \
 		 recipes/focaccia.md \
 		 recipes/chicken-kebabs.md \
-		 recipes/methi-murgh.md
+		 recipes/methi-murgh.md \
+		 books/how-to-cook-everything.md
 
 define render-post
 	@echo "Rendering $<..."
@@ -59,7 +60,7 @@ site/404.html: 404.md bin/build style.css
 tmp/index.md: index.md style.css bin/build $(_POSTS)
 	@echo "Generating index..."
 	@mkdir -p $(@D)
-	@bin/build -recipes recipes -style style.css -index $(_POSTS) > $@
+	@bin/build -books books -recipes recipes -style style.css -index $(_POSTS) > $@
 
 build: site/index.html
 site/index.html: _FLAGS = -nodates -nohome

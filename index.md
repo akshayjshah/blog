@@ -19,6 +19,17 @@ or [read a bit more about me](/colophon/).
 {{ end }}
 </ol>
 
+# Reading
+
+<ol class="post-list">
+{{ range .Books }}
+<li>
+  <span class="post-date">{{ .Published }} &raquo;</span>
+  <a href="{{ .Link }}">{{ .Title }}</a>
+</li>
+{{ end }}
+</ol>
+
 # Cooking
 
 <ol class="post-list">
