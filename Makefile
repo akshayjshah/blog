@@ -7,8 +7,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 _FLAGS ?= ""
-_POSTS = $(shell find recipes -name "*.md") \
-		 building-a-blog.md \
+_POSTS = building-a-blog.md \
 		 zero-to-code-monkey.md \
 		 audible-literacy-filter.md \
 		 language-use-on-github.md \
@@ -18,7 +17,13 @@ _POSTS = $(shell find recipes -name "*.md") \
 		 podcasts-for-developers.md \
 		 decade-of-cap.md \
 		 getting-started-with-go.md \
-		 lazy-loading-data-with-swiftui-and-combine.md
+		 lazy-loading-data-with-swiftui-and-combine.md \
+		 recipes/garam-masala.md \
+		 recipes/bakers-percentages.md \
+		 recipes/sourdough-starter.md \
+		 recipes/focaccia.md \
+		 recipes/chicken-kebabs.md \
+		 recipes/methi-murgh.md
 
 define render-post
 	@echo "Rendering $<..."
