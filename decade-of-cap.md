@@ -1,9 +1,8 @@
 # A Decade of CAP
 
 > Consistency, availability, and tolerance to network partitions: you can have
-> at most two of these properties for any shared-data system.<br>
-> *Eric Brewer, [Towards Robust Distributed
-> Systems](http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf)*
+> at most two of these properties for any shared-data system.\
+> <cite>[Eric Brewer](http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf)</cite>
 
 Distributed systems folks think that everyone should read
 [FLP](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf), but engineers

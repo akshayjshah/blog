@@ -3,9 +3,8 @@
 > If it takes someone more than 20 years to notice how to properly use "it's,"
 > then that's not a learning curve I'm comfortable with. So, even in this
 > hyper-competitive market, I will pass on a great programmer who cannot
-> write.<br>
-> *Kyle Wiens on the [Harvard Business
-> Review](http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html)*
+> write.\
+> <cite>[Kyle Wiens](http://blogs.hbr.org/cs/2012/07/i_wont_hire_people_who_use_poo.html)</cite>
 
 Especially among technical folks, writing is an underrated skill. Kyle Wiens
 hit the front page of Hacker News by blogging about his use of a writing test
