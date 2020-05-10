@@ -72,5 +72,5 @@ site/license/index.html: license.md bin/build page.html style.css
 $(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))
 
 .PHONY: deploy
-deploy:
+deploy: build
 	gsutil -m rsync -R site gs://www.akshayshah.org
