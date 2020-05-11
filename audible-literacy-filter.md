@@ -48,4 +48,4 @@ false-positive rate is low, and it's particularly good at detecting the overly
 self-important candidate (or co-worker).
 
 [economist]: http://www.economist.com/blogs/johnson/2012/07/language-and-computers
-[rww]: http://www.readwriteweb.com/start/2012/04/the-dirty-dozen-grammatical-er.php
+[rww]: https://readwrite.com/2012/04/16/the-dirty-dozen-grammatical-er/
