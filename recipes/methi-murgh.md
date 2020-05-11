@@ -1,4 +1,4 @@
-# Methi Murgh, Dhaba-Style
+# Methi Murgh
 
 This is a rich chicken curry, strongly flavored with methi (fenugreek). The
 recipe comes directly from my mother-in-law.
@@ -27,17 +27,17 @@ Remaining ingredients:
 * 3--4 cloves of garlic
 * 2 inches peeled ginger
 * 4--6 green chiles
-* 2 c chopped methi leaves (some stems are okay)
+* 2 c chopped methi leaves and stems
 * 1/4 c cream (up to 1 c for a more liquid curry)
 * chopped cilantro leaves for garnish
 
 ## Instructions
 
 1. Grind the spices, toast them in the ghee, whisk the resulting paste into the
-   yogurt, and salt to taste. Marinade the chicken for 30m.
+   yogurt, and salt to taste. Marinate the chicken for 30m.
 2. Grind the chopped onion, garlic, and half the ginger and chiles. Saute the
    resulting masala until the raw smell is gone (3--4 minutes).
-3. Add both bowls of methi and saute for another 3--4 minutes.
+3. Add the methi and saute for another 3--4 minutes.
 4. Add the chicken and marinade, stir, and simmer until chicken is just shy of
    tender (6--8 minutes).
 5. Slit remaining green chiles and julienne remaining ginger. Add chiles,
@@ -47,7 +47,8 @@ Remaining ingredients:
 ## Notes
 
 * Fresh methi is much milder than dried (kasoori) methi. If there's no fresh
-  methi available, these recipes is also good with spinach or other greens.
+  methi available, this recipe is also good with 2--3 tbsp kasoori methi and
+  2 c of another leafy green.
 * Kashmiri chile powder is mildly spicy, somewhat floral, and *bright* red.
   Even in India, actual Kashmiri chiles are in short supply; the most common
   substitute is the Byadagi chile from Karnataka, which is also mild and deeply
