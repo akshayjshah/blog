@@ -30,9 +30,9 @@ higher hydration, switching to white flour and 100% hydration
    of active starter with a scoop of the dry flour blend you've been feeding
    it. Incorporate with a spatula, then break apart clumps with your fingers.
    Continue breaking up clumps and adding flour until the mixture feels
-   completely dry, then leave it to dry at room temperature for a few hours.
-   Seal it in a jar and store it away from light and moisture. Revive by mixing
-   the whole jar (or enough of it to get a healthy dose of your original
+   completely dry, then leave it to finish drying at room temperature for a few
+   hours. Seal it in a jar and store it away from light and moisture. Revive by
+   mixing the whole jar (or enough of it to get a healthy dose of your original
    starter) with 50g fresh flour and enough water to make it easy to stir. Mix
    until no dry bits remain, incubate at a warm room temperature until bubbly
    (usually 12--24 hours), then feed as usual.
