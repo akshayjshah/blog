@@ -47,5 +47,12 @@ And there you have it---a simple, audible grammar test. Its
 false-positive rate is low, and it's particularly good at detecting the overly
 self-important candidate (or co-worker).
 
+## Update
+
+Well, *someone* here was certainly self-important. With a few more years of
+workplace experience under my belt, I've mostly outgrown this opinion: clear
+writing is valuable, but correct reflexive pronoun usage is a better signal of
+a privileged education than intelligence or attention to detail.
+
 [economist]: http://www.economist.com/blogs/johnson/2012/07/language-and-computers
 [rww]: https://readwrite.com/2012/04/16/the-dirty-dozen-grammatical-er/
