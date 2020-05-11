@@ -25,7 +25,8 @@ _POSTS = building-a-blog.md \
 		 recipes/chicken-kebabs.md \
 		 recipes/methi-murgh.md \
 		 books/how-to-cook-everything.md \
-		 books/grit.md
+		 books/grit.md \
+		 recipes/waffles.md
 
 define render-post
 	@echo "Rendering $<..."
