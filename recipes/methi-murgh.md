@@ -13,7 +13,7 @@ For the marinade:
 * 1/2 tsp turmeric powder
 * 2 bay leaves
 * 2--3 green cardamom pods
-* 2 black cardamom pods, or 1 tsp seeds
+* 2 black cardamom pods, or 1/4 tsp seeds
 * 3--4 whole cloves
 * 1--2 strands of mace
 * 2--3 small pieces of cinnamon
@@ -59,6 +59,6 @@ Remaining ingredients:
 * Mace is the lacy covering around the nutmeg seed. It's also expensive, rarely
   used, and loses flavor rapidly once ground. A mix of nutmeg and allspice is a
   good substitute.
-* In my weeknight adaptation, I typically use boneless, skinless chicken
-  breast. To bring back some of the flavor of simmered bone-in chicken, I add
-  1 tsp concentrated stock or demi-glace to the yogurt marinade.
+* Boneless, skinless chicken breast is convenient, but doesn't have the depth
+  of flavor of bone-in cuts. To deepen the curry's flavor, add 1 tsp
+  concentrated stock or demi-glace to the yogurt marinade.
