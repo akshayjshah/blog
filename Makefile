@@ -27,7 +27,8 @@ _POSTS = building-a-blog.md \
 		 books/how-to-cook-everything.md \
 		 books/grit.md \
 		 recipes/waffles.md \
-		 recipes/hokkaido-milk-bread.md
+		 recipes/hokkaido-milk-bread.md \
+		 recipes/pizza.md
 
 define render-post
 	@echo "Rendering $<..."
