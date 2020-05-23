@@ -6,6 +6,8 @@ SHELL := bash
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
+_INITIAL_ACCOUNT = $(strip $(shell gcloud config get-value account))
+_ACCOUNT = akshay@akshayshah.org
 _FLAGS ?= ""
 _POSTS = building-a-blog.md \
 		 zero-to-code-monkey.md \
@@ -84,4 +86,10 @@ $(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))
 
 .PHONY: deploy
 deploy: build
-	gsutil -m rsync -R site gs://www.akshayshah.org
+ifneq ($(_ACCOUNT),$(_INITIAL_ACCOUNT))
+	gcloud config set account $(_ACCOUNT)
+endif
+	gsutil -o "GSUtil:parallel_process_count=4" -o "GSUtil:parallel_thread_count=1" -m rsync -d -j -R site gs://www.akshayshah.org
+ifneq ($(_ACCOUNT),$(_INITIAL_ACCOUNT))
+	gcloud config set account $(_INITIAL_ACCOUNT)
+endif
