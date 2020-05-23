@@ -45,10 +45,8 @@ much water.
 
 1. Remove dough from the refrigerator and gently re-shape into balls. Allow
    dough to come back to room temperature, usually 3--5 hours.
-2. An hour before the dough is ready, position the top rack of the oven and
-   baking steel about 6 inches from the broiler. Preheat at 500F for 50
-   minutes, switching to broiling at max heat a few minutes before the first
-   pie is ready to bake.
+2. An hour before the dough is ready, remove the top rack of the oven and place
+   the baking steel onto the middle rack. Preheat at 500&deg;F for 50 minutes.
 3. Lightly flour a dough ball. From the middle of the ball to the edges,
    flatten the dough with your fingertips, leaving a thin rim of untouched
    dough to make the crust. Anchor an edge of the crust with one hand, then
@@ -61,10 +59,11 @@ much water.
    center.
 4. Dust a wooden pizza peel (or a piece of parchment paper) with a bit of flour
    and cornmeal. Transfer the stretched round and top quickly. Transfer to the
-   hot steel and bake for 3--5 minutes. The crust should be charred in places.
+   hot steel, set the oven to broil at 550F, and bake for 5 minutes. The crust
+   should be browned everywhere, with some lightly charred spots.
 5. Retrieve with a metal pizza peel and cool on a wire rack for a few minutes
    before slicing. After every fourth pizza, let the steel reheat for 10
-   minutes.
+   minutes at 500F.
 
 ## Toppings
 
