@@ -26,7 +26,7 @@ Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-reci
    and let it rise at room temperature for 60 minutes---it should be quite
    puffy, but not fragile-looking.
 3. While the dough is rising, preheat the oven to 375.
-4. Gently poke the dough all over with et fingers. Drizzle with olive oil
+4. Gently poke the dough all over with wet fingers. Drizzle with olive oil
    and herbs.
 5. Bake the bread until it's golden brown, 25--30 minutes.
 6. Remove it from the oven, wait 5 minutes, then turn it out of the pan onto a
