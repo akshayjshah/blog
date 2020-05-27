@@ -8,7 +8,7 @@ Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-reci
 
 ### Ingredients
 
-- 418g AP flour (100%)
+- 418g bread flour (100%)
 - 340g warm water (81%)
 - 35g olive oil (for the dough) (8%)
 - 8g salt (2%)
