@@ -31,7 +31,7 @@ _POSTS = building-a-blog.md \
 		 recipes/waffles.md \
 		 recipes/hokkaido-milk-bread.md \
 		 recipes/pizza.md \
-		 automating-gmail-with-appscript.md
+		 automating-gmail-with-appsscript.md
 
 define render-post
 	@echo "Rendering $<..."
@@ -56,6 +56,7 @@ bin/build: go.mod main.go
 build:
 	@echo "Copying static assets..."
 	@rm -rf site/{img,docs}
+	@# TODO: use rsync here to avoid changing mtimes
 	@cp -R static/* site
 	@cp favicon.ico site/favicon.ico
 

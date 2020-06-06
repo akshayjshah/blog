@@ -1,4 +1,4 @@
-# Automating Gmail with AppScript
+# Automating Gmail with AppsScript
 
 We're all drowning in email. The problem isn't the blatant spam---it's easy to
 unsubscribe from most of that and block the rest. The real killer is the email
@@ -8,15 +8,15 @@ and all the other mail you skim when you have the time and skip if you're busy.
 
 Triaging these emails manually can be an exhausting game of whack-a-mole. But
 if you're a Gmail user, there's hope---you can use
-[AppScript](https://www.google.com/script/start/) to automate big parts of the
+[AppsScript](https://www.google.com/script/start/) to automate big parts of the
 job. Best of all, it's free! In this post, I'll walk you through creating your
-first AppScript project and give you a taste of what you can accomplish. (Hat
+first AppsScript project and give you a taste of what you can accomplish. (Hat
 tip to [Prashant Varanasi](https://github.com/prashantv), who first introduced
-me to AppScript.)
+me to AppsScript.)
 
 ## Setup
 
-[Create a new AppScript project](https://www.google.com/script/start), then
+[Create a new AppsScript project](https://www.google.com/script/start), then
 add a small function and save the project. This code doesn't do anything yet,
 but we'll add to it later on.
 
@@ -25,7 +25,7 @@ function processMail() {
 }
 ```
 
-AppScript includes a cron-like triggers service, but you have to be careful:
+AppsScript includes a cron-like triggers service, but you have to be careful:
 Google
 [limits](https://developers.google.com/apps-script/guides/services/quotas) the
 amount of time your script spends running, and it also limits the number of
@@ -153,7 +153,7 @@ function onVacation() {
 
 function pushSMS(msg) {
     // T-Mobile, Sprint, Verizon, and AT&T all support email-to-SMS
-    GmailApp.sendEmail('1234567890@vtext.com', 'AppScript', msg);
+    GmailApp.sendEmail('1234567890@vtext.com', 'AppsScript', msg);
 }
 ```
 
@@ -167,7 +167,7 @@ if my scripts are running amok.
 
 ## Complex: Reduce Notification Spam
 
-The most complex portions of my AppScript project selectively archive
+The most complex portions of my AppsScript project selectively archive
 notifications. Code review systems like Phabricator and GitHub, exception
 trackers like Sentry, and many RSS-like subscriptions send tons of
 notifications. Often, I'm only interested in the oldest or newest unread
@@ -221,7 +221,7 @@ I use a similar approach to:
 
 ## Calendars: The Final Frontier
 
-I haven't worked much with the calendar support in AppScript yet, but there's
+I haven't worked much with the calendar support in AppsScript yet, but there's
 so much low-hanging fruit. I'd love to try:
 
 * Declining meetings if they don't leave me time to eat.
