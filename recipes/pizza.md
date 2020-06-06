@@ -59,8 +59,8 @@ much water.
    center.
 4. Dust a wooden pizza peel (or a piece of parchment paper) with a bit of flour
    and cornmeal. Transfer the stretched round and top quickly. Transfer to the
-   hot steel, set the oven to broil at 550F, and bake for 5 minutes. The crust
-   should be browned everywhere, with some lightly charred spots.
+   hot steel and bake for 6--8 minutes. The crust should be browned everywhere,
+   with some lightly charred spots.
 5. Retrieve with a metal pizza peel and cool on a wire rack for a few minutes
    before slicing. After every fourth pizza, let the steel reheat for 10
    minutes at 500F.
@@ -81,8 +81,13 @@ much water.
 
 ## Notes
 
+* Substituting 50g of bread flour for dark rye flour adds a nice flavor, but
+  makes the dough a bit stickier and harder to shape.
 * On a New Haven- or NY-style pizza, I don't like fresh mozzarella---it's too
   wet, and it gets rubbery when dried out.
+* Most shredded mozzarella is part-skim. Coupled with the powder that stops the
+  cheese from sticking together, it makes for a much drier pizza than
+  whole-milk mozzarella.
 * Vegetables should be pre-cooked or they'll release too much water during
   baking. Microwaving them with a paper towel is often enough.
 * Sauce gets better if it sits for an hour or so at room temperature. I
