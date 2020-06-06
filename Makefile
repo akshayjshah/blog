@@ -90,7 +90,7 @@ deploy: build
 ifneq ($(_ACCOUNT),$(_INITIAL_ACCOUNT))
 	gcloud config set account $(_ACCOUNT)
 endif
-	gsutil -o "GSUtil:parallel_process_count=4" -o "GSUtil:parallel_thread_count=1" -m rsync -d -j -R site gs://www.akshayshah.org
+	gsutil -o "GSUtil:parallel_process_count=4" -o "GSUtil:parallel_thread_count=1" -m rsync -d -r site gs://www.akshayshah.org
 ifneq ($(_ACCOUNT),$(_INITIAL_ACCOUNT))
 	gcloud config set account $(_INITIAL_ACCOUNT)
 endif
