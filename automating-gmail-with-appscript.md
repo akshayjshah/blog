@@ -97,7 +97,7 @@ Examples include:
   participants, no emails from me, and no mention of teams or projects I was
   responsible for. This took a lot of maintenance and had a fair number of
   false positives, but kept my sanity intact while I sat on some *extremely*
-  bureaucratic engineering committees at Uber.
+  bureaucratic engineering committees.
 
 ## Moderate: Limit Inbox Size
 
