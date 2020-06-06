@@ -101,11 +101,11 @@ Examples include:
 
 ## Moderate: Limit Inbox Size
 
-Despite my best intentions, newsletters and other non-essential mail often
-accumulates in my inbox. It's painful to clear this backlog out by hand,
-because most of it really is interesting: I end up agonizing over whether I've
-got time to read *just one more* interesting article or thread, opening a
-million browser tabs, and burning hours of time better spent elsewhere.
+Despite my best intentions, newsletters and other non-essential threads often
+accumulate in my inbox. It's painful to clear this backlog out by hand, because
+I actually want to read most of it: I end up agonizing over whether I've got
+time to read *just one more* interesting article or thread, opening a million
+browser tabs, and burning hours of time better spent elsewhere.
 
 Instead, I use filters to label interesting-but-optional mail as it arrives. (I
 have a *lot* of filters, which I recently started managing with
