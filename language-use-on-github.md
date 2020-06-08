@@ -6,7 +6,7 @@ intuitions about these questions---*but what does the data say*? Spurred on by
 a six-month-old Twitter [conversation][twitter-convo], I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
 languages on GitHub: <figure><img
-src="/img/language-use-on-github/spearman_language_correlation.svg"
+src="/static/language-use-on-github/spearman_language_correlation.svg"
 alt="Language Correlation on GitHub"></figure>
 
 Each square in the chart measures the [rank correlation][wiki-rank-correlation]
@@ -191,7 +191,7 @@ the trick. If you're impatient, you can just peek at the
 [results][pearson-plot].
 
 <h2 id="conclusions">Conclusions</h2>
-<img src="/img/language-use-on-github/spearman_language_correlation.svg"
+<img src="/static/language-use-on-github/spearman_language_correlation.svg"
 alt="Language Correlation on GitHub">
 
 The most striking thing about this chart is its *blueness*. Despite our
@@ -225,10 +225,10 @@ know](mailto:akshay@akshayshah.org)!
 [gist]: https://gist.github.com/akshayjshah/4772174
 [github-archive]: http://www.githubarchive.org/
 [pandas]: http://pandas.pydata.org/
-[pearson-plot]: /img/language-use-on-github/pearson_language_correlation.svg
+[pearson-plot]: /static/language-use-on-github/pearson_language_correlation.svg
 [php]: http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/
-[stacked-csv]: /img/language-use-on-github/stacked_language_by_user.zip
+[stacked-csv]: /static/language-use-on-github/stacked_language_by_user.zip
 [twitter-convo]: https://twitter.com/misc/status/235167513833525249
-[unstacked-csv]: /img/language-use-on-github/unstacked_language_by_user.zip
+[unstacked-csv]: /static/language-use-on-github/unstacked_language_by_user.zip
 [wiki-pearson-correlation]: http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient
 [wiki-rank-correlation]: http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient

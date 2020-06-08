@@ -91,4 +91,4 @@ context.)
 
 ## Related
 
-[The Mundanity of Excellence](/img/grit/mundanity-of-excellence.pdf)
+[The Mundanity of Excellence](/static/grit/mundanity-of-excellence.pdf)

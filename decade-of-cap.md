@@ -27,7 +27,7 @@ linearizability that I stole from [Martin Kleppman's
 blog](https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html).
 Thanks, Martin!) Even in a group of experienced engineers, not everyone was
 familiar with the details of the paper. (If you'd prefer, you can also download
-a [PDF version of the slides](/img/decade-of-cap/decade-of-cap.pdf).)
+a [PDF version of the slides](/static/decade-of-cap/decade-of-cap.pdf).)
 
 It's trendy to [criticize CAP](http://arxiv.org/pdf/1509.05393v2.pdf) these
 days, but I find most of the criticism unconvincing (though interesting). CAP's

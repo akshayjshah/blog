@@ -55,11 +55,9 @@ bin/build: go.mod main.go
 	@go build -o bin/build .
 
 build:
-	@echo "Copying static assets..."
-	@rm -rf site/{img,docs}
-	@# TODO: use rsync here to avoid changing mtimes
-	@cp -R static/* site
-	@cp favicon.ico site/favicon.ico
+	@echo "Syncing static assets..."
+	@rsync -a --delete static/ site/static/
+	@cp -p favicon.ico site/favicon.ico
 
 build: site/404.html
 site/404.html: _FLAGS = -nodates
