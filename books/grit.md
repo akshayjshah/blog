@@ -3,15 +3,24 @@
 > Our potential is one thing. What we do with it is quite another.\
 > <cite>Angela Duckworth, [Grit](https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108)</cite> 
 
-Overall, I found the thesis interesting but likely overstated: I'd be *very*
-surprised if other psychologists agree that the data merits this degree of
-certainty.
+This is *such* an attractive thesis: for all of us, success is within reach.
+The book's fun to read, and the argument is clearly presented. (I wish more
+scientists wrote books like this.) That said, "grit trumps everything" seems
+too neat a conclusion for something as complex as human achievement. Throughout
+the book, there's not much discussion of the evidence for alternative
+explanations of success, and most of the studies cited were done by the author
+or closely-affiliated researchers (and the scientific literature has a
+widespread [reproducibility
+crisis](https://www.theatlantic.com/science/archive/2018/11/psychologys-replication-crisis-real/576223/)).
+(Update: [this
+article](https://journals.sagepub.com/doi/abs/10.1177/1948550620920531)
+specifically attacks the grit thesis and cites many of Duckworth's papers, but
+the actual study is behind a paywall.)
 
 ## Quotes
 
-The author isn't particularly quotable herself, but I enjoyed many of her
-quotations from other works. (Of course, some are probably wildly out of
-context.)
+The book is clear and fun, but doesn't lend itself to great quotes. The quotes
+Duckworth pulls from other works are *amazing*, though!
 
 > You have made a convert of an opponent in one sense, for I have always
 > maintained that, excepting fools, men did not differ much in intellect, only
@@ -22,7 +31,7 @@ context.)
 > Compared with what we ought to be, we are only half awake. Our fires are
 > dampened, our drafts are checked. We are making use of only a small part of
 > our possible mental and physical resources.\
-> <cite>William James, quoted in Ch. 2</cite>
+> <cite>William James, quoted in Chapter 2</cite>
 
 > No one can see in the work of the artist how it has *become*. That is its
 > advantage, for whenever one can see the act of becoming one grows somewhat
