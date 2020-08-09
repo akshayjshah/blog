@@ -12,10 +12,11 @@ explanations of success, and most of the studies cited were done by the author
 or closely-affiliated researchers (and the scientific literature has a
 widespread [reproducibility
 crisis](https://www.theatlantic.com/science/archive/2018/11/psychologys-replication-crisis-real/576223/)).
-(Update: [this
+
+Update: [this
 article](https://journals.sagepub.com/doi/abs/10.1177/1948550620920531)
 specifically attacks the grit thesis and cites many of Duckworth's papers, but
-the actual study is behind a paywall.)
+the actual study is behind a paywall.
 
 ## Quotes
 
