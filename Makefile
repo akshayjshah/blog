@@ -33,7 +33,8 @@ _POSTS = building-a-blog.md \
 		 recipes/pizza.md \
 		 automating-gmail-with-appsscript.md \
 		 recipes/coriander-mint-chutney.md \
-		 recipes/methi-dal.md
+		 recipes/methi-dal.md \
+		 books/sourdough.md \
 
 define render-post
 	@echo "Rendering $<..."
