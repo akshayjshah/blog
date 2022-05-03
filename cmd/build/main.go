@@ -34,7 +34,6 @@ var (
 	_hideHome    = flag.Bool("nohome", false, "hide homepage link")
 	_hideLicense = flag.Bool("nolicense", false, "hide license link")
 	_recipes     = flag.String("recipes", "", "recipes directory (with -index)")
-	_books       = flag.String("books", "", "book notes directory (with -index)")
 	_style       = flag.String("style", "", "CSS file")
 )
 
@@ -69,11 +68,10 @@ type Page struct {
 type Index struct {
 	Posts   []IndexEntry
 	Recipes []IndexEntry
-	Books   []IndexEntry
 }
 
 func (i *Index) Sort() {
-	for _, s := range [][]IndexEntry{i.Posts, i.Recipes, i.Books} {
+	for _, s := range [][]IndexEntry{i.Posts, i.Recipes} {
 		sort.Slice(s, func(i, j int) bool {
 			// Reverse chronological sort.
 			return s[j].Created.Before(s[i].Created)
@@ -189,7 +187,6 @@ func homepage(w io.Writer, files []string) {
 	var (
 		posts   []IndexEntry
 		recipes []IndexEntry
-		books   []IndexEntry
 	)
 	for _, f := range files {
 		title := strings.TrimSpace(strings.TrimPrefix(head(f), "#"))
@@ -203,8 +200,6 @@ func homepage(w io.Writer, files []string) {
 		switch filepath.Dir(f) {
 		case *_recipes:
 			recipes = append(recipes, entry)
-		case *_books:
-			books = append(books, entry)
 		default:
 			posts = append(posts, entry)
 		}
@@ -212,7 +207,6 @@ func homepage(w io.Writer, files []string) {
 	idx := Index{
 		Posts:   posts,
 		Recipes: recipes,
-		Books:   books,
 	}
 	idx.Sort()
 	must(_home.Execute(w, idx), "generate Markdown homepage")

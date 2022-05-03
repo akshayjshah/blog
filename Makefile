@@ -1,15 +1,12 @@
-.DEFAULT_GOAL := build
+.DEFAULT_GOAL := run
 SHELL := bash
 .SHELLFLAGS := -euo pipefail -c
-.ONESHELL:
 .DELETE_ON_ERROR:
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
-_INITIAL_ACCOUNT = $(strip $(shell gcloud config get-value account))
-_ACCOUNT = akshay@akshayshah.org
 _FLAGS ?= ""
-_POSTS = building-a-blog.md \
+_POSTS := building-a-blog.md \
 		 zero-to-code-monkey.md \
 		 audible-literacy-filter.md \
 		 language-use-on-github.md \
@@ -26,74 +23,93 @@ _POSTS = building-a-blog.md \
 		 recipes/focaccia.md \
 		 recipes/chicken-kebabs.md \
 		 recipes/methi-murgh.md \
-		 books/how-to-cook-everything.md \
-		 books/grit.md \
+		 grit.md \
 		 recipes/waffles.md \
 		 recipes/hokkaido-milk-bread.md \
 		 recipes/pizza.md \
 		 automating-gmail-with-appsscript.md \
 		 recipes/coriander-mint-chutney.md \
 		 recipes/methi-dal.md \
-		 books/sourdough.md \
+		 sourdough.md \
 		 recipes/pancakes.md
+
+.PHONY: help
+help: ## Describe useful make targets
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
+
+.PHONY: clean
+clean: ## Delete intermediate build artifacts
+	rm -rf tmp cmd/serve/static cmd/serve/recipes
+	rm -f cmd/serve/favicon.ico cmd/serve/*.html
+
+.PHONY: upgrade
+upgrade: ## Upgrade Go dependencies
+	go get -u -t ./...
+	go mod tidy -v
+
+.PHONY: run
+run: build tmp/serve ## Run on :8080
+	@./tmp/serve
+
+.PHONY: deploy
+deploy: INITIAL = $(strip $(shell gcloud config get-value account))
+deploy: WANT := akshay@akshayshah.org
+deploy: PROJECT := blog-276404/blog
+deploy: build
+ifneq ($(WANT),$(INITIAL))
+	gcloud config set account $(WANT)
+endif
+	gcloud auth configure-docker us-central1-docker.pkg.dev
+	docker build -t us-central1-docker.pkg.dev/$(PROJECT)/blog:latest .
+	docker push us-central1-docker.pkg.dev/$(PROJECT)/blog:latest
+ifneq ($(WANT),$(INITIAL))
+	gcloud config set account $(INITIAL)
+endif
 
 define render-post
 	@echo "Rendering $<..."
 	@mkdir -p $(@D)
-	@bin/build -style style.css $(_FLAGS) $< > $@
+	@tmp/build -style style.css $(_FLAGS) $< > $@
 endef
 
 define post-template
-build: site/$(basename $1)/index.html
-site/$(basename $1)/index.html: $1 bin/build page.html style.css
+build: cmd/serve/$(basename $1).html
+cmd/serve/$(basename $1).html: $1 tmp/build page.html style.css
 	$$(render-post)
 endef
 
-.PHONY: clean
-clean:
-	rm -rf site bin tmp
-
-bin/build: go.mod main.go
-	@echo "Compiling generator..."
-	@go build -o bin/build .
-
+.PHONY: build
 build:
-	@echo "Syncing static assets..."
-	@rsync -a --delete static/ site/static/
-	@cp -p favicon.ico site/favicon.ico
+	@rm -rf cmd/serve/static && cp -R static cmd/serve
+	@cp -p favicon.ico cmd/serve/favicon.ico
 
-build: site/404.html
-site/404.html: _FLAGS = -nodates
-site/404.html: 404.md bin/build style.css
+tmp/build: go.mod cmd/build/main.go
+	@go build -o tmp/build ./cmd/build
+
+tmp/serve: build go.mod cmd/serve/main.go
+	@go build -o tmp/serve ./cmd/serve
+
+build: cmd/serve/404.html
+cmd/serve/404.html: _FLAGS = -nodates
+cmd/serve/404.html: 404.md tmp/build style.css
 	$(render-post)
 
-tmp/index.md: index.md style.css bin/build $(_POSTS)
-	@echo "Generating index..."
+tmp/index.md: index.md style.css tmp/build $(_POSTS)
 	@mkdir -p $(@D)
-	@bin/build -books books -recipes recipes -style style.css -index $(_POSTS) > $@
+	@tmp/build -recipes recipes -style style.css -index $(_POSTS) > $@
 
-build: site/index.html
-site/index.html: _FLAGS = -nodates -nohome
-site/index.html: tmp/index.md style.css bin/build
+build: cmd/serve/index.html
+cmd/serve/index.html: _FLAGS = -nodates -nohome
+cmd/serve/index.html: tmp/index.md style.css tmp/build
 	$(render-post)
 
-build: site/colophon/index.html
-site/colophon/index.html: colophon.md bin/build page.html style.css
+build: cmd/serve/colophon.html
+cmd/serve/colophon.html: colophon.md tmp/build page.html style.css
 	$(render-post)
 
-build: site/license/index.html
-site/license/index.html: _FLAGS = -nolicense -nodates
-site/license/index.html: license.md bin/build page.html style.css
+build: cmd/serve/license.html
+cmd/serve/license.html: _FLAGS = -nolicense -nodates
+cmd/serve/license.html: license.md tmp/build page.html style.css
 	$(render-post)
 
 $(foreach post,$(_POSTS),$(eval $(call post-template,$(post))))
-
-.PHONY: deploy
-deploy: build
-ifneq ($(_ACCOUNT),$(_INITIAL_ACCOUNT))
-	gcloud config set account $(_ACCOUNT)
-endif
-	gsutil -o "GSUtil:parallel_process_count=4" -o "GSUtil:parallel_thread_count=1" -m rsync -d -r site gs://www.akshayshah.org
-ifneq ($(_ACCOUNT),$(_INITIAL_ACCOUNT))
-	gcloud config set account $(_INITIAL_ACCOUNT)
-endif

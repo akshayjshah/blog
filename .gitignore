@@ -1,5 +1,7 @@
 .DS_Store
 
-bin/
-site/
 tmp/
+cmd/serve/recipes/
+cmd/serve/static/
+cmd/serve/favicon.ico
+cmd/serve/*.html
