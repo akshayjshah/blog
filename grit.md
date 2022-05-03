@@ -1,4 +1,4 @@
-# Grit
+# Reading Notes: Grit
 
 > Our potential is one thing. What we do with it is quite another.\
 > <cite>Angela Duckworth, [Grit](https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108)</cite> 
