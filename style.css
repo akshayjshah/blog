@@ -96,7 +96,9 @@ cite::before {
 .post-list .post-date {
     font-style: italic;
     filter: brightness(130%);
-    // color: lighten($textColor, 30%);
+    display: inline-block;
+    min-width: 5em;
+    text-align: end;
 }
 
 img {

@@ -13,7 +13,7 @@ or [read a bit more about me](/colophon/).
 <ol class="post-list">
 {{ range .Posts }}
 <li>
-  <span class="post-date">{{ .Published }} &raquo;</span>
+  <span class="post-date">{{ .Published }} &nbsp;&nbsp;</span>
   <a href="{{ .Link }}">{{ .Title }}</a>
 </li>
 {{ end }}
@@ -24,7 +24,7 @@ or [read a bit more about me](/colophon/).
 <ol class="post-list">
 {{ range .Recipes }}
 <li>
-  <span class="post-date">{{ .Published }} &raquo;</span>
+  <span class="post-date">{{ .Published }} &nbsp;&nbsp;</span>
   <a href="{{ .Link }}">{{ .Title }}</a>
 </li>
 {{ end }}
