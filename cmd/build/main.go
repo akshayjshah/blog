@@ -161,11 +161,15 @@ func updated(path string) *time.Time {
 
 func post(w io.Writer, site Site, post string) {
 	first := head(post)
+	permalink := site.BaseURL + "/" + path.Clean(strings.TrimSuffix(post, ".md")) + "/"
+	if strings.HasSuffix(permalink, "/index/") {
+		permalink = site.BaseURL + "/"
+	}
 	p := Page{
 		Site:        site,
 		TitlePlain:  strings.TrimSpace(strings.TrimPrefix(first, "#")),
 		Title:       render([]byte(first)),
-		Permalink:   site.BaseURL + "/" + path.Clean(strings.TrimSuffix(post, ".md")) + "/",
+		Permalink:   permalink,
 		HideDates:   *_hideDates,
 		HideHome:    *_hideHome,
 		HideLicense: *_hideLicense,
