@@ -3,9 +3,9 @@
 ![Picture of Akshay](/static/headshot-640x640.webp)
 
 I'm Akshay Shah, and you've landed on my little patch of the web---mazel tov!
-As a brief introduction, I live in San Francisco and work on programming tools
-at [Buf](https://buf.build). If you'd like to get in touch with me, you can
-send me an [email](mailto:akshay@akshayshah.org); I'm also on
+As a brief introduction, I live in San Francisco and build programming tools at
+[Buf](https://buf.build). If you'd like to get in touch with me, you can send
+me an [email](mailto:akshay@akshayshah.org); I'm also on
 [Twitter](https://twitter.com/akshayshah),
 [LinkedIn](https://linkedin.com/in/akshayjshah), and
 [GitHub](https://github.com/akshayjshah).
@@ -26,11 +26,9 @@ reattached.
 
 Professionally, I've been a public school teacher, an EMT, and a medical
 student. After finishing medical school in 2011, I moved to California and
-decided to pursue a career in software. If you’re interested, stay tuned for a
-post about leaving medicine for Silicon Valley.
-
-Like the best software, this blog scratches a personal itch: I tend to scribble
-notes while I'm thinking, but I miss longer-form writing. If my notes can be
-polished into posts that other people find useful or entertaining, then I'll be
-thrilled; if not, I'll enjoy the process anyways. Plus, setting up the first
-version of this site was a fun technical project.
+decided to pursue a career in software. I spent a few years as a full-stack web
+engineer at an enterprise software startup, worked for a few years on Uber's
+core infrastructure, started my own venture-backed company, and briefly worked
+at Microsoft on Azure. These days, I build better tools for Protocol Buffers at
+[Buf](https://buf.build). I remain convinced that programming is the _best_ job
+on Earth.
