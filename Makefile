@@ -62,6 +62,23 @@ endif
 	gcloud auth configure-docker us-central1-docker.pkg.dev
 	docker build -t us-central1-docker.pkg.dev/$(PROJECT)/blog:latest .
 	docker push us-central1-docker.pkg.dev/$(PROJECT)/blog:latest
+	gcloud run deploy blog \
+		--image=us-central1-docker.pkg.dev/$(PROJECT)/blog:latest \
+		--port=8080 \
+		--concurrency=512 \
+		--cpu=2 \
+		--ingress=all \
+		--max-instances=5 \
+		--min-instances=default \
+		--memory=512Mi \
+		--platform=managed \
+		--timeout=30s \
+		--use-http2 \
+		--allow-unauthenticated \
+		--cpu-throttling \
+		--region=us-central1
+
+
 ifneq ($(WANT),$(INITIAL))
 	gcloud config set account $(INITIAL)
 endif
