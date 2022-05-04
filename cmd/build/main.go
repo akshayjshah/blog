@@ -222,7 +222,7 @@ func main() {
 		BaseURL:     "https://akshayshah.org",
 		Title:       "Akshay Shah",
 		Author:      "Akshay Shah",
-		Description: "Thoughts on code and human factors from a physician-turned-engineer.",
+		Description: "Code, cooking, and caffeine.",
 		LastChanged: fmt.Sprint(time.Now().Year()),
 		CSS:         style(),
 	}
