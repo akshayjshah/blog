@@ -44,6 +44,7 @@ func serve(w http.ResponseWriter, r *http.Request) {
 		io.Copy(w, page)
 		return
 	}
+	w.Header().Set("Cache-Control", "max-age=31536000") // cache for 1y
 	http.FileServer(http.FS(site)).ServeHTTP(w, r)
 }
 
