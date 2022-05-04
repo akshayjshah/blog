@@ -1,11 +1,11 @@
 # Colophon
 
-![Picture of Akshay](/static/headshot-640x640.png)
+![Picture of Akshay](/static/headshot-640x640.webp)
 
 I'm Akshay Shah, and you've landed on my little patch of the web---mazel tov!
-As a brief introduction, I live in San Francisco, where I'm the cofounder of a
-small startup. If you'd like to get in touch with me, you can send me an
-[email](mailto:akshay@akshayshah.org); I'm also on
+As a brief introduction, I live in San Francisco and work on programming tools
+at [Buf](https://buf.build). If you'd like to get in touch with me, you can
+send me an [email](mailto:akshay@akshayshah.org); I'm also on
 [Twitter](https://twitter.com/akshayshah),
 [LinkedIn](https://linkedin.com/in/akshayjshah), and
 [GitHub](https://github.com/akshayjshah).
