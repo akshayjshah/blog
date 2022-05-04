@@ -1,10 +1,10 @@
 # Reading Notes: Sourdough
 
-> “Culture,” he said. “The word meant this---making cheese---before it meant
+> "Culture," he said. "The word meant this---making cheese---before it meant
 > that---art and opera. And before it meant anything, it just meant working the
-> land. That’s a better definition. That’s who we are. Not our music, our
-> books. Psh, books. They’re all dead. We’re alive. We eat, we grow. But, but
-> but but, here’s the thing! We’re amateurs.”\
+> land. That's a better definition. That's who we are. Not our music, our
+> books. Psh, books. They're all dead. We're alive. We eat, we grow. But, but
+> but but, here's the thing! We're amateurs."\
 > <cite>Robin Sloan</cite>
 
 I loved Robin Sloan's *Sourdough*. (What can I say, I'm a standard-issue
@@ -22,7 +22,7 @@ the book's protagonist.
 One hint at a time, Sloan also builds a hauntingly beautiful picture of the
 Mazg, the fictional community of stateless European migrants who nurtured
 Lois's sourdough culture through centuries of wandering. I regret not listening
-to the audiobook version of *Sourdough* --- it includes computer-generated Mazg
+to the audiobook version of *Sourdough*---it includes computer-generated Mazg
 music! Some samples are included in this [blog
 post](https://www.mcdbooks.com/features/sourdough), which is also the best
 non-technical description of machine learning I've found.

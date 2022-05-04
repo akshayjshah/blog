@@ -94,7 +94,10 @@ func must(err error, prefix string, args ...interface{}) {
 }
 
 func render(md []byte) template.HTML {
-	raw := blackfriday.Run(md)
+	raw := blackfriday.Run(
+		md,
+		blackfriday.WithExtensions(blackfriday.CommonExtensions|blackfriday.AutoHeadingIDs),
+	)
 	min, err := _minifier.Bytes("text/html", raw)
 	must(err, "minify HTML")
 	return template.HTML(min)
