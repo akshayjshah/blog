@@ -55,7 +55,10 @@ run: build tmp/serve ## Run on :8080
 deploy: INITIAL = $(strip $(shell gcloud config get-value account))
 deploy: WANT := akshay@akshayshah.org
 deploy: PROJECT := blog-276404/blog
-deploy: build
+deploy: ## Deploy to GCP
+	# Gross, but ensures that I don't forget to run `make clean`.
+	$(MAKE) clean
+	$(MAKE) build
 ifneq ($(WANT),$(INITIAL))
 	gcloud config set account $(WANT)
 endif
