@@ -31,7 +31,8 @@ _POSTS := building-a-blog.md \
 		 recipes/coriander-mint-chutney.md \
 		 recipes/methi-dal.md \
 		 sourdough.md \
-		 recipes/pancakes.md
+		 recipes/pancakes.md \
+		 go-time-protobuf-grpc.md
 
 .PHONY: help
 help: ## Describe useful make targets
@@ -80,8 +81,6 @@ endif
 		--allow-unauthenticated \
 		--cpu-throttling \
 		--region=us-central1
-
-
 ifneq ($(WANT),$(INITIAL))
 	gcloud config set account $(INITIAL)
 endif
