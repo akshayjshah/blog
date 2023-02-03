@@ -32,7 +32,8 @@ _POSTS := building-a-blog.md \
 		 recipes/methi-dal.md \
 		 sourdough.md \
 		 recipes/pancakes.md \
-		 go-time-protobuf-grpc.md
+		 go-time-protobuf-grpc.md \
+		 grpc-doesnt-need-trailers.md
 
 .PHONY: help
 help: ## Describe useful make targets
