@@ -35,6 +35,15 @@ var (
 	_hideLicense = flag.Bool("nolicense", false, "hide license link")
 	_recipes     = flag.String("recipes", "", "recipes directory (with -index)")
 	_style       = flag.String("style", "", "CSS file")
+
+	_elsewhere = []IndexEntry{
+		{
+			Created: time.Date(2022, 6, 1, 12, 0, 0, 0, time.Local),
+			Title:   "Connect: A Better gRPC",
+			Link:    "https://buf.build/blog/connect-a-better-grpc/",
+			Via:     "on buf.build",
+		},
+	}
 )
 
 func init() {
@@ -84,6 +93,7 @@ type IndexEntry struct {
 	Published string
 	Title     string
 	Link      string
+	Via       template.HTML
 }
 
 func must(err error, prefix string, args ...interface{}) {
@@ -195,6 +205,10 @@ func homepage(w io.Writer, files []string) {
 		posts   []IndexEntry
 		recipes []IndexEntry
 	)
+	for _, p := range _elsewhere {
+		p.Published = p.Created.Format(_date)
+		posts = append(posts, p)
+	}
 	for _, f := range files {
 		title := strings.TrimSpace(strings.TrimPrefix(head(f), "#"))
 		c := created(f)

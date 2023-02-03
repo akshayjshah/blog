@@ -15,7 +15,7 @@ me](/colophon/).
 {{ range .Posts }}
 <li>
   <span class="post-date">{{ .Published }} &nbsp;&nbsp;</span>
-  <a href="{{ .Link }}">{{ .Title }}</a>
+  <a href="{{ .Link }}">{{ .Title }}</a>{{ if .Via }} ({{ .Via}}){{ end }}
 </li>
 {{ end }}
 </ol>
