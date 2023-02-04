@@ -41,7 +41,7 @@ var (
 			Created: time.Date(2022, 6, 1, 12, 0, 0, 0, time.Local),
 			Title:   "Connect: A Better gRPC",
 			Link:    "https://buf.build/blog/connect-a-better-grpc/",
-			Via:     "on buf.build",
+			Via:     "on the Buf blog",
 		},
 	}
 )
