@@ -46,7 +46,7 @@ type config struct {
 func (c *config) Sort() {
 	slices.SortStableFunc(c.Pages, func(l, r pageConfig) bool {
 		// Reverse chronological sort.
-		return l.Date() > r.Date()
+		return l.Created > r.Created
 	})
 }
 
@@ -65,13 +65,6 @@ type pageConfig struct {
 	Link  string `yaml:"link"`
 	Title string `yaml:"title"`
 	Via   string `yaml:"via"`
-}
-
-func (p pageConfig) Date() string {
-	if p.Updated != "" {
-		return p.Updated
-	}
-	return p.Created
 }
 
 func (p pageConfig) Validate() error {
