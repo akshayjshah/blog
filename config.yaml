@@ -85,35 +85,35 @@ pages:
     updated: 2020-05-01
   - markdown: recipes/sourdough-starter.md
     description: "A recipe for homemade sourdough starter."
-    created: 2020-03-01
+    created: 2020-03-02
     updated: 2020-05-01
   - markdown: recipes/focaccia.md
     description: "Recipes for quick and sourdough focaccia."
-    created: 2020-03-01
+    created: 2020-03-03
     updated: 2020-05-01
   - markdown: recipes/chicken-kebabs.md
     description: "A recipes for Indian-inspired chicken kebabs."
     created: 2020-05-01
   - markdown: recipes/methi-murgh.md
     description: "My mother-in-law's recipe for a methi-flavored chicken curry."
-    created: 2020-05-01
+    created: 2020-05-02
     updated: 2020-06-01
   - markdown: recipes/waffles.md
     description: "Recipes for quick and sourdough waffles."
-    created: 2020-05-01
+    created: 2020-05-03
   - markdown: recipes/hokkaido-milk-bread.md
     description: "A recipe for a long-lasting, Japanese-style enriched sandwich bread."
-    created: 2020-05-01
+    created: 2020-05-04
   - markdown: recipes/pizza.md
     title: "A pizza recipe honed over two decades."
-    created: 2020-05-01
+    created: 2020-05-15
     updated: 2020-06-01
   - markdown: recipes/coriander-mint-chutney.md
     description: "My mother-in-law's coriander chutney recipe."
     created: 2020-06-01
   - markdown: recipes/methi-dal.md
     description: "My mother-in-law's recipe for methi dal."
-    created: 2020-06-01
+    created: 2020-06-10
   - markdown: recipes/pancakes.md
     description: "Recipes for buttermilk and lemon-ricotta pancakes."
-    created: 2020-01-15
+    created: 2021-01-15
