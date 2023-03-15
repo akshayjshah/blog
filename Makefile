@@ -15,7 +15,7 @@ build:
 
 .PHONY: run
 run: build ## Run on :8080
-	@wrangler pages dev --port 8080 --live-reload dist
+	@wrangler pages dev --port 8080 --live-reload --compatibility-date=2023-03-02 dist
 
 .PHONY: clean
 clean: ## Delete intermediate build artifacts

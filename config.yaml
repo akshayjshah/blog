@@ -74,6 +74,9 @@ pages:
   - markdown: go-time-protobuf-grpc.md
     description: "I was interviewed on the Go Time podcast about Protocol Buffers and gRPC."
     created: 2022-11-17
+  - markdown: grpc-doesnt-need-trailers.md
+    description: "gRPC doesn't need HTTP trailers: every feature, including streaming, could work without them."
+    created: 2023-03-01
 
   # Recipes
   - markdown: recipes/garam-masala.md
