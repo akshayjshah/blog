@@ -1,12 +1,8 @@
 # Zero to Code Monkey
 
 Last year, I'd never have called myself a programmer. Sure, I'd dabbled a bit
-here and there: I took a few computer science courses in high school and
-college, cobbled together some Excel macros and one-off data processing scripts
-in medical school, and hand-wrote two websites in the late 90s. I'd never
-written code daily, even while taking computer science classes, and most
-importantly, I'd never collaborated on a software project. At best, I was a
-dilettante.
+here and there, but I'd never written code daily and I'd never collaborated on
+a large software project. At best, I was a dilettante.
 
 Nine months later, I'm on a different plane: I'm still no expert, but I'm
 definitely a programmer (or at least a code monkey). Writing code every day is
