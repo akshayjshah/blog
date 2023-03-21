@@ -1,13 +1,12 @@
 # gRPC Doesn't Need Trailers
 
-Among gRPC's many imperfections, none is worse than its dogged insistence on
-HTTP trailers. When detractors highlight this wart, apologists inevitably argue
-that trailers aren't a problem --- in fact, they're essential! Most recently, a
-former gRPC maintainer published <em>[Why Does gRPC Insist on
-Trailers](https://carlmastrangelo.com/blog/why-does-grpc-insist-on-trailers)</em>.
-In it, he argues that trailers protect clients from abruptly dropped TCP
-connections and compensate for oddities in the binary encoding of Protocol
-Buffers. Bluntly, both of these arguments are nonsense.
+Among gRPC's many imperfections, none is worse than its reliance on HTTP
+trailers. Perversely, this seems to be the design decision that gRPC fans
+defend most eagerly. As an example, a former gRPC maintainer recently published
+<em>[Why Does gRPC Insist on Trailers][nonsense]</em>. In it, he argues that
+trailers protect clients from abruptly dropped TCP connections and compensate
+for oddities in the binary encoding of Protocol Buffers. Bluntly, both of these
+arguments are nonsense.
 
 **gRPC doesn't need HTTP trailers.** In this post, I'll explain:
 
@@ -30,17 +29,17 @@ most HTTP/1.1 implementations don't support them, so they're rarely used.
 
 Why, then, would gRPC rely on trailers? Because gRPC supports streaming
 responses, in which the server writes multiple records to the response body.
-Imagine that a well-intentioned gRPC server is preparing to stream a large
-collection to a client. The server connects to the database, executes a query,
-and begins inspecting the results. Everything is copacetic, so the server sends
-a `200 OK` status code and a handful of headers. One by one, the server begins
-reading records from the database and writing them to the response body. Then
-the database crashes. How should the server tell the client that something has
-gone terribly wrong? The client has already received a `200 OK` HTTP status
-code, so it's too late to send a `500 Internal Server Error`. Because the
-server has already started sending the response body, it's also too late to
-send additional headers. The server's only options are to send the error as the
-last portion of the response body or to send it in trailers.
+Imagine that a gRPC server is preparing to stream a large collection to a
+client. The server connects to the database, executes a query, and begins
+inspecting the results. Everything is going well, so the server sends a `200
+OK` status code and some headers. One by one, the server begins reading records
+from the database and writing them to the response body. Then the database
+crashes. How should the server tell the client that something has gone wrong?
+The client has already received a `200 OK` HTTP status code, so it's too late
+to send a `500 Internal Server Error`. Because the server has already started
+sending the response body, it's also too late to send more headers. The
+server's only options are to send the error as the last portion of the response
+body or to send it in trailers.
 
 gRPC chooses to use trailers. Responses include a gRPC-specific status code in
 the `grpc-status` trailer and a description of the error (if any) in the
@@ -82,21 +81,21 @@ so I'll directly address the two arguments above.
 
 ## Why are trailers bad?
 
-If trailers were unnecessary but ultimately harmless, I wouldn't be writing
-this unhinged rant. But trailers aren't harmless: they make it difficult to add
-gRPC APIs to existing applications. Is your Python application built with
-Django, Flask, or FastAPI? Too bad --- WSGI and ASGI don't support trailers, so
-your application can't handle gRPC-flavored HTTP. Trying to call your gRPC
-server from an iPhone? Sorry, `URLSession` doesn't support trailers either. The
-list goes on and on.
+If trailers were unnecessary but harmless, I wouldn't be ranting to internet
+strangers. But trailers aren't harmless: they make it difficult to add gRPC
+APIs to existing applications. Is your Python application built with Django,
+Flask, or FastAPI? Too bad --- WSGI and ASGI don't support trailers, so your
+application can't handle gRPC-flavored HTTP. Trying to call your gRPC server
+from an iPhone? Sorry, `URLSession` doesn't support trailers either. The list
+goes on and on.
 
-Rather than augmenting these battle-tested HTTP stacks, Google's gRPC
-implementations replace them. Of course, this prevents gRPC applications from
-benefiting from the huge ecosystem of middleware, add-ons, and documentation
+Because the protocol requires trailers, gRPC implementations must compete with
+popular HTTP stacks instead of augmenting them. Of course, this prevents gRPC
+applications from benefiting from the ecosystem of add-ons and documentation
 that makes popular web frameworks so productive. It also comes with a
-tremendous loss of generality: gRPC's HTTP stack can _only_ serve RPCs. If you
-want to serve an HTML page, receive a file upload, handle an HTTP `GET`, or
-support HTTP/1.1, you're out of luck.
+tremendous loss of generality: often, gRPC's HTTP stack can _only_ serve RPCs
+over HTTP/2. If you also want to serve an HTML page, receive a file upload,
+support HTTP/1.1 or HTTP/3, or just handle an HTTP `GET`, you're out of luck.
 
 These pains are most acute on the web. Like many other clients, the `fetch` API
 doesn't support trailers. Unlike mobile or backend applications, though, web
@@ -112,11 +111,11 @@ availability of interoperable servers and clients.
 
 ## Could Google fix gRPC?
 
-To be fair, when Google designed gRPC, trailer support had just been added to
-the `fetch` specification. If the Chrome, Firefox, Safari, and Edge teams had
-followed through and implemented the proposed APIs, other HTTP implementations
-might have followed their lead. Instead, browser makers withdrew their support
-for the new APIs, and they were formally removed from the specification in late
+When Google designed gRPC, trailer support had just been added to the `fetch`
+specification. If the Chrome, Firefox, Safari, and Edge teams had followed
+through and implemented the proposed APIs, other HTTP implementations might
+have followed their lead. Instead, browser makers withdrew their support for
+the new APIs, and they were formally removed from the specification in late
 2019.
 
 It's now 2023. Trailers aren't coming to browsers --- or to many other HTTP
@@ -128,15 +127,15 @@ their servers and clients.
 
 [gRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) is the
 obvious choice for a second protocol. It's similar to standard gRPC, but
-encodes post-processing status metadata at the end of the response body rather
-than in trailers. It uses a different Content-Type, so servers could easily
-differentiate gRPC-Web requests from standard gRPC and respond appropriately.
-Clients could opt into the new protocol with a configuration toggle.
-Implementations wouldn't need any other user-visible API changes, and support
-could be shipped in a backward-compatible minor release. And because it's
-already under the gRPC umbrella, we wouldn't need to convince Google to adopt
-any outside ideas. (gRPC-Web also drops gRPC's strict HTTP/2 requirement, which
-is nice but unnecessary to mitigate the trailers fiasco.)
+encodes status metadata at the end of the response body rather than in
+trailers. It uses a different Content-Type, so servers could handle the new
+protocol alongside the old. Clients could opt into the new protocol with a
+configuration toggle. Implementations wouldn't need any other user-visible API
+changes, so they could ship these improvements in a backward-compatible minor
+release. And because gRPC-Web is already under the gRPC umbrella, we wouldn't
+need to convince Google to adopt any outside ideas. (gRPC-Web also drops gRPC's
+strict HTTP/2 requirement, which is nice but unnecessary to mitigate the
+trailers fiasco.)
 
 If today's gRPC implementations embraced the gRPC-Web protocol, new
 implementations could _only_ support gRPC-Web. All of a sudden, `grpc-rails`
@@ -145,9 +144,9 @@ call gRPC backends directly. iOS applications could drop their multi-megabyte
 dependency on `SwiftNIO`. Without trailers, gRPC could meet developers where
 they are.
 
-Microsoft's .NET team seems to agree with this assessment: they've built
-support for the gRPC-Web protocol into `grpc-dotnet`. If you'd like Google to
-do the same, [upvote issue 29818 in the main gRPC
+Microsoft seems to agree with this assessment: they've built support for the
+gRPC-Web protocol into `grpc-dotnet`. If you'd like Google to do the same,
+[upvote issue 29818 in the main gRPC
 repository](https://github.com/grpc/grpc/issues/29818).
 
 ## Could we do better without Google?
@@ -177,7 +176,7 @@ None of these changes affect the protocol's efficiency, but they eliminate most
 of gRPC's fussiness. Creating a `User` becomes a cURL one-liner:
 
 ```
-curl --json '{"name": "Akshay"}' https://api.acme.com/user.v1.Create
+curl --json '{"name": "Akshay"}' https://api.acme.com/user.v1/Create
 ```
 
 This protocol _just works_ because it's boring. It works with human-readable
@@ -190,5 +189,9 @@ toolkits.
 I can't imagine Google embracing a protocol that's so different from today's
 gRPC, especially if it requires HTTP/1.1 support, but you can try it _today_:
 use [Connect](https://connect.build). Connect servers and clients support the
-full gRPC protocol, gRPC-Web, _and_ the simpler protocol we just outlined.
-Implementations are available in Go, TypeScript, Swift, and Kotlin.
+full gRPC protocol, gRPC-Web, _and_ the [simpler protocol][connect-protocol] we
+just outlined. Implementations are available in Go, TypeScript, Swift, and
+Kotlin.
+
+[nonsense]: https://carlmastrangelo.com/blog/why-does-grpc-insist-on-trailers
+[connect-protocol]: https://connect.build/docs/protocol/
