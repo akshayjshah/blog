@@ -1,12 +1,11 @@
 # gRPC Doesn't Need Trailers
 
-Among gRPC's many imperfections, none is worse than its reliance on HTTP
-trailers. Perversely, this seems to be the design decision that gRPC fans
-defend most eagerly. As an example, a former gRPC maintainer recently published
-<em>[Why Does gRPC Insist on Trailers][nonsense]</em>. In it, he argues that
-trailers protect clients from abruptly dropped TCP connections and compensate
-for oddities in the binary encoding of Protocol Buffers. Bluntly, both of these
-arguments are nonsense.
+Among gRPC's many imperfections, none is worse than its use of HTTP trailers.
+Perversely, gRPC fans seem eager to defend this mistake. As an example, a
+former gRPC maintainer recently published <em>[Why Does gRPC Insist on
+Trailers][nonsense]</em>. He argues that trailers protect clients from abruptly
+dropped TCP connections and compensate for oddities in the binary encoding of
+Protocol Buffers. Bluntly, both of these arguments are nonsense.
 
 **gRPC doesn't need HTTP trailers.** In this post, I'll explain:
 
@@ -48,8 +47,7 @@ the `grpc-status` trailer and a description of the error (if any) in the
 
 ## Are trailers necessary?
 
-Of course not! But I didn't write all this just to make unsupported assertions,
-so I'll directly address the two arguments above.
+Of course not! But let's at least address the two arguments above.
 
 1. **Clients don't need trailers to detect dropped TCP connections.** In this
    argument, gRPC apologists claim that trailers help clients detect incomplete
@@ -89,13 +87,14 @@ application can't handle gRPC-flavored HTTP. Trying to call your gRPC server
 from an iPhone? Sorry, `URLSession` doesn't support trailers either. The list
 goes on and on.
 
-Because the protocol requires trailers, gRPC implementations must compete with
-popular HTTP stacks instead of augmenting them. Of course, this prevents gRPC
-applications from benefiting from the ecosystem of add-ons and documentation
-that makes popular web frameworks so productive. It also comes with a
-tremendous loss of generality: often, gRPC's HTTP stack can _only_ serve RPCs
-over HTTP/2. If you also want to serve an HTML page, receive a file upload,
-support HTTP/1.1 or HTTP/3, or just handle an HTTP `GET`, you're out of luck.
+Because the protocol requires trailers, gRPC implementations bundle their own
+HTTP stack rather than relying on popular frameworks. Of course, this prevents
+gRPC applications from benefiting from the ecosystem of add-ons and
+documentation that makes popular web frameworks so productive. It also comes
+with a tremendous loss of generality: often, gRPC's HTTP stack can _only_ serve
+RPCs over HTTP/2. If you also want to serve an HTML page, receive a file
+upload, support HTTP/1.1 or HTTP/3, or just handle an HTTP `GET`, you're out of
+luck.
 
 These pains are most acute on the web. Like many other clients, the `fetch` API
 doesn't support trailers. Unlike mobile or backend applications, though, web
@@ -118,7 +117,7 @@ have followed their lead. Instead, browser makers withdrew their support for
 the new APIs, and they were formally removed from the specification in late
 2019.
 
-It's now 2023. Trailers aren't coming to browsers --- or to many other HTTP
+It's now 2023. Trailers aren't coming to browsers --- or to most other HTTP
 implementations --- for years, if ever. Even Cloudflare, a multi-billion dollar
 internet infrastructure company, [doesn't have end-to-end support for
 trailers](https://blog.cloudflare.com/road-to-grpc/). The gRPC team should
@@ -126,12 +125,12 @@ confront this reality and add support for a second, trailer-free protocol to
 their servers and clients.
 
 [gRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) is the
-obvious choice for a second protocol. It's similar to standard gRPC, but
-encodes status metadata at the end of the response body rather than in
-trailers. It uses a different Content-Type, so servers could handle the new
-protocol alongside the old. Clients could opt into the new protocol with a
+pragmatic choice for a second protocol. It's nearly identical to standard gRPC,
+except that it encodes status metadata at the end of the response body rather
+than in trailers. It uses a different Content-Type, so servers could handle the
+new protocol alongside the old. Clients could opt into the new protocol with a
 configuration toggle. Implementations wouldn't need any other user-visible API
-changes, so they could ship these improvements in a backward-compatible minor
+changes, so these improvements could ship in a backward-compatible minor
 release. And because gRPC-Web is already under the gRPC umbrella, we wouldn't
 need to convince Google to adopt any outside ideas. (gRPC-Web also drops gRPC's
 strict HTTP/2 requirement, which is nice but unnecessary to mitigate the
@@ -139,10 +138,9 @@ trailers fiasco.)
 
 If today's gRPC implementations embraced the gRPC-Web protocol, new
 implementations could _only_ support gRPC-Web. All of a sudden, `grpc-rails`
-and similar framework integrations would be feasible. Web applications could
-call gRPC backends directly. iOS applications could drop their multi-megabyte
-dependency on `SwiftNIO`. Without trailers, gRPC could meet developers where
-they are.
+and similar framework integrations would be feasible. Browsers could call gRPC
+backends directly. iOS applications could drop their multi-megabyte dependency
+on `SwiftNIO`. Without trailers, gRPC could meet developers where they are.
 
 Microsoft seems to agree with this assessment: they've built support for the
 gRPC-Web protocol into `grpc-dotnet`. If you'd like Google to do the same,
@@ -151,7 +149,7 @@ repository](https://github.com/grpc/grpc/issues/29818).
 
 ## Could we do better without Google?
 
-gRPC-Web might be the practical choice, but it still leaves a lot to be
+gRPC-Web might be the pragmatic choice, but it still leaves a lot to be
 desired. What if we were bolder? To _really_ improve upon gRPC, we'd use
 different protocols for streaming and request-response RPCs. The streaming
 protocol would be similar to gRPC-Web, but we'd bring the request-respose
@@ -161,8 +159,8 @@ protocol closer to familiar, resource-oriented HTTP:
 * We'd use meaningful HTTP status codes.
 * We'd dispense with trailers and end-of-body metadata and just rely on
   headers.
-* We wouldn't need to length-prefix the message in the body, so it could be
-  plain JSON or binary Protocol Buffer. That lets us use recognizable Content-Types,
+* We wouldn't need to length-prefix messages, so the body could be plain JSON
+  or binary Protocol Buffer. That lets us use recognizable Content-Types,
   like `application/json`.
 * We'd use the standard `Accept-Encoding` header, so web applications benefit
   from compressed responses.
@@ -182,9 +180,9 @@ curl --json '{"name": "Akshay"}' https://api.acme.com/user.v1/Create
 This protocol _just works_ because it's boring. It works with human-readable
 JSON and optimized binary encodings. It works with cURL and `requests`. It
 works with `fetch` and browsers' built-in debuggers. It works with `URLSession`
-and Charles Proxy. It works with Rails, Django, Laravel, and Express. It works
-with CDNs and browser caches. It works with standard penetration testing
-toolkits.
+and Charles Proxy. It works with Rails, Django, FastAPI, Laravel, and Express.
+It works with CDNs and browser caches. It works with standard penetration
+testing toolkits.
 
 I can't imagine Google embracing a protocol that's so different from today's
 gRPC, especially if it requires HTTP/1.1 support, but you can try it _today_:
