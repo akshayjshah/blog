@@ -84,20 +84,19 @@ strangers. But trailers aren't harmless: they make it difficult to add gRPC
 APIs to existing applications. Is your Python application built with Django,
 Flask, or FastAPI? Too bad --- WSGI and ASGI don't support trailers, so your
 application can't handle gRPC-flavored HTTP. Trying to call your gRPC server
-from an iPhone? Sorry, `URLSession` doesn't support trailers either. The list
-goes on and on.
+from an iPhone? Sorry, `URLSession` doesn't support trailers either. Rather
+than adding a few new routes to your existing server and client, you're stuck
+building a entirely new application for RPC.
 
-Because the protocol requires trailers, gRPC implementations bundle their own
-HTTP stack rather than relying on popular frameworks. Of course, this prevents
-gRPC applications from benefiting from the ecosystem of add-ons and
-documentation that makes popular web frameworks so productive. It also comes
-with a tremendous loss of generality: often, gRPC's HTTP stack can _only_ serve
-RPCs over HTTP/2. If you also want to serve an HTML page, receive a file
-upload, support HTTP/1.1 or HTTP/3, or just handle an HTTP `GET`, you're out of
-luck.
+To support trailers, your new application uses a gRPC-specific HTTP stack. But
+apart from supporting trailers, your new stack is less capable than your old
+one: usually, gRPC's HTTP implementation can _only_ serve RPCs over HTTP/2. If
+you also want to serve an HTML page, receive a file upload, support HTTP/1.1 or
+HTTP/3, or just handle an HTTP `GET`, you're out of luck. In practice, adopting
+gRPC _requires_ a multi-service backend architecture. 
 
-These pains are most acute on the web. Like many other clients, the `fetch` API
-doesn't support trailers. Unlike mobile or backend applications, though, web
+These pains are most acute on the web. Like many other clients, `fetch` doesn't
+support trailers. Unlike mobile or backend applications, though, web
 applications _can't_ bundle an alternate, gRPC-specific HTTP client. Instead,
 they're forced to proxy requests through Envoy, which translates them on the
 fly from a trailer-free protocol to standard gRPC. Envoy is a perfectly fine
@@ -127,14 +126,14 @@ their servers and clients.
 [gRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) is the
 pragmatic choice for a second protocol. It's nearly identical to standard gRPC,
 except that it encodes status metadata at the end of the response body rather
-than in trailers. It uses a different Content-Type, so servers could handle the
-new protocol alongside the old. Clients could opt into the new protocol with a
-configuration toggle. Implementations wouldn't need any other user-visible API
-changes, so these improvements could ship in a backward-compatible minor
-release. And because gRPC-Web is already under the gRPC umbrella, we wouldn't
-need to convince Google to adopt any outside ideas. (gRPC-Web also drops gRPC's
-strict HTTP/2 requirement, which is nice but unnecessary to mitigate the
-trailers fiasco.)
+than in trailers. It uses a different Content-Type, so servers could
+automatically handle the new protocol alongside the old. Clients could opt into
+the new protocol with a configuration toggle. Implementations wouldn't need any
+other user-visible API changes, so these improvements could ship in a
+backward-compatible minor release. And because gRPC-Web is already under the
+gRPC umbrella, we wouldn't need to convince Google to adopt any outside ideas.
+(gRPC-Web also drops gRPC's strict HTTP/2 requirement, which is nice but
+unnecessary to mitigate the trailers fiasco.)
 
 If today's gRPC implementations embraced the gRPC-Web protocol, new
 implementations could _only_ support gRPC-Web. All of a sudden, `grpc-rails`
