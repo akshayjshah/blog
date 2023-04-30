@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    reviewers: [akshayjshah]
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+    reviewers: [akshayjshah]
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: daily
+    reviewers: [akshayjshah]
