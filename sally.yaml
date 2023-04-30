@@ -1,0 +1,11 @@
+url: go.akshayshah.org
+packages:
+  attest:
+    repo: github.com/akshayjshah/attest
+    description: Type-safe assertion helpers for Go
+  connectauth:
+    repo: github.com/akshayjshah/connectauth
+    description: Flexible authentication for Connect handlers
+  connectproto:
+    repo: github.com/akshayjshah/connectproto
+    description: Configurable codecs for Connect

@@ -1,4 +1,7 @@
 .DS_Store
 
+# Don't commit files from GCP auth.
+gha-creds-*.json
+
 dist/*.html
 dist/recipes/*.html
