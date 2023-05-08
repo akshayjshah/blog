@@ -9,3 +9,6 @@ packages:
   connectproto:
     repo: github.com/akshayjshah/connectproto
     description: Configurable codecs for Connect
+  must:
+    repo: github.com/akshayjshah/must
+    description: A generic equivalent to template.Must
