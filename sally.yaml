@@ -9,6 +9,9 @@ packages:
   connectproto:
     repo: github.com/akshayjshah/connectproto
     description: Configurable codecs for Connect
+  memhttp:
+    repo: github.com/akshayjshah/memhttp
+    description: In-memory HTTP for Go applications
   must:
     repo: github.com/akshayjshah/must
     description: A generic equivalent to template.Must
