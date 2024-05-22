@@ -5,3 +5,4 @@ gha-creds-*.json
 
 dist/*.html
 dist/recipes/*.html
+node_modules/
