@@ -31,3 +31,5 @@ lint: ## Lint project
 	test -z "$$(gofmt -s -l . | tee /dev/stderr)"
 	go vet ./...
 	go run honnef.co/go/tools/cmd/staticcheck@latest
+
+# Resize images with ImageMagick: convert file.jpg -resize 300x300 dist/static/file.webp
