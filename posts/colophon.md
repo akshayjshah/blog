@@ -1,6 +1,6 @@
 # Colophon
 
-<img alt="" src="/static/headshot-640x640.webp" height="300px" width="300px">
+<img alt="" src="/static/headshot-2023-300x300.webp" height="300px" width="300px">
 
 I'm Akshay Shah, and you've landed on my little patch of the web --- mazel tov!
 As a brief introduction, I live in San Francisco and build programming tools at
