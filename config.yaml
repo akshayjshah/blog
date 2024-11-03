@@ -77,6 +77,12 @@ pages:
   - markdown: grpc-doesnt-need-trailers.md
     description: "gRPC doesn't need HTTP trailers: every feature, including streaming, could work without them."
     created: 2023-03-01
+  - markdown: zap-to-slog.md
+    description: "From zap to slog: how fast structured logging became part of Go's standard library."
+    created: 2023-08-23
+  - markdown: rpc-at-xerox-parc.md
+    description: "Modern remote procedure call systems can learn from pioneering work in the 1980s at Xerox's Palo Alto Research Center."
+    created: 2023-10-05
 
   # Recipes
   - markdown: recipes/garam-masala.md
