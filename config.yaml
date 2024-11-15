@@ -77,6 +77,14 @@ pages:
   - markdown: grpc-doesnt-need-trailers.md
     description: "gRPC doesn't need HTTP trailers: every feature, including streaming, could work without them."
     created: 2023-03-01
+  - title: "Yet Another Infra Deep Dive: Protocol Buffers"
+    link: https://creators.spotify.com/pod/show/yet-another-infra/episodes/Will-Protobuf-be-the-default-for-everything--Chat-with-Akshay-from-Buf-e2o6jro/a-abh4abb
+    via: "on Spotify"
+    created: 2024-09-09
+  - title: "theCube, at KubeCon: Bufstream"
+    link: https://www.youtube.com/watch?v=4W2H_bi1iDk
+    via: "on YouTube"
+    created: 2024-11-14
 
   # Recipes
   - markdown: recipes/garam-masala.md
