@@ -11,13 +11,13 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"slices"
 	"strings"
 	"time"
 
 	"github.com/russross/blackfriday/v2"
 	"github.com/tdewolff/minify"
 	"github.com/tdewolff/minify/css"
-	"golang.org/x/exp/slices"
 	"gopkg.in/yaml.v3"
 )
 
@@ -44,9 +44,15 @@ type config struct {
 }
 
 func (c *config) Sort() {
-	slices.SortStableFunc(c.Pages, func(l, r pageConfig) bool {
+	slices.SortStableFunc(c.Pages, func(l, r pageConfig) int {
 		// Reverse chronological sort.
-		return l.Created > r.Created
+		if l.Created > r.Created {
+			return -1
+		}
+		if l.Created == r.Created {
+			return 0
+		}
+		return 1
 	})
 }
 
