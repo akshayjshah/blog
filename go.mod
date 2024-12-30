@@ -1,11 +1,12 @@
 module github.com/akshayjshah/blog
 
-go 1.18
+go 1.23.0
+
+toolchain go1.23.4
 
 require (
 	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/tdewolff/minify v2.3.6+incompatible
-	golang.org/x/exp v0.0.0-20230425010034-47ecfdc1ba53
 	gopkg.in/yaml.v3 v3.0.1
 )
 
