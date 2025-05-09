@@ -2,8 +2,9 @@
 
 html {
     font-size: 18px;
-    font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
-    text-rendering: optimizeLegibility;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 body {
@@ -65,8 +66,9 @@ p {
 }
 
 code {
-    font-size: 0.85em;
-    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: 0.95em;
+    font-family: "Inconsolata", ui-monospace, monospace;
+    font-variation-settings: "wdth" 100;
 }
 
 pre {
