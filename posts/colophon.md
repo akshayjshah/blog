@@ -3,10 +3,11 @@
 <img alt="" src="/static/headshot-2023-300x300.webp" height="300px" width="300px">
 
 I'm Akshay Shah, and you've landed on my little patch of the web --- mazel tov!
-As a brief introduction, I live in San Francisco and build programming tools at
-[Buf](https://buf.build). If you'd like to get in touch with me, you can send
-me an [email](mailto:akshay@akshayshah.org); I'm also on
-[Twitter](https://twitter.com/akshayshah),
+As a brief introduction, I live in San Francisco and work as an infrastructure
+and platform engineer. Right now, I'm taking some time off between jobs. If
+you'd like to get in touch with me, you can send me an
+[email](mailto:akshay@akshayshah.org); I'm also on
+[Bluesky](https://bsky.app/profile/akshayshah.org),
 [LinkedIn](https://linkedin.com/in/akshayjshah), and
 [GitHub](https://github.com/akshayjshah).
 
@@ -25,10 +26,8 @@ blasting compound. Thus far, all lost fingertips have been successfully
 reattached.
 
 Professionally, I've been a public school teacher, an EMT, and a medical
-student. After finishing medical school in 2011, I moved to California and
-decided to pursue a career in software. I spent a few years as a full-stack web
-engineer at an enterprise software startup, worked for a few years on Uber's
-core infrastructure, started my own venture-backed company, and briefly worked
-at Microsoft on Azure. These days, I build better tools for Protocol Buffers at
-[Buf](https://buf.build). I remain convinced that programming is the _best_ job
-on Earth.
+student. After finishing medical school in 2011, I moved to California and left
+medicine for a career in software. Most of my experience is in infrastructure
+and platform engineering at growing startups, including streaming data
+infrastructure, service-to-service networking, RPC, and the Go programming
+language. I remain convinced that programming is the _best_ job on Earth.
