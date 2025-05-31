@@ -1,15 +1,39 @@
 # Waffles
 
-The sourdough waffles require more planning, but are more complex and crispy.
-In a pinch, the beer waffles capture some of the complexity of the sourdough
-version without the lengthy preparation.
+## Yeasted waffles
 
-The sourdough waffles are adapted from [King Arthur
-Flour](https://www.kingarthurflour.com/recipes/classic-sourdough-waffles-or-pancakes-recipe),
-and the beer waffles are adapted from
-[Macheesmo](https://www.macheesmo.com/pbr-beer-waffles/).
+These waffles strike a balance between the sourdough and beer versions: they
+have the complexity of a risen batter, but don't require *too* much preparation.
+And especially with hungry kids, it's nice to wake up with batter that's ready
+to cook.
+
+### Ingredients
+
+* 1.75c whole milk
+* 8 tbsp unsalted butter, cut into pieces
+* 2c all-purpose flour
+* 1 tsp vanilla extract
+* 1 tbsp sugar
+* 1 tsp salt
+* 1.5 tsp instant yeast
+* 2 large eggs
+
+### Instructions
+
+1. Melt the butter into half the milk in a small saucepan. Remove from heat, add
+the other half of the milk, and let the mixture cool until it's less than 120
+degrees (or just warm to the touch).
+2. Beat the eggs and vanilla together in a small bowl.
+3. Whisk the dry ingredients together in a large bowl. Whisk in the butter and
+milk mixture, then the egg and vanilla mixture.
+4. Scrape down the sides of the bowl, cover tightly, and refrigerate overnight.
+The batter will at least double in size.
 
 ## Sourdough Waffles
+
+These waffles are complex and crispy, but take quite a bit of planning and a
+healthy sourdough starter. The recipe is adapted from [King Arthur
+Flour](https://www.kingarthurflour.com/recipes/classic-sourdough-waffles-or-pancakes-recipe).
 
 ### Ingredients
 
@@ -36,6 +60,10 @@ and the beer waffles are adapted from
 3. Add the salt, baking soda, and baking powder. The batter should bubble.
 
 ## Beer Waffles
+
+In a pinch, these waffles capture some of the complexity of the sourdough and
+yeasted versions without the lengthy preparation. The recipe is adapted from my
+friend Nick at [Macheesmo](https://www.macheesmo.com/pbr-beer-waffles/).
 
 ### Ingredients
 

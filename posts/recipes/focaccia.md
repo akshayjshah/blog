@@ -5,18 +5,13 @@
 Adapted slightly from [King Arthur
 Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-recipe).
 
-
-### Ingredients
-
-- 418g bread flour (100%)
+- 418g bread flour (100%), or an even mix of bread and whole wheat flour
 - 340g warm water (81%)
 - 35g olive oil (for the dough) (8%)
 - 8g salt (2%)
 - 10g instant yeast (2.4%)
 - 25g olive oil (to drizzle into the pan) (6%)
 - Optional: chopped fresh or dried herbs
-
-### Instructions
 
 1. Use non-stick vegetable oil spray to lightly grease a 9" x 13" pan. Drizzle
    olive oil atop the spray; the spray keeps the bread from sticking, while the
@@ -32,15 +27,9 @@ Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-reci
 6. Remove it from the oven, wait 5 minutes, then turn it out of the pan onto a
    rack. Serve warm or at room temperature.
 
-### Notes
-
-Optionally, replace half the AP flour with whole wheat.
-
 ## Sourdough Focaccia
 
 From [The Perfect Loaf](https://www.theperfectloaf.com/a-simple-focaccia/).
-
-### Ingredients
 
 - 345g AP flour (70%)
 - 148g malted bread flour (30%)
@@ -48,8 +37,6 @@ From [The Perfect Loaf](https://www.theperfectloaf.com/a-simple-focaccia/).
 - 394g water (80%)
 - 9g salt (1.9%)
 - 94g sourdough starter @ 100% hydration (19%)
-
-### Instructions
 
 1. Add starter, flour, and all but 50g of water to mixing bowl. Mix by hand
    until the dough forms a cohesive mass, then knead until smooth and elastic.

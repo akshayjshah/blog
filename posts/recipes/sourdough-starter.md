@@ -5,15 +5,8 @@ Loaf](https://www.theperfectloaf.com/7-easy-steps-making-incredible-sourdough-st
 King Arthur Flour, the Tartine bread book, and every other sourdough-related
 book or website also has a guide available. The basic approach is to start with
 a whole-grain or rye flour (since they contain more yeasts and bacteria) and
-higher hydration, switching to white flour and 100% hydration
+higher hydration, switching to unbleached white flour and 100% hydration
 ([what?](/recipes/bakers-percentages)) once the culture takes hold.
-
-## Ingredients
-
-* Dark rye flour
-* Unbleached all-purpose flour
-
-## Instructions
 
 1. Start with an all-rye, 150% hydration mixture. Cover loosely and incubate at
    room temp. (I started my culture in San Francisco’s cool season, so I kept
@@ -44,6 +37,6 @@ higher hydration, switching to white flour and 100% hydration
   leaving the water in an open container at room temperature for a few hours.
   San Francisco tap water is chloraminated, which is easiest to (mostly) remove
   by running it through a Brita pitcher.
-- King Arthur Flour sells fresh, wet starter online. I haven’t tried it---if it
+- King Arthur Flour sells fresh, wet starter online. I haven’t tried it --- if it
   works, it’d cut a lot of the guesswork out of this process. Some bakeries
   (including The Mill in SF) will also sell or give away their starter.

@@ -1,20 +1,16 @@
 # Methi Dal
 
-## Ingredients
-
-* 1/2 c dry toor dal
-* 1/4 c chopped tomato (one Roma tomato)
-* 3/4 c chopped methi (fenugreek) leaves and tender stems
-* 1/2 c chopped white onion
-* 2 cloves garlic, chopped
-* 2 tbsp chopped cilantro
-* 10 curry leaves
-* 1 small, hot chili, chopped
-* 1 tsp mustard seed
-* 1/4 tsp turmeric
-* 4 tbsp oil, ghee, or a mix of the two
-
-## Instructions
+- 0.5 c dry toor dal
+- 0.25 c chopped tomato (one Roma tomato)
+- 0.75 c chopped methi (fenugreek) leaves and tender stems
+- 0.5 c chopped white onion
+- 2 cloves garlic, chopped
+- 2 tbsp chopped cilantro
+- 10 curry leaves
+- 1 small, hot chili, chopped
+- 1 tsp mustard seed
+- 0.25 tsp turmeric
+- 4 tbsp oil, ghee, or a mix of the two
 
 1. Boil the dry toor dal with 2 cups water and the turmeric. Reduce to a simmer
    and cook until the dal is nearly falling apart (about an hour).
@@ -34,9 +30,9 @@
 
 ## Notes
 
-* The oil should be relatively hot when toasting the mustard seeds, curry
+- The oil should be relatively hot when toasting the mustard seeds, curry
   leaves, and chili, but make sure to let the pan cool before adding the garlic
   and onions.
-* This recipe is also good with chayote (or any other squash) instead of methi.
-* You can make the toor dal ahead of time and store it in the refrigerator. The
+- This recipe is also good with chayote (or any other squash) instead of methi.
+- You can make the toor dal ahead of time and store it in the refrigerator. The
   cooking liquid will separate from the dal overnight.

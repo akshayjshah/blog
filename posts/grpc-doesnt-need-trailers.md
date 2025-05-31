@@ -11,7 +11,7 @@ Protocol Buffers. Bluntly, both of these arguments are nonsense.
 
 1. What trailers are and how gRPC uses them,
 2. Why they're unnecessary,
-3. How they impede gRPC adoption, 
+3. How they impede gRPC adoption,
 4. How Google could fix gRPC in a minor release, and
 5. How we can do even better without Google.
 
@@ -49,33 +49,34 @@ the `grpc-status` trailer and a description of the error (if any) in the
 
 Of course not! But let's at least address the two arguments above.
 
-1. **Clients don't need trailers to detect dropped TCP connections.** In this
-   argument, gRPC apologists claim that trailers help clients detect incomplete
-   responses. "What if," they say, "the server --- or some proxy --- crashes
-   partway through a streaming response and drops the TCP connection? By
-   insisting on an explicit status code in trailers, clients can detect a
-   prematurely-terminated response body." This is plausible-sounding,
-   especially when accompanied by an HTTP/1.1 example, but it's nonsense. gRPC
-   requires at least HTTP/2, and both HTTP/2 and HTTP/3 handle this explicitly:
-   [every HTTP/2 frame includes a byte of bitwise
-   flags](https://www.rfc-editor.org/rfc/rfc9113#section-4.1), and the frame
-   types used for headers, trailers, _and_ body data all include an explicit
-   `END_STREAM` flag used to cleanly terminate the response. If the client sees a
-   TCP connection drop before it receives an HTTP/2 frame with `END_STREAM`
-   set, it knows that the response is incomplete --- no trailers needed.
-2. **Nothing about Protocol Buffers requires trailers.** In this variant of the
-   first argument, gRPC apologists argue that detecting dropped TCP connections
-   is _especially_ important when using Protocol Buffers. "If gRPC only
-   supported JSON," they say, "clients would detect many incomplete responses
-   by noticing unbalanced curly braces. But Protocol Buffer messages don't have
-   explicit delimiters, so we _really_ need to rely on trailers to detect
-   dropped connections." But not only does HTTP/2 provide an unambiguous way to
-   detect dropped connections, the gRPC protocol doesn't rely on
-   encoding-specific delimiters to find message boundaries. Instead, it
-   [prefixes each message in a stream with its
-   length](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md#:~:text=The%20repeated%20sequence%20of%20Length%2DPrefixed%2DMessage%20items%20is%20delivered%20in%20DATA%20frames).
-   Clients can easily detect response bodies that end before delivering the
-   promised quantity of data. Again, trailers don't add any safety.
+**Clients don't need trailers to detect dropped TCP connections.** In this
+argument, gRPC apologists claim that trailers help clients detect incomplete
+responses. "What if," they say, "the server --- or some proxy --- crashes
+partway through a streaming response and drops the TCP connection? By insisting
+on an explicit status code in trailers, clients can detect a
+prematurely-terminated response body." This is plausible-sounding, especially
+when accompanied by an HTTP/1.1 example, but it's nonsense. gRPC requires at
+least HTTP/2, and both HTTP/2 and HTTP/3 handle this explicitly: [every HTTP/2
+frame includes a byte of bitwise
+flags](https://www.rfc-editor.org/rfc/rfc9113#section-4.1), and the frame types
+used for headers, trailers, _and_ body data all include an explicit `END_STREAM`
+flag used to cleanly terminate the response. If the client sees a TCP connection
+drop before it receives an HTTP/2 frame with `END_STREAM` set, it knows that the
+response is incomplete --- no trailers needed.
+
+**Nothing about Protocol Buffers requires trailers.** In this variant of the
+first argument, gRPC apologists argue that detecting dropped TCP connections is
+_especially_ important when using Protocol Buffers. "If gRPC only supported
+JSON," they say, "clients would detect many incomplete responses by noticing
+unbalanced curly braces. But Protocol Buffer messages don't have explicit
+delimiters, so we _really_ need to rely on trailers to detect dropped
+connections." But not only does HTTP/2 provide an unambiguous way to detect
+dropped connections, the gRPC protocol doesn't rely on encoding-specific
+delimiters to find message boundaries. Instead, it [prefixes each message in a
+stream with its
+length](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md#:~:text=The%20repeated%20sequence%20of%20Length%2DPrefixed%2DMessage%20items%20is%20delivered%20in%20DATA%20frames).
+Clients can easily detect response bodies that end before delivering the
+promised quantity of data. Again, trailers don't add any safety.
 
 ## Why are trailers bad?
 
@@ -93,7 +94,7 @@ apart from supporting trailers, your new stack is less capable than your old
 one: usually, gRPC's HTTP implementation can _only_ serve RPCs over HTTP/2. If
 you also want to serve an HTML page, receive a file upload, support HTTP/1.1 or
 HTTP/3, or just handle an HTTP `GET`, you're out of luck. In practice, adopting
-gRPC _requires_ a multi-service backend architecture. 
+gRPC _requires_ a multi-service backend architecture.
 
 These pains are most acute on the web. Like many other clients, `fetch` doesn't
 support trailers. Unlike mobile or backend applications, though, web

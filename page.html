@@ -1,34 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ .Author }}">
-    <meta name="description" content="{{ .Description }}">
-    <title>{{ .TitlePlain }}</title>
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="license" href="/license/">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-    <style>{{ .CSS }}</style>
-  </head>
-  <body>
-    <header>
-      {{ .Title }}
-      {{ if ne .Created "" }}
-        <p class="subtitle">{{ .Created }}{{ if and (ne .Updated "") (ne .Updated .Created) }}, updated {{ .Updated }}{{ end }}</p>
-      {{ end }}
-    </header>
-    <article>
-      {{ .Content }}
-    </article>
-    <footer>
-      {{ if not .HideHome }}&larr; <a href="/" rel="index">Home</a><br>{{ end }}
-      {{ if not .HideLicense }}&copy; 2012&ndash;{{ .EndCopyright }} <a href="/colophon/" rel="author">Akshay Shah</a>, licensed <a href="/license/" rel="license">permissively</a>.{{ end }}
-    </footer>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="{{ .Author }}" />
+        <meta name="description" content="{{ .Description }}" />
+        <title>{{ .TitlePlain }}</title>
+        <link rel="canonical" href="{{ .Permalink }}" />
+        <link rel="license" href="/license/" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/favicon-16x16.png"
+        />
+        <style>
+            {{ .CSS }}
+        </style>
+    </head>
+    <body>
+        <header>
+            {{ .Title }} {{ if ne .Created "" }}
+            <p class="subtitle">
+                {{ .Created }}{{ if and (ne .Updated "") (ne .Updated .Created)
+                }}, updated {{ .Updated }}{{ end }}
+            </p>
+            {{ end }}
+        </header>
+        <article>{{ .Content }}</article>
+        <footer>
+            {{ if not .HideHome }}&larr; <a href="/" rel="index">Home</a
+            ><br />{{ end }} {{ if not .HideLicense }}&copy; 2012&ndash;{{
+            .EndCopyright }} <a href="/colophon/" rel="author">Akshay Shah</a>,
+            licensed <a href="/license/" rel="license">permissively</a>.{{ end
+            }}
+        </footer>
+    </body>
 </html>
