@@ -4,10 +4,10 @@
 
 I'm Akshay Shah, and you've landed on my little patch of the web --- mazel tov!
 As a brief introduction, I'm an infrastructure and platform engineer in San
-Francisco. I've worked at Uber, Microsoft, and many startups (including my own);
-right now, I'm the Field CTO at [Antithesis][]. If you'd like to get in touch
-with me, you can send me an [email][]; I'm also on [Bluesky][], [LinkedIn][],
-and [GitHub][].
+Francisco. After stints at Uber, Microsoft, and many startups (including my
+own), I'm currently the Field CTO at [Antithesis][]. If you'd like to get in
+touch with me, you can send me an [email][]; I'm also on [Bluesky][],
+[LinkedIn][], and [GitHub][].
 
 The first thing you'll notice is that I'm the kind of person who calls this page
 the colophon. What can I say? "About Me," "Meet Akshay," and "The Happy Homepage
