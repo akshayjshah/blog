@@ -1,4 +1,5 @@
 .DS_Store
+blog
 
 # Don't commit files from GCP auth.
 gha-creds-*.json
