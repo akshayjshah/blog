@@ -8,23 +8,9 @@
         <title>{{ .TitlePlain }}</title>
         <link rel="canonical" href="{{ .Permalink }}" />
         <link rel="license" href="/license/" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/static/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
         <style>
             {{ .CSS }}
         </style>
@@ -38,13 +24,10 @@
             </p>
             {{ end }}
         </header>
-        <article>{{ .Content }}</article>
+        {{ .Content }}
         <footer>
-            {{ if not .HideHome }}&larr; <a href="/" rel="index">Home</a
-            ><br />{{ end }} {{ if not .HideLicense }}&copy; 2012&ndash;{{
-            .EndCopyright }} <a href="/colophon/" rel="author">Akshay Shah</a>,
-            licensed <a href="/license/" rel="license">permissively</a>.{{ end
-            }}
+            {{ if not .HideHome }}&larr; <a href="/" rel="index">Home</a ><br />{{ end }}
+            &copy; 2012&ndash;{{ .EndCopyright }} <a href="/colophon/" rel="author">Akshay Shah</a>{{ if not .HideLicense }}, licensed <a href="/license/" rel="license">permissively</a>.{{ end }}
         </footer>
     </body>
 </html>

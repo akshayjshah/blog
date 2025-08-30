@@ -83,7 +83,7 @@ and find ourselves lacking...To call someone &ldquo;divine&rdquo; means:
       experiences, not introspection.
     - Practice: kaizen. ~10y, ~10k hours of *deliberate* practice. To one
       researcher, it's demanding, exhausting, impossible to sustain for more
-      than an hour at a time. Another calls it flow---ecstatic, effortless, in
+      than an hour at a time. Another calls it flow --- ecstatic, effortless, in
       the moment. Duckworth: gritty people do more deliberate practice *and*
       experience more flow. Practice is for preparation, flow is for
       performance. "In other words, there are *different kinds* of positive

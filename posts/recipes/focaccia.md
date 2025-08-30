@@ -18,7 +18,7 @@ Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-reci
    olive oil flavors and crisps the crust.
 2. Combine all of the ingredients, and beat at high speed with an electric
    mixer for 60 seconds. Scoop the sticky batter into the prepared pan, cover,
-   and let it rise at room temperature for 60 minutes---it should be quite
+   and let it rise at room temperature for 60 minutes --- it should be quite
    puffy, but not fragile-looking.
 3. While the dough is rising, preheat the oven to 375.
 4. Gently poke the dough all over with wet fingers. Drizzle with olive oil

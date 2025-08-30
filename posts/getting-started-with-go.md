@@ -3,7 +3,7 @@
 If you're starting a new project or a job that requires knowing Go, here's an
 opinionated learning plan that will get you ready in a hurry. If you're
 exploring Go out of idle curiosity, this probably isn't the plan for
-you---there are plenty of excellent videos and conference talks with a better
+you --- there are plenty of excellent videos and conference talks with a better
 balance of entertainment and technical content.
 
 ## Learn the Language
@@ -56,7 +56,7 @@ them...don't just skim the headings and move on.
   [sub-tests](https://blog.golang.org/subtests), the [race
   detector](https://blog.golang.org/race-detector), and [how to measure code
   coverage](https://blog.golang.org/cover).
-- Documentation generation is also built into the language---familiarize
+- Documentation generation is also built into the language --- familiarize
   yourself with the [comment
   conventions](https://blog.golang.org/godoc-documenting-go-code) and [testable
   examples](https://blog.golang.org/examples). Bookmark
@@ -69,7 +69,7 @@ them...don't just skim the headings and move on.
 Once you've picked up the basics and some common idioms, dive a little deeper.
 
 - At this point, it makes sense to stop relying on your package manager's Go
-  distribution. Instead, use upstream directly---it'll be much easier to test
+  distribution. Instead, use upstream directly --- it'll be much easier to test
   beta releases and debug on older compilers. I use [Travis CI's
   gimme](https://github.com/travis-ci/gimme) script. It's a plain shell script,
   and it's the same script that manages Go versions in Travis builds.

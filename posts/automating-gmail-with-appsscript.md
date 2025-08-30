@@ -7,7 +7,7 @@ involved in, weekly newsletters, chatter on GitHub issues you filed months ago,
 and all the other mail you skim when you have the time and skip if you're busy.
 
 Triaging these emails manually can be an exhausting game of whack-a-mole. But
-if you're a Gmail user, there's hope---you can use
+if you're a Gmail user, there's hope --- you can use
 [AppsScript](https://www.google.com/script/start/) to automate big parts of the
 job. Best of all, it's free! In this post, I'll walk you through creating your
 first AppsScript project and give you a taste of what you can accomplish. (Hat

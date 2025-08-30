@@ -1,138 +1,305 @@
+/*
+Though it's diverged significantly, this CSS was inspired by Oskar
+Wickström's The Monospace Web:
+
+- https://github.com/owickstrom/the-monospace-web
+- https://owickstrom.github.io/the-monospace-web
+*/
+
 @charset "UTF-8";
 
 @font-face {
-    font-family: "Recursive";
-    font-style: normal;
-    font-weight: 400 600 800;
-    font-display: swap;
-    src: url("/static/recursive-v1.085-latin-basic.woff2") format("woff2");
+  font-family: 'Cascadia Code';
+  font-style: italic;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url(/static/cascadia-code-italic-2407-24.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url(/static/cascadia-code-2407-24.woff2) format('woff2');
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ (v2, 2011, public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset */
+
+:root {
+  --font-family: "Cascadia Code", ui-monospace, monospace;
+  --font-weight-medium: 350;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height: 1.4rem;
+  --border-thickness: 2px;
+
+  --color-nord00: #2e3440;
+  --color-nord01: #3b4252;
+  --color-nord02: #434c5e;
+  --color-nord03: #4c566a;
+  --color-nord04: #d8dee9;
+  --color-nord05: #e5e9f0;
+  --color-nord06: #eceff4;
+  --color-nord07: #8fbcbb;
+  --color-nord08: #88c0d0;
+  --color-nord09: #81a1c1;
+  --color-nord10: #5e81ac;
+  --color-nord11: #bf616a;
+  --color-nord12: #d08770;
+  --color-nord13: #ebcb8b;
+  --color-nord14: #a3be8c;
+  --color-nord15: #b48ead;
+
+  --text-color: var(--color-nord00);
+  --background-color: var(--color-nord06);
+  --code-block-color: var(--color-nord05);
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variant-numeric: slashed-zero tabular-nums lining-nums;
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--color-nord05);
+    --background-color: var(--color-nord00);
+    --code-block-color: var(--color-nord02);
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 18px;
-    font-family: "Recursive", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    line-height: calc(1rem * (4 / 3));
-    background-color: #fffff8;
-    color: #111;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 body {
-    max-width: 50rem;
-    margin: 4rlh auto 3rlh;
-    padding: 0 1rem;
+  line-height: var(--line-height);
+  max-width: calc(min(80ch, round(down, 100%, 1ch)));
+  margin: 0 auto 0;
+  padding: var(--line-height) 1ch;
 }
 
-h1,
-h2,
-h3 {
-    font-variation-settings: "CASL" 1;
-    line-height: 1;
-}
-
-h1 {
-    font-weight: 600;
-    font-size: 2.3em;
-    margin: 0;
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 1.6rem;
-    margin-block: 2rlh 1rlh;
-}
-
-h3 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-block: 2rlh 1rlh;
-}
-
-.subtitle {
-    font-style: italic;
-    font-size: 1.2rem;
-    line-height: 1;
-    margin-block: 0.5rlh 2rlh;
+header {
+  margin: calc(var(--line-height) * 2) 0;
 }
 
 footer {
-    font-size: 0.8rem;
-    margin-block-start: 2rlh;
+  margin-block-start: calc(var(--line-height) * 2);
 }
 
-p,
-ul,
-ol,
-dl {
-    margin-block: 1rlh;
-    padding-inline-end: 0;
+h1 {
+  font-size: 2rem;
+  line-height: calc(1.6 * var(--line-height));
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  margin: 0;
+  padding-inline-start: 2ch;
+  text-indent: -2ch;
 }
 
-li > ul,
-li > ol,
-li > dl {
-    margin-block: 0;
+h1::before {
+  content: "# ";
 }
 
-code {
-    font-family: "Recursive", ui-monospace, monospace;
-    font-variation-settings: "MONO" 1;
+.subtitle {
+  margin: 0;
+  padding-left: 4ch; /* 2ch in a font 2x larger */
+}
+
+.profile-pic {
+  margin-block-end: var(--line-height);
+}
+
+.post-row {
+  margin: 0;
+  padding-inline-start: 10ch;
+  text-indent: -10ch;
+}
+
+.post-date {
+  padding-inline-end: 1ch;
+}
+
+h2 {
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+  padding-inline-start: 3ch;
+  text-indent: -3ch;
+}
+
+h2::before {
+  content: "## ";
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+  padding-inline-start: 4ch;
+  text-indent: -4ch;
+}
+
+h3::before {
+  content: "### ";
+}
+
+a {
+  text-decoration-thickness: 1px;
+}
+
+a:link, a:visited {
+  color: var(--text-color);
+}
+
+p {
+  margin-bottom: var(--line-height);
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+em {
+  font-style: italic;
 }
 
 pre {
-    margin: 0 1em;
-    overflow: auto;
+  margin-block-end: var(--line-height);
+  padding: calc(var(--line-height) - var(--border-thickness)) calc(2ch - var(--border-thickness));
+  border: var(--border-thickness) dashed;
+  overflow-x: auto;
+  background: var(--code-block-color);
+}
+
+ul {
+  list-style-type: square;
+  margin: 0 0 var(--line-height);
+  padding: 0 0 0 2ch;
+}
+
+ol {
+  list-style-type: decimal-leading-zero;
+  margin: 0 0 var(--line-height) 4ch;
+  padding: 0;
+}
+
+ol ol,
+ol ul {
+  padding: 0 0 0 4ch;
+  margin: 0;
+}
+
+ul ul,
+ul ol {
+  padding: 0 0 0 2ch;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li::marker {
+  line-height: 0;
 }
 
 blockquote {
-    margin: 1rlh 0;
-    padding-inline-start: 1rlh;
-    border-inline-start: 1px dotted;
+    margin: var(--line-height) 0;
+    padding-inline-start: calc(2ch - var(--border-thickness));
+    border-inline-start: var(--border-thickness) dashed;
 }
 
-cite {
-    padding-left: 1em;
+blockquote cite {
+  display: block;
+  margin-block-start: var(--line-height);
 }
 
-cite::before {
+blockquote cite::before {
     content: "— ";
 }
 
 table {
-    empty-cells: show;
-    overflow-x: auto;
-    clear: left;
-    text-align: center;
-    margin: 1rem 0;
-    border-collapse: separate;
-    border-spacing: 0 5px;
+  width: calc(round(down, 100%, 1ch));
+  border-collapse: collapse;
+  margin: 0 0 var(--line-height);
 }
 
-tbody td {
-    vertical-align: top;
+th, td {
+  border: var(--border-thickness) solid var(--text-color);
+  padding:
+    calc((var(--line-height) / 2))
+    calc(1ch - (var(--border-thickness) / 2))
+    calc((var(--line-height) / 2) - (var(--border-thickness)))
+  ;
+  line-height: var(--line-height);
+  vertical-align: top;
+  text-align: left;
 }
 
-thead th {
-    border-bottom: 1px dotted;
-    font-weight: 400;
+table tbody tr:first-child > * {
+  padding-top: calc((var(--line-height) / 2) - var(--border-thickness));
 }
 
-th,
-tr {
-    padding: 0 1rem;
+th {
+  font-weight: var(--font-weight-semibold);
 }
 
-.post-list {
-    list-style-type: none;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.post-list .post-date {
-    font-style: italic;
-    filter: brightness(130%);
-    display: inline-block;
-    min-width: 6em;
-    text-align: end;
+img {
+  max-width: 100%;
 }

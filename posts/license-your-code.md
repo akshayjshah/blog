@@ -1,11 +1,10 @@
 # License Your Code!
 
-If you're a [GitHub][] user, you probably
-want to let other people use your code in their own projects. Just throwing
-your code online isn't enough, though---you *have* to release it under an
-open-source license.  If you're not sure why, read on: in this post, I'll
-explain the absolute minimum that every developer should know about copyright
-and software licensing.
+If you're a [GitHub][] user, you probably want to let other people use your
+code in their own projects. Just throwing your code online isn't enough, though
+--- you *have* to release it under an open-source license.  If you're not sure
+why, read on: in this post, I'll explain the absolute minimum that every
+developer should know about copyright and software licensing.
 
 Even though I'm not a lawyer, I'll start with a few
 disclaimers: this post isn't legal advice, I'm not going to address patents at
@@ -17,9 +16,9 @@ In the US, every shred of code you've ever written is automatically protected
 by copyright. That means, broadly speaking, that it's your property.  If you
 leave your bike unlocked outside a coffee shop, I'm not allowed to walk by and
 steal it; similarly, if you post your code online, I'm not automatically
-allowed to copy and use it. Don't worry, though---seventy years after you die,
-the copyright expires and your code enters the *public domain*, at which point
-I can finally use it however I like.
+allowed to copy and use it. Don't worry, though --- seventy years after you
+die, the copyright expires and your code enters the *public domain*, at which
+point I can finally use it however I like.
 
 Under American law, it's very difficult to reliably circumvent the century-long
 wait before your copyright expires. To let other developers legally copy,

@@ -1,6 +1,7 @@
 base_url: https://akshayshah.org
 author: Akshay Shah
 description: "Code, cooking, and caffeine."
+javascript: page.js
 css: style.css
 
 pages:
@@ -102,7 +103,7 @@ pages:
     created: 2020-05-02
     updated: 2020-06-01
   - markdown: recipes/waffles.md
-    description: "Recipes for quick and sourdough waffles."
+    description: "Recipes for yeasted, quick, and sourdough waffles."
     created: 2020-05-03
     updated: 2025-06-16
   - markdown: recipes/hokkaido-milk-bread.md

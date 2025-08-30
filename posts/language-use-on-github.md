@@ -129,10 +129,6 @@ pushes = pd.read_csv('stacked_language_by_user.csv').pivot(
     values='pushes')
 ```
 
-Exporting these results from BigQuery was an enormous pain (and required a paid
-account), so I'll keep a zipped copy of the [stacked][stacked-csv] and
-[unstacked][unstacked-csv] results available.
-
 ## Analysis
 
 GitHub recognizes *lots* of different languages, including some that are fairly
@@ -230,8 +226,6 @@ know](mailto:akshay@akshayshah.org)!
 [pandas]: http://pandas.pydata.org/
 [pearson-plot]: /static/language-use-on-github/pearson_language_correlation.svg
 [php]: http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/
-[stacked-csv]: /static/language-use-on-github/stacked_language_by_user.zip
 [twitter-convo]: https://twitter.com/misc/status/235167513833525249
-[unstacked-csv]: /static/language-use-on-github/unstacked_language_by_user.zip
 [wiki-pearson-correlation]: http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient
 [wiki-rank-correlation]: http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient

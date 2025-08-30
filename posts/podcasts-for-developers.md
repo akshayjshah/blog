@@ -6,16 +6,16 @@ emerge, jump the shark, and die, only to re-emerge a few years later. How's a
 working engineer supposed to keep up without spending every free moment
 on Hacker News?
 
-*Podcasts*, that's how. Unfortunately, most podcasts are meandering
-monologues recorded on a laptop microphone. After a few
-years of avid listening, though, I've found a pretty good selection of
-shows---if you share my interests in web development, data science, and startups,
-you may find something you like. All these podcasts regularly produce great
-episodes, but I listen to the three-star shows religiously and the one-star shows
-only if the topic sounds appealing.
+*Podcasts*, that's how. Unfortunately, most podcasts are meandering monologues
+recorded on a laptop microphone. After a few years of avid listening, though,
+I've found a pretty good selection of shows --- if you share my interests in
+web development, data science, and startups, you may find something you like.
+All these podcasts regularly produce great episodes, but I listen to the
+three-star shows religiously and the one-star shows only if the topic sounds
+appealing.
 
 If you know of a great show that isn't on my list, [let me
-know](mailto:akshay@akshayshah.org)---I'm always looking for something new.
+know](mailto:akshay@akshayshah.org) --- I'm always looking for something new.
 
 
 ## General Engineering

@@ -18,6 +18,7 @@ import (
 	"github.com/russross/blackfriday/v2"
 	"github.com/tdewolff/minify"
 	"github.com/tdewolff/minify/css"
+	"github.com/tdewolff/minify/js"
 	"gopkg.in/yaml.v3"
 )
 
@@ -224,6 +225,7 @@ func homepage(cfg config, titles []template.HTML) (page, error) {
 		return page{}, fmt.Errorf("generate homepage Markdown: %w", err)
 	}
 	return page{
+		HideHome:    true,
 		Author:      cfg.Author,
 		Description: cfg.Description,
 		Permalink:   cfg.BaseURL,
@@ -249,8 +251,10 @@ func main() {
 	if err != nil {
 		log.Fatalf("read %q: %v", cfg.CSS, err)
 	}
+
 	minifier := minify.New()
 	minifier.AddFunc("text/css", css.Minify)
+	minifier.AddFunc("application/javascript", js.Minify)
 	styles, err := minifier.Bytes("text/css", rawCSS)
 	if err != nil {
 		log.Fatalf("minify CSS: %v", err)
