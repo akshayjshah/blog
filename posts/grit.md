@@ -29,22 +29,18 @@ excellent snippets from other works!
 > difference.
 > <cite>Charles Darwin</cite>
 
-<!-- br -->
-
 > Compared with what we ought to be, we are only half awake. Our fires are
 > dampened, our drafts are checked. We are making use of only a small part of
 > our possible mental and physical resources.
 > <cite>William James</cite>
 
-<blockquote>
-No one can see in the work of the artist how it has <em>become</em>. That is its
-advantage, for whenever one can see the act of becoming one grows somewhat
-cool...Our vanity, our self-love, promotes the cult of the genius. For if
-we think of genius as something magical, we are not obliged to compare ourselves
-and find ourselves lacking...To call someone &ldquo;divine&rdquo; means:
-&ldquo;here there is no need to compete.&rdquo;
-<cite>Nietzsche</cite>
-</blockquote>
+> No one can see in the work of the artist how it has *become*. That is its
+> advantage, for whenever one can see the act of becoming one grows somewhat
+> cool...Our vanity, our self-love, promotes the cult of the genius. For if we
+> think of genius as something magical, we are not obliged to compare ourselves
+> and find ourselves lacking...To call someone "divine" means: "here there is
+> no need to compete."
+> <cite>Nietzsche</cite>
 
 > Dancing appears glamorous, easy, delightful. But that path to the paradise of
 > that achievement is not easier than any other. There is fatigue so great that
@@ -52,14 +48,10 @@ and find ourselves lacking...To call someone &ldquo;divine&rdquo; means:
 > There are daily small deaths.
 > <cite>Martha Graham</cite>
 
-<!-- br -->
-
 > The true joy in life is to be a force of fortune instead of a feverish,
 > selfish little clod of ailments and grievances complaining that the world
 > will not devote itself to making you happy.
 > <cite>George Bernard Shaw</cite>
-
-<!-- br -->
 
 > Success is never final; failure is never fatal. It's courage that counts.
 > <cite>John Wooden</cite>

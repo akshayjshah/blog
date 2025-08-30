@@ -95,9 +95,10 @@ table {
   --color-nord14: #a3be8c;
   --color-nord15: #b48ead;
 
+  /* vary with color scheme */
   --text-color: var(--color-nord00);
   --background-color: var(--color-nord06);
-  --code-block-color: var(--color-nord05);
+  --code-line-number-color: color-mix(in oklab, var(--color-nord04), var(--color-nord03));
 
   font-family: var(--font-family);
   font-weight: var(--font-weight-medium);
@@ -109,9 +110,9 @@ table {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: var(--color-nord05);
+    --text-color: var(--color-nord06);
     --background-color: var(--color-nord00);
-    --code-block-color: var(--color-nord02);
+    --code-line-number-color: var(--color-nord03);
   }
 }
 
@@ -162,7 +163,7 @@ h1::before {
 }
 
 .profile-pic {
-  margin-block-end: var(--line-height);
+  margin-block-end: calc(2 * var(--line-height));
 }
 
 .post-row {
@@ -216,14 +217,6 @@ strong {
 
 em {
   font-style: italic;
-}
-
-pre {
-  margin-block-end: var(--line-height);
-  padding: calc(var(--line-height) - var(--border-thickness)) calc(2ch - var(--border-thickness));
-  border: var(--border-thickness) dashed;
-  overflow-x: auto;
-  background: var(--code-block-color);
 }
 
 ul {
@@ -303,3 +296,31 @@ th {
 img {
   max-width: 100%;
 }
+
+pre {
+  margin-block-end: var(--line-height);
+  padding: calc(var(--line-height) - var(--border-thickness)) calc(2ch - var(--border-thickness));
+  border: var(--border-thickness) dashed;
+  overflow-x: auto;
+
+  .ln { /* line numbers */
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 1ch;
+    padding:0 1ch 0 0;
+    color: var(--code-line-number-color);
+  }
+
+  .ge, /* generic emph */
+  .c, /* comment */
+  .ch, /* comment hashbang */
+  .cm, /* comment multiline */
+  .c1, /* comment single */
+  .cs, /* comment special */
+  .cp, /* comment preproc */
+  .cpf, /* comment preprocfile */
+  .cx { /* comment other */
+    font-style: italic;
+  }
+}
+

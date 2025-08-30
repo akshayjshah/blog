@@ -15,20 +15,33 @@ import (
 	"strings"
 	"time"
 
-	"github.com/russross/blackfriday/v2"
+	chromahtml "github.com/alecthomas/chroma/v2/formatters/html"
 	"github.com/tdewolff/minify"
 	"github.com/tdewolff/minify/css"
-	"github.com/tdewolff/minify/js"
+	"github.com/yuin/goldmark"
+	highlighting "github.com/yuin/goldmark-highlighting/v2"
+	"github.com/yuin/goldmark/extension"
+	"github.com/yuin/goldmark/parser"
+	"github.com/yuin/goldmark/renderer/html"
+	"go.abhg.dev/goldmark/frontmatter"
 	"gopkg.in/yaml.v3"
 )
 
 const (
+	// Build configuration.
 	_humanDate   = "Jan 2006" // preferred date format for display
 	_machineDate = time.DateOnly
-	_configFile  = "config.yaml"
 	_markdownDir = "posts"
 	_recipesDir  = "recipes"
 	_buildDir    = "dist"
+	_styles      = "style.css"
+
+	// Site metadata.
+	_baseURL     = "https://akshayshah.org"
+	_author      = "Akshay Shah"
+	_description = "Code, cooking, and caffeine."
+
+	_configFile = "config.yaml"
 )
 
 var (
@@ -36,12 +49,37 @@ var (
 	_home = template.Must(template.ParseFiles("index.md"))
 )
 
+func newMD() goldmark.Markdown {
+	typographyOverrides := make(map[extension.TypographicPunctuation]string)
+	typographyOverrides[extension.Ellipsis] = "..."
+	typographyOverrides[extension.LeftAngleQuote] = "<<"
+	typographyOverrides[extension.RightAngleQuote] = ">>"
+
+	return goldmark.New(
+		goldmark.WithParserOptions(
+			parser.WithAutoHeadingID(),
+		),
+		goldmark.WithRendererOptions(
+			html.WithUnsafe(),
+		),
+		goldmark.WithExtensions(
+			extension.GFM,
+			extension.NewTypographer(
+				extension.WithTypographicSubstitutions(typographyOverrides),
+			),
+			highlighting.NewHighlighting(
+				highlighting.WithFormatOptions(
+					chromahtml.WithClasses(true), // no inline styles
+					chromahtml.WithLineNumbers(true),
+				),
+			),
+			&frontmatter.Extender{},
+		),
+	)
+}
+
 type config struct {
-	BaseURL     string       `yaml:"base_url"`
-	Author      string       `yaml:"author"`
-	Description string       `yaml:"description"`
-	CSS         string       `yaml:"css"`
-	Pages       []pageConfig `yaml:"pages"`
+	Pages []pageConfig `yaml:"pages"`
 }
 
 func (c *config) Sort() {
@@ -156,11 +194,11 @@ func (p page) Render(endCopyright int, css template.CSS) (template.HTML, error) 
 }
 
 func renderHTML(markdown []byte) template.HTML {
-	raw := blackfriday.Run(
-		markdown,
-		blackfriday.WithExtensions(blackfriday.CommonExtensions|blackfriday.AutoHeadingIDs),
-	)
-	return template.HTML(raw)
+	md := newMD()
+	var out bytes.Buffer
+	// FIXME: errors
+	_ = md.Convert(markdown, &out)
+	return template.HTML(out.String())
 }
 
 func head(r io.Reader) (string, error) {
@@ -226,9 +264,9 @@ func homepage(cfg config, titles []template.HTML) (page, error) {
 	}
 	return page{
 		HideHome:    true,
-		Author:      cfg.Author,
-		Description: cfg.Description,
-		Permalink:   cfg.BaseURL,
+		Author:      _author,
+		Description: _description,
+		Permalink:   _baseURL,
 		Markdown:    md.Bytes(),
 		Out:         filepath.Join(_buildDir, "index.html"),
 	}, nil
@@ -247,14 +285,13 @@ func main() {
 	}
 	cfg.Sort()
 
-	rawCSS, err := os.ReadFile(cfg.CSS)
+	rawCSS, err := os.ReadFile(_styles)
 	if err != nil {
-		log.Fatalf("read %q: %v", cfg.CSS, err)
+		log.Fatalf("read %q: %v", _styles, err)
 	}
 
 	minifier := minify.New()
 	minifier.AddFunc("text/css", css.Minify)
-	minifier.AddFunc("application/javascript", js.Minify)
 	styles, err := minifier.Bytes("text/css", rawCSS)
 	if err != nil {
 		log.Fatalf("minify CSS: %v", err)
@@ -275,11 +312,11 @@ func main() {
 			log.Fatalf("read %q: %v", pc.Markdown, err)
 		}
 		page := page{
-			Author:      cfg.Author,
+			Author:      _author,
 			Description: pc.Description,
 			Created:     pc.Created,
 			Updated:     pc.Updated,
-			Permalink:   cfg.BaseURL + "/" + slug,
+			Permalink:   _baseURL + "/" + slug,
 			Markdown:    md,
 			Out:         filepath.Join(_buildDir, slug+".html"),
 			HideHome:    pc.HideHome,

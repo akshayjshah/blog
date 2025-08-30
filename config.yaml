@@ -1,9 +1,3 @@
-base_url: https://akshayshah.org
-author: Akshay Shah
-description: "Code, cooking, and caffeine."
-javascript: page.js
-css: style.css
-
 pages:
   # Hidden from homepage
   - markdown: 404.md
