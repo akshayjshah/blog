@@ -3,9 +3,9 @@
 <img alt="" src="/static/headshot-2025-300x300.webp" class="profile-pic" height="300px" width="300px">
 
 Hi there! I'm Akshay, and you've stumbled across my oft-neglected blog. After
-building infrastructure at Uber, Microsoft, and a pile of startups, I'm
-currently the Field CTO at [Antithesis](https://antithesis.com). We make the
-world's best tools for testing distributed systems.
+building infrastructure at Uber, Microsoft, and a pile of startups, I'm now the
+Field CTO at [Antithesis](https://antithesis.com). We make the world's best
+tools for testing distributed systems.
 
 Shoot me an [email](mailto:akshay@akshayshah.org) and say hello, or
 [read a bit more about me](/colophon/).
