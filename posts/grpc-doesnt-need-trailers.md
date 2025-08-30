@@ -9,11 +9,11 @@ Protocol Buffers. Bluntly, both of these arguments are nonsense.
 
 **gRPC doesn't need HTTP trailers.** In this post, I'll explain:
 
-1. What trailers are and how gRPC uses them,
-2. Why they're unnecessary,
-3. How they impede gRPC adoption,
-4. How Google could fix gRPC in a minor release, and
-5. How we can do even better without Google.
+- What trailers are and how gRPC uses them,
+- Why they're unnecessary,
+- How they impede gRPC adoption,
+- How Google could fix gRPC in a minor release, and
+- How we can do even better without Google.
 
 ## What are trailers?
 
@@ -173,7 +173,7 @@ protocol closer to familiar, resource-oriented HTTP:
 None of these changes affect the protocol's efficiency, but they eliminate most
 of gRPC's fussiness. Creating a `User` becomes a cURL one-liner:
 
-```
+```bash
 curl --json '{"name": "Akshay"}' https://api.acme.com/user.v1/Create
 ```
 

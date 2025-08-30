@@ -2,12 +2,14 @@
 
 Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
 using Go also do front-end work in ActionScript? Most programmers have some
-intuitions about these questions---*but what does the data say*? Spurred on by
+intuitions about these questions --- *but what does the data say*? Spurred on by
 a six-month-old Twitter [conversation][twitter-convo], I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: <figure><img
+languages on GitHub: 
+
+<img
 src="/static/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub"></figure>
+alt="Language Correlation on GitHub">
 
 Each square in the chart measures the [rank correlation][wiki-rank-correlation]
 between two languages; positive correlations are in blue, and negative
@@ -25,7 +27,7 @@ details!
 GitHub's own [Brian Doll][brian-doll] published a [data set][brian-doll-data]
 titled "Programming Language Correlations," but as an astute commenter pointed
 out, it's really a set of conditional probabilities. For our question,
-that's an important distinction---while conditional probabilities let us say,
+that's an important distinction --- while conditional probabilities let us say,
 "87.9% of CoffeeScript programmers also code in Ruby," they *don't* allow us to
 say, "People who write more CoffeeScript also tend to write more Ruby." To
 tackle our question, we'll need access to some more granular data.
@@ -139,7 +141,7 @@ obscure, so our unstacked data set has too many columns to visualize. (As
 this calculation ignores any rows with missing data: for example, the
 Python-Ruby correlation ignores any users who haven't used both Python and
 Ruby. We could fill the missing values with zeroes, or we could also calculate
-significance for each correlation. Corey has already done the former---check out his
+significance for each correlation. Corey has already done the former --- check out his
 [updated code](https://gist.github.com/coyotebush/5379476) and
 [plot](http://coreyford.name/2013/04/13/github-language-correlations.html).)
 Let's just keep the most popular languages:
@@ -185,12 +187,13 @@ reasons:
 * There are quite a few outliers in our data set, and rank correlations are
   less distorted by these outliers.
 
-If that doesn't convince you, it's easy to calculate the Pearson correlation---it's
+If that doesn't convince you, it's easy to calculate the Pearson correlation --- it's
 the default in pandas, so removing the ``method='spearman'`` above should do
 the trick. If you're impatient, you can just peek at the
 [results][pearson-plot].
 
 <h2 id="conclusions">Conclusions</h2>
+
 <img src="/static/language-use-on-github/spearman_language_correlation.svg"
 alt="Language Correlation on GitHub">
 
@@ -216,7 +219,7 @@ Like any analysis project, this one comes with a few caveats:
   from their closed-source counterparts.
 * Correlation isn't causation.
 
-I've only scratched the surface here---if you've got some ideas, [let me
+I've only scratched the surface here --- if you've got some ideas, [let me
 know](mailto:akshay@akshayshah.org)!
 
 [big-query]: https://developers.google.com/bigquery/

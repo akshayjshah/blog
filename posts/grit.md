@@ -1,6 +1,6 @@
 # Reading Notes: Grit
 
-> Our potential is one thing. What we do with it is quite another.\
+> Our potential is one thing. What we do with it is quite another.
 > <cite>Angela Duckworth, [Grit](https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108)</cite>
 
 This is *such* an attractive thesis: for all of us, success is within reach.
@@ -20,55 +20,49 @@ the actual study is behind a paywall.
 
 ## Quotes
 
-The book is clear and fun, but doesn't lend itself to great quotes. The quotes
-Duckworth pulls from other works are *amazing*, though!
+Duckworth's writing doesn't lend itself to great quotes. But she pulls
+excellent snippets from other works!
 
-<blockquote>
-You have made a convert of an opponent in one sense, for I have always
-maintained that, excepting fools, men did not differ much in intellect, only
-in zeal and hard work; and I still think this is an <em>eminently</em> important
-difference.<br>
-<cite>Charles Darwin (ch. 2)</cite>
-</blockquote>
+> You have made a convert of an opponent in one sense, for I have always
+> maintained that, excepting fools, men did not differ much in intellect, only
+> in zeal and hard work; and I still think this is an *eminently* important
+> difference.
+> <cite>Charles Darwin</cite>
 
+<!-- br -->
 
-<blockquote>
-Compared with what we ought to be, we are only half awake. Our fires are
-dampened, our drafts are checked. We are making use of only a small part of
-our possible mental and physical resources.<br>
-<cite>William James (ch. 2)</cite>
-</blockquote>
-
+> Compared with what we ought to be, we are only half awake. Our fires are
+> dampened, our drafts are checked. We are making use of only a small part of
+> our possible mental and physical resources.
+> <cite>William James</cite>
 
 <blockquote>
 No one can see in the work of the artist how it has <em>become</em>. That is its
 advantage, for whenever one can see the act of becoming one grows somewhat
-cool&hellip;Our vanity, our self-love, promotes the cult of the genius. For if
+cool...Our vanity, our self-love, promotes the cult of the genius. For if
 we think of genius as something magical, we are not obliged to compare ourselves
-and find ourselves lacking&hellip;To call someone &ldquo;divine&rdquo; means:
-&ldquo;here there is no need to compete.&rdquo;<br>
-<cite>Nietzsche (ch. 3)</cite>
+and find ourselves lacking...To call someone &ldquo;divine&rdquo; means:
+&ldquo;here there is no need to compete.&rdquo;
+<cite>Nietzsche</cite>
 </blockquote>
 
-<blockquote>
-Dancing appears glamorous, easy, delightful. But that path to the paradise of
-that achievement is not easier than any other. There is fatigue so great that
-the body cries even in its sleep. There are times of complete frustration.
-There are daily small deaths.<br>
-<cite>Martha Graham (ch. 7)</cite>
-</blockquote>
+> Dancing appears glamorous, easy, delightful. But that path to the paradise of
+> that achievement is not easier than any other. There is fatigue so great that
+> the body cries even in its sleep. There are times of complete frustration.
+> There are daily small deaths.
+> <cite>Martha Graham</cite>
 
-<blockquote>
-The true joy in life is to be a force of fortune instead of a feverish,
-selfish little clod of ailments and grievances complaining that the world
-will not devote itself to making you happy.<br>
-<cite>George Bernard Shaw (ch. 12)</cite>
-</blockquote>
+<!-- br -->
 
-<blockquote>
-Success is never final; failure is never fatal. It's courage that counts.<br>
-<cite>John Wooden (ch. 12)</cite>
-</blockquote>
+> The true joy in life is to be a force of fortune instead of a feverish,
+> selfish little clod of ailments and grievances complaining that the world
+> will not devote itself to making you happy.
+> <cite>George Bernard Shaw</cite>
+
+<!-- br -->
+
+> Success is never final; failure is never fatal. It's courage that counts.
+> <cite>John Wooden</cite>
 
 ## Notes
 

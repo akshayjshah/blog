@@ -7,11 +7,7 @@ preload="none" class="changelog-episode" controls></audio>
 
 I was interviewed on [episode 256 of the Go Time
 podcast](https://changelog.com/gotime/256)! We talked about Protocol Buffers,
-gRPC, and some common misconceptions about both. If you'd prefer to download an
-MP3, I've archived a [copy of the
-episode](https://storage.googleapis.com/akshayshah-blog-static/go-time-256.mp3).
-
-I tried to emphasize that:
+gRPC, and some common misconceptions about both. I tried to emphasize that:
 
 * Protobuf and gRPC are useful because they reduce developer toil. Any
   performance improvements are nice, but they're secondary.
@@ -21,4 +17,4 @@ I tried to emphasize that:
   work better](https://github.com/bufbuild/connect-go) for most Gophers.
 
 Overall, I found it surprisingly hard to stay on track during the discussion.
-I have _so_ much more respect for previous Go Time guests!
+I have *so* much more respect for previous Go Time guests!

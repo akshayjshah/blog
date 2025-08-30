@@ -7,8 +7,6 @@ have the complexity of a risen batter, but don't require *too* much preparation.
 And especially with hungry kids, it's nice to wake up with batter that's ready
 to cook.
 
-### Ingredients
-
 * 1.75c whole milk
 * 8 tbsp unsalted butter, cut into pieces
 * 2c all-purpose flour
@@ -17,8 +15,6 @@ to cook.
 * 1 tsp salt
 * 1.5 tsp instant yeast
 * 2 large eggs
-
-### Instructions
 
 1. Melt the butter into half the milk in a small saucepan. Remove from heat, add
 the other half of the milk, and let the mixture cool until it's less than 120
@@ -29,13 +25,11 @@ milk mixture, then the egg and vanilla mixture.
 4. Scrape down the sides of the bowl, cover tightly, and refrigerate overnight.
 The batter will at least double in size.
 
-## Sourdough Waffles
+## Sourdough waffles
 
 These waffles are complex and crispy, but take quite a bit of planning and a
 healthy sourdough starter. The recipe is adapted from [King Arthur
 Flour](https://www.kingarthurflour.com/recipes/classic-sourdough-waffles-or-pancakes-recipe).
-
-### Ingredients
 
 * 344g all-purpose flour
 * 28g sugar
@@ -43,12 +37,10 @@ Flour](https://www.kingarthurflour.com/recipes/classic-sourdough-waffles-or-panc
 * 20g sourdough starter
 * 2 large eggs
 * 1 tsp vanilla
-* 50g (1/4 c) vegetable oil or 57g butter (4 tbsp), melted
+* 50g (0.25 c) vegetable oil or 57g butter (4 tbsp), melted
 * 5g salt
 * 5g baking soda
 * 3g baking powder
-
-### Instructions
 
 1. Mix the flour, sugar, buttermilk, and starter. Cover and leave at room
    temperature overnight. (The sponge should be at maximum height in the
@@ -59,13 +51,11 @@ Flour](https://www.kingarthurflour.com/recipes/classic-sourdough-waffles-or-panc
    sponge.
 3. Add the salt, baking soda, and baking powder. The batter should bubble.
 
-## Beer Waffles
+## Beer waffles
 
 In a pinch, these waffles capture some of the complexity of the sourdough and
 yeasted versions without the lengthy preparation. The recipe is adapted from my
 friend Nick at [Macheesmo](https://www.macheesmo.com/pbr-beer-waffles/).
-
-### Ingredients
 
 * 240g (2 c) all-purpose flour
 * 15g baking powder
@@ -77,14 +67,12 @@ friend Nick at [Macheesmo](https://www.macheesmo.com/pbr-beer-waffles/).
 * 1 tsp vanilla
 * pinch salt
 
-### Instructions
-
-* Whisk dry ingredients.
-* Mix in beer.
-* In a separate bowl, whisk together wet ingredients, then gently mix into
-  batter.
-* Batter is ready to use immediately, but improves if left for up to half an
-  hour before cooking.
+1. Whisk dry ingredients.
+2. Mix in beer.
+3. In a separate bowl, whisk together wet ingredients, then gently mix into
+   batter.
+4. Batter is ready to use immediately, but improves if left for up to half an
+   hour before cooking.
 
 ## Notes
 

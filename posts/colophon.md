@@ -1,11 +1,11 @@
 # Colophon
 
-<img alt="" src="/static/headshot-2023-300x300.webp" height="300px" width="300px">
+<img alt="" src="/static/headshot-2023-300x300.webp" class="profile-pic" height="300px" width="300px">
 
 I'm Akshay Shah, and you've landed on my little patch of the web --- mazel tov!
 As a brief introduction, I'm an infrastructure and platform engineer in San
 Francisco. After stints at Uber, Microsoft, and many startups (including my
-own), I'm currently the Field CTO at [Antithesis][]. If you'd like to get in
+own), I'm now the Field CTO at [Antithesis][]. If you'd like to get in
 touch with me, you can send me an [email][]; I'm also on [Bluesky][],
 [LinkedIn][], and [GitHub][].
 

@@ -1,6 +1,6 @@
 # Automating Gmail with AppsScript
 
-We're all drowning in email. The problem isn't the blatant spam---it's easy to
+We're all drowning in email. The problem isn't the blatant spam --- it's easy to
 unsubscribe from most of that and block the rest. The real killer is the email
 that's *sort of* interesting: discussion on projects you're peripherally
 involved in, weekly newsletters, chatter on GitHub issues you filed months ago,
@@ -144,7 +144,7 @@ function onVacation() {
   const cal = CalendarApp.getCalendarById(email);
   for (let event of cal.getEventsForDay(new Date())) {
     let t = event.getTitle();
-    if (t.includes("OOO") || t.includes("PTO") || t.includes("Vacation") || t.includes("vacation")) {
+    if (t.includes("OOO") || t.includes("PTO") || t.includes("Vacation") {
       return true;
     }
   }
