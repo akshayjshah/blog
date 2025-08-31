@@ -20,7 +20,7 @@ me to AppsScript.)
 add a small function and save the project. This code doesn't do anything yet,
 but we'll add to it later on.
 
-```
+```js
 function processMail() {
 }
 ```
@@ -43,7 +43,7 @@ all my archived email is marked read. (It's puzzling to me that this isn't the
 default, since it's the only way to make the badge count on Gmail's mobile apps
 useful.)
 
-```
+```js
 function processMail() {
   const rules = [
     markArchivedRead
@@ -62,11 +62,11 @@ function markArchivedRead() {
 function eachThread(operation, query, f) {
   const threads = GmailApp.search(query).slice(0, 100);
   if (threads.length <= 0) {
-    Logger.log("%s: no threads matching query %s", operation, query);
+    Logger.log("%s: 0 threads match query %s", operation, query);
     return;
   }
   const n = threads.length;
-  Logger.log("%s: found %s threads matching query %s", operation, n, query);
+  Logger.log("%s: %s threads match query %s", operation, n, query);
   for (let thread of threads) {
     f(thread);
   }
@@ -114,7 +114,7 @@ these emails pile up in my inbox, I archive the older messages until only 50
 remain. I also tag the auto-archived messages, so I know that I haven't read
 them if they show up in search later on.
 
-```
+```js
 function limitInbox() {
   const max = 100;
   const op = "gmail: limit inbox";
@@ -144,7 +144,7 @@ function onVacation() {
   const cal = CalendarApp.getCalendarById(email);
   for (let event of cal.getEventsForDay(new Date())) {
     let t = event.getTitle();
-    if (t.includes("OOO") || t.includes("PTO") || t.includes("Vacation") {
+    if (t.includes("OOO") || t.includes("PTO") {
       return true;
     }
   }
@@ -179,13 +179,17 @@ chapter gets published in a book I'm following, but I only catch up on my
 trashy reading a few times a week. Rather than letting all the notifications
 sit in my inbox, I'd rather keep only the oldest email for each book.
 
-```
+```js
 function queueLitRPG() {
   const op = "gmail: queue litRPG";
-  const threads = GmailApp.search('in:inbox from:royalroad.com subject:"New Chapter of"');
+  const threads = GmailApp
+    .search('in:inbox from:royalroad.com subject:"New Chapter of"');
   let unread = {};
   for (let thread of threads) {
-    const book = thread.getFirstMessageSubject().replace(/New Chapter of/, '').trim();
+    const book = thread
+      .getFirstMessageSubject()
+      .replace(/New Chapter of/, '')
+      .trim();
     const chapter = {
       date: thread.getLastMessageDate(),
       thread: thread
@@ -198,8 +202,10 @@ function queueLitRPG() {
   }
   for (const [book, chapters] of Object.entries(unread)) {
     // sort most recent first
-    const sorted = chapters.slice().sort((a, b) => b.date - a.date);
-    // keep the oldest, since that's where I left off reading
+    const sorted = chapters
+      .slice()
+      .sort((a, b) => b.date - a.date);
+    // keep the oldest
     for (let chapter of sorted.slice(0, -1)) {
       chapter.thread.moveToArchive();
     }
