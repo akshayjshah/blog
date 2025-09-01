@@ -1,4 +1,8 @@
-# Getting Started with Go
+---
+title: "Getting started with Go"
+description: "An opinionated plan to learn Go in a hurry."
+created: 2018-05-01
+---
 
 If you're starting a new project or a job that requires knowing Go, here's an
 opinionated learning plan that will get you ready in a hurry. If you're
@@ -6,7 +10,7 @@ exploring Go out of idle curiosity, this probably isn't the plan for
 you --- there are plenty of excellent videos and conference talks with a better
 balance of entertainment and technical content.
 
-## Learn the Language
+## Learn the language
 
 You don't need a local Go installation to get started - you can learn the
 language and start writing code in your browser.
@@ -27,7 +31,7 @@ language and start writing code in your browser.
 
 After those three steps, spend some time writing a bit of toy code.
 
-## Learn the Idioms
+## Learn the idioms
 
 As a community, Go programmers tend to prefer strong conventions over freedom
 of expression. Before you start writing Go professionally, get acquainted with
@@ -64,7 +68,7 @@ them...don't just skim the headings and move on.
   serves documentation for the standard library and all open-source Go
   packages. 
 
-## Learn the Details
+## Learn the details
 
 Once you've picked up the basics and some common idioms, dive a little deeper.
 

@@ -1,4 +1,8 @@
-# Coriander and Mint Chutney
+---
+title: "Coriander and mint chutney"
+description: "My mother-in-law's coriander chutney recipe."
+created: 2020-06-01
+---
 
 With Cholula hot sauce and Dijon mustard, this chutney completes my condiment
 trinity. The miso isn't traditional, but it adds complexity and depth.

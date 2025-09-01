@@ -1,4 +1,9 @@
-# Building a Blog
+---
+title: "Building a blog"
+description: "Building a blog with Haskell, Hakyll, and Bootstrap."
+created: 2012-08-01
+updated: 2020-05-01
+---
 
 Though I've run a few [Wordpress][] sites in the past, I've always found the
 software irritating to use. In particular, I *loathe* the composer --- the rich
@@ -12,7 +17,7 @@ clean slate, I have the luxury of choosing whatever tools I like; after looking
 at everything from [Drupal][] to [Tumblr][], I decided to keep things simple
 and build with [Hakyll][] and [Bootstrap][].
 
-## Hakyll: Static Site Generation
+## Hakyll: static site generation
 
 Hakyll is a static site generator, which means that it's only a few short steps
 away from writing markup by hand. Those few steps make all the difference,
@@ -53,7 +58,7 @@ is excellent, the [mailing list][hakyll-list] is active, and the
 [author][jasper] is exceptionally helpful, so my first foray into practical
 functional programming has been more enlightening than infuriating.
 
-## Bootstrap: Clean Design, No Fuss
+## Bootstrap: clean design, no fuss
 
 I have trouble matching my clothing, let alone the dozens of small elements
 that make up a website, so creating an attractive design for my new site was a
@@ -84,7 +89,7 @@ suggestions! If coding's your thing, take a look at the [source code on
 GitHub](http://github.com/akshayjshah/akshayjshah.github.io); otherwise, send
 me a [tweet](http://twitter.com/akshayshah) and let me know what you think.
 
-## Update: Abject Failure
+## Update: abject failure
 
 It's probably no surprise, but diving straight into Haskell wasn't the
 smoothest transition; without a better understanding of the language as a

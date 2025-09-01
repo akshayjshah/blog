@@ -1,4 +1,8 @@
-# License Your Code!
+---
+title: "License your code!"
+description: "A brief orientation to software licensing."
+created: 2013-08-01
+---
 
 If you're a [GitHub][] user, you probably want to let other people use your
 code in their own projects. Just throwing your code online isn't enough, though
@@ -10,7 +14,7 @@ Even though I'm not a lawyer, I'll start with a few
 disclaimers: this post isn't legal advice, I'm not going to address patents at
 all, and some of what I'm about to explain is specific to the United States.
 
-## Closed by Default
+## Closed by default
 
 In the US, every shred of code you've ever written is automatically protected
 by copyright. That means, broadly speaking, that it's your property.  If you
@@ -25,7 +29,7 @@ wait before your copyright expires. To let other developers legally copy,
 modify, and reuse your code while it's still relevant, you have to offer it to
 them under a *license*.
 
-## Permissive Licensing
+## Permissive licensing
 
 Licenses are just agreements between you, the author and owner of the code, and
 all the other developers who'd like to use your code. Even if you've never
@@ -61,7 +65,7 @@ And with that, you know more than 99% of programmers about software licensing.
 Stand proud, grasshopper, and remember to include an explicit license when
 sharing your code online.
 
-## More Questions?
+## More questions?
 
 * Need a refresher? Looking for some actual legalese to include in your
   project? Check out GitHub's [license picker][].

@@ -1,4 +1,9 @@
-# Waffles
+---
+title: "Waffles"
+description: "Recipes for yeasted, quick, and sourdough waffles."
+created: 2020-05-03
+updated: 2025-06-16
+---
 
 ## Yeasted waffles
 

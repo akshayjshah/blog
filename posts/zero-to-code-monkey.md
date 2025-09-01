@@ -1,4 +1,8 @@
-# Zero to Code Monkey
+---
+title: "Zero to code monkey"
+description: "Lessons from my first year as a professional programmer."
+created: 2012-09-01
+---
 
 Last year, I'd never have called myself a programmer. Sure, I'd dabbled a bit
 here and there, but I'd never written code daily and I'd never collaborated on
@@ -9,7 +13,7 @@ definitely a programmer (or at least a code monkey). Writing code every day is
 an important part of my job, and I *love* it. If you're interested in learning
 to code, especially in Python, I hope my story helps you get started faster.
 
-## Syntax Is Easy
+## Syntax is easy
 Oddly enough, learning the syntax of a programming language --- the rules
 for assembling words, curly braces, backslashes, and all the other
 typographical flotsam in the corners of your keyboard into working code --- was
@@ -31,7 +35,7 @@ also written in Python. Taking the time to really understand how Steve's code
 worked (and why it was much, much better than mine) accelerated my learning
 dramatically.
 
-## Computer Science Is Practical
+## Computer science is practical
 Of course, what's a to-do manager without projects, sub-projects, and maybe
 even sub-sub-projects? Naively, I assumed that adding this feature to my little
 utility would be a quick one-hour project. When I sat down to start
@@ -63,7 +67,7 @@ for me to watch while riding the train and keeping an eye out for my stop. I'm
 not sure what I'll tackle next, but I'm leaning towards continuing the MIT
 undergraduate sequence.
 
-## Craftsmanship Is Crucial
+## Craftsmanship is crucial
 
 A few days after I started watching the MIT lectures, I switched jobs and began
 writing code at work. This was, to say the least, a big transition: I went from
@@ -103,7 +107,7 @@ for software developers][codinghorror]." I'll probably still make the same
 rookie mistakes, but I hope that this early investment will help me learn from
 my mistakes faster.
 
-## What Next?
+## What next?
 I'll finish Code Complete this week, but I'm not sure where I should invest my
 time next. I could:
 

@@ -1,4 +1,10 @@
-# Colophon
+---
+title: "Colophon"
+description: "I'm Akshay Shah, and you've landed on my little patch of the web - mazel tov!"
+hidden: true
+created: 2012-08-01
+updated: 2025-05-09
+---
 
 <img alt="" src="/static/headshot-2025-300x300.webp" class="profile-pic" height="300px" width="300px">
 

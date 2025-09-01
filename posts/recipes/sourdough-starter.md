@@ -1,4 +1,9 @@
-# Sourdough Starter
+---
+title: "Sourdough starter"
+description: "A recipe for homemade sourdough starter."
+created: 2020-03-02
+updated: 2020-05-01
+---
 
 I adapted this approach from [The Perfect
 Loaf](https://www.theperfectloaf.com/7-easy-steps-making-incredible-sourdough-starter-scratch/).

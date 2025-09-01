@@ -1,4 +1,8 @@
-# Testing Django Fields
+---
+title: "Testing Django fields"
+description: "Minimize boilerplate when testing custom Django model fields."
+created: 2013-08-01
+---
 
 I love the flexibility that custom Django fields, abstract models, managers,
 and querysets offer, but unit testing them is a pain. Ideally, the tests for

@@ -1,4 +1,9 @@
-# Akshay Shah
+---
+title: "Akshay Shah"
+description: "Code, cooking, and caffeine."
+hidden: true
+hide_home: true
+---
 
 <img alt="" src="/static/headshot-2025-300x300.webp" class="profile-pic" height="300px" width="300px">
 
@@ -14,7 +19,7 @@ Shoot me an [email](mailto:akshay@akshayshah.org) and say hello, or
 
 {{ range .Posts }}
 <div class="post-row">
-  <span class="post-date">{{ .Published }}</span>
+  <span class="post-date">{{ .Created }}</span>
   <a href="{{ .Link }}">{{ .Title }}</a>{{ if .Via }} ({{ .Via}}){{ end }}
 </div>
 {{ end }}
@@ -23,7 +28,7 @@ Shoot me an [email](mailto:akshay@akshayshah.org) and say hello, or
 
 {{ range .Recipes }}
 <div class="post-row">
-  <span class="post-date">{{ .Published }}</span>
+  <span class="post-date">{{ .Created }}</span>
   <a href="{{ .Link }}">{{ .Title }}</a>
 </div>
 {{ end }}

@@ -1,4 +1,9 @@
-# The MIT License
+---
+title: "The MIT license"
+description: "The license for all content on this site."
+hidden: true
+hide_license: true
+---
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

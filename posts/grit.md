@@ -1,4 +1,9 @@
-# Reading Notes: Grit
+---
+title: "Reading notes: Grit"
+description: "Reading notes from Angela Duckworth's Grit."
+created: 2019-06-01
+updated: 2022-05-01
+---
 
 > Our potential is one thing. What we do with it is quite another.
 > <cite>Angela Duckworth, [Grit](https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108)</cite>

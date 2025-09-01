@@ -1,4 +1,8 @@
-# Banana Bread
+---
+title: "Banana bread"
+description: "A recipe for chocolate chip banana bread."
+created: 2025-08-31
+---
 
 Adapted from [Cook's
 Illustrated](https://www.americastestkitchen.com/recipes/848-the-best-banana-bread),

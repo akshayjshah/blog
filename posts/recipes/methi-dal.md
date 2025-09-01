@@ -1,4 +1,8 @@
-# Methi Dal
+---
+title: "Methi dal"
+description: "My mother-in-law's recipe for methi dal."
+created: 2020-06-10
+---
 
 - 0.5 c dry toor dal
 - 0.25 c chopped tomato (one Roma tomato)

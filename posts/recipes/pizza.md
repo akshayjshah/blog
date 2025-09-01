@@ -1,4 +1,9 @@
-# Pizza
+---
+title: "Pizza"
+description: "A pizza recipe honed over two decades."
+created: 2020-05-15
+updated: 2020-06-01
+---
 
 Baltimore has crab cakes, St. Louis has ribs, New Orleans has gumbo, and New
 Haven has pizza. New Haven pizza ovens are heated with coal, which burns hotter
@@ -40,7 +45,7 @@ whole, because they're made from the fruits that are too ripe to be peeled.
 Hand-blending tomatoes works in a pinch, but over-blending will release too much
 water.
 
-## Shaping and Baking
+## Shaping and baking
 
 1. Remove dough from the refrigerator and gently re-shape into balls. Allow
    dough to come back to room temperature, usually 3--5 hours.

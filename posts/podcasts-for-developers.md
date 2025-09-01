@@ -1,4 +1,8 @@
-# Podcasts for Developers
+---
+title: "Podcasts for developers"
+description: "A selection of well-produced podcasts for programmers."
+created: 2015-05-01
+---
 
 Even though computer science doesn't change too quickly, software engineering
 changes all the time. New libraries, languages, and architectural patterns
@@ -18,7 +22,7 @@ If you know of a great show that isn't on my list, [let me
 know](mailto:akshay@akshayshah.org) --- I'm always looking for something new.
 
 
-## General Engineering
+## General engineering
 1. [Software Engineering Radio](http://www.se-radio.net/) ★★★
 1. [The Changelog](https://changelog.com/podcast/) ★★★
 1. [Hanselminutes](http://hanselminutes.com/) ★★
@@ -26,14 +30,14 @@ know](mailto:akshay@akshayshah.org) --- I'm always looking for something new.
 1. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) ★★
 1. [The Ship Show](http://theshipshow.com/) ★
 
-## The Web
+## The web
 1. [The Big Web Show](http://5by5.tv/bigwebshow) ★★
 1. [The Path to Performance](http://pathtoperf.com/) ★★
 1. [The Web Ahead](http://thewebahead.net/) ★ (the [Web
    Behind](http://thewebahead.net/34) sub-series was ★★★)
 1. [JavaScript Jabber](http://devchat.tv/js-jabber/) ★
 
-## Data Science and Big Data
+## Data science and big data
 1. [Talking Machines](http://www.thetalkingmachines.com/) ★★★
 1. [O'Reilly Data Show](http://radar.oreilly.com/tag/oreilly-data-show-podcast) ★
 

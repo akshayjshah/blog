@@ -1,4 +1,8 @@
-# Reading Notes: Sourdough
+---
+title: "Reading notes: Sourdough"
+description: "Reading notes from Robin Sloan's Sourdough."
+created: 2020-08-01
+---
 
 > "Culture," he said. "The word meant this --- making cheese --- before it meant
 > that --- art and opera. And before it meant anything, it just meant working the

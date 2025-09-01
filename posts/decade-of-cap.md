@@ -1,7 +1,11 @@
-# A Decade of CAP
+---
+title: "A decade of CAP"
+description: "Slides and resources from a talk on Eric Brewer's CAP theorem."
+created: 2016-03-01
+---
 
 > Consistency, availability, and tolerance to network partitions: you can have
-> at most two of these properties for any shared-data system.\
+> at most two of these properties for any shared-data system.
 > <cite>[Eric Brewer](http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf)</cite>
 
 Distributed systems folks think that everyone should read
@@ -39,7 +43,7 @@ means that reality is complicated. Until an alternative emerges that's both
 simpler *and* more useful, I'll continue to anchor my architecture discussions
 in CAP, and so should you.
 
-## Readable References
+## Readable references
 
 If you're interested in distributed systems but don't know where to start, you
 may find some of these resources useful. Most of them take great pains to avoid

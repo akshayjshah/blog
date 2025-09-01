@@ -1,4 +1,9 @@
-# An Audible Literacy Filter
+---
+title: "An audible literacy filter"
+description: "Screening job applicants with a simple grammatical test."
+created: 2012-10-01
+updated: 2020-05-01
+---
 
 > If it takes someone more than 20 years to notice how to properly use "it's,"
 > then that's not a learning curve I'm comfortable with. So, even in this
@@ -17,7 +22,7 @@ us are willing (or allowed) to administer a writing test as part of the
 interview process. For the rushed curmudgeon, I offer a shortcut: focus on the
 candidate's use of the word "myself."
 
-## An Easy, Audible Grammar Test
+## An easy, audible grammar test
 
 Many guides to grammar gaffes focus on homophones --- pairs of words that
 have different meanings but identical pronunciations.  But relying on

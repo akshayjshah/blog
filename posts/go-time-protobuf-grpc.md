@@ -1,4 +1,8 @@
-# Go Time: Protobuf & gRPC
+---
+title: "Go Time: Protobuf & gRPC"
+description: "I was interviewed on the Go Time podcast about Protocol Buffers and gRPC."
+created: 2022-11-17
+---
 
 <audio data-theme="night" data-src="https://changelog.com/gotime/256/embed"
 src="https://op3.dev/e/https://cdn.changelog.com/uploads/gotime/256/go-time-256.mp3"

@@ -1,15 +1,20 @@
-# Language Use on GitHub
+---
+title: "Language use on Github"
+description: "Using the Github Archive to find programming language correlations."
+created: 2013-02-01
+updated: 2020-06-01
+---
 
 Do CoffeeScript aficionados write less vanilla JavaScript? Do systems hackers
 using Go also do front-end work in ActionScript? Most programmers have some
 intuitions about these questions --- *but what does the data say*? Spurred on by
 a six-month-old Twitter [conversation][twitter-convo], I decided to find out.
 Using data from 2012, I charted the relationships between the 25 most popular
-languages on GitHub: 
+languages on Github: 
 
 <img
 src="/static/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub">
+alt="Language Correlation on Github">
 
 Each square in the chart measures the [rank correlation][wiki-rank-correlation]
 between two languages; positive correlations are in blue, and negative
@@ -22,9 +27,9 @@ write less Go (and there's an identically-colored square in the bottom row to
 show it). Take a moment to find your favorite languages, then read on for the
 details!
 
-## Data Collection
+## Data collection
 
-GitHub's own [Brian Doll][brian-doll] published a [data set][brian-doll-data]
+Github's own [Brian Doll][brian-doll] published a [data set][brian-doll-data]
 titled "Programming Language Correlations," but as an astute commenter pointed
 out, it's really a set of conditional probabilities. For our question,
 that's an important distinction --- while conditional probabilities let us say,
@@ -32,8 +37,8 @@ that's an important distinction --- while conditional probabilities let us say,
 say, "People who write more CoffeeScript also tend to write more Ruby." To
 tackle our question, we'll need access to some more granular data.
 
-Rather than banging on the API, we can use the [GitHub
-Archive][github-archive]. This fantastic resource archives every public GitHub
+Rather than banging on the API, we can use the [Github
+Archive][github-archive]. This fantastic resource archives every public Github
 event and makes the whole data set accessible via [Google BigQuery][big-query].
 BigQuery has a web-based console and a comfortably SQL-like query language, so
 it's easy to get the data we need (all the code in this post is also in a
@@ -131,7 +136,7 @@ pushes = pd.read_csv('stacked_language_by_user.csv').pivot(
 
 ## Analysis
 
-GitHub recognizes *lots* of different languages, including some that are fairly
+Github recognizes *lots* of different languages, including some that are fairly
 obscure, so our unstacked data set has too many columns to visualize. (As
 [conjugateprior](http://conjugateprior.org) noted in the now-defunct comments,
 this calculation ignores any rows with missing data: for example, the
@@ -170,7 +175,7 @@ spearman_corr = popular.corr(method='spearman')
 plot_correlation(
     spearman_corr,
     'spearman_language_correlation.svg',
-    title='2012 GitHub Language Correlations',
+    title='2012 Github Language Correlations',
     corr_type='Spearman\'s Rank Correlation')
 ```
 
@@ -191,7 +196,7 @@ the trick. If you're impatient, you can just peek at the
 <h2 id="conclusions">Conclusions</h2>
 
 <img src="/static/language-use-on-github/spearman_language_correlation.svg"
-alt="Language Correlation on GitHub">
+alt="Language Correlation on Github">
 
 The most striking thing about this chart is its *blueness*. Despite our
 tribalism, writing scads of C# doesn't make programmers any less likely to hack
@@ -208,9 +213,9 @@ than the norm, likely because of their niche roles in data analysis and devops.
 
 Like any analysis project, this one comes with a few caveats:
 
-* GitHub pushes aren't a perfect measure of activity. Then again, neither are
+* Github pushes aren't a perfect measure of activity. Then again, neither are
   commits, lines of code changed, or anything else I've heard of.
-* This data only considers public projects on GitHub, many of which are open
+* This data only considers public projects on Github, many of which are open
   source. Open-source programmers, and projects, may behave quite differently
   from their closed-source counterparts.
 * Correlation isn't causation.

@@ -1,11 +1,16 @@
-# Methi Murgh
+---
+title: "Methi murgh"
+description: "My mother-in-law's recipe for a methi-flavored chicken curry."
+created: 2020-05-02
+updated: 2020-06-01
+---
 
 This is a rich chicken curry, strongly flavored with methi (fenugreek). The
 dhaba-style recipe comes straight from my mother-in-law; the weeknight variant
 is my riff on her recipe, using ingredients I tend to keep in the pantry and
 freezer.
 
-## Weeknight Curry
+## Weeknight curry
 
 For the marinade:
 
@@ -46,7 +51,7 @@ Remaining ingredients:
 5. Wait for the curry to cool slightly, then add cream. Adjust seasoning and
    garnish with chopped cilantro leaves.
 
-## Dhaba-Style
+## Dhaba-style
 
 For the marinade:
 

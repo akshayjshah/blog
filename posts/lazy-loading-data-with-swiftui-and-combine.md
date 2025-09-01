@@ -1,4 +1,9 @@
-# Lazy-Loading Data with SwiftUI and Combine
+---
+title: "Lazy-loading data with SwiftUI and Combine"
+description: "An approach to automatically fetch resources when SwiftUI views render."
+created: 2020-01-01
+updated: 2020-05-01
+---
 
 Apple clearly wants us to pair SwiftUI with Combine for asynchronous network
 operations, but using the two frameworks together is surprisingly awkward. The

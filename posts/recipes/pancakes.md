@@ -1,6 +1,10 @@
-# Pancakes
+---
+title: "Pancakes"
+description: "Recipes for buttermilk and lemon-ricotta pancakes."
+created: 2021-01-15
+---
 
-## Buttermilk Pancakes
+## Buttermilk pancakes
 
 - 1.5c all-purpose flour
 - 2 tbsp sugar
@@ -18,7 +22,7 @@
    Depending on the skillet, you may need a bit of butter or neutral oil to
    prevent sticking.
 
-## Lemon-Ricotta Pancakes
+## Lemon-ricotta pancakes
 
 - 4 eggs, separated
 - 12 oz whole-milk ricotta cheese

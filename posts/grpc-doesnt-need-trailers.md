@@ -1,4 +1,8 @@
-# gRPC Doesn't Need Trailers
+---
+title: "gRPC doesn't need trailers"
+description: "gRPC doesn't need HTTP trailers: every feature, including streaming, could work without them."
+created: 2023-03-01
+---
 
 Among gRPC's many imperfections, none is worse than its use of HTTP trailers.
 Perversely, gRPC fans seem eager to defend this mistake. As an example, a

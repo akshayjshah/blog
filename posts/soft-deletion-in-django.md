@@ -1,4 +1,9 @@
-# Soft Deletion in Django
+---
+title: "Soft deletion in Django"
+description: "A soft-deletion approach for Django applications that preserves uniqueness constraints."
+created: 2013-05-01
+updated: 2013-08-01
+---
 
 Like any self-respecting data nerd, I find deleting database records abhorrent.
 What happens if I need to resurrect those records later? What if I want to run
@@ -9,7 +14,7 @@ After living with that system for a while, though, I'm convinced that it's
 inadequate; in this post, I'll explain its principal shortcoming and propose a
 slightly more complex, but vastly better, alternative.
 
-## Naive Soft-Deletion
+## Naive soft-deletion
 
 At first blush, soft-deletion seems embarrassingly simple. If you're like me,
 a system like this probably springs to mind:
@@ -78,7 +83,7 @@ both a soft-deleted and an active record with the same email address, but then
 you're out of luck --- any attempt to delete another record for Betty will throw
 an ``IntegrityError``. Luckily, there's a better way.
 
-## The Null Solution
+## The null solution
 
 At the database level, there's a straightforward solution to this problem
 (though I didn't learn about it until a few months ago): store soft-deleted

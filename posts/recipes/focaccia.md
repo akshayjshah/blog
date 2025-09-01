@@ -1,6 +1,11 @@
-# Focaccia
+---
+title: "Focaccia"
+description: "Recipes for quick and sourdough focaccia."
+created: 2020-03-03
+updated: 2020-05-01
+---
 
-## Blitz Bread
+## Blitz bread
 
 Adapted slightly from [King Arthur
 Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-recipe).
@@ -27,7 +32,7 @@ Flour](https://www.kingarthurflour.com/recipes/blitz-bread-no-fuss-focaccia-reci
 6. Remove it from the oven, wait 5 minutes, then turn it out of the pan onto a
    rack. Serve warm or at room temperature.
 
-## Sourdough Focaccia
+## Sourdough focaccia
 
 From [The Perfect Loaf](https://www.theperfectloaf.com/a-simple-focaccia/).
 

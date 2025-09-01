@@ -1,4 +1,8 @@
-# Garam Masala
+---
+title: "Garam masala"
+description: "A recipe for garam masala."
+created: 2020-01-01
+---
 
 - 2 tbsp coriander seed
 - 1 tsp cumin seed

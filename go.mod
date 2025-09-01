@@ -1,6 +1,6 @@
 module github.com/akshayjshah/blog
 
-go 1.24
+go 1.25
 
 require (
 	github.com/alecthomas/chroma/v2 v2.2.0
@@ -17,4 +17,5 @@ require (
 	github.com/stretchr/testify v1.10.0 // indirect
 	github.com/tdewolff/parse v2.3.4+incompatible // indirect
 	github.com/tdewolff/test v1.0.6 // indirect
+	go.akshayshah.org/must v1.0.0 // indirect
 )

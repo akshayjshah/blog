@@ -1,4 +1,8 @@
-# Chicken Kebabs
+---
+title: "Chicken kebabs"
+description: "A recipes for Indian-inspired chicken kebabs."
+created: 2020-05-01
+---
 
 - 400g boneless chicken, in medium chunks
 - 1 cup yogurt

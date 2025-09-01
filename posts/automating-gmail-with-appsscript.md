@@ -1,4 +1,8 @@
-# Automating Gmail with AppsScript
+---
+title: "Automating Gmail with AppsScript"
+description: "Smarter email automation with Google AppsScript."
+created: 2020-06-01
+---
 
 We're all drowning in email. The problem isn't the blatant spam --- it's easy to
 unsubscribe from most of that and block the rest. The real killer is the email
@@ -35,7 +39,7 @@ quotas. Set up a time-based trigger for the `processMail` function right from
 the editor by going to "Edit," then "Current project's triggers," and finally
 "Add Trigger" in the bottom right.
 
-## Simple: Mark Archived Threads Read
+## Simple: mark archived threads read
 
 The simplest bits of my email automation work on one thread at a time, with no
 further context required: for example, I use a small function to make sure that
@@ -99,7 +103,7 @@ Examples include:
   false positives, but kept my sanity intact while I sat on some *extremely*
   bureaucratic engineering committees.
 
-## Moderate: Limit Inbox Size
+## Moderate: limit inbox size
 
 Despite my best intentions, newsletters and other non-essential threads often
 accumulate in my inbox. It's painful to clear this backlog out by hand, because
@@ -165,7 +169,7 @@ I use the `onVacation` and `pushSMS` functions regularly: the first lets me
 toggle vacation-only behavior with minimal effort, and the second notifies me
 if my scripts are running amok.
 
-## Complex: Reduce Notification Spam
+## Complex: reduce notification spam
 
 The most complex portions of my AppsScript project selectively archive
 notifications. Code review systems like Phabricator and GitHub, exception
@@ -225,7 +229,7 @@ I use a similar approach to:
   information](https://secure.phabricator.com/book/phabricator/article/mail_rules/#stamps-and-gmail)
   into email headers. I wish GitHub supported something similar.
 
-## Calendars: The Final Frontier
+## Calendars: the final frontier
 
 I haven't worked much with the calendar support in AppsScript yet, but there's
 so much low-hanging fruit. I'd love to try:

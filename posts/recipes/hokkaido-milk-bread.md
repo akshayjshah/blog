@@ -1,4 +1,8 @@
-# Hokkaido Milk Bread
+---
+title: "Hokkaido milk bread"
+description: "A recipe for a long-lasting, Japanese-style enriched sandwich bread."
+created: 2020-05-04
+---
 
 This is a soft, enriched sandwich bread that my family loves. The _tangzhong_
 (milk paste) technique helps the bread stay fresh for a week or two.
