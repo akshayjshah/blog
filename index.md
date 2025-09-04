@@ -5,7 +5,7 @@ hidden: true
 hide_home: true
 ---
 
-<img src="/static/headshot-2025-300x300.webp" alt="" class="profile-pic" height="300px" width="300px" fetchpriority="high">
+<img src="/static/headshot-2025-450x450.webp" alt="" class="profile-pic" height="300px" width="300px" fetchpriority="high">
 
 Hi there! I'm Akshay, and you've stumbled across my oft-neglected blog. After
 building infrastructure at Uber, Microsoft, and a pile of startups, I'm now the
