@@ -24,40 +24,37 @@ especially interested in her views.
 
 ## The argument, briefly
 
-Meredith's argument comes in five steps:
+Meredith makes a five-part argument:
 
 1. Today's LLMs aren't a recent scientific breakthrough. Instead, they're
    decades-old algorithms supercharged by the compute, data, and budgets of
    Google, Amazon, Microsoft, and their peers.
 2. Tech giants lavishly fund LLM research, elevating its academic prestige.
-   Simultaneously, LLM research requires donated access to data sets and cloud
-   computing. So in practice, academic success requires close industry ties.
-3. To preserve their industry relationships, researchers praise LLMs and
-   ostracize skeptics.
-4. Despite being captured by industry, prominent researchers still have the
-   *appearance* of impartiality. Their support allows big tech to successfully
-   lobby for government investment into LLMs. Most of this investment ends up
-   back in big tech's pockets.
+   But LLM research requires donated access to data sets and cloud computing.
+   So in practice, academic success requires close industry ties.
+3. To please industry donors, researchers praise LLMs and ostracize skeptics.
+4. Researchers still have the *appearance* of impartiality. Their support
+   allows big tech to win government funding for LLMs. Most of this investment
+   ends up back in big tech's pockets.
 5. To understand the societal costs and benefits of LLMs, we need more
    impartial academic research. Meredith encourages academics and tech workers
    to explicitly discuss the systemic bias that industry money introduces, to
    criticize LLMs more freely, and to organize to protect each other from any
    backlash.
 
-As you'd expect from a five-page article, this is a simple argument for more
+As you'd expect from a short article, this is a simple argument for more
 skepticism during an obvious boom, more academic freedom, and more focus on
 regulating and pricing the externalities of new techology.
 
-At that altitude, I'm fully on board. I did think that Meredith's argument
-would have been more compelling if she directly addressed two inconvenient
-facts.
+At that altitude, I'm on board. I did think that Meredith's argument would have
+been more compelling if she directly addressed two inconvenient facts.
 
 ## What about OpenAI?
 
 Against a backdrop of pessimism about technology, it's easy to nod along as
 Meredith paints LLMs as a cynical ploy by wealthy, entrenched incumbents. But
-the brand most associated with LLMs isn't Google, Amazon, Apple, Meta, or
-Microsoft --- it's ChatGPT.
+the brand most associated with LLMs isn't Google's Gemini, Amazon's Q, Apple's
+Siri, or Microsoft's Copilot --- it's OpenAI's ChatGPT.
 
 Sure, tech giants did much of the early research into LLMs. But the confluence
 of compute, data, and talent required to develop LLMs isn't _only_ available at
@@ -76,10 +73,10 @@ society funds disruptive technology.
 
 ## The bitter lesson
 
-Meredith also suggests that funding more research into old LLM algorithms is
-sucking attention away from more promising new research. Obviously, she knows
-much, *much* more than I do about LLMs and machine learning. But my impression
-is that LLMs are useful precisely *because* they can take advantage of more
+Meredith also suggests that funding research into old LLM algorithms is sucking
+attention away from more promising new research. Obviously, she knows much,
+*much* more than I do about LLMs and machine learning. But my impression is
+that LLMs are useful precisely *because* they can take advantage of more
 compute and more data without theoretical breakthroughs.
 
 Rich Sutton, 2024 Turing award winner, famously called this the [bitter
