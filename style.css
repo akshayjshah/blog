@@ -324,3 +324,8 @@ pre {
   }
 }
 
+@media (max-width: 100ch) {
+    .ln {
+        display: none;
+    }
+}
