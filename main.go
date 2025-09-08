@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"slices"
 	"strings"
+	texttemplate "text/template"
 	"time"
 
 	chromahtml "github.com/alecthomas/chroma/v2/formatters/html"
@@ -31,7 +32,10 @@ const (
 	_baseURL     = "https://akshayshah.org"
 )
 
-var _indexTemplate = template.Must(template.ParseFiles("index.md"))
+var (
+	_indexTemplate   = template.Must(template.ParseFiles("index.md"))
+	_sitemapTemplate = texttemplate.Must(texttemplate.ParseFiles("sitemap.xml"))
+)
 
 func main() {
 	log.SetOutput(os.Stdout)
@@ -54,6 +58,11 @@ func main() {
 	}
 	posts = append(posts, index)
 
+	sitemap, err := readSitemap(posts)
+	if err != nil {
+		log.Fatalf("read sitemap: %v", err)
+	}
+
 	root, err := os.OpenRoot(_buildDir)
 	if err != nil {
 		log.Fatalf("open %q: %v", _buildDir, err)
@@ -62,6 +71,9 @@ func main() {
 		if err := post.RenderTo(root); err != nil {
 			log.Fatalf("render %q in %q: %v", post.Slug, _buildDir, err)
 		}
+	}
+	if err := root.WriteFile("sitemap.xml", sitemap.Bytes(), 0644); err != nil {
+		log.Fatalf("write sitemap: %v", err)
 	}
 }
 
@@ -146,12 +158,22 @@ func readIndex(posts []page, md goldmark.Markdown, copyright int, css template.C
 		Via     string
 	}
 	var index struct {
+		Created string
+		Updated string
 		Posts   []item
 		Recipes []item
 	}
 	for _, post := range posts {
 		if post.Meta.Hidden {
 			continue
+		}
+		if mod := post.LastModified(); mod != "" {
+			if index.Created == "" || index.Created > mod {
+				index.Created = mod
+			}
+			if index.Updated == "" || index.Updated < mod {
+				index.Updated = mod
+			}
 		}
 		link := post.Meta.Link
 		if link == "" {
@@ -175,4 +197,12 @@ func readIndex(posts []page, md goldmark.Markdown, copyright int, css template.C
 		return page{}, fmt.Errorf("generate index Markdown: %w", err)
 	}
 	return NewPage("index.md", expanded.Bytes(), md, copyright, css)
+}
+
+func readSitemap(posts []page) (*bytes.Buffer, error) {
+	var buf bytes.Buffer
+	if err := _sitemapTemplate.Execute(&buf, posts); err != nil {
+		return nil, fmt.Errorf("generate index Markdown: %w", err)
+	}
+	return &buf, nil
 }

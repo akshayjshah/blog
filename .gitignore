@@ -5,6 +5,7 @@ blog
 gha-creds-*.json
 
 dist/*.html
+dist/sitemap.xml
 dist/recipes/*.html
 node_modules/
 .wrangler/

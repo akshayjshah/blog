@@ -2,6 +2,7 @@
 title: "Colophon"
 description: "I'm Akshay Shah, and you've landed on my little patch of the web - mazel tov!"
 hidden: true
+priority: 1.0
 created: 2012-08-01
 updated: 2025-05-09
 ---

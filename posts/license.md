@@ -1,8 +1,10 @@
 ---
 title: "The MIT license"
 description: "The license for all content on this site."
+created: 2012-08-01
 hidden: true
 hide_license: true
+hide_dates: true
 ---
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

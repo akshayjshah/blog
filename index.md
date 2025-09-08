@@ -1,8 +1,12 @@
 ---
 title: "Akshay Shah"
-description: "Code, cooking, and caffeine."
+description: "After building infrastructure at Uber, Microsoft, and a pile of startups, I'm now the Field CTO at Antithesis. I typically write about developer tools and infrastructure, with an occasionally foray into cooking."
+created: {{ .Created }}
+updated: {{ .Updated }}
 hidden: true
 hide_home: true
+hide_dates: true
+priority: 0.8
 ---
 
 <img src="/static/headshot-2025-450x450.webp" alt="" class="profile-pic" height="300px" width="300px" fetchpriority="high">

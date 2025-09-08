@@ -17,7 +17,7 @@
     </head>
     <body>
         <header>
-            <h1>{{ .Title }}</h1>{{ if ne .Created "" }}
+            <h1>{{ .Title }}</h1>{{ if not .HideDates }}
             <p class="subtitle">
                 {{ .Created }}{{ if ne .Updated ""}}, updated {{ .Updated }}{{ end }}
             </p>

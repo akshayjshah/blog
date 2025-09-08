@@ -78,7 +78,8 @@ func (p page) RenderTo(root *os.Root) error {
 }
 
 func (p page) Permalink() string {
-	return _baseURL + "/" + p.Slug
+	u := _baseURL + "/" + strings.TrimSuffix(p.Slug, "index")
+	return strings.TrimSuffix(u, "/")
 }
 
 func (p page) Created() string {
@@ -87,6 +88,14 @@ func (p page) Created() string {
 
 func (p page) Updated() string {
 	return p.Meta.Updated()
+}
+
+func (p page) LastModified() string {
+	// For sitemap.xml.
+	if p.Meta.RawUpdated != "" {
+		return p.Meta.RawUpdated
+	}
+	return p.Meta.RawCreated
 }
 
 func (p page) TitlePlainText() string {
@@ -103,6 +112,22 @@ func (p page) HideHome() bool {
 
 func (p page) HideLicense() bool {
 	return p.Meta.HideLicense
+}
+
+func (p page) HideDates() bool {
+	return p.Meta.HideDates
+}
+
+func (p page) Priority() float64 {
+	pri := p.Meta.Priority
+	if pri == 0 {
+		return 0.5
+	}
+	return pri
+}
+
+func (p page) IsExternalLink() bool {
+	return p.Meta.Via != ""
 }
 
 func comparePages(l, r page) int {

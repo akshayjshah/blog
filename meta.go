@@ -17,10 +17,12 @@ type metadata struct {
 	Hidden     bool   `yaml:"hidden"`
 
 	// for normal posts
-	Description string `yaml:"description"`
-	RawUpdated  string `yaml:"updated"`
-	HideHome    bool   `yaml:"hide_home"`
-	HideLicense bool   `yaml:"hide_license"`
+	Description string  `yaml:"description"`
+	RawUpdated  string  `yaml:"updated"`
+	HideHome    bool    `yaml:"hide_home"`
+	HideLicense bool    `yaml:"hide_license"`
+	HideDates   bool    `yaml:"hide_dates"`
+	Priority    float64 `yaml:"priority"` // for sitemap
 
 	// for external posts
 	Link string `yaml:"link"`
@@ -36,11 +38,14 @@ func (m metadata) Validate() error {
 	if desc && link {
 		return errors.New("posts cannot have both description and external link")
 	}
+	if link && m.Priority != 0 {
+		return errors.New("external links must not have priority")
+	}
 	if link && m.Via == "" {
 		return errors.New("external links must have via text")
 	}
-	if !m.Hidden && m.RawCreated == "" {
-		return errors.New("all displayed posts must have a created date")
+	if m.RawCreated == "" {
+		return errors.New("all pages must have a created date")
 	}
 	if m.RawUpdated != "" && m.RawUpdated <= m.RawCreated {
 		return errors.New("updated date is before created date")
