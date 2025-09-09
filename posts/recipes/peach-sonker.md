@@ -34,7 +34,7 @@ and all delicious.
 
 ## Notes
 
-- You can substitute 2 lb frozen peaches for fresh. Cook for an additional 20m
+- If peaches aren't in season, substitute 2 lb frozen peaches for fresh. Cook for an additional 20m
   in step 2.
 - Sonker does not keep well. Eat shortly after cooking!
-- Vanilla ice cream and whipped cream are both excellent toppings.
+- For a shorter and sweeter life, top with vanilla ice cream and whipped cream.
