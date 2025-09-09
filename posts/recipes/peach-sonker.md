@@ -4,7 +4,7 @@ description: "The turducken of desserts: part pie, part cobbler, part pancake, a
 created: 2025-09-07
 ---
 
-Sonkers are the turduckens of dessert: part pie, part cobbers, part pancake,
+Sonkers are the turduckens of dessert: part pie, part cobbler, part pancake,
 and all delicious.
 
 - 2.5 lb (1134 g) peaches, peeled, halved, pitted, and sliced
