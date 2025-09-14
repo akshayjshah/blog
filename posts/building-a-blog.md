@@ -86,8 +86,8 @@ and I may try mixing some blue or red into the default grays.
 
 I'm not much of a programmer or a designer, so I'm always in the market for
 suggestions! If coding's your thing, take a look at the [source code on
-GitHub](http://github.com/akshayjshah/akshayjshah.github.io); otherwise, send
-me a [tweet](http://twitter.com/akshayshah) and let me know what you think.
+GitHub](http://github.com/akshayjshah/blog); otherwise, send me a
+[tweet](http://twitter.com/akshayshah) and let me know what you think.
 
 ## Update: abject failure
 
