@@ -223,9 +223,11 @@ That said, I'm glad that S3 finally supports conditional writes. Optimistic
 concurrency control with `If-Match` is dead simple, doesn't add any moving
 parts, and is efficient enough for many read-dominated workloads.
 
+All the code in this post is [available on Github][github].
+
 [announcement]: https://aws.amazon.com/about-aws/whats-new/2024/08/amazon-s3-conditional-writes/
 [github]: https://github.com/akshayjshah/conditionalwrite
 [MinIO]: https://www.min.io/
-[testcontainers]: https://testcontainers.com/ 
-[Smithy]: https://smithy.io/index.html
 [smithy-s3]: https://raw.githubusercontent.com/aws/api-models-aws/9c9dd620e2541b82f34ac5d52d73625b753f80a8/models/s3/service/2006-03-01/s3-2006-03-01.json
+[Smithy]: https://smithy.io/index.html
+[testcontainers]: https://testcontainers.com/ 
