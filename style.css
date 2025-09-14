@@ -110,6 +110,7 @@ table {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --font-weight-medium: 300;
     --text-color: var(--color-nord06);
     --background-color: var(--color-nord00);
     --code-line-number-color: var(--color-nord03);
