@@ -303,6 +303,7 @@ pre {
   padding: calc(var(--line-height) - var(--border-thickness)) calc(2ch - var(--border-thickness));
   border: var(--border-thickness) dashed;
   overflow-x: auto;
+  tab-size: 2;
 
   .ln { /* line numbers */
     -webkit-user-select: none;

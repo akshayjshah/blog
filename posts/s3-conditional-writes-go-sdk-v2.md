@@ -48,9 +48,9 @@ type Client struct {
 }
 
 func (c *Client) Set(
-  ctx context.Context,
-  r io.Reader,
-  previous ETag) (ETag, error) {
+ 	ctx context.Context,
+ 	r io.Reader,
+ 	previous ETag) (ETag, error) {
 
 	input := &s3.PutObjectInput{
 		Bucket: aws.String(c.bucket),
