@@ -19,7 +19,7 @@ tools for testing distributed systems.
 Shoot me an [email](mailto:akshay@akshayshah.org) and say hello, or
 [read a bit more about me](/colophon/).
 
-## Writing
+## Writing &amp; speaking
 
 {{ range .Posts }}
 <div class="post-row">
