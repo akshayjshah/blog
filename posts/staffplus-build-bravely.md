@@ -8,8 +8,8 @@ created: 2025-10-15
 
 This fall, I spoke at [LeadDev][leaddev] about property-based testing --- but I
 camouflaged all the Haskell in a story about well-intentioned wizards and
-murderous steampunk robots. There's a [nice video of the talk][vid] and a [PDF
-of my slides][slides] available on the LeadDev website.
+murderous steampunk robots. It went well! There's a [nice video of the
+talk][vid] and a [PDF of my slides][slides] available on the LeadDev website.
 
 Unfortunately, the video and PDF are behind a registration wall. The LeadDev
 folks put on an excellent conference, so I don't begrudge them the opportunity
