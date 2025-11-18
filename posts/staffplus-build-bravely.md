@@ -4,6 +4,8 @@ description: "Engineering teams shy away from ambitious projects for good reason
 created: 2025-10-15
 ---
 
+<img src="/static/staffplus-build-bravely/akshay-on-stage.jpg" alt="" max-height="400px">
+
 This fall, I spoke at [LeadDev][leaddev] about property-based testing --- but I
 camouflaged all the Haskell in a story about well-intentioned wizards and
 murderous steampunk robots. There's a [nice video of the talk][vid] and a [PDF
