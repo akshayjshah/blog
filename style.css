@@ -171,6 +171,10 @@ h1::before {
   margin: 0;
   padding-inline-start: 10ch;
   text-indent: -10ch;
+
+  a {
+    text-decoration-style: dotted;
+  }
 }
 
 .post-date {
