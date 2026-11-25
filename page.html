@@ -23,7 +23,9 @@
             </p>
             {{ end }}
         </header>
-        {{ .Content }}
+        <main role="main">
+            {{ .Content }}
+        </main>
         <footer>
             {{ if not .HideHome }}&larr; <a href="/" rel="index">Home</a ><br />{{ end }}
             &copy; 2012&ndash;{{ .Copyright }} <a href="/colophon/" rel="author">Akshay Shah</a>{{ if not .HideLicense }}, licensed <a href="/license/" rel="license">permissively</a>{{ end }}.
