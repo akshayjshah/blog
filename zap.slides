@@ -1,0 +1,245 @@
+---
+# This Markdown file is designed for use with
+# https://github.com/maaslalani/slides
+author: "Akshay Shah"
+date: 2026-08-26
+# Presented to GoSF
+---
+
+<!--
+- What are we talking about
+- The world in 2016
+- Uber in 2016
+- logrus
+- problems
+  - repeat work
+  - allocations
+  - lock contention
+  - runtime level changes
+- zap
+- log/slog
+- unfinished work
+
+-->
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+# The birth of ⚡zap⚡
+
+Or, why are the `log/slog` APIs so bizarre?
+
+---
+
+# Vibes in 2016
+
+2016 was a different time.
+
+- Microservices were new and trendy.
+- Container orchestration was still unsolved.
+- NoSQL and "big data" were crossing the chasm.
+- OpenTelemetry and "observability" didn't exist.
+- HTTP/2 hadn't been fully standardized.
+
+---
+
+# Go in 2016
+
+In 2016, Go was *much* more immature.
+
+- Go 1.6 had just been released.
+- Rob Pike was leading the Go team.
+- Russ Cox had *just* ported the compiler to Go.
+- No dependency management: vendoring still feature-flagged.
+- No context package.
+
+---
+
+# Uber in 2016
+
+In 2016, Uber was 🍌bananapants🍌.
+
+- All-in on microservices: >1 per engineer.
+- Custom L7 network protocol.
+- Custom service mesh implemented in Node.js.
+- Controversial, bottoms-up Go adoption.
+
+---
+
+# Going fast
+
+A small group of us was rebuilding the service mesh in Go, including the data
+plane.
+
+- The performance target was proxying 10k RPS/core...
+- With p95 latency overhead of 1ms and p99 < 10ms...
+- Which we hit...
+- And then we tried to add some observability.
+
+---
+
+# logrus
+
+```go
+logger := logrus.New().WithFields(logrus.Fields{
+  "host": "prod-sfo-123",
+  "service": "winterfell",
+  "pid": 1234,
+})
+logger.WithFields(logrus.Fields{
+  "error": err,
+  "code": 500,
+  "caller": "horcrux",
+  "request": myRequest,
+  "metadata": metadata,
+}).Error("oh no")
+
+// ☠️ 11 µs, ~80 heap allocations
+```
+
+---
+
+# logrus, under the hood
+
+```go
+type Fields map[string]any
+
+type Logger struct {
+  level uint32
+  fields map[string]any
+  
+  mu sync.Mutex
+  out io.Writer
+}
+
+func (l *Logger) WithFields(fs logrus.Fields) *Logger { ... }
+
+func (l *Logger) Error(args ...any) { ... }
+```
+
+---
+
+# Duplicate work
+
+```
+{"host": "prod-sfo-123", "service": "winterfell", "pid": 1234, "message": "oh no"}
+{"host": "prod-sfo-123", "service": "winterfell", "pid": 1234, "message": "great success"}
+{"host": "prod-sfo-123", "service": "winterfell", "pid": 1234, "message": "please"}
+{"host": "prod-sfo-123", "service": "winterfell", "pid": 1234, "message": "help"}
+```
+
+---
+
+# Allocations
+
+```go
+logger := logrus.New().
+  WithFields(logrus.Fields{       // alloc map
+    "host": "prod-sfo-123",       // alloc interface
+    "service": "winterfell",      // alloc interface
+    "pid": 1234,                  // alloc interface
+  })                              // alloc map
+logger.WithFields(logrus.Fields{  // alloc map
+  "error": err,
+  "code": 500,                    // alloc interface
+  "caller": "horcrux",            // alloc interface
+  "request": myRequest,
+  "metadata": metadata,
+}).Error("oh no")                 // alloc map + interface
+```
+
+---
+
+# Lock contention
+
+```go
+if err != nil {
+  logger.WithFields(logrus.Fields{"error": err}).Error(err.Error())
+  return fmt.Errorf("XYZ: %v", err)
+}
+```
+
+---
+
+# Eager serialization
+
+```go
+type Fields map[string]any
+
+type Logger struct {
+  level   uint32
+  message []byte
+  // {"host": "prod-sfo-123", "service": "winterfell", "pid": 1234
+  
+  mu  sync.Mutex
+  out io.Writer
+}
+
+func (l *Logger) WithFields(fs logrus.Fields) *Logger { ... }
+
+func (l *Logger) Error(args ...any) { ... }
+```
+
+---
+
+# Avoid interfaces
+
+```go
+type Field struct {
+  key   string
+  typ   uint32
+  str   string
+  num   int64
+  iface any
+}
+
+type Logger struct { ... }
+
+func (l *Logger) With(fs ...Field) *Logger { ... }
+
+func (l *Logger) Error(fields ...Field)
+```
+
+---
+
+# Sampling
+
+```go
+type Field struct { ... }
+
+type Logger struct { ... }
+
+func (l *Logger) With(fs ...Field) *Logger { ... }
+
+func (l *Logger) Error(message string, fields ...Field)
+```
+
+```yaml
+sampling:
+  first: 100
+  thereafter: 1000
+```
+
+---
+
+# Unfinished work
+
+- Buffer output, flush async.
+- msgpack serialization.
+- Context-aware APIs.
+- Tracing backend.
+
+---
+
+# Collaborators
+
+- Prashant Varanasi
+- Abhinav Gupta
+- Bryce Lampe
+- Josh Corbin
+- Ryan Hang
+- Sung Yoon Whang
+- Many Go engineers at Uber
