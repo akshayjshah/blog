@@ -7,7 +7,7 @@ created: 2012-08-01
 updated: 2026-11-25
 ---
 
-<img src="/static/headshot-2025-450x450.webp" alt="" class="profile-pic" height="300px" width="300px" fetchpriority="high">
+<img src="/static/headshot-2026-450x675.webp" alt="" class="profile-pic" height="200px" width="300px" fetchpriority="high">
 
 I'm Akshay Shah, and you've landed on my little patch of the web --- mazel tov!
 As a brief introduction, I'm an infrastructure and platform engineer in San
